@@ -8,42 +8,42 @@ Privilégiant une approche ouverte, le CEAI publie ici toute la documentation co
 
 ## Contenu
 
-### Architecture
+### [Architecture](./Architecture/README.md)
 
 Diagrammes d'architecture du CEAI
 
-### ASEA (AWS Secure Environment Accelerator)
+### [ASEA (AWS Secure Environment Accelerator)](./ASEA/README.md)
 
 Documentation du processus de déploiement d'AWS Secure Environment Accelerator comme infrastructure cloud du CEAI.
 
-### Openshift
+### [Openshift](./Openshift/README.md)
 
 Documentation du processus de déploiement d'Openshift comme plateforme en tant que service, appuyant les phases d'expérimentation et de développement au CEAI.
 
-### Experimentations
+### [Experimentations](./Experimentations/README.md)
 
 Rapports d'expérimentations effectués dans le cadre de la mise en place du CEAI.
 
-### Gabarits
+### [Gabarits](./Gabarits/README.md)
 
 Gabarits utiles aux activités du CEAI.
 
-### Guides
+### [Guides](./Guides/README.md)
 
 Guides d'utilisation des services du CEAI.
 
-### Orientations
+### [Orientations](./Orientations/README.md)
 
 Orientations prises au cours de la mise en place du CEAI.
 
-### Patrons
+### [Patrons](./Patrons/README.md)
 
 Patrons de conceptions testés ou utilisés pour le déploiement de divers services du CEAI.
 
-### Presentations
+### [Presentations](./Presentations/README.md)
 
 Supports aux présentations faites par l'équipe du CEAI.
 
-### References 
+### [References](./References/README.md)
 
 Listes de liens et de références qui ont été utilisés dans la mise en place du CEAI.
