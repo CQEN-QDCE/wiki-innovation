@@ -77,6 +77,23 @@ $ git branch -m <nom actuel> <nouveau nom de la branche>
 
 # Workflows 
 
+## Identifiez-vous à git
+
+Lors de vos commits, il est obligatoire de faire la soumission signée par vous(`signoff`), aux fins de validation auprès de la plateforme. Alors, il faut vous identifier dans la configuration de `git` pour que le signoff soit généré correctement. 
+
+D'abord, identifiez-vous en ajoutant votre nom et votre courriel à la configuration de git: 
+
+```
+$ git config --global user.name "Votre nom"
+$ git config --global user.email "votre@adresseemail.com"
+``` 
+
+Ensuite, lors de vos commits, utilisez la flag `-s` ou `--signoff` pour signer votre commit. 
+
+``` 
+$ git commit -m "[tag] votre message" --signoff
+```
+
 ## Création d'un repositoire github 
 
 - Crééz un répertoire pour le projet 
