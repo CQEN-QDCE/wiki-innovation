@@ -1,4 +1,37 @@
-# Github 
+# Github et Git
+
+
+## Github
+La plateforme de collaboration et de controle de code source adoptée par le Laboratoire du Centre d'expertise appliquée en innovation du CQEN (CEAI) est [Github](https://github.com).
+
+GitHub permet aux développeurs de stocker et de partager, publiquement ou non, le code qu’ils créent. La plateforme accueille ainsi, dit-elle, plus de 80 millions de projets, qu’il s’agisse de logiciels, de sites Web, d’applications pour mobile ou tous autres types de programme informatique — et ce quel que soit le langage de programmation utilisé.
+
+Le site est aussi un espace collaboratif. Chaque utilisateur peut contribuer aux projets mis en ligne publiquement sur GitHub, en proposant des modifications. Le succès de GitHub repose notamment sur la façon dont le site a facilité ce processus. Pour que les utilisateurs ne se dérangent pas mutuellement en modifiant un programme en même temps, ils téléchargent chacun de son côté le code sur son ordinateur, effectuent les modifications, qui sont ensuite publiées sur GitHub après validation. 
+
+Chaque modification du code est ainsi stockée sur GitHub, et il est possible de suivre pas à pas chaque étape de développement d’un programme. Des espaces de discussion permettent à tous les développeurs d’échanger sur chaque programme et contribution.
+
+**Sources:**  
+- [Site web de github](https://github.com)
+- [Qu’est-ce que GitHub, la plate-forme que Microsoft vient de racheter ?](https://www.lemonde.fr/pixels/article/2018/06/04/qu-est-ce-que-github-la-plate-forme-que-microsoft-vient-de-racheter_5309488_4408996.html), Le Monde, 2018-06-04
+
+
+## Git
+Le site se base pour cela sur Git, un outil développé en 2005 par Linus Torvalds, le célèbre créateur de Linux. Comme avec la plupart des autres systèmes de contrôle de version distribués, et contrairement à la plupart des systèmes client-serveur, chaque répertoire Git sur chaque ordinateur est un référentiel à part entière avec un historique complet et des capacités complètes de suivi des versions, indépendamment de l'accès au réseau ou d'un serveur central. Git est un logiciel gratuit et open source distribué sous la licence GPL-2.0 uniquement. Selon la `man page` de git: 
+
+        Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.
+
+GitHub aura eu pour talent de rendre ce système plus simple d’utilisation et compréhensible par le plus grand nombre.
+
+**Source:** 
+- [Page man de git](https://git.github.io/htmldocs/git.html)
+
+
+
+# Documentation
+
+## [Les meilleures pratiques d'utilisation pour Git et Github](./GithubBestPractices.md) 
+## [Commandes git de base pour tout développeur](./CommandesBase.md)
+
 
 GitHub est considéré comme un service d’hébergement de projets en cours de développement. Les projets sont multiples :
 
@@ -30,18 +63,8 @@ GitHub permet surtout de travailler sur différentes parties du code, et donc de
 
 Rewrite: 
 
-La plateforme de collaboration et de controle de code source adoptée par le Laboratoire du Centre d'expertise appliquée en innovation du CQEN (CEAI) est [Github](https://github.com).
 
-GitHub permet aux développeurs de stocker et de partager, publiquement ou non, le code qu’ils créent. La plateforme accueille ainsi, dit-elle, plus de 80 millions de projets, qu’il s’agisse de logiciels, de sites Web, d’applications pour mobile ou tous autres types de programme informatique — et ce quel que soit le langage de programmation utilisé.
 
-Le site est aussi un espace collaboratif. Chaque utilisateur peut contribuer aux projets mis en ligne publiquement sur GitHub, en proposant des modifications. Le succès de GitHub repose notamment sur la façon dont le site a facilité ce processus. Pour que les utilisateurs ne se dérangent pas mutuellement en modifiant un programme en même temps, ils téléchargent chacun de son côté le code sur son ordinateur, effectuent les modifications, qui sont ensuite publiées sur GitHub après validation. 
-
-Le site se base pour cela sur Git, un outil développé en 2005 par Linus Torvalds, le célèbre créateur de Linux — GitHub aura eu pour talent de rendre ce système plus simple d’utilisation et compréhensible par le plus grand nombre.
-
-Chaque modification du code est ainsi stockée sur GitHub, et il est possible de suivre pas à pas chaque étape de développement d’un programme. Des espaces de discussion permettent à tous les développeurs d’échanger sur chaque programme et contribution.
 
 ## Références 
 
-- [Site web de github](https://github.com)
-
-- [Qu’est-ce que GitHub, la plate-forme que Microsoft vient de racheter ?](https://www.lemonde.fr/pixels/article/2018/06/04/qu-est-ce-que-github-la-plate-forme-que-microsoft-vient-de-racheter_5309488_4408996.html), Le Monde, 2018-06-04
