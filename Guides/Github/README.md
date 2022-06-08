@@ -32,6 +32,8 @@ GitHub aura eu pour talent de rendre ce système plus simple d’utilisation et 
 ## [Les meilleures pratiques d'utilisation pour Git et Github](./GithubBestPractices.md) 
 ## [Commandes git de base pour tout développeur](./CommandesBase.md)
 
+## [Configuration des outils pour le pipeline CI/CD](./OutilsCICD.md)
+
 
 GitHub est considéré comme un service d’hébergement de projets en cours de développement. Les projets sont multiples :
 
