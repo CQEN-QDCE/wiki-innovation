@@ -8,6 +8,13 @@
 ## Git pull 
 Fetch from and integrate with another repository or a local branch.
 
+Git pull permet de récupérer tous les changements sur la branche distant.
+
+Elle prend en paramètre la branche source et la branche ciblé.
+
+Exemple:
+La commande  `git pull wpk preprod:master`  nous permet de récupérer les changement de la branche `preprod` du remote `wpk` dans la branche `master` du remote `origin`.
+
 ## Git fetch
 Download objects and refs from another repository.
 
@@ -17,8 +24,18 @@ Récuperer les dernières informations du serveur git
 $ git fetch <nom-du-remote>
 ```
 
+Git fetch permet de rechercher et afficher les changements sur un remote passé en argument, qui ne sont pas présent en local, sans aucun transfert de fichiers.
+
+Exemple: 
+La commande  `git fetch wpk`  permet de chercher les nouveaux changement sur le remote `wpk` qui ne sont pas présent en `local`.
+
 ## Git rebase 
 Reapply commits on top of another base tip.
+
+Git rebase permet de transférer les changements d’une branche à une autre, elle prend en argument la branche avec laquelle nous voulons rebaser.
+
+Exemple:
+La commande  `git rebase -i wpk/preprod`  permet de rebaser les commits de notre branche courant avec la branche `preprod` de remote `wpk`.
 
 ## Git checkout 
 Switch branches or restore working tree files.
@@ -28,20 +45,65 @@ Changement de branche
 $ git checkout <nom de la branche> 
 ```
 
+Git checkout permet de déplacer d’une branche à une autre, elle prend en argument la branche cible et aussi de supprimer les modifications qui ne sont pas ajoutées.
+
+Exemples:
+```sh
+$ git checkout branch-A         # nous permet de nous déplacer vers la branche branch-A s’elle existe
+$ git checkout -b branch-B      # nous permet de créer et déplacer vers la branche branch-B s’elle n’existe pas déjà
+$ git checkout path/file.php    # permet de supprimer tous les changements non ajoutés (unstaged) sur le fichier path/file.php
+$ git checkout .                # permet de supprimer tous les changements non ajoutés (unstaged) sur tous les fichiers
+```
+
 ## Git add 
 Add file contents to the index.
+
+Git add permet d’ajouter les changements que nous avons fait dans nos fichiers sur la branche courante.
+
+Exemples:
+```sh
+ git add .     # permet d’ajouter tous les changements que nous avons fait
+ git add -u    # permet d’ajouter les modifications sur les fichier déjà connus par git (les nouveaux fichiers ne seront pas ajoutés)
+```
 
 ## Git commit 
 Record changes to the repository.
 
+Git commit permet commiter les modifications que nous avons en local sur la branche courante.
+
+Exemples:
+```sh
+$ git commit -m “Message de commit”    # permet de commiter les changements sur la branche courante, avec un message “Message de commit”
+$ git commit –amend                    # permet de commiter les nouveaux changements sur la branche courante dans la dernière commit que nous avons créé sur la branche
+```
+
 ## Git reset 
 Reset current HEAD to the specified state.
+
+Git reset permet de supprimer tous les changements que nous avons fait sur la branche courante.
+
+Exemples:
+```sh 
+$ git reset –hard HEAD    # permet de retourner vers la version que nous avons sur la branche master.
+$ git commit –amend       # permet de commiter les nouveaux changements sur la branche courante dans la dernière commit que nous avons créé sur la branche.
+```
 
 ## Git push 
 Update remote refs along with associated objects.
 
+Git push permet d’envoyer les modifications sur un remote.
+
+Exemples:
+```sh
+$ git push origin branch-A    # permet d’envoyer les modifications que nous avons fait sur la branche branch-A vers notre repos origin.
+```
+
 ## Git status 
 Show the working tree status.
+
+```sh
+$ git status    # permet d’afficher toutes les modifications non commités sur la branche courante.
+```
 
 ## Git merge 
 Join two or more development histories together.
@@ -50,7 +112,7 @@ Join two or more development histories together.
 
 Afficher l'arbre des modifications 
 
-```bash
+```sh
 $ git hist 
 ``` 
 
