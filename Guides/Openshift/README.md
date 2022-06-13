@@ -10,9 +10,47 @@ Pour plus d’information cliquez [ici](https://www.ionos.fr/digitalguide/serveu
 “*Red Hat OpenShift est une plateforme d’orchestration de conteneurs Open Source pour les entreprises. Il s’agit d’un produit logiciel qui inclut les composants du projet de gestion des conteneurs Kubernetes et y ajoute des fonctions de productivité et de sécurité avancées importantes pour les grandes entreprises.*”
 Pour en savoir plus, cliquez [ici](https://www.redhat.com/fr/topics/containers/red-hat-openshift-kubernetes)
 
-## Console Web
+## Console Web (Documentation Openshift [ici](https://docs.openshift.com/container-platform/4.8/web_console/odc-about-developer-perspective.html))
 ### Créer un projet
+Le site du laboratoire, [CEAI](https://ceai.cqen.ca/), vous offre l'option  "Coffre à outils" avec des outils que vous serviront pour travailler comme le "Portail Openshift". 
+
+Pour accéder à la console web, vous devez vous logger avec vos identifiants.
+
+À partir de la page principale de Openshift (avec la liste de projets), vous verrez le bouton "Create Project". Cliquez sur ce bouton pour créer votre projet en fournissant le nom, le nom à montrer et une petite description si vous voulez:
+
+![ocp-web-creation-projet](images/ocp-web-console-create-project.png)
+
 ### Créer une application
+Sélectionnez le projet que vous avez créé précédemment.
+Dans le menu à gauche, vous verrez l'option "+Add". Cliquez sur ce bouton pour créer une application.
+Vous verrez que Openshift vous offre une diversité d'options de création des applications, telles que: 
+- Exemples suggérés, 
+- Création à partir des sources dans un dépôt Git, 
+- Création à partir d'une image dans un registre des conteneurs, 
+- Création à partir d'un fichier dans la machine locale, 
+- Autres.
+
+![ocp-web-creation-application](images/ocp-web-console-create-application.png)
+
+Pour démontrer un exemple de création d'une application, on va choisir l'option à partir des exemples suggérés: "Getting started resources" -> "View all samples" -> "Node.js"
+
+![ocp-web-creation-app-basic-nodejs](images/ocp-web-console-create-app-sample-nodejs.png)
+
+Cette application vient d'un dépôt git [nodejs-ex](https://github.com/sclorg/nodejs-ex) qui a les scripts nécessaires pour la création des ressources comme le service, le pod, la route (url), entre autres.
+
+Une fois créée l'application, la procédure de déploiement va se déclencher et finalement l'application sera déployée et accessible avec un url web:
+
+![ocp-web-creation-app-deploiement](images/ocp-web-console-create-project-deployment.png)
+
+Vous pouvez constater que le pod et le service ont été créés, que le "build" a bien roulé, que le service a été exposé avec le port 8080 et qu'il y a une route [url](https://nodejs-sample-demo-guide-openshift-project.apps.dev.openshift.cqen.ca/) pour accéder à l'application.
+
+* Pour ajouter la couche de sécurité (TLS) à la route, il faut éditer la route créé originalement. Pour le faire suivez les instructions [ici](#ajout-de-dune-couche-de-sécurité-pour-laccès-à-nos-applications-sur-le-web)
+
+Vous pouvez cliquer sur le lien de la route pour ouvrir l'application sur le web:
+
+![ocp-web-url-app-deployee](images/ocp-web-console-deployed-app-url.png)
+
+Et voilà!, Félicitations! vous avez déployé une application web sur openshift.
 
 ## Openshift Command Line Interface (OC CLI) (Documentation Openshift [ici](https://docs.openshift.com/container-platform/4.8/cli_reference/openshift_cli/getting-started-cli.html))
 ### Installation de oc cli
@@ -176,3 +214,21 @@ Vous verrez un output similaire:
 ```bash
 oc logout
 ```
+
+#### Ajout d'une couche de sécurité pour l'accès à nos applications sur le web
+
+Pour rendre l'application plus sécuritaire, on ajoute à la route, le protocole TLS (Transport Layer Security) qui offre une sécurité de bout en bout aux donnés envoyés sur internet. Pour le configurer, dans la console web, il faut éditer la route pour ajouter ce qui correspond au protocole TLS.
+* Cliquez sur la route (dans Routes -> nodejs-sample-demo)
+* Ouvrez l'onglet YAML et vous allez voir le script de la route.
+* Trouvez la section qui correspond aux spécifications ("spec" -> "port"), et ensuite après le port, ajouter:
+    ```yaml
+    tls:
+        termination: edge
+        insecureEdgeTerminationPolicy: None
+    ```
+    ![ocp-web-edit-route](images/ocp-web-console-edit-route.png)
+* Sauvegardez les changements.
+* Retournez aux détails de la route (cliquez sur le bouton "cancel").
+* Vérifiez que l'url pour accéder à l'application a changé pour "https:..." au lieu de "http:..."
+
+    ![ocp-web-route-avec-tls](images/ocp-web-console-route-with-tls.png)
