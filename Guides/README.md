@@ -55,11 +55,15 @@ R: L'application intégrée doit avoir un fichier de configuration pour le dépl
 - un fichier docker-compose dans un repertoire github
 - une image docker dans un image registry
 
+Voir [ici](kompose/README.md#openshift) un exemple d'utilisation de kompose pour convertir un fichier docker-compose aux fichiers yaml de création des ressources sur *Openshift*.
+
 #### Après mon expérimentation
 
 **Q: Est-ce que je pourrais migrer mon projet sur OpenShift vers un fournisseur infonuagique?**
 
-R: Il existe des outils comme [komposer](https://kompose.io/) qui permettent de convertir un fichier docker-compose.yaml vers un fichier yaml de déploiement sur kubernetes or sur OpenShift.
+R: Il existe des outils comme [kompose](https://kompose.io/) qui permettent de convertir un fichier docker-compose.yaml vers plusieurs fichiers yaml pour la création des ressources sur kubernetes ou sur OpenShift.
+
+Voir [ici](kompose/README.md#kubernetes) un exemple d'utilisation de kompose pour convertir un fichier docker-compose aux fichiers yaml de création des ressources sur *Kubernetes*.
 
 ### 1.3 Exemple de déploiement
 - Exemple dans la console web (portail Openshift):  [voir](Openshift/README.md#console-web)
