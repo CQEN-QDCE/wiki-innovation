@@ -5,7 +5,9 @@
 
 # Meilleures pratiques de Github
 
-## Principes Fondamentaux 
+
+
+## Principes fondamentaux 
 
 Selon la [Poly de Montréal](https://cours.polymtl.ca/inf1900/logiciel/qualiteCode/guides/BonnesPratiquesGit.pdf), les cinq principes fondamentaux d'usage de Github sont les suivants: 
 
@@ -13,7 +15,7 @@ Selon la [Poly de Montréal](https://cours.polymtl.ca/inf1900/logiciel/qualiteCo
 Très souvent, on fait plusieurs changements de natures différentes dans une session de travail. Il ne faut pas les regrouper en un seul commit, mais plutôt répartir en plusieurs
 commits distincts. On saura ainsi plus facilement ce qui a été fait, puisque la description associée à chaque commit sera simple (et ne concernera qu'une chose), et si on a besoin
 de revenir en arrière, on pourra choisir de défaire le commit qui concerne le problème spécifique, plutôt que de tout défaire ce qu'on a fait dans la session de travail.
-Cela vous aidera sur plusieurs points. Ceux-ci seront plus compréhensibles, ils contiendront peu de modifications, ce que vous aidera à revenir sur un point ou changer quelques fichiers, différement si l'on a un gros commit. Cela aidera aussi lors des merge et des pull requests - vous aurez moins de code à réviser et donc moins de conflits potentiels à gérer. 
+Cela vous aidera sur plusieurs points. Ceux-ci seront plus compréhensibles, ils contiendront peu de modifications, ce qui vous aidera à revenir sur un point ou changer quelques fichiers, différemment si l'on a un gros commit. Cela aidera aussi lors des merge et des pull requests - vous aurez moins de code à réviser et donc moins de conflits potentiels à gérer. 
 
 2. **Pour chaque commit, écrivez une description concise qui décrit exactement les changements apportés**.  
 Ce principe est très important et souvent négligé par le développeur trop pressé ou insouciant. Comment pensez-vous qu'on peut se retrouver en cas de problème si la 
@@ -22,23 +24,23 @@ description du commit est quelque chose comme "du ménage pour corriger les conn
 Il est suggéré d'écrire une description de la forme suivante: 
 
 ```
-type: description du changement apporté
+[type] description du changement apporté
 ```
 
-On pourrait adopter un système de types au début du message pour signifier imediatement le type de changement le fichier a subi. Par example:  
-`[func]` Ajout d'une nouvelle fonctionnalité;  
-`[edit]` Modification d'une fonctionnalité existente;  
-`[del]` Suppréssion d'une fonctionnalité ou d'un fichier;  
-`[fix]` Correction d'un bogue;  
-`[refac]` Refactoring d'un code, amélioration du code sans changement de fonctionnalité;   
-`[doc]` Ajout de documentation (commentaires y compris);  
-`[style]` Modifications cosmetiques au code;  
-`[misc]` lorsque la tâche ne correspond à aucune des types précédantes.   
+On pourrait adopter un système de types au début du message pour signifier immédiatement le type de changement le fichier a subi. Par exemple:  
+- `[func]` Ajout d'une nouvelle fonctionnalité;  
+- `[edit]` Modification d'une fonctionnalité existante;  
+- `[del]` Suppression d'une fonctionnalité ou d'un fichier;  
+- `[fix]` Correction d'un bogue;  
+- `[refac]` Refactoring d'un code, amélioration du code sans changement de fonctionnalité;   
+- `[doc]` Ajout de documentation (commentaires y compris);  
+- `[style]` Modifications cosmétiques au code;  
+- `[misc]` lorsque la tâche ne correspond pas aux types précédents.   
 
 
-3. **Faites des commits très frequemment**.  
+3. **Faites des commits très fréquemment**.  
 Git est un excellent système de gestion des versions, profitez-en! N'attendez pas d'avoir écrit beaucoup de code avant de faire un commit. Dès que vous avez quelque chose qui fonctionne raisonnablement (mais pas nécessairement complètement), faites un commit. 
-Décomposez votre session de travail en très petites étapes significatives, et faites un commit après chacune. Par exemple, chaque fois qu'on avance un peu dans le développement d'une fonctionnalité, on s'assure qu'un nouveau test passe, et on fait un commit.
+Décomposez votre session de travail en très petites étapes significatives et faites un commit après chacune. Par exemple, chaque fois qu'on avance un peu dans le développement d'une fonctionnalité, on s'assure qu'un nouveau test passe et on fait un commit.
 
 4. **Ne modifiez pas l'historique des commits qui ont été publiés**.  
 Ce principe vous évitera de gros maux de tête. Si vous changez l'historique des commits qui sont visibles par tous, vous risquez de causer des problèmes lorsqu'un développeur voudra faire une fusion avec son entrepôt local. Donc, pensez-y bien avant d'utiliser une commande qui change l'historique des commits (comme rebase), et si vous le faites, faites-le seulement sur une branche locale.
@@ -108,7 +110,9 @@ like this:
 Resolves: #123
 See also: #456, #789
 ```
+## Workflow de base
 
+![Github workflow](./images/Github%20workflow.jpg)
 # Branching models 
 
 ## Git Flow
