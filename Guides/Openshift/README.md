@@ -1,234 +1,66 @@
-# Redhat Openshift
+## Redhat Openshift
 
-## Openshift: qu’est-ce que c’est?
+Dans le cadre d'offrir et faciliter un environnement intégré prêt pour les expérimentations des utilisateurs, l'équipe du Centre d’Expertise Appliquée en Innovation (CEAI), a sélectionné Openshift comme l'outil adéquat de travail.
 
-“*OpenShift constitue une plateforme d’application basée sur Kubernetes. Ce logiciel est utilisé pour construire des environnements d’application et de développement décentralisés et capables de mettre à l’échelle.
-...
-Ce logiciel permet une gestion complète du cycle de vie de l’application, y compris le développement, le déploiement, le pilotage et la maintenance. Plus de 2 000 entreprises à travers le monde s’appuient sur OpenShift pour héberger leurs applications dans des environnements Cloud hybrides.*”
-Pour plus d’information cliquez [ici](https://www.ionos.fr/digitalguide/serveur/know-how/openshift-quest-ce-que-cest/)
+Openshift permet de déployer et gérer les applications d'une manière très flexible, sans exiger aux utilisateurs une connaissance quelconque en DevOps ou en infrastructure:
 
-“*Red Hat OpenShift est une plateforme d’orchestration de conteneurs Open Source pour les entreprises. Il s’agit d’un produit logiciel qui inclut les composants du projet de gestion des conteneurs Kubernetes et y ajoute des fonctions de productivité et de sécurité avancées importantes pour les grandes entreprises.*”
-Pour en savoir plus, cliquez [ici](https://www.redhat.com/fr/topics/containers/red-hat-openshift-kubernetes)
+*"OpenShift est une Plateforme-en-tant-que-service qui permet une orchestration de conteneur facile et constante en réduisant les efforts à fournir pour déployer une plateforme Kubernetes."* (Plus des détails [ici](https://www.cloudops.com/fr/blog/la-valeur-dopenshift-pour-la-transformation-des-logiciels-dentreprise/))
 
-## Console Web (Documentation Openshift [ici](https://docs.openshift.com/container-platform/4.8/web_console/odc-about-developer-perspective.html))
-### Créer un projet
-Le site du laboratoire, [CEAI](https://ceai.cqen.ca/), vous offre l'option  "Coffre à outils" avec des outils que vous serviront pour travailler comme le "Portail Openshift". 
+### Contraintes de sécurité
+Pour permettre le travail sur openshift dans un contexte sécuritaire, l’utilisateur devra demander l’accès aux administrateurs du laboratoire du CQEN.
 
-Pour accéder à la console web, vous devez vous logger avec vos identifiants.
+### Questions - Réponses
 
-À partir de la page principale de Openshift (avec la liste de projets), vous verrez le bouton "Create Project". Cliquez sur ce bouton pour créer votre projet en fournissant le nom, le nom à montrer et une petite description si vous voulez:
+#### Avant de commencer mes travaux d'expérimentation
 
-![ocp-web-creation-projet](images/ocp-web-console-create-project.png)
+**Q: Par où commencer mon expérience sur openshift?**
 
-### Créer une application
-Sélectionnez le projet que vous avez créé précédemment.
-Dans le menu à gauche, vous verrez l'option "+Add". Cliquez sur ce bouton pour créer une application.
-Vous verrez que Openshift vous offre une diversité d'options de création des applications, telles que: 
-- Exemples suggérés, 
-- Création à partir des sources dans un dépôt Git, 
-- Création à partir d'une image dans un registre des conteneurs, 
-- Création à partir d'un fichier dans la machine locale, 
-- Autres.
+R: Il y a deux manières de travailler sur OpenShift:
+- La console web : l’interface graphique d’Openshift facilite l’accès et la gestion des ressources d’une manière intuitive. Le portail vous offre la possibilité de commencer de zéro avec une application sample existente ou de déployer une ou plusieurs applications à partir d'une source comme un repertoire github, un fichier Dockerfile, une image registry, etc. Vous trouvez l'option d'accès au portail OpenShift dans notre [Coffre à outils](https://ceai.cqen.ca/coffre-a-outils/index.html)
 
-![ocp-web-creation-application](images/ocp-web-console-create-application.png)
+- La ligne de commandes avec le Client d'OpenShift (oc cli): Si vous êtes familiarisé à travailler avec bash, alors cette option pourrait vous permettre de gérer les ressources vous même. Pour l'utilisation de oc cli vous devez l'installer localement. [Voir instructions](Openshift/README.md#installation-de-oc-cli)
 
-Pour démontrer un exemple de création d'une application, on va choisir l'option à partir des exemples suggérés: "Getting started resources" -> "View all samples" -> "Node.js"
+**Q: Comment je prépare mon application pour la déployer sur openshift?**
 
-![ocp-web-creation-app-basic-nodejs](images/ocp-web-console-create-app-sample-nodejs.png)
+R: Idéalement, toute application comme service (SAAS: Software as a Service) qui sera deployé dans un contexte infonuagique devrait suivre la méthodologie des [12 facteurs](https://www.cncf.io/blog/2022/04/28/twelve-factor-app-anno-2022/)
 
-Cette application vient d'un dépôt git [nodejs-ex](https://github.com/sclorg/nodejs-ex) qui a les scripts nécessaires pour la création des ressources comme le service, le pod, la route (url), entre autres.
+<i>Minimalement</i>, l'application doit:
 
-Une fois créée l'application, la procédure de déploiement va se déclencher et finalement l'application sera déployée et accessible avec un url web:
+- Exister dans un repertoire de code (github)
+  
+<i>Fortement recommandé</i> mais non obligatoire:
+- Être contenneurisé (avoir un Dockerfile)
 
-![ocp-web-creation-app-deploiement](images/ocp-web-console-create-project-deployment.png)
+#### Déploiement des composants sur openshift
 
-Vous pouvez constater que le pod et le service ont été créés, que le "build" a bien roulé, que le service a été exposé avec le port 8080 et qu'il y a une route [url](https://nodejs-sample-demo-guide-openshift-project.apps.dev.openshift.cqen.ca/) pour accéder à l'application.
+**Q: Je n'ai pas une application pour déployer, est-ce que je peux trouver des applications exemple?**
 
-* Pour ajouter la couche de sécurité (TLS) à la route, il faut éditer la route créé originalement. Pour le faire suivez les instructions [ici](#ajout-de-dune-couche-de-sécurité-pour-laccès-à-nos-applications-sur-le-web)
+R: Oui, Openshift offre plusieurs exemples des applications dans les différents langages de programmation (nodejs, python, java, .net, etc) que vous pouvez choisir.
 
-Vous pouvez cliquer sur le lien de la route pour ouvrir l'application sur le web:
+**Q: Comment déployer une application existente?**
 
-![ocp-web-url-app-deployee](images/ocp-web-console-deployed-app-url.png)
+R: On peut déployer une application à partir de:
+- un repertoire github
+- un fichier Dockerfile dans un repertoire github
+- une image docker dans un image registry
 
-Et voilà!, Félicitations! vous avez déployé une application web sur openshift.
+**Q: Comment déployer une solution intégrée sur Openshift? (plusieurs composants)**
 
-## Openshift Command Line Interface (OC CLI) (Documentation Openshift [ici](https://docs.openshift.com/container-platform/4.8/cli_reference/openshift_cli/getting-started-cli.html))
-### Installation de oc cli
+R: L'application intégrée doit avoir un fichier de configuration pour le déploiement comme docker-compose ou un ficher yaml. Comme pour une application simple, la source de l'application peut venir de:
+- un repertoire github
+- un fichier docker-compose dans un repertoire github
+- une image docker dans un image registry
 
-Vous pouvez obtenir le binaire à partir du [lien](https://downloads-openshift-console.apps.dev.openshift.cqen.ca/)
+Voir [ici](../kompose/README.md#openshift) un exemple d'utilisation de kompose pour convertir un fichier docker-compose aux fichiers yaml de création des ressources sur *Openshift*.
 
-**Ubuntu**
-- extraire le fichier:
-```bash
-tar xvzf <file>
-```
-- copier le fichier oc dans un repertoire du PATH (par exemple: /usr/local/bin):
-```bash
-echo $PATH
-```
-- Après l'installation vous pouvez commencer à exécuter les commandes oc:
-```bash
-oc <command>
-```
-### Se connecter au cluster d'Openshift
-Pour se logger au cluster, obtenir le token avec un appel [HTTP request](https://oauth-openshift.apps.dev.openshift.cqen.ca/oauth/token/request
-)
-La réponse au request dans le navigateur web va vous indiquer la commande pour vous logger, par exemple:
-```bash
-oc login --token=<token-dans-la-response> --server=https://api.dev.openshift.cqen.ca:6443
-```
-Un message va s'afficher pour montrer qu'on est loggé avec succès dans le cluster
-### Créer un projet
-La commande "oc new-project" va créer un nouveau projet:
-```bash
-oc new-project guide-openshift-project
-Now using project "guide-openshift-project" on server "https://api.dev.openshift.cqen.ca:6443".
-```
-### Créer une application
-La commande "oc new-app" va créer une nouvelle application:
-```bash
-oc new-app https://github.com/sclorg/cakephp-ex
-```
-Vous verrez un output similaire:
-```bash
---> Found image 6f4aedf (13 months old) in image stream "openshift/php" under tag "7.4-ubi8" for "php"
-...
---> Creating resources ...
-    imagestream.image.openshift.io "cakephp-ex" created
-    buildconfig.build.openshift.io "cakephp-ex" created
-    deployment.apps "cakephp-ex" created
-    service "cakephp-ex" created
---> Success
-    Build scheduled, use 'oc logs -f buildconfig/cakephp-ex' to track its progress.
-    Application is not exposed. You can expose services to the outside world by executing one or more of the commands below:
-     'oc expose service/cakephp-ex' 
-    Run 'oc status' to view your app.
-```
-#### Autres commandes
-- Voir les pods
-    ```bash
-    oc get pods -o wide
-    ```
-    exemple de output:
-    ```bash
-    NAME                                READY   STATUS    RESTARTS     AGE     IP               NODE                                        NOMINATED NODE   READINESS GATES
-    cakephp-ex-1-build                  0/1     Completed   0          23m     10.128.7.33    ip-10-2-8-154.ca-central-1.compute.internal     <none>           <none>
-    cakephp-ex-586bf8946d-tf9lj         1/1     Running     0          21m     10.129.4.93    ip-10-2-105-25.ca-central-1.compute.internal    <none>           <none>
-    ```    
-- Voir les logs du pod
-    ```bash
-    oc logs cakephp-ex-586bf8946d-tf9lj
-    ```
-- Voir le projet courant
-    ```bash
-    oc project
-    Using project "sample-nodejs-from-oc-cli" on server "https://api.dev.openshift.cqen.ca:6443".
-    ```
-- Voir le statut du projet
-    ```bash
-    oc status
-    In project guide-openshift-project on server https://api.dev.openshift.cqen.ca:6443
+#### Après mon expérimentation
 
-    https://cakephp-example-guide-openshift-project.apps.dev.openshift.cqen.ca to pod port 8080-tcp (svc/cakephp-ex)
-    deployment/cakephp-ex deploys istag/cakephp-ex:latest <-
-    bc/cakephp-ex source builds https://github.com/sclorg/cakephp-ex on openshift/php:7.4-ubi8 
-    deployment #2 running for about an hour - 1 pod
-    deployment #1 deployed about an hour ago
-    ```
+**Q: Est-ce que je pourrais migrer mon projet sur OpenShift vers un fournisseur infonuagique?**
 
-- Suggestions (aide)
-    ```bash
-    oc help
-    OpenShift Client
+R: Il existe des outils comme [kompose](https://kompose.io/) qui permettent de convertir un fichier docker-compose.yaml vers plusieurs fichiers yaml pour la création des ressources sur kubernetes ou sur OpenShift.
 
-    This client helps you develop, build, deploy, and run your applications on any
-    OpenShift or Kubernetes cluster. It also includes the administrative commands for managing a cluster under the 'adm' subcommand.
+Voir [ici](../kompose/README.md#kubernetes) un exemple d'utilisation de kompose pour convertir un fichier docker-compose aux fichiers yaml de création des ressources sur *Kubernetes*.
 
-    Usage:
-    oc [flags]
-
-    Basic Commands:
-    login           Log in to a server
-    new-project     Request a new project
-    new-app         Create a new application
-    ...
-    ```
-    Pour obtenir de l'aide avec une commande specifique utiliser "--help":
-    ```bash
-    oc create --help
-    Create a resource from a file or from stdin.
-
-    JSON and YAML formats are accepted.
-
-    Usage:
-    oc create -f FILENAME [flags]
-
-    Exemples:
-    # Create a pod using the data in pod.json.
-    oc create -f ./pod.json
-    
-    # Create a pod based on the JSON passed into stdin.
-    cat pod.json | oc create -f -
-    
-    # Edit the data in docker-registry.yaml in JSON then create the resource using the edited data.
-    oc create -f docker-registry.yaml --edit -o json    
-    ```
-- Voir la documentation pour l'un de resources en particulier: Utiliser "explain". Pour exemple, pour les pods:
-    ```bash
-    oc explain pods
-    KIND:     Pod
-    VERSION:  v1
-
-    DESCRIPTION:
-        Pod is a collection of containers that can run on a host. This resource is
-        created by clients and scheduled onto hosts.
-
-    FIELDS:
-    apiVersion	<string>
-        APIVersion defines the versioned schema of this representation of an
-        object. Servers should convert recognized schemas to the latest internal
-        value, and may reject unrecognized values. More info:
-        https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-
-    kind	<string>
-        Kind is a string value representing the REST resource this object
-        represents. Servers may infer this from the endpoint the client submits
-        requests to. Cannot be updated. In CamelCase. More info:
-        https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-
-    metadata	<Object>
-        Standard object's metadata. More info:
-        https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-
-    spec	<Object>
-        Specification of the desired behavior of the pod. More info:
-        https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-
-    status	<Object>
-        Most recently observed status of the pod. This data may not be up to date.
-        Populated by the system. Read-only. More info:
-        https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-    ```
-
-#### Log Out du cluster Openshift CLI
-```bash
-oc logout
-```
-
-#### Ajout d'une couche de sécurité pour l'accès à nos applications sur le web
-
-Pour rendre l'application plus sécuritaire, on ajoute à la route, le protocole TLS (Transport Layer Security) qui offre une sécurité de bout en bout aux donnés envoyés sur internet. Pour le configurer, dans la console web, il faut éditer la route pour ajouter ce qui correspond au protocole TLS.
-* Cliquez sur la route (dans Routes -> nodejs-sample-demo)
-* Ouvrez l'onglet YAML et vous allez voir le script de la route.
-* Trouvez la section qui correspond aux spécifications ("spec" -> "port"), et ensuite après le port, ajouter:
-    ```yaml
-    tls:
-        termination: edge
-        insecureEdgeTerminationPolicy: None
-    ```
-    ![ocp-web-edit-route](images/ocp-web-console-edit-route.png)
-* Sauvegardez les changements.
-* Retournez aux détails de la route (cliquez sur le bouton "cancel").
-* Vérifiez que l'url pour accéder à l'application a changé pour "https:..." au lieu de "http:..."
-
-    ![ocp-web-route-avec-tls](images/ocp-web-console-route-with-tls.png)
+### Exemples de déploiement
+- Exemple dans la console web (portail Openshift):  [voir](ExperiencePratique.md#expérimentation-avec-la-console-web-dopenshift-documentation-openshift-icihttpsdocsopenshiftcomcontainer-platform48webconsoleodc-about-developer-perspectivehtml)
+- Exemple avec la ligne de commande (oc CLI): [voir](ExperiencePratique.md#expérimentation-avec-linterface-de-commande-en-ligne-dopenshift-oc-cli-documentation-openshift-icihttpsdocsopenshiftcomcontainer-platform48clireferenceopenshiftcligetting-started-clihtml)
