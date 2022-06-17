@@ -16,9 +16,9 @@ Pour permettre le travail sur openshift dans un contexte sécuritaire, l’utili
 **Q: Par où commencer mon expérience sur openshift?**
 
 R: Il y a deux manières de travailler sur OpenShift:
-- La console web : l’interface graphique d’Openshift facilite l’accès et la gestion des ressources d’une manière intuitive. Le portail vous offre la possibilité de commencer de zéro avec une application sample existente ou de déployer une ou plusieurs applications à partir d'une source comme un repertoire github, un fichier Dockerfile, une image registry, etc. Vous trouvez l'option d'accès au portail OpenShift dans notre [Coffre à outils](https://ceai.cqen.ca/coffre-a-outils/index.html)
+- La console web : l’interface graphique d’Openshift facilite l’accès et la gestion des ressources d’une manière intuitive. Le portail vous offre la possibilité de commencer de zéro avec une application sample existente ou de déployer une ou plusieurs applications à partir d'une source comme un répertoire github, un fichier Dockerfile, une image registry, etc. Vous trouvez l'option d'accès au portail OpenShift dans notre [Coffre à outils](https://ceai.cqen.ca/coffre-a-outils/index.html)
 
-- La ligne de commandes avec le Client d'OpenShift (oc cli): Si vous êtes familiarisé à travailler avec bash, alors cette option pourrait vous permettre de gérer les ressources vous même. Pour l'utilisation de oc cli vous devez l'installer localement. [Voir instructions](Openshift/README.md#installation-de-oc-cli)
+- La ligne de commandes avec le Client d'OpenShift (oc cli): Si vous êtes familiarisé à travailler avec bash, alors cette option pourrait vous permettre de gérer les ressources vous même. Pour l'utilisation de oc cli vous devez l'installer localement. [Voir instructions](Readme-HandsOn.md#installation-de-oc-cli)
 
 **Q: Comment je prépare mon application pour la déployer sur openshift?**
 
@@ -26,7 +26,7 @@ R: Idéalement, toute application comme service (SAAS: Software as a Service) qu
 
 <i>Minimalement</i>, l'application doit:
 
-- Exister dans un repertoire de code (github)
+- Exister dans un répertoire de code (github)
   
 <i>Fortement recommandé</i> mais non obligatoire:
 - Être contenneurisé (avoir un Dockerfile)
@@ -40,15 +40,15 @@ R: Oui, Openshift offre plusieurs exemples des applications dans les différents
 **Q: Comment déployer une application existente?**
 
 R: On peut déployer une application à partir de:
-- un repertoire github
-- un fichier Dockerfile dans un repertoire github
+- un répertoire github
+- un fichier Dockerfile dans un répertoire github
 - une image docker dans un image registry
 
 **Q: Comment déployer une solution intégrée sur Openshift? (plusieurs composants)**
 
 R: L'application intégrée doit avoir un fichier de configuration pour le déploiement comme docker-compose ou un ficher yaml. Comme pour une application simple, la source de l'application peut venir de:
-- un repertoire github
-- un fichier docker-compose dans un repertoire github
+- un répertoire github
+- un fichier docker-compose dans un répertoire github
 - une image docker dans un image registry
 
 Voir [ici](../kompose/README.md#openshift) un exemple d'utilisation de kompose pour convertir un fichier docker-compose aux fichiers yaml de création des ressources sur *Openshift*.
@@ -62,5 +62,5 @@ R: Il existe des outils comme [kompose](https://kompose.io/) qui permettent de c
 Voir [ici](../kompose/README.md#kubernetes) un exemple d'utilisation de kompose pour convertir un fichier docker-compose aux fichiers yaml de création des ressources sur *Kubernetes*.
 
 ### Exemples de déploiement
-- Exemple dans la console web (portail Openshift):  [voir](ExperiencePratique.md#expérimentation-avec-la-console-web-dopenshift-documentation-openshift-icihttpsdocsopenshiftcomcontainer-platform48webconsoleodc-about-developer-perspectivehtml)
-- Exemple avec la ligne de commande (oc CLI): [voir](ExperiencePratique.md#expérimentation-avec-linterface-de-commande-en-ligne-dopenshift-oc-cli-documentation-openshift-icihttpsdocsopenshiftcomcontainer-platform48clireferenceopenshiftcligetting-started-clihtml)
+- Exemple dans la console web (portail Openshift):  [voir](Readme-HandsOn.md#expérimentation-avec-la-console-web-dopenshift)
+- Exemple avec la ligne de commande (oc CLI): [voir](Readme-HandsOn.md#expérimentation-avec-linterface-de-commande-en-ligne-dopenshift-oc-cli)

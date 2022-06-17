@@ -10,7 +10,8 @@ Pour plus d’information cliquez [ici](https://www.ionos.fr/digitalguide/serveu
 “*Red Hat OpenShift est une plateforme d’orchestration de conteneurs Open Source pour les entreprises. Il s’agit d’un produit logiciel qui inclut les composants du projet de gestion des conteneurs Kubernetes et y ajoute des fonctions de productivité et de sécurité avancées importantes pour les grandes entreprises.*”
 Pour en savoir plus, cliquez [ici](https://www.redhat.com/fr/topics/containers/red-hat-openshift-kubernetes)
 
-## Expérimentation avec la Console Web d'Openshift (Documentation Openshift [ici](https://docs.openshift.com/container-platform/4.8/web_console/odc-about-developer-perspective.html))
+## Expérimentation avec la Console Web d'Openshift
+(Documentation Openshift [ici](https://docs.openshift.com/container-platform/4.8/web_console/odc-about-developer-perspective.html))
 ### Créer un projet
 Le site du laboratoire, [CEAI](https://ceai.cqen.ca/), vous offre l'option  "Coffre à outils" avec des outils que vous serviront pour travailler comme le "Portail Openshift". 
 
@@ -52,7 +53,8 @@ Vous pouvez cliquer sur le lien de la route pour ouvrir l'application sur le web
 
 Et voilà!, Félicitations! vous avez déployé une application web sur openshift.
 
-## Expérimentation avec l'Interface de Commande en Ligne d'Openshift (OC CLI) (Documentation Openshift [ici](https://docs.openshift.com/container-platform/4.8/cli_reference/openshift_cli/getting-started-cli.html))
+## Expérimentation avec l'Interface de Commande en Ligne d'Openshift (OC CLI) 
+(Documentation Openshift [ici](https://docs.openshift.com/container-platform/4.8/cli_reference/openshift_cli/getting-started-cli.html))
 ### Installation de oc cli
 
 Vous pouvez obtenir le binaire à partir du [lien](https://downloads-openshift-console.apps.dev.openshift.cqen.ca/)
