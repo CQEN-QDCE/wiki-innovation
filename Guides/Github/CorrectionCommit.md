@@ -25,7 +25,7 @@ Comment le faire:
 
 Que vous ayez réussi à révoquer les informations d'identification ou non, passez à l'étape 2 pour atténuer la fuite et en supprimer les preuves.
 
-## **Étape 2 : Nettoyez l'historique de git **
+## **Étape 2 : Nettoyez l'historique de git**
 
 Si, pour une raison quelconque, vous ne pouviez pas révoquer les informations d'identification divulguées, l'action la plus rapide pour supprimer les informations d'identification de la vue de la plupart des attaquants consiste à rendre le répo privé. Bien que vos informations d'identification soient probablement reproduites à un autre endroit sur Internet, c'est déjà un bon moyen de gagner du temps.
 
@@ -48,7 +48,7 @@ Comment le faire:
 - Nous vous recommandons d'utiliser ...
 - Une fois que vous avez corrigé votre historique git, poussez-le vers le serveur distant. Sachez que cela peut arriver qu'il reste un commit orphelin d'une fuite sur GitHub. Vous pouvez contacter le support GitHub pour supprimer définitivement ces données.
 
-## **Étape 3 : Inspectez les logs  **
+## **Étape 3 : Inspectez les logs**
 
 L'inspection de vos logs vous donnera une idée rapide de savoir si les informations d'identification compromises ont été utilisées par un attaquant ou non, et ce qui s'est exactement passé là-bas.
 
@@ -56,7 +56,7 @@ Comment le faire:
 
 - Si le fournisseur concerné est géré par le moteur de détection, vous pouvez consulter la section Vérifier les activités suspectes de la documentation du détecteur concerné. Sinon, le fournisseur d'API donne généralement des informations sur la date à laquelle les informations d'identification ont été utilisées pour la dernière fois dans la page des paramètres. Si les informations d'identification compromises sont des informations d'identification de base de données ou des clés privées, vous pouvez consulter les logs de serveur pertinents.
 
-## À la fin du bout
+## **À la fin du bout**
 
 Félicitations, vous devriez maintenant être couvert.
 
