@@ -5,6 +5,29 @@
 
 # Commandes Git de base pour tout développeur
 
+## Configurez git 
+
+Si vous n'avez jamais utilisé git auparavant, vous avez besoin de faire quelques configurations tout d'abord. 
+
+Exécutez les commandes suivantes, pour que git connaisse votre nom et courriel. 
+
+```sh
+git config --global user.name "Votre nom "
+git config --global user.email "vous@email.com"
+```
+
+Configurez les préférences de fin de ligne: 
+
+```sh 
+# Pour usagers de Mac/Unix
+git config --global core.autocrlf input
+git config --global core.safecrlf true
+
+# Pour usagers de Windows
+git config --global core.autocrlf true
+git config --global core.safecrlf true
+```
+
 ## Git pull 
 Fetch from and integrate with another repository or a local branch.
 
@@ -13,12 +36,12 @@ Git pull permet de récupérer tous les changements sur la branche distant.
 Elle prend en paramètre la branche source et la branche ciblé.
 
 Exemple:
-La commande  `git pull wpk preprod:master`  nous permet de récupérer les changement de la branche `preprod` du remote `wpk` dans la branche `master` du remote `origin`.
+La commande  `git pull wpk preprod:master`  nous permet de récupérer les changements de la branche `preprod` du remote `wpk` dans la branche `master` du remote `origin`.
 
 ## Git fetch
 Download objects and refs from another repository.
 
-Récuperer les dernières informations du serveur git 
+Récupérer les dernières informations du serveur git 
 
 ```bash
 $ git fetch <nom-du-remote>
@@ -27,7 +50,7 @@ $ git fetch <nom-du-remote>
 Git fetch permet de rechercher et afficher les changements sur un remote passé en argument, qui ne sont pas présent en local, sans aucun transfert de fichiers.
 
 Exemple: 
-La commande  `git fetch wpk`  permet de chercher les nouveaux changement sur le remote `wpk` qui ne sont pas présent en `local`.
+La commande  `git fetch wpk`  permet de chercher les nouveaux changements sur le remote `wpk` qui ne sont pas présents en `local`.
 
 ## Git rebase 
 Reapply commits on top of another base tip.
@@ -35,7 +58,7 @@ Reapply commits on top of another base tip.
 Git rebase permet de transférer les changements d’une branche à une autre, elle prend en argument la branche avec laquelle nous voulons rebaser.
 
 Exemple:
-La commande  `git rebase -i wpk/preprod`  permet de rebaser les commits de notre branche courant avec la branche `preprod` de remote `wpk`.
+La commande  `git rebase -i wpk/preprod`  permet de rebaser les commits de notre branche courante avec la branche `preprod` de remote `wpk`.
 
 ## Git checkout 
 Switch branches or restore working tree files.
@@ -63,7 +86,7 @@ Git add permet d’ajouter les changements que nous avons fait dans nos fichiers
 Exemples:
 ```sh
  git add .     # permet d’ajouter tous les changements que nous avons fait
- git add -u    # permet d’ajouter les modifications sur les fichier déjà connus par git (les nouveaux fichiers ne seront pas ajoutés)
+ git add -u    # permet d’ajouter les modifications sur les fichiers déjà connus par git (les nouveaux fichiers ne seront pas ajoutés)
 ```
 
 ## Git commit 
@@ -80,7 +103,7 @@ $ git commit –amend                    # permet de commiter les nouveaux chang
 ## Git reset 
 Reset current HEAD to the specified state.
 
-Git reset permet de supprimer tous les changements que nous avons fait sur la branche courante.
+Git reset permet de supprimer tous les changements que nous avons faits sur la branche courante.
 
 Exemples:
 ```sh 
@@ -95,7 +118,7 @@ Git push permet d’envoyer les modifications sur un remote.
 
 Exemples:
 ```sh
-$ git push origin branch-A    # permet d’envoyer les modifications que nous avons fait sur la branche branch-A vers notre repos origin.
+$ git push origin branch-A    # permet d’envoyer les modifications que nous avons faites sur la branche branch-A vers notre repos origin.
 ```
 
 ## Git status 
@@ -133,10 +156,10 @@ $ git branch -r
 Création d'une nouvelle branche 
 
 ```bash 
-$ git branch <nom nouvelle branche>
+$ git branch <nom de la nouvelle branche>
 ```
 
-Renomer une branche 
+Renommer une branche 
 
 ```bash 
 $ git branch -m <nom actuel> <nouveau nom de la branche>
@@ -161,13 +184,13 @@ Ensuite, lors de vos commits, utilisez la flag `-s` ou `--signoff` pour signer v
 $ git commit -m "[tag] votre message" --signoff
 ```
 
-## Création d'un repositoire github 
+## Création d'un répositoire github 
 
-- Crééz un répertoire pour le projet 
+- Créez un répertoire pour le projet 
 - Allez au nouveau répertoire 
-- Saisisez `git init` 
+- Saisissez `git init` 
 - Écrivez du code 
-- Saisisez `git add` pour ajouter du code au projet 
+- Saisissez `git add` pour ajouter du code au projet 
 - Saisissez `git commit` pour faire un commit à votre repo local. 
 
 - Allez à github 
@@ -184,7 +207,7 @@ $ git push -u origin master
 
 ## Corriger une branche qui est derrière la branche master 
 
-Admetons que maintenait vous êtes dans votre branche `maBranche`. 
+Admettons que maintenait vous êtes dans votre branche `maBranche`. 
 
 Faites le suivant: 
 
@@ -211,7 +234,7 @@ $ git add .
 $ git commit -m"resolved conflicts message"
 ```
 
-Ensuite poussez les changements: 
+Ensuite, poussez les changements: 
 
 ```
 $ git push origin maBranche
