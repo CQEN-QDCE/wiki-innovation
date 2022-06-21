@@ -1,3 +1,14 @@
+<!-- ENTETE -->
+[![img](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://www.quebec.ca/gouv/politiques-orientations/vitrine-numeriqc/accompagnement-des-organismes-publics/demarche-conception-services-numeriques)
+[![License](https://img.shields.io/badge/Licence-LiLiQ--R-blue)](LICENSE_FR)
+
+---
+
+<div>
+    <img src="./images/mcn.png">
+</div>
+<!-- FIN ENTETE -->
+
 # Procédure pour correction de commit
 
 Si vous vous retrouvez sur cette page, il est probable que vous ayez reçu une alerte de notre service d'alerte pro bono. Ne vous inquiétez pas, les fuites se produisent parfois... même pour les meilleurs d'entre nous... Cette section fournit un guide étape par étape sur la façon de remédier à une fuite qui s'est produite sur un GitHub public.
@@ -61,3 +72,9 @@ Comment le faire:
 Félicitations, vous devriez maintenant être couvert.
 
 Restez vigilant et surveillez votre code et votre historique pour vérifier que vous n'avez pas d'autres secrets enfouis dans votre code.
+
+
+
+## Références
+
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository
