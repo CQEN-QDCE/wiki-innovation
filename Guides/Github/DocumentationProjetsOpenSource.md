@@ -11,6 +11,40 @@
 
 # Documentation des projets `Open Source`
 
+# Contribution  
+
+Vous pouvez créer des lignes directrices pour communiquer comment les gens devraient contribuer à votre projet.
+
+Pour aider les contributeurs de votre projet à faire du bon travail, vous pouvez ajouter un fichier avec des directives de contribution à la racine, au dossier `docs` ou au dossier `.github` de votre répo de projet. 
+
+Lorsqu'une personne ouvre un `pull request` ou crée un `issue`, elle voit un lien vers ce fichier. Le lien vers les directives de contribution apparaît également sur la page de contribution de votre répo. Pour un exemple de page de contribution, voir [github/docs/contribute (en)][contribute].
+
+Pour le **propriétaire du répo**, les directives de contribution sont un moyen de communiquer comment les gens doivent contribuer.
+
+Pour les **contributeurs**, les directives les aident à vérifier qu'ils soumettent des `pull requests` bien formées et ouvrent des `issues` utiles.
+
+Pour les **propriétaires et les contributeurs**, les directives de contribution permettent d'économiser du temps et des tracas causés par des `pull request` mal créées ou des `issues` qui doivent être rejetés et resoumis.
+
+Vous pouvez créer des directives de contribution par défaut pour votre organisation ou votre compte personnel. Pour plus d'informations, consultez ["Création d'un dossier de santé communautaire par défaut (en)"][health].
+
+Conseil : les responsables du répo peuvent définir des directives spécifiques pour les `issues` en créant un modèle d'`issue` ou de `pull request` pour le répo. Pour plus d'informations, consultez ["À propos des modèles de demande d'incident et de pull request (en)"][modele-pr]. 
+
+## Définir des directives pour les contributeurs du répo
+
+Rendez-vous sur la page ["Définir des lignes directrices pour les contributeurs du répo (en)"][contrib] pour instructions comment lier le fichier `CONTRIBUTING.md` à votre projet.
+
+## Exemple de fichier `CONTRIBUTING.md` 
+
+Voici un exemple de fichier [`CONTRIBUTING.md`][contributing.md], tiré et adapté de `github.com/remarkjs/.github/blob/main/contributing.md`
+
+
+## Références 
+
+
+
+
+<!-- Définitions -->
+
 
 # Soutien 
 
@@ -28,7 +62,7 @@ Rendez-vous sur la page ["Ajouter des ressources de support à votre projet (en)
 
 ## Exemple de fichier `SUPPORT.md` 
 
-Voici un exemple de fichier [`SUPPORT.md`][support.md], tiré et adapté de https://github.com/remarkjs/.github/blob/main/support.md
+Voici un exemple de fichier [`SUPPORT.md`][support.md], tiré et adapté de `github.com/remarkjs/.github/blob/main/support.md`.
 
 # Sécurité 
 
@@ -58,14 +92,19 @@ Rendez-vous sur la page ["Ajouter une politique de sécurité à votre projet (e
 
 ## Exemple de fichier `SECURITY.md` 
 
-Voici un exemple de fichier [`SECURITY.md`][securite.md], tiré et adapté de https://raw.githubusercontent.com/atomist/samples/master/SECURITY.md
+Voici un exemple de fichier [`SECURITY.md`][securite.md], tiré et adapté de `raw.githubusercontent.com/atomist/samples/master/SECURITY.md`.
 
 # Références 
 
 
 ## Général 
-https://opensource.guide/fr 
+[Open Source Guides](https://opensource.guide/fr )
 
+## Contribution 
+
+[Contributing and Code of Conduct (en)](https://gist.github.com/PurpleBooth/b24679402957c63ec426)
+
+[Great contributing (en)](https://github.com/remarkjs/.github/blob/main/contributing.md)
 ## Soutien 
 
 https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-support-resources-to-your-project
@@ -82,6 +121,10 @@ https://github.com/Trewaters/security-README
 <!-- Definitions -->
 
 [health]: https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file
+[contribute]: https://github.com/github/docs/contribute
+[modele-pr]: https://docs.github.com/en/articles/about-issue-and-pull-request-templates
+[contributing.md]: ./docs/CONTRIBUTING.md
+[contrib]: https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors
 [securite]: https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository
 [securite.md]: ./docs/SECURITY.md
 [support]: https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-support-resources-to-your-project
