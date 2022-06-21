@@ -11,6 +11,9 @@
 
 # Documentation des projets `Open Source`
 
+> **Remarque** : avant de participer à notre communauté, veuillez lire notre [code de conduite][cc].
+> En interagissant avec ce répo, cette organisation ou cette communauté, vous acceptez de respecter ses conditions.
+
 # Contribution  
 
 Vous pouvez créer des lignes directrices pour communiquer comment les gens devraient contribuer à votre projet.
@@ -98,7 +101,7 @@ Voici un exemple de fichier [`SECURITY.md`][securite.md], tiré et adapté de `r
 
 
 ## Général 
-[Open Source Guides](https://opensource.guide/fr )
+[Open Source Guides](https://opensource.guide/fr)
 
 ## Contribution 
 
@@ -119,7 +122,7 @@ https://github.com/Trewaters/security-README
 
 
 <!-- Definitions -->
-
+[cc]: ./docs/CODE_OF_CONDUCT.md
 [health]: https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file
 [contribute]: https://github.com/github/docs/contribute
 [modele-pr]: https://docs.github.com/en/articles/about-issue-and-pull-request-templates
