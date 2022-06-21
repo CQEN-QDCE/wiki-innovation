@@ -73,7 +73,7 @@ Vous pouvez fusionner le `pull request` une fois que vous avez l'approbation de 
 * N'incluez pas les modifications non liées à votre `issue` ou `pull request`;
 * Testez avant de soumettre le code en exécutant `npm test`;
 * Mettez à jour le fichier `README.md` avec les détails des modifications apportées à l'interface, notamment les nouvelles variables d'environnement, les ports exposés, les emplacements de fichiers utiles et les paramètres de conteneur;
-* Augmentez les numéros de version dans tous les fichiers d'exemple et le fichier README.md à la nouvelle version que ce `pull request` représenterait. Le schéma de version que nous utilisons est [SemVer](http://semver.org/);
+* Augmentez les numéros de version dans tous les fichiers d'exemple et le fichier README.md à la nouvelle version que ce `pull request` représenterait. Le schéma de version que nous utilisons est [SemVer][semver];
 * Rédigez une description convaincante de la raison pour laquelle nous devrions recevoir votre `pull request` : c'est à vous de nous convaincre. 
 
 ## Références
@@ -93,6 +93,8 @@ Vous pouvez fusionner le `pull request` une fois que vous avez l'approbation de 
 [support]: support.md
 
 [collective]: https://opencollective.com/unified
+
+[semver]: https://semver.org/lang/fr/spec/v2.0.0.html
 
 --- 
 (Exemple tiré et adapté de https://github.com/remarkjs/.github/blob/main/contributing.md)
