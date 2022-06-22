@@ -14,6 +14,30 @@
 > **Remarque** : avant de participer à notre communauté, veuillez lire notre [code de conduite][cc].
 > En interagissant avec ce répo, cette organisation ou cette communauté, vous acceptez de respecter ses conditions.
 
+# Code de Conduite 
+
+
+Adoptez un code de conduite pour définir les normes communautaires, signaler un projet accueillant et inclusif et définir des procédures pour gérer les abus.
+
+Un code de conduite définit des normes sur la façon de s'engager dans une communauté. Il signale un environnement inclusif qui respecte toutes les contributions. Il décrit également les procédures pour résoudre les problèmes entre les membres de la communauté de votre projet. Pour plus d'informations sur les raisons pour lesquelles un code de conduite définit des normes et des attentes sur la façon de s'engager dans une communauté, consultez le Guide Open Source.
+
+Avant d'adopter un code de conduite pour votre projet :
+
+* Recherchez différents codes de conduite conçus pour les projets open source. Choisissez-en un qui reflète les normes de votre communauté.
+* Réfléchissez bien si vous êtes disposé et capable de l'appliquer.
+
+Vous pouvez ajouter un code de conduite à votre projet en utilisant un modèle ou en créant manuellement un code de conduite personnalisé. Votre code de conduite sera disponible dans les deux sens, mais "Code de conduite" ne sera marqué comme complet dans le profil de la communauté de votre référentiel que si vous utilisez un modèle. Si vous utilisez un code de conduite rédigé par une autre personne ou organisation, assurez-vous de suivre les directives d'attribution de la source. Pour plus d'informations sur les profils de communauté, voir « À propos des profils de communauté pour les référentiels publics ».
+
+Vous pouvez créer un code de conduite par défaut pour votre organisation ou votre compte personnel. Pour plus d'informations, consultez "Création d'un dossier de santé communautaire par défaut".
+
+## Définir le code de conduite pour la communauté
+
+Rendez-vous sur la page ["Ajouter un code de conduite à votre projet (en)"][code-of-conduct] pour instructions comment lier le fichier `CODE_OF_CONDUCT.md` à votre projet.
+
+## Exemple de fichier `CODE_OF_CONDUCT.md` 
+
+Voici un exemple de fichier [`CODE_OF_CONDUCT.md`][cc], tiré et adapté de `github.com/remarkjs/.github/blob/main/code-of-conduct.md`. 
+
 # Contribution  
 
 Vous pouvez créer des lignes directrices pour communiquer comment les gens devraient contribuer à votre projet.
@@ -39,14 +63,6 @@ Rendez-vous sur la page ["Définir des lignes directrices pour les contributeurs
 ## Exemple de fichier `CONTRIBUTING.md` 
 
 Voici un exemple de fichier [`CONTRIBUTING.md`][contributing.md], tiré et adapté de `github.com/remarkjs/.github/blob/main/contributing.md`
-
-
-## Références 
-
-
-
-
-<!-- Définitions -->
 
 
 # Soutien 
@@ -99,7 +115,6 @@ Voici un exemple de fichier [`SECURITY.md`][securite.md], tiré et adapté de `r
 
 # Références 
 
-
 ## Général 
 [Open Source Guides](https://opensource.guide/fr)
 
@@ -122,6 +137,7 @@ https://github.com/Trewaters/security-README
 
 
 <!-- Definitions -->
+[code-of-conduct]: https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project
 [cc]: ./docs/CODE_OF_CONDUCT.md
 [health]: https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file
 [contribute]: https://github.com/github/docs/contribute
