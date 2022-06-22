@@ -19,7 +19,7 @@
 
 Adoptez un code de conduite pour définir les normes communautaires, signaler un projet accueillant et inclusif et définir des procédures pour gérer les abus.
 
-Un code de conduite définit des normes sur la façon de s'engager dans une communauté. Il signale un environnement inclusif qui respecte toutes les contributions. Il décrit également les procédures pour résoudre les problèmes entre les membres de la communauté de votre projet. Pour plus d'informations sur les raisons pour lesquelles un code de conduite définit des normes et des attentes sur la façon de s'engager dans une communauté, consultez le Guide Open Source.
+Un code de conduite définit des normes sur la façon de s'engager dans une communauté. Il signale un environnement inclusif qui respecte toutes les contributions. Il décrit également les procédures pour résoudre les problèmes entre les membres de la communauté de votre projet. Pour plus d'informations sur les raisons pour lesquelles un code de conduite définit des normes et des attentes sur la façon de s'engager dans une communauté, consultez le [Guide Open Source][opensource].
 
 Avant d'adopter un code de conduite pour votre projet :
 
@@ -116,7 +116,7 @@ Voici un exemple de fichier [`SECURITY.md`][securite.md], tiré et adapté de `r
 # Références 
 
 ## Général 
-[Open Source Guides](https://opensource.guide/fr)
+[Open Source Guides][opensource]
 
 ## Contribution 
 
@@ -137,6 +137,7 @@ https://github.com/Trewaters/security-README
 
 
 <!-- Definitions -->
+[opensource]: https://opensource.guide/fr
 [code-of-conduct]: https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project
 [cc]: ./docs/CODE_OF_CONDUCT.md
 [health]: https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file
