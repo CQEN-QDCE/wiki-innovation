@@ -40,6 +40,13 @@ https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-f
 
 Voici un exemple de gabatit de fichier [`README.md`][readme]. Utilisez-le et adaptez-le selon les préférences et besoins de votre projet. 
 
+# Licence 
+
+Le gouvernement du Québec a développé au cours de l’année 2015 une licence adaptée aux besoins exprimés par ses divers organismes: la Licence Libre du Québec (LiLiQ). Cette licence se présente en trois déclinaisons avec des clauses plus ou moins restrictives selon les besoins. La licence a été soumise à l’organisme Open Source Initiative pour validation et elle a été approuvée en janvier 2016.
+
+Il est à priviligier l'adoption d'une déclinaison de la Licence Libre du Québec dans les projets Open Source développés dans le Laboratoire. 
+
+Pour plus d'informations, référez-vous à la page [Licence libres du Québec (LiLiQ)](https://forge.gouv.qc.ca/licence/) dans la Forge Gouvernementale. 
 
 # Code de Conduite 
 
