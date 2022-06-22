@@ -32,7 +32,9 @@ Si vous placez votre fichier README dans le répertoire caché .github, root ou 
 
 Si un répo contient plusieurs fichiers README, le fichier affiché est choisi parmi les emplacements dans l'ordre suivant : le répertoire .github, puis le répertoire racine du répo et enfin le répertoire docs.
 
-Pour plus d'informations, rendez-vous sur Github : https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes (en)
+Pour plus d'informations, rendez-vous sur Github : 
+
+https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes (en)
 
 ## Exemple de fichier `README.md`
 
