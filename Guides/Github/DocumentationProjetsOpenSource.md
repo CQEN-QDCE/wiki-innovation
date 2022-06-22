@@ -38,7 +38,7 @@ https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-f
 
 ## Exemple de fichier `README.md`
 
-Voici un exemple de fichier [`README.md`][readme]. Utilisez-le et adaptez-le selon les préférences et besoins de votre projet. 
+Voici un exemple de gabatit de fichier [`README.md`][readme]. Utilisez-le et adaptez-le selon les préférences et besoins de votre projet. 
 
 
 # Code de Conduite 
