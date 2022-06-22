@@ -82,3 +82,10 @@ https://docs.github.com/en/actions/security-guides/security-hardening-for-github
 https://docs.github.com/en/actions/security-guides/encrypted-secrets
 
 https://docs.github.com/en/actions/security-guides/automatic-token-authentication
+
+
+# Intégration avec Taïga 
+
+Il est possible de faire l'intégration entre Github et Taïga, de façon que lorsque certains évenements choisis se passent, github déclenche un webhook qu'ira créer un issue équivalent dans Taïga, bien comme ajouter des commentaires à l'issue connectés dans Taïga lorsqu'ils sont crées dans Github. 
+
+Référez-vous à la page https://docs.taiga.io/integrations-github.html pour détails de la configuration dans Taïga. 
