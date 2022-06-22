@@ -14,6 +14,31 @@
 > **Remarque** : avant de participer à notre communauté, veuillez lire notre [code de conduite][cc].
 > En interagissant avec ce répo, cette organisation ou cette communauté, vous acceptez de respecter ses conditions.
 
+# À propos des fichiers README
+
+Vous pouvez ajouter un fichier README à votre répo pour dire aux autres personnes pourquoi votre projet est utile, ce qu'ils peuvent faire avec votre projet et comment ils peuvent l'utiliser.
+
+Utilisez le fichier README d'un répo pour communiquer des informations importantes sur votre projet. Un fichier README, ainsi qu'une licence de répo, des directives de contribution et un code de conduite, communique les attentes pour votre projet et vous aide à gérer les contributions.
+
+Un fichier README est souvent le premier élément qu'un visiteur verra lorsqu'il visitera votre répo. Les fichiers README contiennent généralement des informations sur :
+
+* Que fait le projet;
+* Pourquoi le projet est utile;
+* Comment les utilisateurs peuvent démarrer avec le projet;
+* Où les utilisateurs peuvent obtenir de l'aide pour votre projet;
+* Qui maintient et contribue au projet.
+
+Si vous placez votre fichier README dans le répertoire caché .github, root ou docs de votre répo, GitHub reconnaîtra et présentera automatiquement votre README aux visiteurs du répo.
+
+Si un répo contient plusieurs fichiers README, le fichier affiché est choisi parmi les emplacements dans l'ordre suivant : le répertoire .github, puis le répertoire racine du répo et enfin le répertoire docs.
+
+Pour plus d'informations, rendez-vous sur Github : https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes (en)
+
+## Exemple de fichier `README.md`
+
+Voici un exemple de fichier [`README.md`][readme]. Utilisez-le et adaptez-le selon les préférences et besoins de votre projet. 
+
+
 # Code de Conduite 
 
 
@@ -137,6 +162,7 @@ https://github.com/Trewaters/security-README
 
 
 <!-- Definitions -->
+[readme]: ./docs/README.md
 [opensource]: https://opensource.guide/fr
 [code-of-conduct]: https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project
 [cc]: ./docs/CODE_OF_CONDUCT.md
