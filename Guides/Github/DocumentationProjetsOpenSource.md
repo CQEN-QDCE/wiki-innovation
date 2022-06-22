@@ -152,6 +152,8 @@ Voici un exemple de fichier [`SECURITY.md`][securite.md], tiré et adapté de `r
 ## Général 
 [Open Source Guides][opensource]
 
+[Foundation for Public Code][ffpc]
+
 ## Contribution 
 
 [Contributing and Code of Conduct (en)](https://gist.github.com/PurpleBooth/b24679402957c63ec426)
@@ -173,6 +175,7 @@ https://github.com/Trewaters/security-README
 <!-- Definitions -->
 [readme]: ./docs/README.md
 [opensource]: https://opensource.guide/fr
+[ffpc]: https://standard.publiccode.net/
 [code-of-conduct]: https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project
 [cc]: ./docs/CODE_OF_CONDUCT.md
 [health]: https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file
