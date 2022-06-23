@@ -2,64 +2,14 @@
 
 Dans le cadre d'offrir et faciliter un environnement intégré prêt pour les expérimentations des utilisateurs, l'équipe du Centre d’Expertise Appliquée en Innovation (CEAI), a sélectionné Openshift comme l'outil adéquat de travail.
 
-Openshift permet de déployer et gérer les applications d'une manière très flexible, sans exiger aux utilisateurs une connaissance quelconque en DevOps ou en infrastructure:
-
-*"OpenShift est une Plateforme-en-tant-que-service qui permet une orchestration de conteneur facile et constante en réduisant les efforts à fournir pour déployer une plateforme Kubernetes."* (Plus des détails [ici](https://www.cloudops.com/fr/blog/la-valeur-dopenshift-pour-la-transformation-des-logiciels-dentreprise/))
+Openshift permet de déployer et gérer les applications d'une manière très flexible dans un contexte conteneurisé, sans exiger aux utilisateurs une grande connaissance en DevOps ou en infrastructure.
 
 ### Contraintes de sécurité
-Pour permettre le travail sur openshift dans un contexte sécuritaire, l’utilisateur devra demander l’accès aux administrateurs du laboratoire du CQEN.
+Pour permettre le travail sur openshift dans un contexte sécuritaire, l’utilisateur devra demander la création d'un compte usager du CEAI, aux administrateurs du laboratoire du CQEN.
 
-### Questions - Réponses
+Le compte crée aura accès au(x) laboratoire(s) qui contiendront des projets Openshift.
 
-#### Avant de commencer mes travaux d'expérimentation
-
-**Q: Par où commencer mon expérience sur openshift?**
-
-R: Il y a deux manières de travailler sur OpenShift:
-- La console web : l’interface graphique d’Openshift facilite l’accès et la gestion des ressources d’une manière intuitive. Le portail vous offre la possibilité de commencer de zéro avec une application sample existente ou de déployer une ou plusieurs applications à partir d'une source comme un répertoire github, un fichier Dockerfile, une image registry, etc. Vous trouvez l'option d'accès au portail OpenShift dans notre [Coffre à outils](https://ceai.cqen.ca/coffre-a-outils/index.html)
-
-- La ligne de commandes avec le Client d'OpenShift (oc cli): Si vous êtes familiarisé à travailler avec bash, alors cette option pourrait vous permettre de gérer les ressources vous même. Pour l'utilisation de oc cli vous devez l'installer localement. [Voir instructions](Readme-HandsOn.md#installation-de-oc-cli)
-
-**Q: Comment je prépare mon application pour la déployer sur openshift?**
-
-R: Idéalement, toute application comme service (SAAS: Software as a Service) qui sera deployé dans un contexte infonuagique devrait suivre la méthodologie des [12 facteurs](https://www.cncf.io/blog/2022/04/28/twelve-factor-app-anno-2022/)
-
-<i>Minimalement</i>, l'application doit:
-
-- Exister dans un répertoire de code (github)
-  
-<i>Fortement recommandé</i> mais non obligatoire:
-- Être contenneurisé (avoir un Dockerfile)
-
-#### Déploiement des composants sur openshift
-
-**Q: Je n'ai pas une application pour déployer, est-ce que je peux trouver des applications exemple?**
-
-R: Oui, Openshift offre plusieurs exemples des applications dans les différents langages de programmation (nodejs, python, java, .net, etc) que vous pouvez choisir.
-
-**Q: Comment déployer une application existente?**
-
-R: On peut déployer une application à partir de:
-- un répertoire github
-- un fichier Dockerfile dans un répertoire github
-- une image docker dans un image registry
-
-**Q: Comment déployer une solution intégrée sur Openshift? (plusieurs composants)**
-
-R: L'application intégrée doit avoir un fichier de configuration pour le déploiement comme docker-compose ou un ficher yaml. Comme pour une application simple, la source de l'application peut venir de:
-- un répertoire github
-- un fichier docker-compose dans un répertoire github
-- une image docker dans un image registry
-
-Voir [ici](../kompose/README.md#openshift) un exemple d'utilisation de kompose pour convertir un fichier docker-compose aux fichiers yaml de création des ressources sur *Openshift*.
-
-#### Après mon expérimentation
-
-**Q: Est-ce que je pourrais migrer mon projet sur OpenShift vers un fournisseur infonuagique?**
-
-R: Il existe des outils comme [kompose](https://kompose.io/) qui permettent de convertir un fichier docker-compose.yaml vers plusieurs fichiers yaml pour la création des ressources sur kubernetes ou sur OpenShift.
-
-Voir [ici](../kompose/README.md#kubernetes) un exemple d'utilisation de kompose pour convertir un fichier docker-compose aux fichiers yaml de création des ressources sur *Kubernetes*.
+### [Questions - Réponses](Readme-FAQ.md#questions---réponses)
 
 ### Exemples de déploiement
 - Exemple dans la console web (portail Openshift):  [voir](Readme-HandsOn.md#expérimentation-avec-la-console-web-dopenshift)
