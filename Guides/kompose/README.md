@@ -109,15 +109,15 @@ kompose --provider openshift --file docker-compose.yaml convert
 ```
 Vous allez voir un output comme:
 ```bash
-INFO OpenShift file "frontend-tcp-service.yaml" created 
-INFO OpenShift file "redis-master-service.yaml" created 
-INFO OpenShift file "redis-slave-service.yaml" created 
-INFO OpenShift file "frontend-deploymentconfig.yaml" created 
-INFO OpenShift file "frontend-imagestream.yaml" created 
-INFO OpenShift file "redis-master-deploymentconfig.yaml" created 
-INFO OpenShift file "redis-master-imagestream.yaml" created 
-INFO OpenShift file "redis-slave-deploymentconfig.yaml" created 
-INFO OpenShift file "redis-slave-imagestream.yaml" created 
+INFO Openshift file "frontend-tcp-service.yaml" created 
+INFO Openshift file "redis-master-service.yaml" created 
+INFO Openshift file "redis-slave-service.yaml" created 
+INFO Openshift file "frontend-deploymentconfig.yaml" created 
+INFO Openshift file "frontend-imagestream.yaml" created 
+INFO Openshift file "redis-master-deploymentconfig.yaml" created 
+INFO Openshift file "redis-master-imagestream.yaml" created 
+INFO Openshift file "redis-slave-deploymentconfig.yaml" created 
+INFO Openshift file "redis-slave-imagestream.yaml" created 
 ```
 
 On constate que:

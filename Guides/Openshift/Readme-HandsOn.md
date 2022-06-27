@@ -1,17 +1,7 @@
 # Redhat Openshift
 
-## Openshift: qu’est-ce que c’est?
-
-“*OpenShift constitue une plateforme d’application basée sur Kubernetes. Ce logiciel est utilisé pour construire des environnements d’application et de développement décentralisés et capables de mettre à l’échelle.
-...
-Ce logiciel permet une gestion complète du cycle de vie de l’application, y compris le développement, le déploiement, le pilotage et la maintenance. Plus de 2 000 entreprises à travers le monde s’appuient sur OpenShift pour héberger leurs applications dans des environnements Cloud hybrides.*”
-Pour plus d’information cliquez [ici](https://www.ionos.fr/digitalguide/serveur/know-how/openshift-quest-ce-que-cest/)
-
-“*Red Hat OpenShift est une plateforme d’orchestration de conteneurs Open Source pour les entreprises. Il s’agit d’un produit logiciel qui inclut les composants du projet de gestion des conteneurs Kubernetes et y ajoute des fonctions de productivité et de sécurité avancées importantes pour les grandes entreprises.*”
-Pour en savoir plus, cliquez [ici](https://www.redhat.com/fr/topics/containers/red-hat-openshift-kubernetes)
-
 ## Expérimentation avec la Console Web d'Openshift
-(Documentation Openshift [ici](https://docs.openshift.com/container-platform/4.8/web_console/odc-about-developer-perspective.html))
+(Documentation Openshift [ici](https://docs.openshift.com/container-platform/4.10/web_console/odc-about-developer-perspective.html))
 ### Créer un projet
 Le site du laboratoire, [CEAI](https://ceai.cqen.ca/), vous offre l'option  "Coffre à outils" avec des outils que vous serviront pour travailler comme le "Portail Openshift". 
 
@@ -141,10 +131,10 @@ Vous verrez un output similaire:
 - Suggestions (aide)
     ```bash
     oc help
-    OpenShift Client
+    Openshift Client
 
     This client helps you develop, build, deploy, and run your applications on any
-    OpenShift or Kubernetes cluster. It also includes the administrative commands for managing a cluster under the 'adm' subcommand.
+    Openshift or Kubernetes cluster. It also includes the administrative commands for managing a cluster under the 'adm' subcommand.
 
     Usage:
     oc [flags]

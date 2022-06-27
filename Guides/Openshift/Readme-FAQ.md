@@ -4,18 +4,18 @@
 
 **Q: Par où commencer mon expérience sur openshift?**
 
-R: Il y a deux manières de travailler sur OpenShift:
+R: Il y a deux manières de travailler sur Openshift:
 - La console web : l’interface graphique d’Openshift facilite l’accès et la gestion des ressources d’une manière intuitive. Le portail vous offre la possibilité de commencer de zéro avec une application exemple ou de déployer une ou plusieurs applications à partir d'une source comme un répertoire github, un fichier Dockerfile, un registre d'images, etc. Vous trouvez l'option d'accès au portail Openshift dans notre [Coffre à outils](https://ceai.cqen.ca/coffre-a-outils/index.html).
 Pour accèder au portail:
     - Cliquez sur l'option "Portail Openshift" 
     - Sélectionnez l'option de "Log in with" CEAI
     - Completez vos idéntifiants pour vous connecter au portail.
 
-- La ligne de commandes avec le Client d'OpenShift (oc cli): Si vous êtes familiarisé à travailler avec bash, alors cette option pourrait vous permettre de gérer les ressources vous même. Pour l'utilisation de oc cli vous devez l'installer localement. [Voir instructions](Readme-HandsOn.md#installation-de-oc-cli)
+- La ligne de commandes avec le Client d'Openshift (oc cli): Si vous êtes familiarisé à travailler avec bash, alors cette option pourrait vous permettre de gérer les ressources vous même. Pour l'utilisation de oc cli vous devez l'installer localement. [Voir instructions](Readme-HandsOn.md#installation-de-oc-cli)
 
 **Q: Comment je prépare mon application pour la déployer sur openshift?**
 
-R: Idéalement, toute application comme service (SAAS: Software as a Service) qui sera deployé dans un contexte infonuagique devrait suivre la méthodologie des [12 facteurs](https://12factor.net/)
+R: Idéalement, toute application comme service (SAAS: Software as a Service) qui sera deployée dans un contexte infonuagique devrait suivre la méthodologie des [12 facteurs](https://12factor.net/)
 
 <i>Minimalement</i>, l'application doit:
 
@@ -28,29 +28,43 @@ R: Idéalement, toute application comme service (SAAS: Software as a Service) qu
 
 **Q: Je n'ai pas une application pour déployer, est-ce que je peux trouver des applications exemple?**
 
-R: Oui, Openshift offre plusieurs exemples des applications dans les différents langages de programmation (nodejs, python, java, .net, etc) que vous pouvez choisir.
-Au moment d'ajouter ("+Add") une application, component ou service, vous avez l'option de les créer à partir des exemples Vous pouvez voir les différents exemples avec l'option "+Add" -> 
+R: Oui, Openshift offre plusieurs exemples d'applications dans les différents langages de programmation (nodejs, python, java, .net, etc), que vous pouvez choisir au moment de la création des applications, components ou services.
+
+Dans la console web, perspective de développeur, vous chosissez l'option "+Add" pour commencer avec des resources existents ("Getting started resources"). Vous trouvez deux options:
+- Créer des applications à partir des examples ("Create applications using samples -> View all samples")
+- Documentation pour vous guider, étape par étape, à construir des applications et vous familiariser avec les characteristics principales. ("Build with guided documentation -> View all quick starts")
+
+![ocp-web-getting-started-resources](images/ocp-web-console-add-started-resource.png)
 
 **Q: Comment déployer une application existente?**
 
-R: On peut déployer une application à partir de:
+R: On peut déployer une application à partir d'une source comme:
 - un répertoire github
 - un fichier Dockerfile dans un répertoire github
 - une image docker dans un image registry
+- autres.
+
+![ocp-web-add-resource-from-source](images/ocp-web-console-add-resrouce-from-source.png)
+
+Allez [ici](README.md#exemples-de-déploiement) pour voir des exemples de déploiement.
 
 **Q: Comment déployer une solution intégrée sur Openshift? (plusieurs composants)**
 
-R: L'application intégrée doit avoir un fichier de configuration pour le déploiement comme docker-compose ou un ficher yaml. Comme pour une application simple, la source de l'application peut venir de:
-- un répertoire github
-- un fichier docker-compose dans un répertoire github
-- une image docker dans un image registry
+R: L'application intégrée doit avoir un fichier de configuration pour le déploiement comme par exemple un ficher [yaml](https://yaml.org/). 
+
+Le développeur a l'option de déployer les composantes manuellement ou en utilisant le catalogue du développeur de la console web, qui facilite la sélection de templates des solutions integrées comme:
+- CakePHP + MySQL
+- Node.js + PostgreSQL
+- Autres.
+
+![ocp-web-dev-catalog-php-mysql](images/ocp-web-console-dev-catalog-php.png)
+
+![ocp-web-dev-catalog-nodejs-postgreSQL](images/ocp-web-console-dev-catalog-nodejs.png)
+
+
+**Q: Est-il possible de déployer une solution intégrée avec un fichier docker-compose?**
+
+Non. On ne peut pas déployer directement une solution intégrée avec un fichier docker-compose dans Openshift.
+Mais, il existe des outils comme *kompose* qui permettent de "traduire" un fichier docker-compose dans plusieurs fichiers yaml de déploiement pour chacune des composantes.
 
 Voir [ici](../kompose/README.md#openshift) un exemple d'utilisation de kompose pour convertir un fichier docker-compose aux fichiers yaml de création des ressources sur *Openshift*.
-
-#### Après mon expérimentation
-
-**Q: Est-ce que je pourrais migrer mon projet sur OpenShift vers un fournisseur infonuagique?**
-
-R: Il existe des outils comme [kompose](https://kompose.io/) qui permettent de convertir un fichier docker-compose.yaml vers plusieurs fichiers yaml pour la création des ressources sur kubernetes ou sur OpenShift.
-
-Voir [ici](../kompose/README.md#kubernetes) un exemple d'utilisation de kompose pour convertir un fichier docker-compose aux fichiers yaml de création des ressources sur *Kubernetes*.
