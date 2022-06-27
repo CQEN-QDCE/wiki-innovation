@@ -5,11 +5,9 @@
 ### Créer un projet
 Le site du laboratoire, [CEAI](https://ceai.cqen.ca/), vous offre l'option  "Coffre à outils" avec des outils que vous serviront pour travailler comme le "Portail Openshift". 
 
-Pour accéder à la console web, vous devez vous logger avec vos identifiants.
+Pour accéder à la console web, vous devez vous logger avec vos identifiants fournis pour l'administrateur pour authentication SSO.
 
-À partir de la page principale de Openshift (avec la liste de projets), vous verrez le bouton "Create Project". Cliquez sur ce bouton pour créer votre projet en fournissant le nom, le nom à montrer et une petite description si vous voulez:
-
-![ocp-web-creation-projet](images/ocp-web-console-create-project.png)
+À partir de la page principale de Openshift, vous allez voir la liste de projets qui ont été crées pour vous. Cliquez sur l'un des projets pour commencer avec la création des resources comme des applications.
 
 ### Créer une application
 Sélectionnez le projet que vous avez créé précédemment.
@@ -67,14 +65,14 @@ Pour se logger au cluster, obtenir le token avec un appel [HTTP request](https:/
 )
 La réponse au request dans le navigateur web va vous indiquer la commande pour vous logger, par exemple:
 ```bash
-oc login --token=<token-dans-la-response> --server=https://api.dev.openshift.cqen.ca:6443
+oc login --token=<token-dans-la-response> --server=https://api.exp.openshift.cqen.ca:6443
 ```
 Un message va s'afficher pour montrer qu'on est loggé avec succès dans le cluster
 ### Créer un projet
 La commande "oc new-project" va créer un nouveau projet:
 ```bash
 oc new-project guide-openshift-project
-Now using project "guide-openshift-project" on server "https://api.dev.openshift.cqen.ca:6443".
+Now using project "guide-openshift-project" on server "https://api.exp.openshift.cqen.ca:6443".
 ```
 ### Créer une application
 La commande "oc new-app" va créer une nouvelle application:
@@ -114,12 +112,12 @@ Vous verrez un output similaire:
 - Voir le projet courant
     ```bash
     oc project
-    Using project "sample-nodejs-from-oc-cli" on server "https://api.dev.openshift.cqen.ca:6443".
+    Using project "sample-nodejs-from-oc-cli" on server "https://api.exp.openshift.cqen.ca:6443".
     ```
 - Voir le statut du projet
     ```bash
     oc status
-    In project guide-openshift-project on server https://api.dev.openshift.cqen.ca:6443
+    In project guide-openshift-project on server https://api.exp.openshift.cqen.ca:6443
 
     https://cakephp-example-guide-openshift-project.apps.dev.openshift.cqen.ca to pod port 8080-tcp (svc/cakephp-ex)
     deployment/cakephp-ex deploys istag/cakephp-ex:latest <-

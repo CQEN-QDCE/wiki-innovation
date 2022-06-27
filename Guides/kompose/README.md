@@ -9,7 +9,7 @@ L'importance de **Kompose** se manifeste quand on veut passer à l'étape de dé
 ## Kompose: qu’est-ce que c’est?
 
 Kompose est un outil de conversion pour des fichiers docker-compose vers un orchestrateur de conteneurs comme kubernetes ou Openshift.
-[Voir site web de kompose ici](https://kompose.io/)
+[Voir site web de kompose](https://kompose.io/)
 
 
 ## Installation
@@ -97,10 +97,17 @@ INFO Kubernetes file "frontend-deployment.yaml" created
 INFO Kubernetes file "redis-master-deployment.yaml" created 
 INFO Kubernetes file "redis-slave-deployment.yaml" created 
 ```
-
 On constate que:
 - Six fichiers yaml ont été crées en total.
 - Il y a deux fichiers yaml pour chacun de composants: un pour le service et autre pour le déploiement.
+
+Vous pouvez voir en détail les fichiers yaml générés:
+- [frontend-tcp-service.yaml](converted-kubernetes/frontend-tcp-service.yaml)
+- [redis-master-service.yaml](converted-kubernetes/redis-master-service.yaml)
+- [redis-slave-service.yaml](converted-kubernetes/redis-slave-service.yaml)
+- [frontend-deployment.yaml](converted-kubernetes/frontend-deployment.yaml)
+- [redis-master-deployment.yaml](converted-kubernetes/redis-master-deployment.yaml) 
+- [redis-slave-deployment.yaml](converted-kubernetes/redis-slave-deployment.yaml) 
 
 #### Openshift
 Pour la conversion du fichier docker-compose.yaml pour Openshift, on spécifie le fournisseur avec l'option "--provider":
@@ -123,6 +130,17 @@ INFO Openshift file "redis-slave-imagestream.yaml" created
 On constate que:
 - Neuf fichiers yaml ont été crées en total.
 - Il y a trois fichiers yaml pour chacun de composants: un pour le service, autre pour le déploiement et un troisième pour l'image.
+
+Vous pouvez voir en détail les fichiers yaml générés:
+- [frontend-tcp-service.yaml](converted-openshift/frontend-tcp-service.yaml)
+- [redis-master-service.yaml](converted-openshift/redis-master-service.yaml)
+- [redis-slave-service.yaml](converted-openshift/redis-slave-service.yaml)
+- [frontend-deploymentconfig.yaml](converted-openshift/frontend-deploymentconfig.yaml)
+- [frontend-imagestream.yaml](converted-openshift/frontend-imagestream.yaml)
+- [redis-master-deploymentconfig.yaml](converted-openshift/redis-master-deploymentconfig.yaml)
+- [redis-master-imagestream.yaml](converted-openshift/redis-master-imagestream.yaml)
+- [redis-slave-deploymentconfig.yaml](converted-openshift/redis-slave-deploymentconfig.yaml)
+- [redis-slave-imagestream.yaml](converted-openshift/redis-slave-imagestream.yaml)
 
 ### Étape finale: Déploiement des composants avec les fichiers yaml de kompose convert
 Les fichiers yaml générés à partir d'un fichier docker-compose permettront de déployer les composants dans un environnement conteneurisé comme Kubernetes ou Openshift (basé sur kubernetes).
@@ -174,6 +192,8 @@ Vous pouvez vérifier ensuite les ressources créées comme:
 #### Openshift
 Pour le déploiement sur openshift on doit utiliser les fichiers yaml générés avec le fournisseur openshift.
 
+:warning: Avant de continuer, il faudrait vérifier la version declaré dans les fichiers yaml générés. [Voir possible-problème-avec-les-fichiers-yaml](#dépannage-possible-problème-avec-les-fichiers-yaml-générés-par-kompose-pour-openshift)
+
 On a deux options pour travailler avec openshift:
 - Avec la ligne de commandes "oc cli"
   - Pre-Réquis:
@@ -184,7 +204,7 @@ On a deux options pour travailler avec openshift:
     - Être loggé au projet openshift ([voir instructions](../Openshift/README.md#se-connecter-au-cluster-dopenshift))
   - Commande pour exécuter un fichier yaml dans le cluster d'openshift:
       ```bash
-      kubectl apply -f frontend-tcp-service.yaml
+      oc apply -f frontend-tcp-service.yaml
       ```
 - Avec la console web
   - Pour ajouter une ressource avec un fichier yaml dans openshift on peut utiliser l'option "+Add":
@@ -198,7 +218,7 @@ On a deux options pour travailler avec openshift:
 ### Dépannage: Possible problème avec les fichiers yaml générés par kompose pour Openshift
 C'est possible que quand vous allez essayer de appliquer le fichier yaml pour la création des ressources dans Openshift, vous ayez des erreurs comme:
 
-![ocp-web-ajout-yaml-erreur](../Openshift/images/oc-web-console-add-yaml-error.png)
+![ocp-web-ajout-yaml-erreur](../Openshift/images/ocp-web-console-add-yaml-error.png)
   
 Pour éviter ces problèmes, vérifiez la valeur de l'apiVersion dans le fichier yaml avant de l'appliquer:
 
