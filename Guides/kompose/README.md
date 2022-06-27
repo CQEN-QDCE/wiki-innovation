@@ -234,3 +234,12 @@ apiVersion: apps.openshift.io/v1
 kind: DeploymentConfig
 ```
 
+### Comparaison: Composante dans docker-compose vs composante dans les fichiers yaml générés
+
+On va prendre comme exemple, le composant de backend: ***redis-master***
+
+| docker-compose | fichiers yaml pour kubernetes | fichiers yaml pour Openshift | 
+--- | --- | --- |
+| <code>redis-master:<br>image: k8s.gcr.io/redis:e2e <br>ports:<br>- "6379"</code> |[redis-master-deployment](converted-kubernetes/redis-master-deployment.yaml) |[redis-master-deployment-config](converted-openshift/redis-master-deploymentconfig.yaml)||
+||[redis-master-service](converted-kubernetes/redis-master-service.yaml)|[redis-master-service](converted-openshift/redis-master-service.yaml)| 
+|||[redis-master-image-stream](converted-openshift/redis-master-imagestream.yaml)|
