@@ -92,7 +92,7 @@ Vous pouvez fusionner le `pull request` une fois que vous avez l'approbation de 
 
 [support]: support.md
 
-[collective]: https://opencollective.com/unified
+[collective]: https://opencollective.com/
 
 [semver]: https://semver.org/lang/fr/spec/v2.0.0.html
 
