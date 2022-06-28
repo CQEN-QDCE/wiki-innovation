@@ -178,6 +178,8 @@ Ce projet est sous licence LiLiQ-R - voir le fichier [LICENCE.md](LICENCE.md) po
 
 # Références 
 
+https://standard.publiccode.net/
+
 https://opensource.guide/fr/
 
 https://opensource.guide/fr/how-to-contribute/
