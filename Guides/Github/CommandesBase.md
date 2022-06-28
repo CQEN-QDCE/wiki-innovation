@@ -198,16 +198,16 @@ $ git commit -m "[tag] votre message" --signoff
 - Écrivez du code 
 - Saisissez `git add` pour ajouter du code au projet 
 - Saisissez `git commit` pour faire un commit à votre repo local. 
-
-- Allez à github 
+- Saisissez `git branch -M master` pour créer la branche principale. 
+- Allez sur github
 - Cliquez sur `new repository`, et ensuite `Create repository`
 
-- Maintenant, on va pusher le repo 
-- Saisissez les commandes suivantes: 
+
+Maintenant, on va pusher le repo. Saisissez les commandes suivantes: 
 
 ```bash
 # $ git remote add origin git@github.com:username/new_repo
-$ git remote add https://github.com/username/new_repo 
+$ git remote add origin https://github.com/username/new_repo 
 $ git push -u origin master
 ```
 
