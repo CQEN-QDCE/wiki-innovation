@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Quand il s'agit des projets multi-module (plusieurs composants), souvent, on doit travailler avec un fichier docker-compose.yaml qui contient l'information nécessaire pour le déploiement des composants d'une manière intégrée dans un environnement conteneurisé.
+Quand il s'agit des projets multimodule (plusieurs composants), souvent, on doit travailler avec un fichier docker-compose.yaml qui contient l'information nécessaire pour le déploiement des composants d'une manière intégrée dans un environnement conteneurisé.
 
 L'importance de **Kompose** se manifeste quand on veut passer à l'étape de déploiement de nos applications dans un contexte beaucoup mieux géré et orchestré comme kubernetes. Kubernetes aussi permet d'aller plus facilement vers les environnements infonuagiques.
 
@@ -35,7 +35,7 @@ On peut spécifier le fournisseur avec l'option globale "provider":
 ```bash
 kompose --provider openshift --file docker-compose.yaml convert
 ```
-Si on ne spécifie pas, par défaut, la conversion se fera pour Kubernetes.
+Si l'on ne le spécifie pas, par défaut, la conversion se fera pour Kubernetes.
 
 ### Exemple de l'utilisation de "kompose convert"
 On va suivre l'exemple utilisé dans la page web de kompose [ici](https://kompose.io/getting-started/)
@@ -78,9 +78,9 @@ Vous pouvez créer un répertoire où le fichier docker-compose.yaml sera copié
 On va exécuter la conversion du fichier pour les deux cas mentionnés de fournisseur: Kubernetes et Openshift
 
 Pour commencer avec l'exemple:
-- Créez un répertoire de travail (c.à-d.: monProjetKompose)
-- Copiez le fichier docker-compose.yaml dans le répertoire crée.
-- Dans un terminal, allez au répertoire crée ("cd <PathAuRepertoire>/monProjetKompose/").
+- Créez un répertoire de travail (c.à-d: monProjetKompose)
+- Copiez le fichier docker-compose.yaml dans le répertoire créé.
+- Dans un terminal, allez au répertoire créé ("cd <PathAuRepertoire>/monProjetKompose/").
 
 #### Kubernetes (défaut)
 Pour une conversion par défaut, simplement utiliser:
@@ -88,7 +88,7 @@ Pour une conversion par défaut, simplement utiliser:
 ```bash
 kompose --file docker-compose.yaml convert
 ```
-Vous allez voir un output comme:
+Vous allez voir un résultat comme:
 ```bash
 INFO Kubernetes file "frontend-tcp-service.yaml" created 
 INFO Kubernetes file "redis-master-service.yaml" created 
@@ -98,7 +98,7 @@ INFO Kubernetes file "redis-master-deployment.yaml" created
 INFO Kubernetes file "redis-slave-deployment.yaml" created 
 ```
 On constate que:
-- Six fichiers yaml ont été crées en total.
+- Six fichiers yaml ont été créés en total.
 - Il y a deux fichiers yaml pour chacun de composants: un pour le service et autre pour le déploiement.
 
 Vous pouvez voir en détail les fichiers yaml générés:
@@ -114,7 +114,7 @@ Pour la conversion du fichier docker-compose.yaml pour Openshift, on spécifie l
 ```bash
 kompose --provider openshift --file docker-compose.yaml convert
 ```
-Vous allez voir un output comme:
+Vous allez voir un résultat comme:
 ```bash
 INFO Openshift file "frontend-tcp-service.yaml" created 
 INFO Openshift file "redis-master-service.yaml" created 
@@ -128,8 +128,8 @@ INFO Openshift file "redis-slave-imagestream.yaml" created
 ```
 
 On constate que:
-- Neuf fichiers yaml ont été crées en total.
-- Il y a trois fichiers yaml pour chacun de composants: un pour le service, autre pour le déploiement et un troisième pour l'image.
+- Neuf fichiers yaml ont été créés en total.
+- Il y a trois fichiers yaml pour chacun de composants: un pour le service, un deuxième pour le déploiement et un troisième pour l'image.
 
 Vous pouvez voir en détail les fichiers yaml générés:
 - [frontend-tcp-service.yaml](converted-openshift/frontend-tcp-service.yaml)
@@ -143,7 +143,7 @@ Vous pouvez voir en détail les fichiers yaml générés:
 - [redis-slave-imagestream.yaml](converted-openshift/redis-slave-imagestream.yaml)
 
 ### Étape finale: Déploiement des composants avec les fichiers yaml de kompose convert
-Les fichiers yaml générés à partir d'un fichier docker-compose permettront de déployer les composants dans un environnement conteneurisé comme Kubernetes ou Openshift (basé sur kubernetes).
+Les fichiers yaml générés à partir d'un fichier docker-compose, permettront de déployer les composants dans un environnement conteneurisé comme Kubernetes ou Openshift (basé sur kubernetes).
 
 #### Kubernetes
 Pour le déploiement dans un environnement kubernetes, on a besoin de:
@@ -163,7 +163,7 @@ Vous pouvez vérifier ensuite les ressources créées comme:
     ```bash
     kubectl get svc
     ```
-    exemple d'output:
+    exemple de résultat:
     ```bash
     NAME           TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
     frontend-tcp   LoadBalancer   172.30.77.221    <pending>     80:30475/TCP   20m
@@ -175,7 +175,7 @@ Vous pouvez vérifier ensuite les ressources créées comme:
     ```bash
     kubectl get pods
     ```
-    exemple d'output:
+    exemple de résultat:
     ```bash
     NAME                    READY   STATUS      RESTARTS   AGE
     frontend-1-deploy       1/1     Running     0          19m
@@ -192,16 +192,16 @@ Vous pouvez vérifier ensuite les ressources créées comme:
 #### Openshift
 Pour le déploiement sur openshift on doit utiliser les fichiers yaml générés avec le fournisseur openshift.
 
-:warning: Avant de continuer, il faudrait vérifier la version declaré dans les fichiers yaml générés. [Voir possible-problème-avec-les-fichiers-yaml](#dépannage-possible-problème-avec-les-fichiers-yaml-générés-par-kompose-pour-openshift)
+:warning: Avant de continuer, il faudrait vérifier la version déclarée dans les fichiers yaml générés. [Voir possible-problème-avec-les-fichiers-yaml](#dépannage-possible-problème-avec-les-fichiers-yaml-générés-par-kompose-pour-openshift)
 
 On a deux options pour travailler avec openshift:
 - Avec la ligne de commandes "oc cli"
-  - Pre-Réquis:
+  - Preréquis:
     - Installation de "oc cli" ([voir instructions](../Openshift/README.md#installation-de-oc-cli))
     - Installation de l'outil de ligne de commandes pour kubernetes: "kubectl"
       - Instructions pour l'installation [ici](https://kubernetes.io/docs/tasks/tools/)
     - Un projet existant dans openshift
-    - Être loggé au projet openshift ([voir instructions](../Openshift/README.md#se-connecter-au-cluster-dopenshift))
+    - Être connecté au projet openshift ([voir instructions](../Openshift/README.md#se-connecter-au-cluster-dopenshift))
   - Commande pour exécuter un fichier yaml dans le cluster d'openshift:
       ```bash
       oc apply -f frontend-tcp-service.yaml
@@ -216,7 +216,7 @@ On a deux options pour travailler avec openshift:
     ![ocp-web-ajout-yaml-contenu](../Openshift/images/ocp-web-console-add-yaml-content.png)
 
 ### Dépannage: Possible problème avec les fichiers yaml générés par kompose pour Openshift
-C'est possible que quand vous allez essayer de appliquer le fichier yaml pour la création des ressources dans Openshift, vous ayez des erreurs comme:
+C'est possible que quand vous allez essayer d'appliquer le fichier yaml pour la création des ressources dans Openshift, vous ayez des erreurs comme:
 
 ![ocp-web-ajout-yaml-erreur](../Openshift/images/ocp-web-console-add-yaml-error.png)
   
@@ -245,7 +245,7 @@ On va prendre comme exemple, le composant de backend: ***redis-master*** dans do
       - "6379"
 ```
 
-Kompose génère des fichiers separés pour le déploiement, le service et pour l'image pour Openshift:
+Kompose génère des fichiers séparés pour le déploiement, le service et pour l'image pour Openshift:
 
 | fichiers yaml pour kubernetes | fichiers yaml pour Openshift | 
 | --- | --- |
