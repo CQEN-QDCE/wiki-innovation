@@ -76,6 +76,9 @@ https://docs.gitguardian.com/secrets-detection/leaks_remediation
 
 # [Github Actions](https://docs.github.com/en/actions)
 
+https://github.com/features/actions
+
+https://docs.github.com/en/actions
 
 https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions
 
