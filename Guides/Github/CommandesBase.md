@@ -186,11 +186,13 @@ $ git config --global user.name "Votre nom"
 $ git config --global user.email "votre@adresseemail.com"
 ``` 
 
-Ensuite, lors de vos commits, utilisez la flag `-s` ou `--signoff` pour signer votre commit. 
+Ensuite, lors de vos commits, utilisez la flag `-s` ou `--signoff` pour rajouter vos informations d'identification au commit, et utilisez le flag -S pour signer le code avec votre clé GPG. 
 
 ``` 
-$ git commit -m "[tag] votre message" --signoff
+$ git commit -m "[tag] votre message" --signoff -S
 ```
+
+Référez-vous au [répo de la Base de connaissances][securisation] pour plus d'information sur la sécurisation de Github.  
 
 ## Création d'un répositoire github 
 
@@ -257,3 +259,5 @@ $ git push origin maBranche
 
 <!-- Définitions -->
 [signature]: https://github.com/CQEN-QDCE/BaseConnaissances/tree/main/github/obligation-signature-commits
+
+[securisation]: https://github.com/CQEN-QDCE/BaseConnaissances/tree/main/github
