@@ -34,6 +34,8 @@ git config --global core.autocrlf true
 git config --global core.safecrlf true
 ```
 
+Finalement, crééz et configurez votre clé GPG pour signature de code dans Github. Référez vous à la page [Création et configuration d'une clé GPG][signature]
+
 ## Git pull 
 Fetch from and integrate with another repository or a local branch.
 
@@ -251,3 +253,7 @@ $ git push origin maBranche
 - [Page man de git](https://git.github.io/htmldocs/git.html)
 
 - [Git guide Start a new git repository ](https://kbroman.org/github_tutorial/pages/init.html)
+
+
+<!-- Définitions -->
+[signature]: https://github.com/CQEN-QDCE/BaseConnaissances/tree/main/github/obligation-signature-commits
