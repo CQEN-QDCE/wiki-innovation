@@ -1,8 +1,8 @@
 # Openshift Workshop: Déploiement d'une application sample nodejs + base de données (mogodb)
 
 ## Prérequis
-Accès à la console web d'Openshift
-Commande oc installé dans le poste de travail (Lab 0), pour les Labs 1 et plus.
+- Accès à la console web d'Openshift.
+- Commande oc installé dans le poste de travail (Lab 0), pour les Labs 1 et plus.
 
 ## Table de matières
 
