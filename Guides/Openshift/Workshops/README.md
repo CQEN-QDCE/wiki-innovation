@@ -6,10 +6,6 @@ Documentation originale des workshops d'Openshift [ici](https://github.com/RedHa
 - oc: outil client d'Openshift 
 - odo: outil client de développement pour des applications dans kubernetes et Openshift
 
-## Application simple avec un lien à la base de données
+## [Application simple avec un lien à la base de données](Nodejs/README.md)
 
-nodejs + mongodb: https://github.com/sclorg/nodejs-ex
-
-
-## Aplication multi-module avec une base de données
-odo: https://github.com/RedHatWorkshops/openshiftv4-odo-workshop
+## [Aplication multi-module avec une base de données](Odo-Kiosk/README.md)
