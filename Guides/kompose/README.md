@@ -15,7 +15,7 @@ Kompose est un outil de conversion pour des fichiers docker-compose vers un orch
 ## Installation
 
 L'installation de kompose dépendra de votre système d'exploitation.
-Pour la documentation détaillée, vous pouvez consulter la page web de kompose [ici](https://kompose.io/installation/)
+Pour la documentation détaillée, vous pouvez consulter la page web de kompose [ici](https://kompose.io/installation/).
 Pour ce guide-ci, on montrera l'installation sur Ubuntu/Debian.
 
 ### Ubuntu
@@ -234,7 +234,7 @@ apiVersion: apps.openshift.io/v1
 kind: DeploymentConfig
 ```
 
-### Comparaison: Composante dans docker-compose vs composante dans les fichiers yaml générés
+### Comparaison: Composant dans docker-compose vs composant dans les fichiers yaml générés
 
 On va prendre comme exemple, le composant de backend: ***redis-master*** dans docker-compose.yaml:
 
