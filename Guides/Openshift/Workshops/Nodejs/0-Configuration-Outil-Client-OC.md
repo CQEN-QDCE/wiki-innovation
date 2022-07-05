@@ -6,6 +6,6 @@ Avec l'interface de ligne de commande d'Openshift (CLI), la commande oc, vous po
 
 Documentation originale Red Hat Openshift en anglais [ici](https://docs.openshift.com/container-platform/4.8/cli_reference/openshift_cli/getting-started-cli.html)
 
-Voir [installation de oc CLI](../../Readme-HandsOn.md#installation-de-oc-cli)
+Voir [installation de oc CLI](../../Outils/OC/README.md#installation-de-openshift-cli-oc)
 
 [Table de matières](README.md)
