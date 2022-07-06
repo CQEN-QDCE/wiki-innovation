@@ -23,11 +23,6 @@ Il existe plusieurs façons de contribuer, pas seulement en écrivant du code.
 Si vous avez des questions, consultez [support][support].
 
 
-### Aide financière
-
-Il est possible de nous soutenir financièrement en devenant mécène ou sponsor via [Collectif ouvert][collective].
-
-
 ### Améliorer les documents
 
 
@@ -66,15 +61,14 @@ bug ou suggérer une nouvelle fonctionnalité avant de créer un `pull request`.
 
 Vous pouvez fusionner le `pull request` une fois que vous avez l'approbation de deux autres développeurs, ou si vous n'êtes pas autorisé à le faire, vous pouvez demander au deuxième réviseur de la fusionner pour vous.
 
-* Exécutez `npm test` localement pour créer, formater et tester vos modifications;
 * Les changements non triviaux sont souvent mieux discutés d'abord dans un `issue`, pour vous éviter de faire un travail inutile; 
 * Pour les tâches ambitieuses, vous devriez essayer de présenter votre travail à la communauté pour obtenir des commentaires dès que possible;
 * Les nouvelles fonctionnalités doivent être accompagnées de tests et de documentation;
 * N'incluez pas les modifications non liées à votre `issue` ou `pull request`;
-* Testez avant de soumettre le code en exécutant `npm test`;
+* Testez avant de soumettre le code en exécutant les tests unitaires;
 * Mettez à jour le fichier `README.md` avec les détails des modifications apportées à l'interface, notamment les nouvelles variables d'environnement, les ports exposés, les emplacements de fichiers utiles et les paramètres de conteneur;
 * Augmentez les numéros de version dans tous les fichiers d'exemple et le fichier README.md à la nouvelle version que ce `pull request` représenterait. Le schéma de version que nous utilisons est [SemVer][semver];
-* Rédigez une description convaincante de la raison pour laquelle nous devrions recevoir votre `pull request` : c'est à vous de nous convaincre. 
+* Rédigez une description convaincante de la raison pour laquelle nous devrions recevoir votre `pull request`: c'est à vous de nous convaincre. 
 
 ## Références
 
