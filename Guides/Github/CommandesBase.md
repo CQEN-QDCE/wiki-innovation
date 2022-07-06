@@ -11,6 +11,44 @@
 
 # Commandes Git de base pour tout développeur
 
+
+## Installation des outils 
+
+Avant d'entreprendre des travaux avec git, il faut s'équiper avec les outils dont vous aurez besoin. Il s'agit surtout d'installer git, ensuite selon vos préférences installer Github Desktop et l'extension pour VSCode appelée Gitlens. 
+
+### Installation de git 
+
+Faites l'installation selon votre système d'exploitation. 
+
+**Linux** 
+
+Installez via la commande suivante: 
+
+```sh 
+$ sudo apt-get install git -y
+```
+
+**Mac** 
+
+Pour l'installation la plus à jour, installez via l'installateur binaire disponible dans le site web de Git, à l'adresse [https://git-scm.com/download/mac](https://git-scm.com/download/mac). 
+
+
+**Windows** 
+
+Il y a quelques façons différentes d'installer git sur Windows. 
+
+Le téléchargement du build officiel est disponible sur le site web de Git. Allez à l'adresse 
+[https://git-scm.com/download/win](https://git-scm.com/download/win) et le téléchargement se déclenchera automatiquement. 
+
+Une autre alternative, avec l'installation automatisée, est disponible au package de Git dans Chocolatey. Notez que Chocolatey est maintenu par la communauté de logiciel opensource.
+
+### Installation de Github Desktop
+
+Si vous préférez travailler avec une interface d'usager au lieu de la ligne de commande, probablement vous aimerez `Github Desktop`. Cette application est une couche d'interface d'usager qui utilise git pour faire le contrôle de source dans la plateforme Github. 
+
+Allez à la page [https://desktop.github.com/](https://desktop.github.com/) pour faire le téléchargement et l'installation selon votre système d'exploitation. 
+
+
 ## Configurez git 
 
 Si vous n'avez jamais utilisé git auparavant, vous avez besoin de faire quelques configurations tout d'abord. 
@@ -37,46 +75,45 @@ git config --global core.safecrlf true
 Finalement, crééz et configurez votre clé GPG pour signature de code dans Github. Référez vous à la page [Création et configuration d'une clé GPG][signature]
 
 ## Git pull 
-Fetch from and integrate with another repository or a local branch.
 
-Git pull permet de récupérer tous les changements sur la branche distant.
+Recupère et intègre les objets et refs d'un autre répo ou une branche locale. 
 
-Elle prend en paramètre la branche source et la branche ciblé.
+La commande `git pull` permet de récupérer tous les changements sur la branche distant. Elle prend en paramètre la branche source et la branche ciblé.
 
 Exemple:
-La commande  `git pull wpk preprod:master`  nous permet de récupérer les changements de la branche `preprod` du remote `wpk` dans la branche `master` du remote `origin`.
+La commande  `git pull main preprod:master`  nous permet de récupérer les changements de la branche `preprod` du remote `main` dans la branche `master` du remote `origin`.
 
 ## Git fetch
-Download objects and refs from another repository.
 
-Récupérer les dernières informations du serveur git 
+Récupérer les dernières informations d'objets et refs du serveur git.  
 
-```bash
+```sh
 $ git fetch <nom-du-remote>
 ```
 
-Git fetch permet de rechercher et afficher les changements sur un remote passé en argument, qui ne sont pas présent en local, sans aucun transfert de fichiers.
+`git fetch` permet de rechercher et afficher les changements sur un remote passé en argument, qui ne sont pas présent en local, sans aucun transfert de fichiers.
 
 Exemple: 
-La commande  `git fetch wpk`  permet de chercher les nouveaux changements sur le remote `wpk` qui ne sont pas présents en `local`.
+La commande  `git fetch main`  permet de chercher les nouveaux changements sur le remote `main` qui ne sont pas présents en `local`.
 
-## Git rebase 
-Reapply commits on top of another base tip.
+## Git rebase
 
-Git rebase permet de transférer les changements d’une branche à une autre, elle prend en argument la branche avec laquelle nous voulons rebaser.
+Réapplique les commits au-dessus d'une autre base.
+
+`git rebase` permet de transférer les changements d’une branche à une autre, elle prend en argument la branche avec laquelle nous voulons rebaser.
 
 Exemple:
-La commande  `git rebase -i wpk/preprod`  permet de rebaser les commits de notre branche courante avec la branche `preprod` de remote `wpk`.
+La commande  `git rebase -i cqen/preprod`  permet de rebaser les commits de notre branche courante avec la branche `preprod` de remote `cqen`.
 
 ## Git checkout 
-Switch branches or restore working tree files.
-Changement de branche 
+
+Change de branche ou restaure les fichiers de la branche de travail.
 
 ```bash 
 $ git checkout <nom de la branche> 
 ```
 
-Git checkout permet de déplacer d’une branche à une autre, elle prend en argument la branche cible et aussi de supprimer les modifications qui ne sont pas ajoutées.
+`git checkout` permet de déplacer d’une branche à une autre, elle prend en argument la branche cible et aussi de supprimer les modifications qui ne sont pas ajoutées.
 
 Exemples:
 ```sh
@@ -87,9 +124,10 @@ $ git checkout .                # permet de supprimer tous les changements non a
 ```
 
 ## Git add 
-Add file contents to the index.
 
-Git add permet d’ajouter les changements que nous avons fait dans nos fichiers sur la branche courante.
+Ajoute le contenu de fichiers dans la zone de l'index. 
+
+`git add` permet d’ajouter les changements que nous avons fait dans nos fichiers sur la branche courante.
 
 Exemples:
 ```sh
@@ -98,20 +136,18 @@ Exemples:
 ```
 
 ## Git commit 
-Record changes to the repository.
 
-Git commit permet commiter les modifications que nous avons en local sur la branche courante.
+`git commit` permet commiter les modifications que nous avons en local sur la branche courante.
 
 Exemples:
 ```sh
-$ git commit -m “Message de commit”    # permet de commiter les changements sur la branche courante, avec un message “Message de commit”
-$ git commit –amend                    # permet de commiter les nouveaux changements sur la branche courante dans la dernière commit que nous avons créé sur la branche
+$ git commit -m “[tag] Message de commit” -s -S   # permet de commiter les changements sur la branche courante, avec un message “Message de commit” (et fait la signature et le signoff).
+$ git commit –amend                         # permet de commiter les nouveaux changements sur la branche courante dans la dernière commit que nous avons créé sur la branche
 ```
 
 ## Git reset 
-Reset current HEAD to the specified state.
 
-Git reset permet de supprimer tous les changements que nous avons faits sur la branche courante.
+`git reset` permet de supprimer tous les changements que nous avons faits sur la branche courante.
 
 Exemples:
 ```sh 
@@ -120,9 +156,8 @@ $ git commit –amend       # permet de commiter les nouveaux changements sur la
 ```
 
 ## Git push 
-Update remote refs along with associated objects.
 
-Git push permet d’envoyer les modifications sur un remote.
+`git push` permet d’envoyer les modifications sur un remote.
 
 Exemples:
 ```sh
@@ -130,7 +165,8 @@ $ git push origin branch-A    # permet d’envoyer les modifications que nous av
 ```
 
 ## Git status 
-Show the working tree status.
+
+Afficher l'état de du repertoire de travail.
 
 ```sh
 $ git status    # permet d’afficher toutes les modifications non commités sur la branche courante.
