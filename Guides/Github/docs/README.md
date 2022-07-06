@@ -63,7 +63,7 @@ jusqu'à la fin
 
 Terminez avec un exemple d'extraction de données du système ou de leur utilisation pour une petite démonstration. 
 
-1. Obtenez une clé API gratuite sur[https://example.com](https://example.com)
+1. Obtenez une clé API gratuite sur [https://example.com](https://example.com)
 2. Clonez le dépôt
 
    ```sh
@@ -108,7 +108,7 @@ Donnez un exemple
 
 ## Déploiement
 
-Ajoutez des notes supplémentaires sur la façon de déployer ceci sur un système en direct. 
+Ajoutez des notes supplémentaires sur la façon de déployer ceci sur un système en direct ou sur le cloud. 
 
 ## Construit avec
 
@@ -118,15 +118,15 @@ Ajoutez des notes supplémentaires sur la façon de déployer ceci sur un systè
 
 ## Contribuez
 
-Lisez s'il vous plaît [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) pour plus de détails sur notre code de conduite et le processus de soumission des demandes d'extraction.
+Lisez s'il vous plaît [CONTRIBUTING.md](./CONTRIBUTING.md) pour plus de détails sur notre code de conduite et le processus de soumission des demandes d'extraction.
 
 Les contributions sont ce qui fait de la communauté open source un endroit incroyable pour apprendre, inspirer et créer. Toutes les contributions que vous faites sont ** grandement appréciées **.
 
-1. Fourchez le projet
-2. Créez votre branche de fonctionnalité (`git checkout -b fonctionnalite/nouvelle-fonctionnalite`)
-3. Validez vos modifications (`git commit -m 'Ajouter nouvelle fonctionnalité'`)
-4. Appuyez sur la branche (`git push origin fonctionnalite/nouvelle-fonctionnalite`)
-5. Ouvrir une demande de PR 
+1. Fourchez le projet;
+2. Créez votre branche de fonctionnalité (`git checkout -b fonctionnalite/nouvelle-fonctionnalite`);
+3. Validez vos modifications (`git commit -m 'Ajouter nouvelle fonctionnalite'`);
+4. Appuyez sur la branche (`git push origin fonctionnalite/nouvelle-fonctionnalite`);
+5. Ouvrir une demande de `PR`.
 
 
 ## Gestion des versions
@@ -151,7 +151,9 @@ Voir aussi la liste des [contributeurs](https://github.com/CQEN-QDCE/nom-du-proj
 <!-- LICENSE -->
 ## License
 
-Ce projet est sous licence LiLiQ-R - voir le fichier [LICENCE.md](LICENCE.md) pour plus de détails. 
+Ce projet est sous la Licence Libre du Québec Permissive (LiLiQ-P) version 1.1. 
+
+Référez-vous au fichier [LICENCE.md](LICENCE.md) pour plus de détails. 
 
 
 <!-- REMERCIEMENTS -->
@@ -178,11 +180,13 @@ Ce projet est sous licence LiLiQ-R - voir le fichier [LICENCE.md](LICENCE.md) po
 
 # Références 
 
-https://standard.publiccode.net/
+[Licence Libre du Québec](https://forge.gouv.qc.ca/licence/)
 
-https://opensource.guide/fr/
+[Standard for Public Code (en)](https://standard.publiccode.net/)
 
-https://opensource.guide/fr/how-to-contribute/
+[Guide d'opensource](https://opensource.guide/fr/)
+
+[Comment contribuer a l'opensource](https://opensource.guide/fr/how-to-contribute/)
 
 
 
