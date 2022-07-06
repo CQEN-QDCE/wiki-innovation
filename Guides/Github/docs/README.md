@@ -151,7 +151,7 @@ Voir aussi la liste des [contributeurs](https://github.com/CQEN-QDCE/nom-du-proj
 <!-- LICENSE -->
 ## License
 
-Ce projet est sous la Licence Libre du Québec Permissive (LiLiQ-P) version 1.1. 
+Ce projet est sous la Licence Libre du Québec - Permissive (LiLiQ-P) version 1.1. 
 
 Référez-vous au fichier [LICENCE.md](LICENCE.md) pour plus de détails. 
 
