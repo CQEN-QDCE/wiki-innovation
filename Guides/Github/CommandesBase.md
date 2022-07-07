@@ -74,6 +74,23 @@ git config --global core.safecrlf true
 
 Finalement, crééz et configurez votre clé GPG pour signature de code dans Github. Référez vous à la page [Création et configuration d'une clé GPG][signature]
 
+
+## Configurez VSCode pour signer et faire signoff
+
+Une fois que vous avez déjà configuré vos informations personnelles et ajouté votre clé GPG dans Github, il faut configurer VSCode pour les utiliser lors d'un `commit`. 
+
+Dans VSCode, sélectionnez l'option `Settings` ou `Configuration` et faites la recherche pour `gpg`. 
+
+<img src="./images/VSCode-signature.png" align="center" />
+
+Marquez la boîte qui dit `Enables commit signing with GPG or X.509`. Ensuite, cherchez pour `signoff` 
+
+<img src="./images/VSCode-signoff.png" align="center" />
+
+Marquez la boîte qui dit `Controls the signoff flag for all commits`. 
+
+Et voilà, vous avez configuré la clé GPG et vos informations personnelles pour créer le signoff et la signature obligatoires à tous les commits dans le Github du CQEN.  
+
 ## Git pull 
 
 Recupère et intègre les objets et refs d'un autre répo ou une branche locale. 
@@ -213,7 +230,7 @@ $ git branch -m <nom actuel> <nouveau nom de la branche>
 
 ## Identifiez-vous à git
 
-Lors de vos commits, il est obligatoire de faire la soumission signée par vous(`signoff`), aux fins de validation auprès de la plateforme. Alors, il faut vous identifier dans la configuration de `git` pour que le signoff soit généré correctement. 
+Lors de vos commits, il est obligatoire de faire la soumission signée par vous avec votre clé GPG (`signature`) et ajoute votre nom et courriel à la fin de la message de `commit` (`signoff`), aux fins de validation auprès de la plateforme. Alors, il faut vous identifier dans la configuration de `git` pour que le signoff soit généré correctement. 
 
 D'abord, identifiez-vous en ajoutant votre nom et votre courriel à la configuration de git: 
 
@@ -264,7 +281,7 @@ Si les changements ne sont pas commités, faites-le d'abord:
 
 ```
 $ git add .
-$ git commit -m"commit changes"
+$ git commit -m "[func] commit changes" -s -S
 ```
 
 Ensuite, faites un `pull` du contenu du `master`:
