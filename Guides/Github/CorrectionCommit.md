@@ -13,11 +13,6 @@
 
 Si vous vous retrouvez sur cette page, il est probable que vous ayez reçu une alerte de notre service d'alerte pro bono. Ne vous inquiétez pas, les fuites se produisent parfois... même pour les meilleurs d'entre nous... Cette section fournit un guide étape par étape sur la façon de remédier à une fuite qui s'est produite sur un GitHub public.
 
-## Ce qu'on ne doit pas faire
-
-- Commit sur la version actuelle du code n'est pas la solution. Tenez en compte que git a tout l'historique, alors le secret continue visible dans les commits anterieurs. 
-- Seulement déconnecter le repo affecté n'est pas la solution non plus. 
-
 ## **Guide étape par étape pour remédier à la fuite**
 
 Étape 1 : Révoquez le secret exposé  
@@ -56,7 +51,7 @@ De plus, ce n'est pas une action triviale à mener, sachez que la réécriture d
 
 Comment le faire: 
 
-- Nous vous recommandons d'utiliser ...
+- Nous vous recommandons d'utiliser les orientations de Github pour la remotion de contenu sensitive du repo [Removing sensitive data from a repository (en)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository)
 - Une fois que vous avez corrigé votre historique git, poussez-le vers le serveur distant. Sachez que cela peut arriver qu'il reste un commit orphelin d'une fuite sur GitHub. Vous pouvez contacter le support GitHub pour supprimer définitivement ces données.
 
 ## **Étape 3 : Inspectez les logs**
@@ -66,6 +61,11 @@ L'inspection de vos logs vous donnera une idée rapide de savoir si les informat
 Comment le faire: 
 
 - Si le fournisseur concerné est géré par le moteur de détection, vous pouvez consulter la section Vérifier les activités suspectes de la documentation du détecteur concerné. Sinon, le fournisseur d'API donne généralement des informations sur la date à laquelle les informations d'identification ont été utilisées pour la dernière fois dans la page des paramètres. Si les informations d'identification compromises sont des informations d'identification de base de données ou des clés privées, vous pouvez consulter les logs de serveur pertinents.
+
+## Ce qu'on ne doit pas faire
+
+- Commit sur la version actuelle du code n'est pas la solution. Tenez en compte que git a tout l'historique, alors le secret continue visible dans les commits anterieurs. 
+- Seulement rendre le repo affecté privé n'est pas la solution non plus. 
 
 ## **À la fin du bout**
 
