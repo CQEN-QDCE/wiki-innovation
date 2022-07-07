@@ -67,7 +67,7 @@ Comment le faire:
 - Commit sur la version actuelle du code n'est pas la solution. Tenez en compte que git a tout l'historique, alors le secret continue visible dans les commits anterieurs. 
 - Seulement rendre le repo affecté privé n'est pas la solution non plus. 
 
-## **À la fin du bout**
+## **Finalement**
 
 Félicitations, vous devriez maintenant être couvert.
 
