@@ -98,8 +98,8 @@ INFO Kubernetes file "redis-master-deployment.yaml" created
 INFO Kubernetes file "redis-slave-deployment.yaml" created 
 ```
 On constate que:
-- Six fichiers yaml ont été créés en total.
-- Il y a deux fichiers yaml pour chacun de composants: un pour le service et autre pour le déploiement.
+- Six fichiers yaml ont été créés au total.
+- Il y a deux fichiers yaml pour chacun des composants: un pour le service et autre pour le déploiement.
 
 Vous pouvez voir en détail les fichiers yaml générés:
 - [frontend-tcp-service.yaml](converted-kubernetes/frontend-tcp-service.yaml)
@@ -129,7 +129,7 @@ INFO Openshift file "redis-slave-imagestream.yaml" created
 
 On constate que:
 - Neuf fichiers yaml ont été créés en total.
-- Il y a trois fichiers yaml pour chacun de composants: un pour le service, un deuxième pour le déploiement et un troisième pour l'image.
+- Il y a trois fichiers yaml pour chacun des composants: un pour le service, un deuxième pour le déploiement et un troisième pour l'image.
 
 Vous pouvez voir en détail les fichiers yaml générés:
 - [frontend-tcp-service.yaml](converted-openshift/frontend-tcp-service.yaml)
@@ -190,24 +190,24 @@ Vous pouvez vérifier ensuite les ressources créées comme:
     ```
 
 #### Openshift
-Pour le déploiement sur openshift on doit utiliser les fichiers yaml générés avec le fournisseur openshift.
+Pour le déploiement sur Openshift on doit utiliser les fichiers yaml générés avec le fournisseur Openshift.
 
-:warning: Avant de continuer, il faudrait vérifier la version déclarée dans les fichiers yaml générés. [Voir possible-problème-avec-les-fichiers-yaml](#dépannage-possible-problème-avec-les-fichiers-yaml-générés-par-kompose-pour-openshift)
+:warning: Avant de continuer, il faut vérifier la version déclarée dans les fichiers yaml générés. [Voir possible-problème-avec-les-fichiers-yaml](#dépannage-possible-problème-avec-les-fichiers-yaml-générés-par-kompose-pour-openshift)
 
-On a deux options pour travailler avec openshift:
+On a deux options pour travailler avec Openshift:
 - Avec la ligne de commandes "oc cli"
   - Preréquis:
     - Installation de "oc cli" ([voir instructions](../Openshift/README.md#installation-de-oc-cli))
     - Installation de l'outil de ligne de commandes pour kubernetes: "kubectl"
       - Instructions pour l'installation [ici](https://kubernetes.io/docs/tasks/tools/)
-    - Un projet existant dans openshift
-    - Être connecté au projet openshift ([voir instructions](../Openshift/README.md#se-connecter-au-cluster-dopenshift))
-  - Commande pour exécuter un fichier yaml dans le cluster d'openshift:
+    - Un projet existant dans Openshift
+    - Être connecté au projet Openshift ([voir instructions](../Openshift/README.md#se-connecter-au-cluster-dopenshift))
+  - Commande pour exécuter un fichier yaml dans le cluster d'Openshift:
       ```bash
       oc apply -f frontend-tcp-service.yaml
       ```
 - Avec la console web
-  - Pour ajouter une ressource avec un fichier yaml dans openshift on peut utiliser l'option "+Add":
+  - Pour ajouter une ressource avec un fichier yaml dans Openshift on peut utiliser l'option "+Add":
 
     ![ocp-web-ajout-yaml](../Openshift/images/ocp-web-console-add-yaml.png)
 
@@ -216,7 +216,7 @@ On a deux options pour travailler avec openshift:
     ![ocp-web-ajout-yaml-contenu](../Openshift/images/ocp-web-console-add-yaml-content.png)
 
 ### Dépannage: Possible problème avec les fichiers yaml générés par kompose pour Openshift
-C'est possible que quand vous allez essayer d'appliquer le fichier yaml pour la création des ressources dans Openshift, vous ayez des erreurs comme:
+Il est possible que lorsque vous allez essayer d'appliquer le fichier yaml pour la création des ressources dans Openshift, vous ayez des erreurs comme:
 
 ![ocp-web-ajout-yaml-erreur](../Openshift/images/ocp-web-console-add-yaml-error.png)
   

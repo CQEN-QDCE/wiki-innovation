@@ -31,7 +31,7 @@ Une fois créée l'application, la procédure de déploiement va se déclencher 
 
 ![ocp-web-creation-app-deploiement](images/ocp-web-console-create-project-deployment.png)
 
-Vous pouvez constater que le pod et le service ont été créés, que le "build" a bien roulé, que le service a été exposé avec le port 8080 et qu'il y a une route [url](https://nodejs-sample-demo-guide-openshift-project.apps.dev.openshift.cqen.ca/) pour accéder à l'application.
+Vous pouvez constater que le pod et le service ont été créés, que le "build" a bien roulé, que le service a été exposé avec le port 8080 et qu'il y a une route pour accéder à l'application (section "Routes -> Location" dans l'image).
 
 * Pour ajouter la couche de sécurité (TLS) à la route, il faut éditer la route créée originalement. Pour le faire, suivez les instructions [ici].(#ajout-de-dune-couche-de-sécurité-pour-laccès-à-nos-applications-sur-le-web)
 

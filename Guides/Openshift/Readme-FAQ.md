@@ -11,7 +11,7 @@ Pour accéder au portail:
     - Sélectionnez l'option de "Log in with" CEAI
     - Completez vos identifiants pour vous connecter au portail.
 
-- La ligne de commandes avec le Client d'Openshift (oc cli): Si vous êtes familiarisé à travailler avec bash, alors cette option pourrait vous permettre de gérer les ressources vous-même. Pour l'utilisation de oc cli, vous devez l'installer localement. [Voir instructions](Readme-HandsOn.md#installation-de-oc-cli)
+- Le client en ligne de commandes (CLI): Si vous êtes familiarisé à travailler avec bash, alors cette option pourrait vous permettre de gérer les ressources vous-même. Pour l'utilisation de oc cli, vous devez l'installer localement. [Voir instructions](Readme-HandsOn.md#installation-de-oc-cli)
 
 **Q: Comment je prépare mon application pour la déployer sur Openshift?**
 
