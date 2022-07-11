@@ -61,7 +61,7 @@ echo $PATH
 oc <command>
 ```
 ### Se connecter au cluster d'Openshift
-Pour ouvrir une session au cluster, obtenir le jeton avec un appel [HTTP request](https://oauth-openshift.apps.dev.openshift.cqen.ca/oauth/token/request
+Pour ouvrir une session au cluster, obtenir le jeton avec un appel [HTTP request](https://oauth-openshift.apps.exp.openshift.cqen.ca/oauth/token/request
 )
 La réponse à la requête dans le navigateur web va vous indiquer la commande pour ouvrir une session, par exemple:
 ```bash
