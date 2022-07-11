@@ -45,7 +45,7 @@ Et voilà!, félicitations! vous avez déployé une application web sur Openshif
 (Documentation Openshift [ici](https://docs.openshift.com/container-platform/4.10/cli_reference/openshift_cli/getting-started-cli.html))
 ### Installation de oc cli
 
-Vous pouvez obtenir le fichier binaire à partir du [lien](https://downloads-openshift-console.apps.dev.openshift.cqen.ca/)
+Vous pouvez obtenir le fichier binaire à partir du [lien](https://downloads-openshift-console.apps.exp.openshift.cqen.ca/)
 
 **Ubuntu**
 - extraire le fichier:
