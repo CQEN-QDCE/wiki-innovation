@@ -42,7 +42,7 @@ Vous pouvez cliquer sur le lien de la route pour ouvrir l'application sur le web
 Et voilà!, félicitations! vous avez déployé une application web sur Openshift.
 
 ## Expérimentation avec l'Interface de Commande en Ligne d'Openshift (OC CLI) 
-(Documentation Openshift [ici](https://docs.openshift.com/container-platform/4.8/cli_reference/openshift_cli/getting-started-cli.html))
+(Documentation Openshift [ici](https://docs.openshift.com/container-platform/4.10/cli_reference/openshift_cli/getting-started-cli.html))
 ### Installation de oc cli
 
 Vous pouvez obtenir le fichier binaire à partir du [lien](https://downloads-openshift-console.apps.dev.openshift.cqen.ca/)
