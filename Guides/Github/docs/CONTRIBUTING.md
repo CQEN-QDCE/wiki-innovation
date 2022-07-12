@@ -61,6 +61,7 @@ bug ou suggérer une nouvelle fonctionnalité avant de créer un `pull request`.
 
 Vous pouvez fusionner le `pull request` une fois que vous avez l'approbation de deux autres développeurs, ou si vous n'êtes pas autorisé à le faire, vous pouvez demander au deuxième réviseur de la fusionner pour vous.
 
+* Assurez-vous de faire un `git pull` de la branche principale avant de tout changement, et ce pour éviter des éventuels conflits de code lors du `pull request`; 
 * Les changements non triviaux sont souvent mieux discutés d'abord dans un `issue`, pour vous éviter de faire un travail inutile; 
 * Pour les tâches ambitieuses, vous devriez essayer de présenter votre travail à la communauté pour obtenir des commentaires dès que possible;
 * Les nouvelles fonctionnalités doivent être accompagnées de tests et de documentation;
