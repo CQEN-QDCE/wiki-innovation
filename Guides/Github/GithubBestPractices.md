@@ -18,15 +18,14 @@
 Selon la [Poly de Montréal](https://cours.polymtl.ca/inf1900/logiciel/qualiteCode/guides/BonnesPratiquesGit.pdf), les cinq principes fondamentaux d'usage de Github sont les suivants: 
 
 1. **Faites des commits propres qui ne concernent qu'une seule chose**.    
-Très souvent, on fait plusieurs changements de natures différentes dans une session de travail. Il ne faut pas les regrouper en un seul commit, mais plutôt répartir en plusieurs
+Très souvent, on fait plusieurs changements de natures différentes dans une session de travail. Il ne faut pas les regrouper en un seul commit, mais plutôt repartir en plusieurs
 commits distincts. On saura ainsi plus facilement ce qui a été fait, puisque la description associée à chaque commit sera simple (et ne concernera qu'une chose), et si on a besoin
 de revenir en arrière, on pourra choisir de défaire le commit qui concerne le problème spécifique, plutôt que de tout défaire ce qu'on a fait dans la session de travail.
 Cela vous aidera sur plusieurs points. Ceux-ci seront plus compréhensibles, ils contiendront peu de modifications, ce qui vous aidera à revenir sur un point ou changer quelques fichiers, différemment si l'on a un gros commit. Cela aidera aussi lors des merge et des pull requests - vous aurez moins de code à réviser et donc moins de conflits potentiels à gérer. 
 
 2. **Pour chaque commit, écrivez une description concise qui décrit exactement les changements apportés**.  
-Ce principe est très important et souvent négligé par le développeur trop pressé ou insouciant. Comment pensez-vous qu'on peut se retrouver en cas de problème si la 
-description du commit est quelque chose comme "du ménage pour corriger les conneries de Paul"? Décrivez la fonctionnalité que vous avez créé, le bug que vous avez corrigé... 
-à proscrire les descriptions génériques (correction de bogue, grande mise-à-jour de code, etc), ou des commentaires qui n'ont pas rapport avec les changements apportés.  
+Ce principe est très important et souvent négligé par le développeur trop pressé ou insouciant. Comment pensez-vous qu'on peut se retrouver en cas de problème si la description du commit est quelque chose comme "du ménage pour corriger les conneries de Paul"? Décrivez la fonctionnalité que vous avez créée, le bug que vous avez corrigé... 
+à proscrire les descriptions génériques (correction de bogue, grande mise à jour de code, etc.), ou des commentaires qui n'ont pas rapport avec les changements apportés.  
 Il est suggéré d'écrire une description de la forme suivante: 
 
 ```
@@ -58,22 +57,22 @@ On veut conserver ce qui demande beaucoup d'effort à produire (le code tout par
 ## Autres principes et bonnes pratiques 
 
 1. Tous les fichiers de code source doivent être encodés en utf-8. 
-1. Corriger um fichier ou un bout de code qui ne respecte pas les conventions n'est jamais une perte de temps.
+1. Corriger un fichier ou un bout de code qui ne respecte pas les conventions n'est jamais une perte de temps.
 1. Ne faites pas de commit de fichiers d'environnement, comme `.env` ou `.envprod`. 
 1. Si vous déplacez ou renommez un fichier, assurez-vous de faire un commit avant de recommencer à modifier ce fichier. 
 1. Ne faites pas de commit d'un fichier de configuration.
 1. Ne faites pas de commit d'un gros fichier binaire.
-1. Soyez très prudent avec la commande reset, qui peut détruire des fichiers de manière definitive. 
+1. Soyez très prudent avec la commande reset, qui peut détruire des fichiers de manière définitive. 
 1. Ne pushez pas directement vers la branche master: (webpick)
 [Protect branches](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches),
 [Mergeability](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests)
 1. Ne pas commiter le code en tant qu'auteur non reconnu
 1. Définissez les propriétaires de code pour des révisions de code plus rapides: [CodeOwners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
-1. Ne digulguez pas de secrets dans le contrôle de code source  
-Tout ce que peut donner accès ou entraîner une authentification ou authorisation y est compris: mots de passe, clés secrètes, les clés d'API, les jetons privés, les clés SSH, etc. Il est recommendé d'utiliser un magasin externe sécurisé pour l'injection sécuritaire de secrets, tel que AWS Secrets Manager, Openshift Secrets, Github Secrets ou Hashicorp Vault. 
+1. Ne divulguez pas de secrets dans le contrôle de code source  
+Tout ce que peut donner accès ou entraîner une authentification ou autorisation y est compris: mots de passe, clés secrètes, les clés d'API, les jetons privés, les clés SSH, etc. Il est recommandé d'utiliser un magasin externe sécurisé pour l'injection sécuritaire de secrets, tel que AWS Secrets Manager, Openshift Secrets, Github Secrets ou Hashicorp Vault. 
 1. Ne pas commiter les dépendances dans le contrôle de code source 
 1. Ne pas commiter les fichiers de configuration locaux dans le contrôle de code source.  
-Ces fichiers de configuration privés contiennent souvent des secrets, des préférences personnelles, historiques ou des informations générales concernant votre environnement local qui ne doivent pas être divulgés.
+Ces fichiers de configuration privés contiennent souvent des secrets, des préférences personnelles, historiques ou des informations générales concernant votre environnement local qui ne doivent pas être divulguées.
 
 ## Les sept règles d'or d'un commit message réussi
 
@@ -142,12 +141,12 @@ La façon dont l'équipe chez Github fait la gestion de leur flow interne est l'
 
 En fait, ils travaillent avec un environnement de déploiement en continu où il n'y a pas le concept de `« release »` car chaque fois qu'ils finissent de préparer une nouvelle fonctionnalité, ils poussent en direct immédiatement (après toute la chaîne d'automatisation créée dans l'environnement). C'est le moyen le plus complet et le plus direct de gérer le flux d'applications Web ou de projets qui ne traitent pas exactement avec le concept de versions.
 
-Les applications Web sont généralement livrées en continu, et vous n'avez pas à prendre en charge plusieurs versions du logiciel déploiées. 
+Les applications Web sont généralement livrées en continu, et vous n'avez pas à prendre en charge plusieurs versions du logiciel déployé. 
 
 Les concepts principaux de Github Flow sont: 
 
 - Tout ce qui se trouve dans la branche `master` est déployable 
-- Pour travailler sur quelque chose de nouveau, créez une branche nommée de manière descriptive hors de `master` (par example: `new-oauth2-scopes`) 
+- Pour travailler sur quelque chose de nouveau, créez une branche nommée de manière descriptive hors de `master` (par exemple: `new-oauth2-scopes`) 
 - Commitez(`commit`) dans cette branche localement et poussez (`push`) régulièrement votre travail vers la même branche nommée sur le serveur 
 - Lorsque vous avez besoin de commentaires ou d'aide, ou que vous pensez que la branche est prête pour la fusion (`merge`), ouvrez une `pull request`
 - Une fois que quelqu'un d'autre a examiné et approuvé la fonctionnalité, vous pouvez la fusionner (`merge`) dans `master` 
