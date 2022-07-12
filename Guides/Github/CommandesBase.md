@@ -190,7 +190,7 @@ $ git status    # permet d’afficher toutes les modifications non commités sur
 ```
 
 ## Git merge 
-Join two or more development histories together.
+Joignez deux ou plusieurs historiques de développement ensemble.
 
 ## Git history 
 
