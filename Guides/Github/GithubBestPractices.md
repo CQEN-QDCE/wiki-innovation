@@ -154,11 +154,6 @@ Les concepts principaux de Github Flow sont:
 
 Ceci est le flux complèt. 
 
-
-It is very simple, very effective and works for fairly large teams - GitHub is 35 employees now, maybe 15-20 of whom work on the same project (github.com) at the same time.
-
-I think that most development teams - groups that work on the same logical code at the same time which could produce conflicts - are around this size or smaller. Especially those that are progressive enough to be doing rapid and consistent deployments.
-
 ![Github Flow](./images/GithubFlow.png)
 
 **Références**  

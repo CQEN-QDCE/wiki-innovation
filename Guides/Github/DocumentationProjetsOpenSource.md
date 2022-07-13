@@ -16,7 +16,7 @@
 
 # À propos des fichiers README
 
-Vous pouvez ajouter un fichier README à votre répo pour dire aux autres personnes pourquoi votre projet est utile, ce qu'ils peuvent faire avec votre projet et comment ils peuvent l'utiliser.
+Vous devez ajouter un fichier README à votre répo pour dire aux autres personnes pourquoi votre projet est utile, ce qu'ils peuvent faire avec votre projet et comment ils peuvent l'utiliser.
 
 Utilisez le fichier README d'un répo pour communiquer des informations importantes sur votre projet. Un fichier README, ainsi qu'une licence de répo, des directives de contribution et un code de conduite, communique les attentes pour votre projet et vous aide à gérer les contributions.
 
@@ -38,7 +38,7 @@ https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-f
 
 ## Exemple de fichier `README.md`
 
-Voici un exemple de gabatit de fichier [`README.md`][readme]. Utilisez-le et adaptez-le selon les préférences et besoins de votre projet. 
+Voici un exemple de gabarit de fichier [`README.md`][readme]. Utilisez-le et adaptez-le selon les préférences et besoins de votre projet. 
 
 # Licence 
 

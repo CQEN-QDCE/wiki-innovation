@@ -37,7 +37,9 @@ Ici sont disponibilisés des documents de base qui peuvent aider à votre démar
 
 Utilisez-les comme point de départ pour votre mise à niveau. Ces documents seront mise-à-jour et de nouveaux documents seront ajoutés selon l'évolution de l'écosystème et le besoin de complémentation d'informations. 
 
+
 Les consignes listées dans ces références doivent être appliquées à tout dépôt crée et entretenu dans le github du CQEN/CEAI.
+
 
 * ## [Les meilleures pratiques d'utilisation pour Git et Github](./GithubBestPractices.md) 
 
