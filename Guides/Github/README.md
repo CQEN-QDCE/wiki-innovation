@@ -15,6 +15,8 @@
 ## Github
 La plateforme de collaboration et de controle de code source adoptée par le Laboratoire du Centre d'expertise appliquée en innovation du CQEN (CEAI) est [Github](https://github.com).
 
+Github est un choix réflexi pour faire bénéficier les utilisateurs du Lab d'un outil qui est opensource, collaboratif et qui permet facilement le partage et la réutilisation de code source entre l'équipe de développement. En plus, en utilisant les fonctionnalités fournies par l'outil, on participe aux pratiques et principes des communautés de développement de "l'écosystème OpenSource".   
+
 GitHub permet aux développeurs de stocker et de partager, publiquement ou non, le code qu’ils créent. La plateforme accueille ainsi, dit-elle, plus de 80 millions de projets, qu’il s’agisse de logiciels, de sites Web, d’applications pour mobile ou tous autres types de programme informatique — et ce quel que soit le langage de programmation utilisé.
 
 Le site est aussi un espace collaboratif. Chaque utilisateur peut contribuer aux projets mis en ligne publiquement sur GitHub, en proposant des modifications. Le succès de GitHub repose notamment sur la façon dont le site a facilité ce processus. Pour que les utilisateurs ne se dérangent pas mutuellement en modifiant un programme en même temps, ils téléchargent chacun de son côté le code sur son ordinateur, effectuent les modifications, qui sont ensuite publiées sur GitHub après validation. 
@@ -34,6 +36,8 @@ GitHub aura eu pour talent de rendre ce système plus simple d’utilisation et 
 Ici sont disponibilisés des documents de base qui peuvent aider à votre démarrage dans le monde des projets opensource sur la plateforme Github. 
 
 Utilisez-les comme point de départ pour votre mise à niveau. Ces documents seront mise-à-jour et de nouveaux documents seront ajoutés selon l'évolution de l'écosystème et le besoin de complémentation d'informations. 
+
+Les consignes listées dans ces références doivent être appliquées à tout dépôt crée et entretenu dans le github du CQEN/CEAI.
 
 * ## [Les meilleures pratiques d'utilisation pour Git et Github](./GithubBestPractices.md) 
 
