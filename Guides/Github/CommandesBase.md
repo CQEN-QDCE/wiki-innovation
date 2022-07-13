@@ -239,7 +239,7 @@ $ git config --global user.name "Votre nom"
 $ git config --global user.email "votre@adresseemail.com"
 ``` 
 
-Ensuite, lors de vos commits, utilisez la flag `-s` ou `--signoff` pour rajouter vos informations d'identification au commit, et utilisez le flag -S pour signer le code avec votre clé GPG. 
+Ensuite, lors de vos commits, utilisez la flag `-s` ou `--signoff` pour rajouter vos informations d'identification au commit, et utilisez le flag -S pour signer le code avec votre clé GPG (détails sur le document [Création et configuration d'une clé GPG](https://github.com/CQEN-QDCE/BaseConnaissances/tree/main/github/obligation-signature-commits)). 
 
 ``` 
 $ git commit -m "[tag] votre message" --signoff -S
