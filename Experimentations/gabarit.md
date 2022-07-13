@@ -22,7 +22,7 @@
 ## Démarche
 
 1. [Décrire étapes par étapes la démarche utilisée pour vérifier l'hypothèse]
-2. [Inclure ce qui est nécéssaire pour reproduire l'expérimentation]
+2. [Inclure ce qui est nécessaire pour reproduire l'expérimentation]
 
 ## Résultat
 
@@ -32,7 +32,7 @@
 
 ## Références
 
-- [Consigner ici] 
+- [Consigner ici]
 - [les liens]
-- [vers les documents consultés] 
+- [vers les documents consultés]
 - [pour mener l'expérimentation.]
