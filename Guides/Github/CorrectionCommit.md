@@ -73,6 +73,7 @@ Félicitations, vous devriez maintenant être couvert.
 
 Restez vigilant et surveillez votre code et votre historique pour vérifier que vous n'avez pas d'autres secrets enfouis dans votre code.
 
+En plus, dans le pipeline de CI/CD du CQEN dans Github, il y a quelques outils qui sont utilisés pour veiller sur la fuite de données sensibles dans vos dépôts, bien comme pour surveiller plusieurs paramètres de sécurité et de qualité de code. Ces outils sont [Snyk](https://snyk.io), [GitGuardian](https://www.gitguardian.com/) et [SonarQube](https://www.sonarqube.org/). Référez-vous à la page [Outils CI/CD](./OutilsCICD.md) pour des informations sur leur configuration. 
 
 
 ## Références
