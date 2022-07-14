@@ -114,10 +114,13 @@ Voici un exemple de message de commit bien réussi:
     Résout: #123
     Voyez aussi: #456, #789
 ```
+
+# Modèles de branche
+
 ## Workflow de base
 
 ![Github workflow](./images/Github%20workflow.jpg)
-# Modèles de branches
+
 
 ## Git Flow
 
