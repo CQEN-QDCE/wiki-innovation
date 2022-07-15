@@ -50,9 +50,9 @@ Allez à la page [https://desktop.github.com/](https://desktop.github.com/) pour
 
 ## Configurez git 
 
-Si vous n'avez jamais utilisé git auparavant, vous avez besoin de faire quelques configurations tout d'abord. 
+Si vous n'avez jamais utilisé Git auparavant, vous aurez besoin de faire quelques configurations. 
 
-Exécutez les commandes suivantes, pour que git connaisse votre nom et courriel. 
+Exécutez les commandes suivantes, pour que Git connaisse votre nom et votre adresse courriel. 
 
 ```sh
 git config --global user.name "Votre nom "
