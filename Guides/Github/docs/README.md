@@ -27,7 +27,7 @@ Faites une introduction au sujet du projet. Decrivez autant possible du contexte
 
 Ceci est un exemple de la façon dont vous pouvez donner des instructions sur la configuration de votre projet localement.
 
-Ces instructions vous permettront d'obtenir une copie du projet opérationnel sur votre machine locale à des fins de développement et de test. Voir déploiement pour des notes sur la façon de déployer le projet sur un système réel. 
+Ces instructions vous permettront d'obtenir une copie du projet opérationnel sur votre machine locale à des fins de développement et de test. Voir la section `déploiement` pour des notes sur la façon de déployer le projet sur un système réel. 
 
 
 ### Pré-requis
