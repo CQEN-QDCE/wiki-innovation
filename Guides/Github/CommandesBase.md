@@ -44,7 +44,7 @@ Une autre alternative, avec l'installation automatisée, est disponible au packa
 
 ### Installation de Github Desktop
 
-Si vous préférez travailler avec une interface d'usager au lieu de la ligne de commande, probablement vous aimerez `Github Desktop`. Cette application est une couche d'interface d'usager qui utilise git pour faire le contrôle de source dans la plateforme Github. 
+Si vous préférez travailler avec une interface graphique au lieu de la ligne de commande, vous aimerez probablement  `Github Desktop`. Cette application est une couche d'interface graphique qui utilise Git pour faire le contrôle de source dans la plateforme Github. 
 
 Allez à la page [https://desktop.github.com/](https://desktop.github.com/) pour faire le téléchargement et l'installation selon votre système d'exploitation. 
 
