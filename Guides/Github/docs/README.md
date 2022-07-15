@@ -34,9 +34,7 @@ Ces instructions vous permettront d'obtenir une copie du projet opérationnel su
 
 De quoi avez-vous besoin pour installer le logiciel et comment les installer. 
 
-Donnez des examples. 
-
-Ceci est un exemple de la liste des choses dont vous avez besoin pour utiliser le logiciel et comment les installer.
+Donnez des exemples. 
 
 * npm
   ```sh
