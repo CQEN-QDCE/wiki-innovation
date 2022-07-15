@@ -14,7 +14,7 @@
 
 ## Installation des outils 
 
-Avant d'entreprendre des travaux avec git, il faut s'équiper avec les outils dont vous aurez besoin. Il s'agit surtout d'installer git, ensuite selon vos préférences installer Github Desktop et l'extension pour VSCode appelée Gitlens. 
+Avant d'entreprendre des travaux avec Git, il faut s'équiper des outils dont vous aurez besoin. Vous devez d'abord installer l’exécutable en ligne de commande Git, puis, selon vos préférences, vous pouvez installer des outils graphiques complémentaires tels que Github Desktop ou encore l'extension pour VSCode Gitlens.
 
 ### Installation de git 
 
