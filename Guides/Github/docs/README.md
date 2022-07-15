@@ -47,7 +47,7 @@ Donnez des exemples.
 Une série d'exemples étape par étape qui vous expliquent comment faire fonctionner un environnement de développement
 
 
-Dites quelle sera l'étape
+Décrivez chaque étapes
 
 ```
 Donnez l'exemple
