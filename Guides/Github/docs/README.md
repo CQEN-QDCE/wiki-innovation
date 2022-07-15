@@ -52,7 +52,7 @@ Une série d'exemples étape par étape qui vous expliquent comment faire foncti
 Dites quelle sera l'étape
 
 ```
-Donnez l'example
+Donnez l'exemple
 ```
 
 Et répétez
