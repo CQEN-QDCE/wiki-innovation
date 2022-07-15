@@ -37,8 +37,7 @@ Pour l'installation la plus à jour, installez via l'installateur binaire dispon
 
 Il y a quelques façons différentes d'installer git sur Windows. 
 
-Le téléchargement du build officiel est disponible sur le site web de Git. Allez à l'adresse 
-[https://git-scm.com/download/win](https://git-scm.com/download/win) et le téléchargement se déclenchera automatiquement. 
+Téléchargez le build officiel sur le site web de Git. [https://git-scm.com/download/win](https://git-scm.com/download/win)
 
 Une autre alternative, avec l'installation automatisée, est disponible au package de Git dans Chocolatey. Notez que Chocolatey est maintenu par la communauté de logiciel opensource.
 
