@@ -32,15 +32,6 @@ $ sudo apt-get install git -y
 
 Pour l'installation la plus à jour, installez via l'installateur binaire disponible dans le site web de Git, à l'adresse [https://git-scm.com/download/mac](https://git-scm.com/download/mac). 
 
-
-**Windows** 
-
-Il y a quelques façons différentes d'installer git sur Windows. 
-
-Téléchargez le build officiel sur le site web de Git. [https://git-scm.com/download/win](https://git-scm.com/download/win)
-
-Une autre alternative, avec l'installation automatisée, est disponible au package de Git dans Chocolatey. Notez que Chocolatey est maintenu par la communauté de logiciel opensource.
-
 ### Installation de Github Desktop
 
 Si vous préférez travailler avec une interface graphique au lieu de la ligne de commande, vous aimerez probablement  `Github Desktop`. Cette application est une couche d'interface graphique qui utilise Git pour faire le contrôle de source dans la plateforme Github. 
