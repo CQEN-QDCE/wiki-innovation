@@ -2,15 +2,15 @@
 
 Cet exemple va vous montrer une simple page de bienvenue générée à partir d'un gabarit Nodejs offert pour Openshift.
 
-On s'inspire des instructions détaillées dans [le répertoire de l'exemple](https://github.com/sclorg/nodejs-ex)
+On s'inspire des instructions détaillées dans [le dépôt de l'exemple](https://github.com/sclorg/nodejs-ex)
 
 ## Étape 1: Se connecter au projet de travail
-Pour se connecter au projet du travail, on va utiliser la commande oc dans un terminal (ligne de commandes).
+Pour se connecter au projet du travail, nous allons utiliser la commande oc dans un terminal (ligne de commandes).
 ```bash
 oc login --token=<jeton> --server=https://api.exp.openshift.cqen.ca:6443
 ```
 
-Pour obtenir le jeton de connection, voir les instructions [ici](../../Readme-HandsOn.md#se-connecter-au-cluster-dopenshift)
+Pour obtenir le jeton de connexion, voir les instructions [ici](../../Readme-HandsOn.md#se-connecter-au-cluster-dopenshift)
 
 ## Étape 2: Créer l'application avec l'outil client OC
 
@@ -52,7 +52,7 @@ Vous aurez un résultat similaire:
 
 ### "Build" de l'application
 
-La commande "oc new-app" va déclencher un "build" une fois que toutes les dependencies nécessaires ont été confirmées.
+La commande "oc new-app" va déclencher un "build" une fois que toutes les dépendances nécessaires ont été confirmées.
 
 Vérifier le statut de votre nouvelle application avec la commande "oc status"
 ```bash
@@ -76,7 +76,7 @@ svc/nodejs-ex - 172.30.204.90:8080
 ### Déploiement de l'application
 Le déploiement arrive automatiquement quand l'image de la nouvelle  application est disponible.
 
-Les commandes "oc get pods" ou "oc get svc" peuvent nous aider à monitorer le status du déploiement:
+Les commandes "oc get pods" ou "oc get svc" peuvent nous aider à surveiller le statut du déploiement:
 
 ```bash
 oc get pods
@@ -87,7 +87,7 @@ NAME                         READY   STATUS      RESTARTS   AGE
 nodejs-ex-1-build            0/1     Completed   0          24h
 nodejs-ex-585694c695-6kdzn   1/1     Running     0          24h
 ```
-On observe un première pod pour le build de l'application et un deuxième pod pour l'application qui roule.
+On observe un premier pod pour le build de l'application et un deuxième pod pour l'application qui s'exécute.
 
 ```bash
 oc get svc
@@ -97,18 +97,18 @@ résultat obtenu:
 NAME        TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
 nodejs-ex   ClusterIP   172.30.204.90   <none>        8080/TCP   24h
 ```
-On observe une adresse IP pour le service qui roule et le port par défaut pour le déploiement: 8080
+On observe une adresse IP pour le service qui s'exécute et le port par défaut pour le déploiement: 8080
 
 #### Console Web
 Vous pouvez aussi vérifier le déploiement de l'application dans la console web d'Openshift:
 
 ![ocp-web-projet-cree](images/ocp-web-console-nodejs-from-github-created.png)
 
-On peut observer que des ressources associés à l'application ont été crées:
+On peut observer que des ressources associées à l'application ont été crée:
 - la définition du service
 - la configuration de construction (build)
 
-Dans les options du menu à gauche, vous pouvez clicker sur "Project" pour voir l'aperçu du projet. La section inventaire vous montre la liste de ressources qui ont été créés, dont le fichier de configuration de déploiement.
+Dans les options du menu à gauche, vous pouvez cliquer sur "Project" pour voir l'aperçu du projet. La section inventaire vous montre la liste de ressources qui ont été créées, dont le fichier de configuration de déploiement.
 
 ![ocp-web-project-inventaire](images/ocp-web-console-nodejs-from-github-inventory.png)
 
@@ -117,7 +117,7 @@ Cliquez sur "1 Deployment" pour voir les détails du déploiement:
 ![ocp-web-nodejs-deploiement](images/ocp-web-console-nodejs-deployment.png)
 
 ### Configurer le routage
-La commande "oc expose" va nous permettre d'exposer le service avec un URL pour accéder à l'application dans le web:
+La commande "oc expose" nous permettra d'exposer le service avec une URL pour accéder à l'application dans le web:
 
 ```bash
 oc expose svc/nodejs-ex

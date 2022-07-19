@@ -1,6 +1,6 @@
 # Outils Client pour Openshift
 
-Les outils client pour Openshift permettent à l'utilisateur d'interargir avec la plateforme conteneurisée d'Openshift (OCP - Openshift Container Platform).
+Les outils client pour Openshift permettent à l'utilisateur d'interagir avec la plateforme conteneurisée d'Openshift (OCP - Openshift Container Platform).
 Entre les opérations possibles, on peut mentionner:
 - Gérer les groupes (clusters).
 - Construire (build), déployer et gérer les applications.

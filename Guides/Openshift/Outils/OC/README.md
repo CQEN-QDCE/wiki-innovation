@@ -1,6 +1,6 @@
 # Openshift CLI (oc)
 
-Openshift CLI (oc) est l'outil CLI le plus utilisé pour les utilisateurs de la plateforme conteneurisée d'Openshift (OCP). Il permet aux administrateurs et développeurs du cluster, d'effectuer des opérations de bout en bout dans Openshift à partir d'un terminal.
+Openshift CLI (oc) est l'outil CLI le plus utilisé pour les utilisateurs de la plateforme conteneurisée d'Openshift (OCP). Il permet aux administrateurs et développeurs du cluster d'effectuer des opérations de bout en bout dans Openshift à partir d'un terminal.
 
 Avec la commande oc, vous pouvez créer des applications et gérer les projets dans la plateforme conteneurisée d'Openshift.
 
@@ -22,7 +22,7 @@ oc <command>
 ```
 
 ## Se connecter au cluster d'Openshift
-Pour ouvrir une session au cluster, obtenir le jeton avec un appel [HTTP request](https://oauth-openshift.apps.exp.openshift.cqen.ca/oauth/token/request
+Pour ouvrir une session au cluster, obtenir le jeton avec un [appel HTTP](https://oauth-openshift.apps.exp.openshift.cqen.ca/oauth/token/request
 )
 La réponse à la requête dans le navigateur web va vous indiquer la commande pour ouvrir une session, par exemple:
 ```bash
@@ -110,7 +110,7 @@ oc project <projectname>
     # Edit the data in docker-registry.yaml in JSON then create the resource using the edited data.
     oc create -f docker-registry.yaml --edit -o json    
     ```
-- Voir la documentation pour l'un de ressources en particulier: Utilisez "explain". Pour exemple, pour les pods:
+- Voir la documentation pour l'un de ressources en particulier: utilisez "explain". Pour exemple, pour les pods:
     ```bash
     oc explain pods
     KIND:     Pod
@@ -147,8 +147,8 @@ oc project <projectname>
         https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
     ```
 
-## Nettoyage (Effacer les Ressources Créées)
-Pour obtenit la liste de composants qui ont été créés dans le projet, utilisez la commande "oc get all":
+## Nettoyage (effacer les ressources créées)
+Pour obtenir la liste de composants qui ont été créés dans le projet, utilisez la commande "oc get all":
 
 ```bash
 oc get all
