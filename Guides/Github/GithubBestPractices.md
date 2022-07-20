@@ -35,7 +35,7 @@ Le fichier `.gitignore` répertorie tous les fichiers qui ne doivent jamais êtr
 Ce principe vous évitera de gros maux de tête. Si vous changez l'historique des commits qui sont visibles par tous, vous risquez de causer des problèmes lorsqu'un développeur voudra faire une fusion avec sa version locale. Donc, pensez-y bien avant d'utiliser une commande qui change l'historique des commits (comme rebase), et si vous le faites, faites-le seulement sur une branche locale.
 
 1. **Ne pas commiter le code en tant qu'auteur non reconnu**.  
-Les dépôts du Lab exigent la conformité avec le [Developer Certificate of Origin](https://github.com/apps/dco) qui est un moyen léger pour les contributeurs de certifier qu'ils ont écrit ou qu'ils ont le droit de soumettre le code qu'ils contribuent au projet. À tous les commits, il est obligatoire qu'ils aient le `signoff` du développeur, bien que la signature avec sa clé GPG. On fait cela en ajoutant les flags `-s` et `-S` à la commande de commit, par exemple: `git commit -m "[tag] texte du message" -s -S`. 
+Les dépôts du CQEN exigent la conformité avec le [Developer Certificate of Origin](https://github.com/apps/dco) qui est un moyen léger pour les contributeurs de certifier qu'ils sont l'auteur du code qu'ils contribuent au projet. À tous les commits, il est obligatoire d'y inclure le `signoff` du développeur et de signer le commit avec sa clé GPG. On fait cela en ajoutant les flags `-s` et `-S` à la commande de commit, par exemple: `git commit -m "[tag] texte du message" -s -S`. 
 
 1. Tous les fichiers de code source doivent être encodés en utf-8. 
 
