@@ -33,9 +33,9 @@ L'utilisation de plateforme GitHub rend ce système plus simple d’utilisation 
 
 # Documentation de référence 
 
-Ici sont disponibilisés des documents de base qui peuvent aider à votre démarrage dans le monde des projets opensource sur la plateforme Github. 
+Ici sont proposés des documents de base qui peuvent aider à votre démarrage dans le monde des projets opensource sur la plateforme GitHub. 
 
-Utilisez-les comme point de départ pour votre mise à niveau. Ces documents seront mise-à-jour et de nouveaux documents seront ajoutés selon l'évolution de l'écosystème et le besoin de complémentation d'informations. 
+Utilisez-les comme point de départ pour votre mise à niveau. Ces documents seront mis à jour selon l'évolution de l'écosystème et selon les besoins des équipes qui utilisent le CEAI. 
 
 
 Les consignes listées dans ces références doivent être appliquées à tout dépôt crée et entretenu dans le github du CQEN/CEAI.
