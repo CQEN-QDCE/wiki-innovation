@@ -20,7 +20,7 @@
 <!-- PROJET -->
 # Titre du projet 
 
-Faites une introduction au sujet du projet. Decrivez autant possible du contexte général de votre projet ou du sujet traité dans cette documentation. 
+Faites une introduction au sujet du projet. Décrivez autant possible le contexte général de votre projet ou du sujet traité dans cette documentation. 
 
 ## Démarrage 
 
