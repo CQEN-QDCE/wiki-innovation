@@ -64,8 +64,8 @@ Comment le faire:
 
 ## Ce qu'on ne doit pas faire
 
-- Commit sur la version actuelle du code n'est pas la solution. Tenez en compte que git a tout l'historique, alors le secret continue visible dans les commits anterieurs. 
-- Seulement rendre le repo affecté privé n'est pas la solution non plus. 
+- Faire un commit sur la version actuelle du code n'est pas la solution. Github conserve tout l'historique du dépôt, alors le secret continue visible dans les commits antérieurs. 
+- Seulement rendre le dépôt affecté privé n'est pas la solution non plus. 
 
 ## **Finalement**
 
