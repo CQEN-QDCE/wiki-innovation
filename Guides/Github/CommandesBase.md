@@ -120,15 +120,14 @@ Change de branche ou restaure les fichiers de la branche de travail.
 $ git checkout <nom de la branche> 
 ```
 
-`git checkout` permet de déplacer d’une branche à une autre, elle prend en argument la branche cible et aussi de supprimer les modifications qui ne sont pas ajoutées.
+`git checkout` permet de se déplacer d’une branche à une autre et aussi de supprimer les modifications qui ne sont pas ajoutées. Elle prend en argument la branche cible. 
 
 Exemples:
 ```sh
-$ git checkout branch-A         # nous permet de nous déplacer vers la branche branch-A s’elle existe
-$ git checkout -b branch-B      # nous permet de créer et déplacer vers la branche branch-B s’elle n’existe pas déjà
-$ git checkout path/file.php    # permet de supprimer tous les changements non ajoutés (unstaged) sur le fichier path/file.php
-$ git checkout .                # permet de supprimer tous les changements non ajoutés (unstaged) sur tous les fichiers
-```
+$ git checkout branch-A         # Déplace vers la branche branch-A si elle existe.
+$ git checkout -b branch-B      # Crée et déplace vers la branche branch-B si elle n’existe pas déjà.
+$ git checkout path/file.php    # Supprime tous les changements non ajoutés (unstaged) sur le fichier path/file.php.
+$ git checkout .                # Supprime tous les changements non ajoutés (unstaged) sur tous les fichiers.
 
 ## Git add 
 
