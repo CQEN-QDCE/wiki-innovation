@@ -92,7 +92,7 @@ La commande  `git pull main preprod:master` nous permet de récupérer les chang
 
 ## Git fetch
 
-Récupérer les dernières informations d'objets et refs du serveur git.  
+Récupère les dernières informations d'objets et références du serveur Git.  
 
 ```sh
 $ git fetch <nom-du-remote>
