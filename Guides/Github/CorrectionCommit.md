@@ -51,8 +51,8 @@ De plus, ce n'est pas une action triviale à mener, sachez que la réécriture d
 
 Comment le faire: 
 
-- Nous vous recommandons d'utiliser les orientations de Github pour la remotion de contenu sensitive du repo [Removing sensitive data from a repository (en)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository)
-- Une fois que vous avez corrigé votre historique git, poussez-le vers le serveur distant. Sachez que cela peut arriver qu'il reste un commit orphelin d'une fuite sur GitHub. Vous pouvez contacter le support GitHub pour supprimer définitivement ces données.
+- Nous vous recommandons d'utiliser la procédure de Github pour la suppression de contenu problématique du dépôt [Removing sensitive data from a repository (en)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository)
+- Une fois que vous avez corrigé votre historique Git, poussez-le vers le serveur distant. Sachez qu'il peut arriver qu'il reste un commit orphelin contenant encore les données problématiques sur Github. Vous pouvez contacter le support Github pour supprimer définitivement ces données.
 
 ## **Étape 3 : Inspectez les logs**
 
