@@ -257,9 +257,9 @@ $ git push -u origin master
 
 ## Corriger une branche qui est derrière la branche master 
 
-Admettons que maintenait vous êtes dans votre branche `maBranche`. 
+Admettons que vous êtes sur votre branche `maBranche`. 
 
-Faites le suivant: 
+Faites les commandes suivantes: 
 
 ```
 $ git status
