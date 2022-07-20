@@ -2,9 +2,11 @@
 
 ## Introduction
 
-Quand il s'agit des projets multimodule (plusieurs composants), souvent, on doit travailler avec un fichier docker-compose.yaml qui contient l'information nécessaire pour le déploiement des composants d'une manière intégrée dans un environnement conteneurisé.
+Pour déployer un projet contenant plusieurs conteneurs localement, on utilise souvent l'orchestrateur Docker-Compose. 
 
-L'importance de **Kompose** se manifeste quand on veut passer à l'étape de déploiement de nos applications dans un contexte beaucoup mieux géré et orchestré comme kubernetes. Kubernetes aussi permet d'aller plus facilement vers les environnements infonuagiques.
+Docker-Compose permet de documenter dans un fichier yaml toute l'information nécessaire pour le déploiement des composants d'une manière intégrée dans un environnement conteneurisé. Malheureusement la plateforme Kubernetes (ainsi qu'Openshift) ne supporte pas l'utilisation de fichier Docker-Compose.
+
+Pour pallier à ce problème, le projet Kubernetes propose un outil nommé `Kompose`. `Kompose` peut s'avérer un outil puissant pour passer du déploiement local vers un contexte orchestré comme Kubernetes.
 
 ## Kompose: qu’est-ce que c’est?
 
@@ -19,7 +21,7 @@ Pour la documentation détaillée, vous pouvez consulter la page web de kompose 
 Pour ce guide-ci, on montrera l'installation sur Ubuntu/Debian.
 
 ### Ubuntu
-On va chercher le paquet debian à partir du [dépôt github](https://github.com/kubernetes/kompose/releases)
+Récupérer le paquet Debian à partir du [dépôt GitHub](https://github.com/kubernetes/kompose/releases)
 ```bash
 wget https://github.com/kubernetes/kompose/releases/download/v1.26.1/kompose_1.26.1_amd64.deb # Replace 1.26.1 with latest tag
 sudo apt install ./kompose_1.26.1_amd64.deb
@@ -30,7 +32,7 @@ kompose version
 1.26.1 (a9d05d509)
 ```
 ## Kompose Convert
-Kompose offre soutien pour deux fournisseurs: Openshift et Kubernetes.
+Kompose supporte deux fournisseurs: Openshift et Kubernetes.
 On peut spécifier le fournisseur avec l'option globale "provider":
 ```bash
 kompose --provider openshift --file docker-compose.yaml convert
@@ -38,9 +40,9 @@ kompose --provider openshift --file docker-compose.yaml convert
 Si l'on ne le spécifie pas, par défaut, la conversion se fera pour Kubernetes.
 
 ### Exemple de l'utilisation de "kompose convert"
-On va suivre l'exemple utilisé dans la page web de kompose [ici](https://kompose.io/getting-started/)
+Nous allons suivre l'exemple utilisé dans la page web de kompose [ici](https://kompose.io/getting-started/)
 
-À l'effet de cet exemple, on a besoin simplement du fichier docker-compose qui sera converti en plusieurs fichiers yaml, selon les ressources nécessaires pour le déploiement de l'application. Vous pouvez accéder au fichier docker-compose utilisé dans l'exemple à partir du [lien ici](https://raw.githubusercontent.com/kubernetes/kompose/master/examples/docker-compose.yaml)
+Dans cet exemple, nous avons besoin simplement du fichier docker-compose qui sera converti en plusieurs fichiers yaml, selon les ressources nécessaires pour le déploiement de l'application. Vous pouvez accéder au fichier docker-compose utilisé dans l'exemple à partir du [lien ici](https://raw.githubusercontent.com/kubernetes/kompose/master/examples/docker-compose.yaml)
 
 ```yaml
 version: "2"
@@ -194,7 +196,7 @@ Pour le déploiement sur Openshift on doit utiliser les fichiers yaml générés
 
 :warning: Avant de continuer, il faut vérifier la version déclarée dans les fichiers yaml générés. [Voir possible-problème-avec-les-fichiers-yaml](#dépannage-possible-problème-avec-les-fichiers-yaml-générés-par-kompose-pour-openshift)
 
-On a deux options pour travailler avec Openshift:
+Nous avons deux options pour la conversion Openshift:
 - Avec la ligne de commandes "oc cli"
   - Preréquis:
     - Installation de "oc cli" ([voir instructions](../Openshift/README.md#installation-de-oc-cli))
