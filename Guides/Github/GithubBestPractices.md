@@ -19,7 +19,7 @@ Git est un excellent système de gestion des versions, profitez-en! N'attendez p
 Décomposez votre session de travail en très petites étapes significatives et faites un commit après chacune. Par exemple, chaque fois qu'on avance un peu dans le développement d'une fonctionnalité, on s'assure qu'un nouveau test passe et l’on fait un commit.
 
 1. **Ne faites pas de commit de fichiers binaires**.
-Fichiers du type document (Writer, Word, Pages, WordPerfect), chiffrier (Calc, Excel, Numbers, Lotus123), présentation (Impress, PowerPoint, Keynote) etc., n'a aucun bénéfice à être enregistrés dans un système de contrôle de code source. Pour ce type de fichier, utilisez un gestionnaire de documents, comme par exemple SharePoint ou Content Manager. De même pour les fichiers de type exécutable, il est impossible de contrôler leurs versions dans Github; trouvez un autre endroit à les déposer.
+Les fichiers de type document (Writer, Word, Pages, WordPerfect), chiffrier (Calc, Excel, Numbers, Lotus123), présentation (Impress, PowerPoint, Keynote) etc., n'ont aucun bénéfice à être enregistrés dans un système de contrôle de code source. Pour ce type de fichier, utilisez un gestionnaire de documents, comme par exemple SharePoint ou Content Manager. De même pour les fichiers de type exécutable, il est impossible de contrôler leurs versions dans Github; trouvez un autre endroit où les déposer.
 
 1. **Ne faites pas de commit d'un fichier qui est généré automatiquement**.  
 Nous disposons aujourd'hui de beaucoup d'espace mémoire, mais il ne faut pas exagérer!
