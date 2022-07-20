@@ -170,7 +170,7 @@ $ git push origin branch-A    # permet d’envoyer les modifications que nous av
 
 ## Git status 
 
-Afficher l'état de du repertoire de travail.
+Affiche l'état du repertoire de travail.
 
 ```sh
 $ git status    # permet d’afficher toutes les modifications non commités sur la branche courante.
