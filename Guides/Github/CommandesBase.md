@@ -217,7 +217,7 @@ $ git branch -m <nom actuel> <nouveau nom de la branche>
 
 ## Identifiez-vous à git
 
-Lors de vos commits, il est obligatoire de faire la soumission signée par vous avec votre clé GPG (`signature`) et ajoute votre nom et courriel à la fin de la message de `commit` (`signoff`), aux fins de validation auprès de la plateforme. Alors, il faut vous identifier dans la configuration de `git` pour que le signoff soit généré correctement. 
+Lors de vos commits, il est obligatoire de faire la soumission signée par vous avec votre clé GPG (`signature`) et d'ajouter votre nom et courriel à la fin du message de `commit` (`signoff`), aux fins de validation auprès de la plateforme. 
 
 D'abord, identifiez-vous en ajoutant votre nom et votre courriel à la configuration de git: 
 
