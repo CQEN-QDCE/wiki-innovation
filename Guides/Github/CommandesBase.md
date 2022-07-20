@@ -83,12 +83,12 @@ Et voilà, vous avez configuré la clé GPG et vos informations personnelles pou
 
 ## Git pull 
 
-Recupère et intègre les objets et refs d'un autre répo ou une branche locale. 
+Récupère et intègre les objets et références d'un autre dépôt ou d'une branche locale. 
 
-La commande `git pull` permet de récupérer tous les changements sur la branche distant. Elle prend en paramètre la branche source et la branche ciblé.
+La commande `git pull` permet de récupérer tous les changements sur la branche distante. Elle prend en paramètre la branche source et la branche ciblé.
 
 Exemple:
-La commande  `git pull main preprod:master`  nous permet de récupérer les changements de la branche `preprod` du remote `main` dans la branche `master` du remote `origin`.
+La commande  `git pull main preprod:master` nous permet de récupérer les changements de la branche `preprod` du remote `main` dans la branche `master` du remote `origin`.
 
 ## Git fetch
 
