@@ -27,7 +27,7 @@ La révocation du secret est le seul moyen de s'assurer qu'aucun attaquant n'acc
 Comment le faire: 
 
 - Après avoir été alerté, vous devez accéder au code source correspondant; consultez la documentation du fournisseur concerné, vous pouvez généralement révoquer vos informations d'identification dans la même section que vous les avez émises. 
-- Enfin, si vous avez divulgué des informations d'identification d'entreprise ou des informations d'identification que vous ne pouvez pas révoquer par-vous-même, nous vous recommandos vivement de contacter votre équipe de sécurité. C'est normal de faire des erreurs, les cacher est souvent un plus gros problème. 
+- Enfin, si vous avez divulgué des informations d'identification d'entreprise ou des informations d'identification que vous ne pouvez pas révoquer par-vous-même, nous vous recommandons vivement de contacter votre équipe de sécurité. C'est normal de faire des erreurs, par contre les cacher ne fera qu'empirer les problèmes. 
 
 Que vous ayez réussi à révoquer les informations d'identification ou non, passez à l'étape 2 pour atténuer la fuite et en supprimer les preuves.
 
