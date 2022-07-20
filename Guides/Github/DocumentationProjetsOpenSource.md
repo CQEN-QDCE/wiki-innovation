@@ -60,7 +60,7 @@ Avant d'adopter un code de conduite pour votre projet :
 * Recherchez différents codes de conduite conçus pour les projets open source. Choisissez-en un qui reflète les normes de votre communauté.
 * Réfléchissez bien si vous êtes disposé et capable de l'appliquer.
 
-Vous pouvez ajouter un code de conduite à votre projet en utilisant un modèle ou en créant manuellement un code de conduite personnalisé. Votre code de conduite sera disponible dans les deux sens, mais "Code de conduite" ne sera marqué comme complet dans le profil de la communauté de votre référentiel que si vous utilisez un modèle. Si vous utilisez un code de conduite rédigé par une autre personne ou organisation, assurez-vous de suivre les directives d'attribution de la source. Pour plus d'informations sur les profils de communauté, voir « À propos des profils de communauté pour les référentiels publics ».
+Vous pouvez ajouter un code de conduite à votre projet en utilisant un modèle ou en créant manuellement un code de conduite personnalisé. Par contre, notez que "Code de conduite" ne sera marqué comme complet dans le profil de la communauté de votre référentiel que si vous utilisez un modèle. Si vous utilisez un code de conduite rédigé par une autre personne ou organisation, assurez-vous de suivre les directives d'attribution de la source. Pour plus d'informations sur les profils de communauté, voir « À propos des profils de communauté pour les référentiels publics ».
 
 Vous pouvez créer un code de conduite par défaut pour votre organisation ou votre compte personnel. Pour plus d'informations, consultez "Création d'un dossier de santé communautaire par défaut".
 
