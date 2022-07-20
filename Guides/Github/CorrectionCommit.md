@@ -11,7 +11,7 @@
 
 # Procédure pour correction de commit
 
-Si vous vous retrouvez sur cette page, il est probable que vous ayez reçu une alerte de notre service d'alerte pro bono. Ne vous inquiétez pas, les fuites se produisent parfois... même pour les meilleurs d'entre nous... Cette section fournit un guide étape par étape sur la façon de remédier à une fuite qui s'est produite sur un GitHub public.
+Si vous vous retrouvez sur cette page, il est probable que vous ayez reçu une alerte de notre service de surveillance des dépôts Github. Ne vous inquiétez pas, les fuites se produisent parfois... même pour les meilleurs d'entre nous... Cette section fournit un guide étape par étape sur la façon de remédier à une fuite qui s'est produite sur un dépôt Github public.
 
 ## **Guide étape par étape pour remédier à la fuite**
 
