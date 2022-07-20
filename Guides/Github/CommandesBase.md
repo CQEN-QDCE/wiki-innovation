@@ -131,15 +131,13 @@ $ git checkout .                # Supprime tous les changements non ajoutés (un
 
 ## Git add 
 
-Ajoute le contenu de fichiers dans la zone de l'index. 
 
-`git add` permet d’ajouter les changements que nous avons fait dans nos fichiers sur la branche courante.
+`git add` permet d’ajouter les changements que nous avons fait sur la branche courante dans le prochain commit.
 
 Exemples:
 ```sh
- git add .     # permet d’ajouter tous les changements que nous avons fait
- git add -u    # permet d’ajouter les modifications sur les fichiers déjà connus par git (les nouveaux fichiers ne seront pas ajoutés)
-```
+ git add nom_fichier.go     # Ajoute les changements fait au fichier nom_fichier.go au prochain commit
+ git add -u    # Ajoute les modifications sur les fichiers déjà connus par git (les nouveaux fichiers ne seront pas ajoutés)
 
 ## Git commit 
 
