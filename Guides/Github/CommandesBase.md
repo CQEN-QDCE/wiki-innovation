@@ -234,20 +234,20 @@ $ git commit -m "[tag] votre message" --signoff -S
 
 Référez-vous au [répo de la Base de connaissances][securisation] pour plus d'information sur la sécurisation de Github.  
 
-## Création d'un répositoire github 
+## Création d'un dépôt Github 
 
 - Créez un répertoire pour le projet 
-- Allez au nouveau répertoire 
+- Allez dans le nouveau répertoire 
 - Saisissez `git init` 
 - Écrivez du code 
 - Saisissez `git add` pour ajouter du code au projet 
-- Saisissez `git commit` pour faire un commit à votre repo local. 
+- Saisissez `git commit` pour faire un commit à votre dépôt local. 
 - Saisissez `git branch -M master` pour créer la branche principale. 
-- Allez sur github
+- Allez sur Github
 - Cliquez sur `new repository`, et ensuite `Create repository`
 
 
-Maintenant, on va pusher le repo. Saisissez les commandes suivantes: 
+Pour pousser votre code sur le serveur Github, saisissez les commandes suivantes: 
 
 ```bash
 # $ git remote add origin git@github.com:username/new_repo
