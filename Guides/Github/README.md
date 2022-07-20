@@ -12,10 +12,10 @@
 # Contrôle de code source avec Github et Git
 
 
-## Github
-La plateforme de collaboration et de controle de code source adoptée par le Laboratoire du Centre d'expertise appliquée en innovation du CQEN (CEAI) est [Github](https://github.com).
+## GitHub
+La plateforme de collaboration et de contrôle de code source adoptée par le Laboratoire du Centre d'expertise appliquée en innovation du CQEN (CEAI) est [GitHub](https://github.com).
 
-Github est un choix réflexi pour faire bénéficier les utilisateurs du Lab d'un outil qui est opensource, collaboratif et qui permet facilement le partage et la réutilisation de code source entre l'équipe de développement. En plus, en utilisant les fonctionnalités fournies par l'outil, on participe aux pratiques et principes des communautés de développement de "l'écosystème OpenSource".   
+GitHub a été choisi dans le but de faire bénéficier les utilisateurs du CEAI d'un outil collaboratif et qui permet facilement le partage et la réutilisation de code source entre les membres d'une équipe de développement. En plus, en utilisant les fonctionnalités fournies par l'outil, on participe aux pratiques et principes des communautés de développement de "l'écosystème OpenSource".   
 
 GitHub permet aux développeurs de stocker et de partager, publiquement ou non, le code qu’ils créent. La plateforme accueille ainsi, dit-elle, plus de 80 millions de projets, qu’il s’agisse de logiciels, de sites Web, d’applications pour mobile ou tous autres types de programme informatique — et ce quel que soit le langage de programmation utilisé.
 
