@@ -24,9 +24,9 @@ Le site est aussi un espace collaboratif. Chaque utilisateur peut contribuer aux
 Chaque modification du code est ainsi stockée sur GitHub, et il est possible de suivre pas à pas chaque étape de développement d’un programme. Des espaces de discussion permettent à tous les développeurs d’échanger sur chaque programme et contribution.
 
 ## Git
-La base de controle de code source sur laquelle s'appuiGithub est appelée tout simplement `Git`, qui est un outil développé en 2005 par Linus Torvalds, le célèbre créateur de Linux. Comme avec la plupart des autres systèmes de contrôle de version distribués, et contrairement à la plupart des systèmes client-serveur, chaque répertoire Git sur chaque ordinateur est un référentiel à part entière avec un historique complet et des capacités complètes de suivi des versions, indépendamment de l'accès au réseau ou d'un serveur central. Git est un logiciel gratuit et open source distribué sous la licence GPL-2.0 uniquement. Selon la `man page` de git: **Git est un système de contrôle de révision rapide, évolutif et distribué avec un jeu de commandes exceptionnellement riche qui fournit à la fois des opérations de haut niveau et un accès complet aux éléments internes.**
+Le système de contrôle de code source sur laquelle s’appuie GitHub est appelée tout simplement `Git`, qui est un outil développé en 2005 par Linus Torvalds, le célèbre créateur de Linux. Comme avec la plupart des autres systèmes de contrôle de version distribués, et contrairement à la plupart des systèmes client-serveur, chaque répertoire Git sur chaque ordinateur est un référentiel à part entière avec un historique complet et des capacités complètes de suivi des versions, indépendamment de l'accès au réseau ou d'un serveur central. Git est un logiciel gratuit et open source distribué sous la licence GPL-2.0 uniquement. Selon la `man page` de git: **Git est un système de contrôle de révision rapide, évolutif et distribué avec un jeu de commandes exceptionnellement riche qui fournit à la fois des opérations de haut niveau et un accès complet aux éléments internes.**
 
-GitHub aura eu pour talent de rendre ce système plus simple d’utilisation et compréhensible par le plus grand nombre.
+L'utilisation de plateforme GitHub rend ce système plus simple d’utilisation et compréhensible par le plus grand nombre.
 
 
 
