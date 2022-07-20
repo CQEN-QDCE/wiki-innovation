@@ -12,10 +12,7 @@
 # Meilleures pratiques de Github
 
 1. **Faites des commits propres qui ne concernent qu'une seule chose**.    
-Très souvent, on fait plusieurs changements de natures différentes dans une session de travail. Il ne faut pas les regrouper en un seul commit, mais plutôt repartir en plusieurs
-commits distincts. On saura ainsi plus facilement ce qui a été fait, puisque la description associée à chaque commit sera simple (et ne concernera qu'une chose), et si l'on a besoin
-de revenir en arrière, on pourra choisir de défaire le commit qui concerne le problème spécifique, plutôt que de tout défaire ce qu'on a fait dans la session de travail.
-Cela vous aidera sur plusieurs points. Ceux-ci seront plus compréhensibles, ils contiendront peu de modifications, ce qui vous aidera à revenir sur un point ou changer quelques fichiers, différemment si l'on a un gros commit. Cela aidera aussi lors des merges et des pull requests - vous aurez moins de code à réviser et donc moins de conflits potentiels à gérer. 
+Très souvent, on fait plusieurs changements de natures différentes dans une session de travail. Il ne faut pas les regrouper en un seul commit, mais plutôt les répartir en plusieurs commits distincts. On saura ainsi plus facilement ce qui a été fait, puisque la description associée à chaque commit sera simple (et ne concernera qu'une chose). Si jamais l'on a besoin de revenir en arrière, on pourra choisir de défaire seulement le commit qui concerne le problème spécifique, plutôt que de tout défaire ce qui a été fait dans la session de travail. Cela aidera aussi lors des merges et des pull requests: Vous aurez moins de code à réviser et donc moins de conflits potentiels à gérer. 
 
 1. **Faites des commits très fréquemment**  
 Git est un excellent système de gestion des versions, profitez-en! N'attendez pas d'avoir écrit beaucoup de code avant de faire un commit. Dès que vous avez quelque chose qui fonctionne raisonnablement (mais pas nécessairement complètement), faites un commit. 
