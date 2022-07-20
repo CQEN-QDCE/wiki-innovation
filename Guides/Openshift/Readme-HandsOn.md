@@ -5,12 +5,12 @@
 ### Créer un projet
 Le site du laboratoire, [CEAI](https://ceai.cqen.ca/), vous offre l'option  "Coffre à outils" avec des outils que vous servira pour travailler comme le "Portail Openshift". 
 
-Pour accéder à la console web, vous devez vous logger avec vos identifiants fournis pour l'administrateur pour authentification SSO.
+Pour accéder à la console web, vous devez vous authentifier avec votre identifiant du CEAI.
 
-À partir de la page principale de Openshift, vous allez voir la liste de projets qui ont été créés pour vous. Cliquez sur l'un des projets pour commencer avec la création des ressources comme des applications.
+À partir de la page d'accueil d'Openshift, vous trouverez la liste des projets auxquels vous avez accès. Cliquez sur l'un d'eux pour commencer avec la création des ressources comme des applications.
 
 ### Créer une application
-Sélectionnez le projet que vous avez créé précédemment.
+Sélectionnez un projet.
 Dans le menu à gauche, vous verrez l'option "+Add". Cliquez sur ce bouton pour créer une application.
 Vous verrez que Openshift vous offre une diversité d'options de création des applications, telles que: 
 - Exemples suggérés, 
@@ -21,19 +21,19 @@ Vous verrez que Openshift vous offre une diversité d'options de création des a
 
 ![ocp-web-creation-application](images/ocp-web-console-create-application.png)
 
-Pour démontrer un exemple de création d'une application, on va choisir l'option à partir des exemples suggérés: "Getting started resources" -> "View all samples" -> "Node.js"
+Pour démontrer un exemple de création d'une application, choisir `Node.js` dans la liste des exemples suggérés: "Getting started resources" -> "View all samples" -> "Node.js"
 
 ![ocp-web-creation-app-basic-nodejs](images/ocp-web-console-create-app-sample-nodejs.png)
 
 Cette application vient d'un dépôt git [nodejs-ex](https://github.com/sclorg/nodejs-ex) qui a les scripts nécessaires pour la création des ressources comme le service, le pod, la route (url), entre autres.
 
-Une fois créée l'application, la procédure de déploiement va se déclencher et finalement l'application sera déployée et accessible avec un lien web:
+Une fois le déploiement terminé, l'application sera déployée et accessible via un lien web:
 
 ![ocp-web-creation-app-deploiement](images/ocp-web-console-create-project-deployment.png)
 
-Vous pouvez constater que le pod et le service ont été créés, que le "build" a bien roulé, que le service a été exposé avec le port 8080 et qu'il y a une route [url](https://nodejs-sample-demo-guide-openshift-project.apps.dev.openshift.cqen.ca/) pour accéder à l'application.
+Vous pouvez constater que le pod et le service ont été créés, que le "build" s'est bien complété, que le service a été exposé avec le port 8080 et qu'il y a une route pour accéder à l'application (section "Routes -> Location" dans l'image).
 
-* Pour ajouter la couche de sécurité (TLS) à la route, il faut éditer la route créée originalement. Pour le faire, suivez les instructions [ici].(#ajout-de-dune-couche-de-sécurité-pour-laccès-à-nos-applications-sur-le-web)
+* Pour ajouter la couche de sécurité (TLS) à la route, il faut éditer la route créée originalement. Pour le faire, suivez les instructions [ici](#prise-en-charge-https-des-routes-dans-openshift)
 
 Vous pouvez cliquer sur le lien de la route pour ouvrir l'application sur le web:
 
@@ -42,7 +42,8 @@ Vous pouvez cliquer sur le lien de la route pour ouvrir l'application sur le web
 Et voilà!, félicitations! vous avez déployé une application web sur Openshift.
 
 ## Expérimentation avec l'Interface de Commande en Ligne d'Openshift (OC CLI) 
-(Documentation Openshift [ici](https://docs.openshift.com/container-platform/4.8/cli_reference/openshift_cli/getting-started-cli.html))
+
+(Documentation Openshift [ici](https://docs.openshift.com/container-platform/4.10/cli_reference/openshift_cli/getting-started-cli.html))
 ### [Installation de oc cli](Outils/OC/README.md#installation-de-openshift-cli-oc)
 ### [Se connecter au cluster d'Openshift](Outils/OC/README.md#se-connecter-au-cluster-dopenshift)
 ### [Accéder à votre projet de travail](Outils/OC/README.md#accéder-à-votre-projet-de-travail)
@@ -74,11 +75,11 @@ Vous verrez un résultat similaire:
 oc logout
 ```
 
-#### Ajout d'une couche de sécurité pour l'accès à nos applications sur le web
+#### Prise en charge HTTPS des routes dans Openshift
 
 Pour rendre l'application plus sécuritaire, on ajoute à la route, le protocole TLS (Transport Layer Security) qui offre une sécurité de bout en bout aux données envoyées sur internet. Pour le configurer, dans la console web, il faut éditer la route pour ajouter ce qui correspond au protocole TLS.
 * Cliquez sur la route (dans Routes -> nodejs-sample-demo)
-* Ouvrez l'onglet YAML et vous allez voir le script de la route.
+* Ouvrez l'onglet YAML et vous allez voir la définition de la route.
 * Trouvez la section qui correspond aux spécifications ("spec" -> "port"), et ensuite après le port, ajouter:
     ```yaml
     tls:
