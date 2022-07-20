@@ -1,6 +1,8 @@
 # Workshops Openshift
 Documentation originale des workshops d'Openshift [ici](https://github.com/RedHatWorkshops)
 
+L'équipe du CEAI vous propose quelques ateliers pour apprendre à utiliser et à opérer la plateforme d'Openshift.
+
 ## Outils nécessaires pour les workshops
 - git (voir la page d'installation) TBD!!!! (existe-t-il le fichier readme pour l'installation de github? Demander à @Julio!!! )
 - [oc](../Outils/OC/README.md): outil client d'Openshift 
