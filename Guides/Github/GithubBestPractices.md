@@ -62,7 +62,7 @@ Les dépôts du CQEN exigent la conformité avec le [Developer Certificate of Or
 8. Pour chaque commit, écrivez une description concise qui décrit exactement les changements apportés
 
 
-Un bon message de commit est très important et souvent négligé par le développeur trop pressé ou insouciant. Comment pensez-vous qu'on peut se retrouver en cas de problème si la description du commit est quelque chose comme "du ménage pour corriger les conneries de Paul"? Décrivez la fonctionnalité que vous avez créée, le bogue que vous avez corrigé, etc. À proscrire les descriptions génériques (correction de bogue, grande mise à jour de code), ou des commentaires qui n'ont pas rapport avec les changements apportés.  
+Un bon message de commit est très important et souvent négligé par le développeur trop pressé ou insouciant. Comment pensez-vous qu'on peut se retrouver en cas de problème si la description du commit est quelque chose comme "du ménage pour corriger les conneries de Paul"? Décrivez la fonctionnalité que vous avez créée, le bogue que vous avez corrigé, etc. Sont à proscrire les descriptions génériques (correction de bogue, grande mise à jour de code), ou des commentaires qui n'ont pas rapport avec les changements apportés.  
 
 Il est suggéré d'écrire une description de la forme suivante: 
 
