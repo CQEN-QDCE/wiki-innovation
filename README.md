@@ -8,11 +8,11 @@ Privilégiant une approche ouverte, le CEAI publie ici toute la documentation co
 
 ## Contenu
 
-### [Architecture](./Architecture)
+### [Architecture](./Architecture/README.md)
 
 Diagrammes d'architecture du CEAI
 
-### [ASEA (*AWS Secure Environment Accelerator*)](./ASEA)
+### [ASEA (*AWS Secure Environment Accelerator*)](./ASEA/README.md)
 
 Documentation du processus de déploiement d'AWS Secure Environment Accelerator comme infrastructure cloud du CEAI.
 
@@ -28,11 +28,11 @@ Rapports d'expérimentations effectués dans le cadre de la mise en place du CEA
 
 Gabarits utiles aux activités du CEAI.
 
-### Guides
+### [Guides](./Guides/README.md)
 
 Guides d'utilisation des services du CEAI.
 
-### [Orientations](./Orientations)
+### [Orientations](./Orientations/README.md)
 
 Orientations prises au cours de la mise en place du CEAI.
 
