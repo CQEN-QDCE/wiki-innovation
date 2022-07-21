@@ -9,13 +9,12 @@ Pour se connecter au projet du travail, nous allons utiliser la commande oc dans
 ```bash
 oc login --token=<jeton> --server=https://api.exp.openshift.cqen.ca:6443
 ```
-
-Pour obtenir le jeton de connexion, voir les instructions [ici](../../Readme-HandsOn.md#se-connecter-au-cluster-dopenshift)
+Pour obtenir le jeton de connexion, voir les instructions [ici](../../Readme-HandsOn.md#se-connecter-au-cluster-dopenshiftoutilsocreadmemdse-connecter-au-cluster-dopenshift)
 
 ## Étape 2: Créer l'application avec l'outil client OC
 
 ### Créer l'application à partir du code source (github)
-On va créer l'application à partir du code source dans github:
+Création de l'application à partir du code source dans github:
 
 ```bash
 oc new-app https://github.com/sclorg/nodejs-ex -l name=nodejs-from-source
@@ -116,15 +115,21 @@ Cliquez sur "1 Deployment" pour voir les détails du déploiement:
 
 ![ocp-web-nodejs-deploiement](images/ocp-web-console-nodejs-deployment.png)
 
-### Configurer le routage
-La commande "oc expose" nous permettra d'exposer le service avec une URL pour accéder à l'application dans le web:
+### Créer la route de l'application
+La commande `oc create route edge` nous permettra d'ajouter la route au service pour accéder à l'application dans le web (avec un lien sécurisé https):
 
 ```bash
-oc expose svc/nodejs-ex
+oc create route edge nodejs-ex --service=nodejs-ex
 ```
 résultat:
 ```bash
-route.route.openshift.io/nodejs-ex exposed
+route.route.openshift.io/nodejs-ex created
 ```
+
+Cliquez sur le lien créé et vous allez voir dans le navigateur, l'interface graphique (UI) généré par le gabarit utilisé pour cet exemple:
+
+![ocp-web-nodejs-ui](images/ocp-deployed-nodejs-ui.png)
+
+
 
 [Table de matières](README.md)

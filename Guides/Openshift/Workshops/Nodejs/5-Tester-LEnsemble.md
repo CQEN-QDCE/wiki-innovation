@@ -11,5 +11,4 @@ Rafraîchissez la page web par exemple deux fois, et vous allez vérifier que le
 
 ![ocp-nodejs-ui-avec-bd-visited](images/ocp-deployed-nodejs-ui-page-view-count-with-db-revisited-cropped.png)
 
-
 [Table de matières](README.md)
