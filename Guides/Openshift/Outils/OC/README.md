@@ -19,7 +19,7 @@ Avec la commande oc, vous pouvez créer des applications et gérer les projets d
   - [Références](#références)
 
 ## Installation de Openshift CLI (oc)
-Vous pouvez obtenir le fichier binaire à partir du [lien](https://downloads-openshift-console.apps.dev.openshift.cqen.ca/)
+Vous pouvez obtenir l'exécutable `oc` à partir du [lien](https://downloads-openshift-console.apps.exp.openshift.cqen.ca/)
 
 **Ubuntu**
 - extraire le fichier:
@@ -45,13 +45,13 @@ oc login --token=<token-dans-la-response> --server=https://api.exp.openshift.cqe
 Un message va s'afficher pour montrer qu'on a bien ouvert une session avec succès dans le cluster
 
 ## Accéder à votre projet de travail
-La commande "oc get projects" vous montrera la liste de projets qui ont été créés pour vous:
+La commande "oc get projects" vous montrera la liste de projets auxquels vous avez accès:
 ```bash
 oc get projects
 NAME    DISPLAY NAME            STATUS
 ...
 ```
-Vous pouvez sélectionner le projet de travail avec la commande "oc project <projectname>"
+Vous pouvez sélectionner le projet en cours avec la commande "oc project <projectname>"
 ```bash
 oc project <projectname>
 ```
@@ -132,13 +132,19 @@ L'exemple montre le cas d'une variable d'environnement (MONGO_URL), ajouté au d
 - Voir le statut du projet
     ```bash
     oc status
-    In project guide-openshift-project on server https://api.exp.openshift.cqen.ca:6443
+    In project ws1-nodejs on server https://api.exp.openshift.cqen.ca:6443
 
-    https://cakephp-example-guide-openshift-project.apps.dev.openshift.cqen.ca to pod port 8080-tcp (svc/cakephp-ex)
-    deployment/cakephp-ex deploys istag/cakephp-ex:latest <-
-    bc/cakephp-ex source builds https://github.com/sclorg/cakephp-ex on openshift/php:7.4-ubi8 
-    deployment #2 running for about an hour - 1 pod
-    deployment #1 deployed about an hour ago
+    svc/mongodb-26-centos7 - 172.30.245.220:27017
+      deployment/mongodb-26-centos7 deploys istag/mongodb-26-centos7:latest 
+        deployment #2 running for 2 weeks - 1 pod
+        deployment #1 deployed 2 weeks ago
+
+    https://nodejs-ex-ws1-nodejs.apps.exp.openshift.cqen.ca to pod port 8080-tcp (svc/nodejs-ex)
+      deployment/nodejs-ex deploys istag/nodejs-ex:latest <-
+        bc/nodejs-ex source builds https://github.com/sclorg/nodejs-ex on openshift/nodejs:16-ubi8 
+        deployment #3 running for 2 weeks - 1 pod
+        deployment #2 deployed 2 weeks ago
+        deployment #1 deployed 2 weeks ago
     ```
 
 - Suggestions (aide)
@@ -178,7 +184,7 @@ L'exemple montre le cas d'une variable d'environnement (MONGO_URL), ajouté au d
     # Edit the data in docker-registry.yaml in JSON then create the resource using the edited data.
     oc create -f docker-registry.yaml --edit -o json    
     ```
-- Voir la documentation pour l'un de ressources en particulier: utilisez "explain". Pour exemple, pour les pods:
+- Voir la documentation pour l'une des ressources en particulier: utilisez "explain". Pour exemple, pour les pods:
     ```bash
     oc explain pods
     KIND:     Pod
