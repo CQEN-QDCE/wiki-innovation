@@ -31,7 +31,7 @@ Actuellement les services offerts par le laboratoire du CEAI sont: Openshift et 
 
 1. Problème/Hypothèse
    
-C'est le début de l'accompagnement pour l'expérimentation. L'étape d'identification du problème e les hypothèses à valider.
+C'est le début de l'accompagnement pour l'expérimentation. L'étape d'identification du problème et les hypothèses à valider.
 
 2. Rechercher solution existante
 
