@@ -43,7 +43,7 @@ La première phase de l'expérimentation est la réalisation d'un environnement 
 
 4. Création du prototype
    
-On doit utiliser des [Conteneurs](#conteneurs) pour générer un prototype déployable dans l'infrastructure du lab.
+On doit utiliser des [Conteneurs](#conteneurs) pour générer un prototype déployable dans l'infrastructure du laboratoire.
 
 5. Déploiement PaaS ou Déploiement AWS
    
