@@ -107,11 +107,11 @@ Le schéma qui suit liste les 12 facteurs qui doivent être respectés pour l'ap
 ![12-factorApps](img/12-factorApps.png)
 
 ### Linux
-> Linux est le système d'exploitation Open Source le plus connu et utilisé au monde. Des compagnies et des individus choisissent de l'utiliser parce qu'il est sécuritaire, flexible et c'est possible d'avoir beaucoup de support d'une grande communauté d'utilisateurs. 
+> Linux est le système d'exploitation Open Source le plus connu et utilisé au monde. Des compagnies et des individus choisissent de l'utiliser parce qu'il est sécuritaire, flexible et qu'il est possible d'avoir beaucoup de support d'une grande communauté d'utilisateurs. 
 
-Dans le lab, les conteneurs utilisés doivent être installés avec un OS Linux.
+Dans le laboratoire, les conteneurs déployés doivent utiliser un OS Linux.
 
-Pour plus d'informations sur les applications cloud-native, consultez [cet article](https://opensource.com/resources/linux).
+Pour plus d'informations, consultez [cet article](https://opensource.com/resources/linux).
 
 ---
 :point_right: **NOTE:**
