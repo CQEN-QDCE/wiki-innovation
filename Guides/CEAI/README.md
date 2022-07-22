@@ -35,7 +35,7 @@ C'est le début de l'accompagnement pour l'expérimentation. L'étape d'identifi
 
 2. Rechercher solution existante
 
-La recherche des solutions existantes, qui respectent les critères du laboratoire: application cloud-native ou containeurisée.
+La recherche des solutions existantes qui respectent les critères du laboratoire: application cloud-native ou déployable en conteneur.
 
 3. Expérimentation locale
 
