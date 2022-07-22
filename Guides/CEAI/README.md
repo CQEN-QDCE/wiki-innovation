@@ -159,7 +159,7 @@ Pour plus d'informations sur les API, consultez [cet article](https://aws.amazon
 > 
 > La partie intégration continue compile, teste et intègre des modifications dans le code de façon automatique, pour qu'ensuite la partie déploiement continue déploie les modifications dans le code aux environnements de production.
 
-Pour plus d'information sur l'Open Source, consultez [cet article](https://resources.github.com/ci-cd/).
+Pour plus d'information, consultez [cet article](https://resources.github.com/ci-cd/).
 
 #### Open Source
 > Le terme Open Source fait référence à quelque chose que n'importe qui  peut modifier et distribuer, car sa conception est accessible au public. 
