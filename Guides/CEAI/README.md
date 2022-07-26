@@ -92,8 +92,10 @@ Le prototype peut être exposé sur le web, ou bien à l'interne, pour être tes
 5. Orchestrateur (guide Openshift disponible [ici](https://github.com/CQEN-QDCE/ceai-cqen-documentation/tree/121-guide-openshift-kompose/Guides/Openshift))
 6. Atout: capable de faire du bash script
 
+Nous avons disponibilisé un [guide de formations](formations.md) en ligne pour vous aider à intégrer le laboratoire du CEAI.
+
 ### Twelve-factor App
-> L'application 12 facteurs est une méthodologie pour concevoir des logiciels en tant que service qui:  
+> L'application à 12 facteurs est une méthodologie définie par les développeurs d'Heroku pour créer et déployer des applications cloud natives:  
 > - Utilisent des formats **déclaratifs** pour mettre en oeuvre l'automatisation, pour minimiser le temps et les coûts pour que des nouveaux développeurs rejoignent le projet;
 > - Ont un **contrat propre** avec le système d'exploitation sous-jacent, offrant une **portabilité maximum** entre les environnements d'exécution;
 > - Sont adaptés à des **déploiements** sur des **plateformes cloud** modernes, rendant inutile le besoin de serveurs et de l'administration de systèmes;
@@ -102,9 +104,12 @@ Le prototype peut être exposé sur le web, ou bien à l'interne, pour être tes
 >
 > La méthodologie 12 facteurs peut être appliquée à des applications écrites dans tout langage de programmation, et qui utilisent tout type de services externes (base de données, mémoire cache, etc.)
 
-Le schéma qui suit liste les 12 facteurs qui doivent être respectés pour l'application de cette méthodologie. Pour plus de détails sur la méthodologie 12 facteurs, consultez la [documentation officielle](https://12factor.net/).
+Le schéma qui suit liste les 12 facteurs qui doivent être respectés pour l'application de cette méthodologie. Pour plus de détails sur la méthodologie 12 facteurs, consultez:
+- [Documentation officielle](https://12factor.net/)
+- [Beyond the 12 factors: 15-factor cloud-native Java applications](https://developer.ibm.com/articles/15-factor-applications/)
 
-![12-factorApps](img/12-factorApps.png)
+![12 Factor Apps](img/12-factorApps.png)
+
 
 ### Linux
 > Linux est le système d'exploitation Open Source le plus connu et utilisé au monde. Des compagnies et des individus choisissent de l'utiliser parce qu'il est sécuritaire, flexible et qu'il est possible d'avoir beaucoup de support d'une grande communauté d'utilisateurs. 
