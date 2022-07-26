@@ -35,10 +35,8 @@ Nous vous sugérons ces formations pour que votre expérimentation dans le labor
 
 | Formation                                   | Type | Langue | Ce que vous allez apprendre |
 |---------------------------------------------|------|--------|-----------------------------|
-| [Optimisez votre deploiement en creant des conteneurs avec docker](https://openclassrooms.com/fr/courses/2035766-optimisez-votre-deploiement-en-creant-des-conteneurs-avec-docker) | Cours  | Fr     | Découvrer les conteneurs et Docker <br> Installer Docker sur votre poste
-Lancer vos images Docker avec les Dockerfiles <br> Gérer vos images Docker avec Docker Compose |
-| [Docker web development](https://app.pluralsight.com/library/courses/docker-web-development/table-of-contents) | Vidéo  | En     | Découvrer les conteneurs et Docker <br> Installer Docker sur votre poste
-Lancer vos images Docker avec les Dockerfiles <br> Gérer vos images Docker avec Docker Compose |
+| [Optimisez votre deploiement en creant des conteneurs avec docker](https://openclassrooms.com/fr/courses/2035766-optimisez-votre-deploiement-en-creant-des-conteneurs-avec-docker) | Cours  | Fr     | Découvrer les conteneurs et Docker <br> Installer Docker sur votre poste <br> Lancer vos images Docker avec les Dockerfiles <br> Gérer vos images Docker avec Docker Compose |
+| [Docker web development](https://app.pluralsight.com/library/courses/docker-web-development/table-of-contents) | Vidéo  | En     | Découvrer les conteneurs et Docker <br> Installer Docker sur votre poste <br> Lancer vos images Docker avec les Dockerfiles <br> Gérer vos images Docker avec Docker Compose |
 | [Débuter de zéro avec Docker]( https://www.youtube.com/playlist?list=PL8SZiccjllt1jz9DsD4MPYbbiGOR_FYHu) | Vidéo  | Fr     | Découvrer Docker <br> Créer vos propres images Docker <br> Erreurs à éviter avec Docker et les conteneurs <br> Déployer un image docker sur le cloud AWS <br> Comment DOUBLER les perf réseaux des conteneurs Docker |
 | [Beginners Track](https://dockerlabs.collabnix.com/beginners/README.html) | Workshop + Docs  | En     | Installation, mise à niveau et maintenance de Docker <br> Composants de Docker <br> Utiliser avec une image et avoir un conteneur Docker <br> Accéder et gérer un conteneur Docker <br> Démarrer avec Docker Volume <br> Mise en réseau de Docker |
 |                                             |      |        |                             |
