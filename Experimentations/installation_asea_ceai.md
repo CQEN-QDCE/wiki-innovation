@@ -26,6 +26,7 @@ Le CEAI ne possédant aucune installation *on premise* et n'ayant pas accès à 
 
 ## Démarche
 
+1. Ouvrir un compte AWS et prendre contact avec son équipe de support afin de s'assurer que les limites associées aux nouveaux comptes AWS puissent être levées.  
 1. Préparer le fichier de configuration. https://github.com/CQEN-QDCE/ceai-cqen-deployments/tree/main/ASEA/config
 1. Installer ASEA. https://github.com/CQEN-QDCE/ceai-cqen-deployments/tree/main/ASEA
 1. Déployer une instance Keycloak dans un compte de travail AWS. https://github.com/CQEN-QDCE/ceai-cqen-deployments/tree/main/sso
