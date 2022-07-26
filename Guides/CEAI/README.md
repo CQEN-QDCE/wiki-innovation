@@ -24,7 +24,7 @@
 
 Le laboratoire sert à faciliter l'expérimentation de nouvelles technologies et de les appliquer au contexte gouvernemental de manière innovante. Il fournit des services infonuagiques et l'accompagnement tout au long des expérimentations. Vous devez utiliser les approches "Cloud Native" et "DevSecOps" pour expérimenter des solutions dans le laboratoire ([Bonnes pratiques](#les-bonnes-pratiques-pour-lutilisation-de-lenvironnement-dexpérimentation)).
 
-Actuellement les services offerts par le laboratoire du CEAI sont: Openshift et AWS.S
+Actuellement les services offerts par le laboratoire du CEAI sont: [Openshift](../Openshift/README.md) et [AWS/ASEA](../ASEA/README.md).
 
 
 ### Expérimentation dans l'environnement du CEAI
@@ -134,15 +134,16 @@ Pour plus d'informations sur les applications cloud-native, consultez [cet artic
 Pour plus d'information sur les patrons de conception d'architecture cloud-native, consultez [cet article](https://medium.com/walmartglobaltech/cloud-native-application-architecture-a84ddf378f82) et [cet article](https://cloud.google.com/blog/products/application-development/5-principles-for-cloud-native-architecture-what-it-is-and-how-to-master-it).
 
 ### Concepts de base
-#### DevOps
-> Le modèle DevOps est une approche de la culture informatique, de l'automatisation et de la conception de plateformes conçue pour accroître la valeur ajoutée et optimiser la réactivité des entreprises grâce à une distribution plus rapide et efficace des services. Tout cela est rendu possible grâce à une distribution de services informatiques itérative et accélérée. Le modèle DevOps fait le lien entre les applications existantes et les nouvelles applications et infrastructures cloud-native.
+#### DevSecOps
+> DevSecOps signifie développement, sécurité et opérations. Il s'agit d'une approche de la culture, de l'automatisation et de la conception de plate-forme qui intègre la sécurité en tant que responsabilité partagée tout au long du cycle de vie informatique.
+>
+> DevSecOps signifie penser à la sécurité des applications et de l'infrastructure dès le départ. Cela signifie également automatiser certaines portes de sécurité pour empêcher le flux de travail DevOps de ralentir. La sélection des bons outils pour intégrer en permanence la sécurité, comme convenir d'un environnement de développement intégré (IDE) avec des fonctionnalités de sécurité, peut aider à atteindre ces objectifs. Cependant, une sécurité DevOps efficace nécessite plus que de nouveaux outils : elle s'appuie sur les changements culturels de DevOps pour intégrer le travail des équipes de sécurité le plus tôt possible.
 
-Pour plus d'informations sur le modèle DevOps, consultez [cet article](https://www.redhat.com/fr/topics/devops).
+Pour plus d'informations sur le modèle DevSecOps, consultez [cet article](https://www.redhat.com/en/topics/devops/what-is-devsecops).
 
 #### Conteneurs
 > Un conteneur est une unité de logiciel qui permet d'assembler et d'isoler des applications avec leur environnement d'exécution complet, c'est-à-dire tous les fichiers nécessaires à leur exécution. Les applications conteneurisées sont plus faciles à déplacer d'un environnement à un autre (développement, test, production, etc.), tout en conservant l'intégralité de leurs fonctions.
 
-Dans le lab, les conteneurs utilisés doivent être installés avec un OS Linux.
 ---
 :point_right: **NOTE:**
 
