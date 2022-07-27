@@ -24,8 +24,7 @@
 
 Le laboratoire sert à faciliter l'expérimentation de nouvelles technologies et de les appliquer au contexte gouvernemental de manière innovante. Il fournit des services infonuagiques et l'accompagnement tout au long des expérimentations. Vous devez utiliser les approches "Cloud Native" et "DevSecOps" pour expérimenter des solutions dans le laboratoire ([Bonnes pratiques](#les-bonnes-pratiques-pour-lutilisation-de-lenvironnement-dexpérimentation)).
 
-Actuellement les services offerts par le laboratoire du CEAI sont: [Openshift](../Openshift/README.md) et [AWS/ASEA](../ASEA/README.md).
-
+Actuellement, les services infonuagiques offerts par le laboratoire du CEAI sont: [Openshift (PaaS)](../Openshift/README.md) et [AWS/ASEA (IaaS)](../ASEA/README.md). On vous accompagne dans la montée en compétence et la mise en oeuvre de votre application cloud-native.
 
 ### Expérimentation dans l'environnement du CEAI
 
