@@ -66,7 +66,7 @@ Le prototype peut être exposé sur le web, ou bien à l'interne, pour être tes
 
 8. Rapport d'expérimentation
 
-Écrire votre rapport d'expérimentation directement dans le repo [Github](https://github.com/CQEN-QDCE) utilisé pour être inclus dans le site du CEAI.
+Un rapport d'expérimentation devra être déposé dans le dépôt Git de votre expérimentation.
 
 
 ### Les bonnes pratiques pour l'utilisation de l'environnement d'expérimentation
