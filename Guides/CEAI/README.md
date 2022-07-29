@@ -70,18 +70,18 @@ Un rapport d'expérimentation devra être déposé dans le dépôt Git de votre 
 
 
 ### Les bonnes pratiques pour l'utilisation de l'environnement d'expérimentation
-- S'assurer que le type de ressource utilisé est disponible dans le catalogue du courtier en infonuagique;
 - Les utilisateurs s'engagent à ne pas utiliser des données sensibles et à ne pas en produire;
 - Utiliser une voûte de secrets pour le stockage des mots de passe et toutes les informations sensibles nécessaires au fonctionnement des composantes logicielles;
 - Nommer de manière consistante les composantes logicielles nécessaires aux expérimentations;
 - Documenter les expérimentations de manière à faciliter la réutilisation et la répétabilité;
 - Automatiser les tâches répétitives;
-- Mettre en place des mécanismes d'alertage et de suivi de coûts;
 - Mettre en place des mécanismes permettant de limiter l'utilisation des ressources lorsque non utilisés (scripts de démarrage-arrêt);
 - N'utiliser que des solutions libres pour les expérimentations;
-- Ne pas donner des accès à des usagers autres que ceux de l'équipe d'expérimentations;
-    - Ne pas créer des utilisateurs qu'à des fins d'expérimentation;
-- Pour AWS: Privilégier l'API SSO à l'API IAM autant que possible.
+
+- Pour AWS: 
+  - S'assurer que le type de ressource utilisé est disponible dans le catalogue du courtier en infonuagique.
+  - Utiliser l'API SSO.
+  - Mettre en place des mécanismes d'alertage et de suivi de coûts (fourni avec ASEA).
 
 ## Pré-requis pour l'intégration au laboratoire du CEAI
 1. 12-factor Apps
