@@ -50,7 +50,7 @@ Le déploiement du prototype dans un de nos environnements:
 
 [Openshift](../Openshift/README.md)
 
-OpenShift est plus simple pour faire les premiers pas dans le déploiement d'un projet. 
+La plateforme OpenShift fournit des outils de développement et de déploiement intégrés qui facilite le déploiement d'une solution. Son utilisation est souvent plus simple pour faire les premiers pas dans la méthodologie DevSecOps. 
 
 [AWS/ASEA](../ASEA/README.md)
 
