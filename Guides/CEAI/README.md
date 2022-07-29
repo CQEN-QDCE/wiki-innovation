@@ -54,7 +54,7 @@ La plateforme OpenShift fournit des outils de développement et de déploiement 
 
 [AWS/ASEA](../ASEA/README.md)
 
-AWS est conseillé quand le prototype est prêt à être testé. L'environnement AWS ASEA est plus complexe à utiliser, mais il est beaucoup plus robuste.
+AWS est actuellement le fournisseur infonuagique de la zone d'accueil du MCN. Si le prototype d'une expérimentation est destiné a être déployé dans un environnement de production infonuagique, le laboratoire peut fournir un équivalent dans sa zone d'accueil pour prendre en main les services natifs d'AWS dans l'architecture sécurisée ASEA.
 
 6. Mise en disponibilité/test du prototype
 
