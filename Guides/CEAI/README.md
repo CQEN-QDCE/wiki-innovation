@@ -62,7 +62,7 @@ Le prototype peut être exposé sur le web, ou bien à l'interne, pour être tes
 
 7. Packaging du prototype
 
-À la fin des tests, écrire les procédure de provisionnement et déploiement du prototype avec un outil comme Terraform. De cette façon il sera déployable en dehors du lab.
+À la fin des tests, écrire les procédure de provisionnement et déploiement du prototype avec un outil comme Terraform. De cette façon il sera déployable en dehors du laboratoire.
 
 8. Rapport d'expérimentation
 
