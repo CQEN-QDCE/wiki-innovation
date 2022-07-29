@@ -85,7 +85,7 @@ Un rapport d'expérimentation devra être déposé dans le dépôt Git de votre 
 
 ## Pré-requis pour l'intégration au laboratoire du CEAI
 1. 12-factor Apps
-2. Containers (allez à la section [Conteneurs](#conteneurs))
+2. Conteneurs (allez à la section [Conteneurs](#conteneurs))
 3. Linux
 4. Protocole Git (guide disponible [ici](https://github.com/CQEN-QDCE/ceai-cqen-documentation/tree/GithubBonnesPratiques))
 5. Orchestrateur (guide Openshift disponible [ici](https://github.com/CQEN-QDCE/ceai-cqen-documentation/tree/121-guide-openshift-kompose/Guides/Openshift))
