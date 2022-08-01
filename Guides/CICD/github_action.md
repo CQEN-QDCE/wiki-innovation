@@ -5,7 +5,7 @@
 ---
 
 <div>
-    <img src="./images/mcn.png">
+    <img src="../images/mcn.png">
 </div>
 <!-- FIN ENTETE -->
 
@@ -107,6 +107,8 @@ Remarque : Une étape peut avoir soit run, soit uses, mais pas les deux.
 Les actions sont des commandes autonomes qui sont combinées en étapes pour créer un travail. Les actions sont la plus petite composante portable d'un flux de travail. Vous pouvez créer vos propres actions ou utiliser des actions créées par la communauté GitHub.https://github.com/marketplace?type=actions Pour utiliser une action dans un flux de travail, vous devez l'inclure dans une étape.
 
 ```yml
+# Meta-information about this step
+    # ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ 
 - name: Install Node.js
       uses: actions/setup-node@v1
       with:
@@ -116,6 +118,8 @@ Les actions sont des commandes autonomes qui sont combinées en étapes pour cr�
 Les artefacts sont utilisés pour partager des données d'une tâche à l'autre et également pour stocker des données une fois le flux de travail terminé. Dans GitHub Actions, nous aurons besoin d'un moyen de télécharger des artefacts et un moyen de les télécharger. Voyons cela.
 
 ```yml
+# Meta-information about this step
+    # ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ 
 - name: Upload deployable package
   uses: actions/upload-artifact@v2
   with:
@@ -131,8 +135,84 @@ Après une construction réussie, vous devriez voir l'artefact généré dans l'
 Un runner est un serveur sur lequel l'application GitHub Actions runner est installée. Vous pouvez utiliser un runner hébergé par GitHub ou héberger le vôtre. Un runner est à l'écoute des tâches disponibles, exécute une tâche à la fois et transmet la progression, les journaux et les résultats à GitHub. Les exécuteurs hébergés par GitHub sont basés sur Ubuntu Linux, Windows et macOS, et chaque tâche d'un flux de travail s'exécute dans un environnement virtuel frais.
 
 ```yml
+# Meta-information about this step
+    # ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓
  - name: Build project
    run: npm run build
+```
+## Fichier de flux de travail complet
+Voici le dépôt GitHub qui héberge un site web de démonstration et un fichier de flux de travail qui le construit et le déploie. Voici à quoi ressemble le fichier de flux de travail complet :
+
+```yml
+name: Build & deploy
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    - name: Install Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 13.x
+    
+    - name: Install NPM packages
+      run: npm ci
+    
+    - name: Build project
+      run: npm run build
+    
+    - name: Run tests and produce reports
+      run: npm run test:ci
+    
+    - name: Publish test results
+      uses: IgnusG/jest-report-action@v2.3.3
+      if: always()  
+      with:
+        access-token: ${{ secrets.GITHUB_TOKEN }}   
+
+    - name: Publish code coverage results
+      uses: romeovs/lcov-reporter-action@v0.2.19
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        lcov-file: ./coverage/lcov.info
+
+    - name: Upload production-ready build files
+      uses: actions/upload-artifact@v2
+      with:
+        name: production-files
+        path: ./build
+  
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - name: Download artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: production-files
+        path: ./build
+
+    - name: Deploy to gh-pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build
 ```
 
 
