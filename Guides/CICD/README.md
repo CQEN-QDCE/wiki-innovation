@@ -35,8 +35,6 @@ Voici les sujets de base qui peuvent vous aider à démarrer avec le CICD.
 
 * [Composants de AWS Pipeline](./aws_pipeline.md)
 
-* [L'utilisation de CICD au ceai](./ceai_cicd.md)
-
 * [GitHub Action Demo]()
 
 
