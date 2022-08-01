@@ -5,13 +5,13 @@
 ---
 
 <div>
-    <img src="./images/mcn.png">
+    <img src="../images/mcn.png">
 </div>
 <!-- FIN ENTETE -->
 
 ## GitHub Action
 
-GitHub Action a été choisi dans le but de permetre les utilisateurs du CEAI d'automatiser son pipeline de construction, de test et de déploiement. En plus, en utilisant les fonctionnalités fournies par l'outil, ils peuvent créer des flux de travail qui construisent et testent chaque demande d'extraction vers votre dépôt ou qui déploient des demandes d'extraction fusionnées vers la production.
+GitHub Action a été choisi dans le but de permetre les utilisateurs du laboratoire du Centre d'expertise appliquée en innovation du CQEN (CEAI) d'automatiser son pipeline de construction, de test et de déploiement. En plus, en utilisant les fonctionnalités fournies par l'outil, ils peuvent créer des flux de travail qui construisent et testent chaque demande d'extraction vers votre dépôt ou qui déploient des demandes d'extraction fusionnées vers la production.
 
 
 ## AWS Codepipeline
@@ -29,11 +29,15 @@ Voici les sujets de base qui peuvent vous aider à démarrer avec le CICD.
 
 * [L’approche CI/CD en DevOps](./devops_cicd.md)
 
-* [La strecture git flow selon le type de projet au ceai](./ceai_git_workflow.md) 
+* [La strecture git flow selon le type de projet au ceai et l'utilisation de CICD](./ceai_cicd_workflow.md) 
 
 * [Composants de Github Actions](./github_action.md)
 
+* [Composants de AWS Pipeline](./aws_pipeline.md)
+
 * [L'utilisation de CICD au ceai](./ceai_cicd.md)
+
+* [GitHub Action Demo]()
 
 
 # Références 
