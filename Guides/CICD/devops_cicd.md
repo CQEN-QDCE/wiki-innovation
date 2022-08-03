@@ -12,12 +12,12 @@
 
 # Introduction
 
-Avant d'aborder le fonctionnement du pipeline CI CD, il faut comprendre le concept DevOps.
+Avant d'aborder le fonctionnement du pipeline CI/CD, il faut comprendre le concept DevOps.
 
 ## DevOps
 DevOps est une méthodologie de développement standardisée, une communication claire et des processus documentés, soutenus par une plate-forme middleware standardisée, améliorent les cycles de développement et de gestion des applications, apportent de l’agilité et fournissent une disponibilité et une sécurité accrues à votre infrastructure informatique. Pour être concis, le DevOps consiste à connecter des personnes, des produits et des processus.
 
-Donc c'Est une approche du développement logiciel qui implique un développement continu, des tests continus, une intégration continue, un déploiement continu et une surveillance continue du logiciel tout au long de son cycle de vie. C'est exactement le processus adopté par toutes les grandes entreprises pour développer des logiciels de haute qualité et des cycles de développement plus courts.
+Donc c'Est une approche du développement logiciel qui implique un développement continu, des tests continus, une intégration continue, un déploiement continu et une surveillance continue du logiciel tout au long de son cycle de vie.
 
 
 ![DevOps](./images/devops-diagram.png)
@@ -50,8 +50,6 @@ Le modèle DevSecOps implique d'intégrer la sécurité au processus de dévelop
 
 L'automatisation est un principe fondamental pour la réussite de DevOps et le CI/CD en est une composante essentielle. Le CI/CD comprend l'intégration continue et la livraison continue ou le déploiement continu. Ensemble, ils forment un "pipeline CI/CD" - une série de flux de travail automatisés qui aident les équipes DevOps à réduire les tâches manuelles :
 
-![CI/CD](./images/cicd-diagram-01.png)
-
 ![CI/CD](./images/cicd-diagram-02.png)
 
 ### L'intégration continue (CI) 
@@ -62,9 +60,11 @@ permet de livrer automatiquement les modifications du code dans des environnemen
 ### Le déploiement continu (CD) 
 déploie automatiquement les changements de code aux clients directement afin de publier et déployer des mises à jour logicielles. Dans le cadre du processus typique de CD, le code est automatiquement construit et testé avant le déploiement. Le déploiement continu est souvent associé à l'intégration continue.
 
+![CI/CD](./images/cicd-diagram-01.png)
+
 ### Sécurité des processus CI/CD
 Il serait préférable de suivre les étapes suivantes pour sécuriser votre application et votre environnement:
- 
+
 - Intégrer des analyseurs de sécurité pour les conteneurs;
 - Automatiser les tests de sécurité dans le processus CI;
 - Ajouter des tests automatisés de la sécurité au processus de test d'acceptation;

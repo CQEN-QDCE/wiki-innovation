@@ -26,10 +26,11 @@ Les branches principales de ce flux sont :
 - Prod (master)
 - fonctionnalités(features)
 
+![Github WorkFlow](./images/github_workflow.png)
+
 Lorsque vous clonez un dépôt GIT dans votre dossier local, vous devez immédiatement créer une branche du master appelée au nom de votre fonctionnalité par exemple (features/nom), cette branche sera la branche pour votre développement et où vous pourriez implémenter votre  fonctionnalité ou corriger des bogues avant le déploiment. Chaque fois qu'un développeur a besoin d'ajouter une nouvelle fonctionnalité, il crée une nouvelle branche à partir de master qui lui permet de travailler correctement sur cette fonctionnalité sans compromettre le code des autres membres de l'équipe dans la branche develop.
 Lorsque la fonctionnalité est prête et testée, et vous êtes prêt à déployer votre projet, Vous pourriez ouvrir une demande "Pull-request" et une fois la réviseur et approuvé la fonctionnalité, vous pouvez la fusionner avec master afin de faire le déploiement final. 
 Notre objectif est d'avoir toujours une version stable de la branche de production car nous ne fusionnons le code que lorsque la nouvelle fonctionnalité est terminée et qu'elle fonctionne.
-Évidemment pour accomplir toutes ces tâches, vous pouvez trouver en ligne un grand nombre de scripts .
 
 ### CI/CD
 L'intégration continue et le déploiement continu feront référence au transfert automatique des modifications apportées par les développeurs du référentiel de la branche prod (maître) vers l'environnement de production sur AWS SEA en utilisant AWS pipeline. Ce processus permet d'apporter régulièrement des modifications au code de leurs applications, de les tester par les développeurs et de soulager les équipes d'exploitation surchargées par des tâches manuelles qui ralentissent la distribution des applications.
@@ -55,7 +56,6 @@ Lorsque vous faites passer votre code de la branche de développement à la bran
 À la fin, lorsque vous êtes prêt à déployer votre projet en direct, vous marquerez la version (Mettre un tag) dans la branche principale afin d'avoir toutes les différentes versions que vous publiez semaine après semaine.
 Apparemment, cela peut sembler beaucoup d'étapes, mais il est certain que c'est assez sûr et vous aide à éviter les erreurs ou les problèmes lors de la publication.
 
-
 ### CI/CD
 Ici nous aurons deux parties selon nos branches :
 
@@ -67,5 +67,25 @@ Le déploiement dans la branche de pre-prod doit être le même que dans la bran
 Et pour cela, le CEAI a decidé que le CICD doit être construit dans AWS SEA avec AWS pipeline.
 Donc l'integration continue et le déploiement continu vont étre dans le AWS pipline afin de réduiser les risques liés au déploiement des applications, puisqu'il est plus simple de publier des modifications par petites touches qu'en un seul bloc. Cette approche nécessite néanmoins un investissement de départ considérable, car les tests automatisés devront être rédigés de manière à s'adapter à un large éventail d'étapes de test et de lancement dans le pipeline CI/CD.
 
+## Sécuriser le CI/CD
 
+[GitHub Action Snyk](https://github.com/marketplace/actions/snyk) a été choisi dans le but de permetre les utilisateurs du laboratoire du Centre d'expertise appliquée en innovation du CQEN (CEAI) de sécurisé pour vos projets GitHub. Et en intégrant Snyk à votre GitHub CI/CD, vous pouvez automatiser l'analyse de sécurité dans le cadre de votre cycle de construction avant la production. Avec les GitHub Action de Snyk, vous pouvez ajouter automatiquement l'analyse à votre flux de travail des actions GitHub et combiner les actions pour qu'elles s'adaptent au mieux à votre projet, garantissant ainsi la sécurité du code maintenant et à l'avenir. 
 
+Snyk est un éditeur spécialisé dans l'analyse des vulnérabilités dans le code des fichiers de configuration d'infrastructure, notamment celles présentes dans les conteneurs et les packages applicatifs.
+
+Snyk Container dans Github consiste à créer une nouvelle image. Pour utiliser Snyk, vous devez créer un nouveau secret appelé SNYK_TOKEN, et pour obtenir le token, vous devez créer un compte chez Snyk. Avec le jeton, vous pouvez créer le secret sur Github et l'utiliser dans l'action.
+
+Voici un exemple d'utilisation, dans ce cas pour tester un projet Node.js :
+
+```yml
+# Meta-information about this step of GitHub Action Snyk
+    # ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ 
+opensource-security:
+   runs-on: ubuntu-latest
+   steps:
+     - uses: actions/checkout@master
+     - name: Run Snyk to check for vulnerabilities
+       uses: snyk/actions/node@master
+       env:
+         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+```
