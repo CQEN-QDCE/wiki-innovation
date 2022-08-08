@@ -154,7 +154,7 @@ Après une construction réussie, vous devriez voir l'artefact généré dans l'
 Remarque : Une étape peut avoir soit run, soit uses, mais pas les deux.
 
 ## Fichier de flux de travail complet
-Voici le dépôt GitHub qui héberge un site web de démonstration et un fichier de flux de travail qui le construit et le déploie. Voici à quoi ressemble le fichier de flux de travail complet :
+Voici à quoi ressemble le fichier de flux de travail complet :
 
 ```yml
 name: Build & deploy
