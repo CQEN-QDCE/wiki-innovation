@@ -17,7 +17,7 @@ Avant d'aborder le fonctionnement du pipeline CI/CD, il faut comprendre le conce
 ## DevOps
 DevOps est une méthodologie de développement standardisée, une communication claire et des processus documentés, soutenus par une plate-forme middleware standardisée, améliorent les cycles de développement et de gestion des applications, apportent de l’agilité et fournissent une disponibilité et une sécurité accrues à votre infrastructure informatique. Pour être concis, le DevOps consiste à connecter des personnes, des produits et des processus.
 
-Donc c'Est une approche du développement logiciel qui implique un développement continu, des tests continus, une intégration continue, un déploiement continu et une surveillance continue du logiciel tout au long de son cycle de vie.
+Donc c'est une approche du développement logiciel qui implique un développement continu, des tests continus, une intégration continue, un déploiement continu et une surveillance continue du logiciel tout au long de son cycle de vie.
 
 
 ![DevOps](./images/devops-diagram.png)
