@@ -21,7 +21,7 @@ Lorsque vous utilisez la console pour créer ou modifier un pipeline qui a une s
 ## Concepts
 
 ### Pipeline
-Un pipeline définit le flux de travail de votre processus de publication et décrit comment une nouvelle modification de code progresse dans votre processus de publication.
+Un pipeline définit le flux de travail de votre processus de publication et décrit la progression du code à chaque nouvelle modification.
 Les pipelines doivent comporter au moins deux étapes. La première doit être une étape source, et le pipeline doit également avoir au moins une autre étape de construction ou de déploiement.
 Définissez la structure de votre pipeline à l'aide d'un document déclaratif JSON.
 
