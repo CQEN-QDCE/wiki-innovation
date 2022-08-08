@@ -16,7 +16,7 @@ Un flux de travail est un processus automatisé personnalisé que nous pouvons i
 
 ### Events (Événements)
 Un événement est une activité spécifique qui déclenche un flux de travail. Par exemple, l'activité peut provenir de GitHub lorsque quelqu'un pousse un commit vers un dépôt ou lorsqu'une issue ou une pull request est créée. Vous pouvez également utiliser le webhook de répartition du dépôt pour déclencher un flux de travail lorsqu'un événement externe se produit.
-Pour une liste complète des événements qui peuvent déclencher un flux de travail se trouve [ici](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows).
+Une liste complète des événements qui peuvent déclencher un flux de travail se trouve [ici](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows).
 Vous pouvez également spécifier les branches auxquelles ces règles s'appliquent. Par exemple, dans l'extrait de code ci-dessous, nous déclenchons ce flux de travail lorsqu'un push est effectué sur la branche principale et lorsqu'une demande de pull est créée pour fusionner les changements sur la branche principale.
 
 ```yml
