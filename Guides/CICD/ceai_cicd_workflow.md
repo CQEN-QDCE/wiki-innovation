@@ -15,7 +15,7 @@ Il y a deux façons principales de structurer vos pipelines, chacune ayant ses p
 Production : Idéal pour les projets complexes et de grande envergure qui nécessitent une exécution efficace.
 2. Production : Idéal pour les projets en cours de production ou dont vous pensez qu'ils peuvent passer à la phase de production.
 
-## Eprémentation:
+## Expérimentation:
 
 ### WorkFlow
 
