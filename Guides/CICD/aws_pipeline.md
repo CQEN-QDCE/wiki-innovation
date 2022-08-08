@@ -22,7 +22,7 @@ Lorsque vous utilisez la console pour créer ou modifier un pipeline qui a une s
 
 ### Pipeline
 Un pipeline définit le flux de travail de votre processus de publication et décrit comment une nouvelle modification de code progresse dans votre processus de publication.
-Les pipelines doivent comporter au moins deux étapes. La première étape d'un pipeline doit être une étape source, et le pipeline doit également avoir au moins une autre étape qui est une étape de construction ou de déploiement.
+Les pipelines doivent comporter au moins deux étapes. La première doit être une étape source, et le pipeline doit également avoir au moins une autre étape de construction ou de déploiement.
 Définissez la structure de votre pipeline à l'aide d'un document déclaratif JSON 
 
 ### Revision
