@@ -19,14 +19,14 @@ Production : Idéal pour les projets complexes et de grande envergure qui néces
 
 ### WorkFlow
 
-Le flux Github Flow fonctionne avec différentes branches pour gérer facilement chaque phase du développement du logiciel, il est suggéré de l'utiliser lorsque votre logiciel a le concept de "Expérimentation" car, comme vous pouvez le voir dans le schéma ci-dessus
+Le flux Github Flow fonctionne avec différentes branches pour gérer facilement chaque phase du développement du logiciel. Il est suggéré de l'utiliser lorsque votre logiciel a le concept de "Expérimentation", voici le schéma ci-dessous qui pourrait bien le présenter:
+
+![Github WorkFlow](./images/github_workflow.png)
 
 Les branches principales de ce flux sont :
 
 - Prod (master)
 - fonctionnalités(features)
-
-![Github WorkFlow](./images/github_workflow.png)
 
 Lorsque vous clonez un dépôt GIT dans votre dossier local, vous devez immédiatement créer une branche à partir du `master` appelée au nom de votre fonctionnalité, par exemple (`features/nom`). Cette branche sera la branche utilisée pour votre développement, où vous pourriez implémenter votre  fonctionnalité ou corriger des bogues avant le déploiement. Chaque fois qu'un développeur a besoin d'ajouter une nouvelle fonctionnalité, il crée une nouvelle branche à partir du `master` qui lui permet de travailler correctement sur cette fonctionnalité sans compromettre le code des autres membres de l'équipe dans la branche `develop`.
 Lorsque la fonctionnalité est prête et testée, et vous êtes prêt à déployer votre projet, vous pourriez ouvrir une demande `Pull-request`. Une fois le réviseur a approuvé la fonctionnalité, vous pouvez la fusionner avec `master` afin de faire le déploiement final. 
