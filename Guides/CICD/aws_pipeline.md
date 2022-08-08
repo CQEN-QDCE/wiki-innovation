@@ -13,7 +13,7 @@ La plateforme amazon cloud offre AWS `CodePipeline` qui automatise les phases de
 
 Lorsque les développeurs apportent des changements à un référentiel de sources, CodePipeline détecte automatiquement ces changements. Ces changements sont construits, et si des tests sont configurés, ils sont exécutés. Une fois les tests terminés, le code construit est déployé sur des serveurs de test pour être testé. À partir du serveur de préparation, CodePipeline exécute d'autres tests (par exemple, des tests d'intégration ou de charge). Une fois ces tests terminés avec succès et l'action d'approbation manuelle ajoutée au pipeline, CodePipeline déploie le code testé et approuvé dans les instances de production à l'aide de AWS CodeDeploy, AWS Elastic Beanstalk, Amazon ECS, AWS Fargate, Amazon S3, AWS Service Catalog, AWS CloudFormation.
 
-Lorsque vous utilisez la console pour créer ou modifier un pipeline qui a une source GitHub, CodePipeline crée un webhook. Un webhook est une notification HTTP qui détecte des événements dans un autre outil, tel qu'un dépôt GitHub, et connecte ces événements externes à un pipeline. 
+Lorsque vous utilisez la console pour créer ou modifier un pipeline qui a une source GitHub, `CodePipeline` crée un `webhook`. Un `webhook` est une notification HTTP qui détecte des événements dans un autre outil, tel qu'un dépôt GitHub, et connecte ces événements externes à un pipeline. 
 
 ![](./images/aws-codepipeline.png)
 
