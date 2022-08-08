@@ -37,7 +37,8 @@ L'intégration continue et le déploiement continu feront référence au transfe
 
 
 ## Production
-Le flux Git fonctionne avec différentes branches pour gérer facilement chaque phase du développement du logiciel, il est suggéré de l'utiliser lorsque votre logiciel a le concept de "Prduction" car, comme vous pouvez le voir dans le schéma ci-dessus, ce n'est pas la meilleure décision lorsque vous travaillez dans un environnement de livraison continue ou de déploiement continu où ce concept est absent.
+
+Le flux Git fonctionne avec différentes branches pour gérer facilement chaque phase du développement logiciel. Il est suggéré de l'utiliser lorsque votre logiciel a le concept de "Prduction" en d'autres termes lorsque le logiciel a l'idée de paquets de différentes versions déployées. Ce n'est pas la meilleure décision lorsque vous travaillez dans un environnement de livraison ou de déploiement continu où ce concept est absent.
 Un autre point positif de ce flux est qu'il convient parfaitement lorsque vous travaillez en équipe et qu'un ou plusieurs développeurs doivent collaborer à la même fonctionnalité.
 Mais regardons de plus près ce modèle.
 
