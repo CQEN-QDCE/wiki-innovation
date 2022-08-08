@@ -23,7 +23,7 @@ Lorsque vous utilisez la console pour créer ou modifier un pipeline qui a une s
 ### Pipeline
 Un pipeline définit le flux de travail de votre processus de publication et décrit comment une nouvelle modification de code progresse dans votre processus de publication.
 Les pipelines doivent comporter au moins deux étapes. La première doit être une étape source, et le pipeline doit également avoir au moins une autre étape de construction ou de déploiement.
-Définissez la structure de votre pipeline à l'aide d'un document déclaratif JSON 
+Définissez la structure de votre pipeline à l'aide d'un document déclaratif JSON.
 
 ### Revision
 Une révision est une modification apportée à l'emplacement de la source définie pour votre pipeline. Il peut s'agir de code source, de résultats de compilation, de configuration ou de données. Un pipeline peut avoir plusieurs révisions qui le traversent en même temps.
