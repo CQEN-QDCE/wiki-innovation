@@ -53,4 +53,4 @@ Les étapes (Stages) d'un pipeline sont reliées par des transitions. Les transi
 Une action d'approbation empêche un pipeline de passer à l'action suivante tant que l'autorisation n'est pas accordée. 
 Ceci est utile lorsque vous effectuez des revues de code avant que le code ne soit déployé vers l'étape suivante. 
 
-Pour plus d'informations sur la conception du codepipline AWS, veuillez suivre ce [lien](https://docs.aws.amazon.com/fr_fr/codepipeline/latest/userguide/concepts.html#concepts-stages)
+Pour plus d'informations sur la conception du `CodePipeline AWS`, veuillez suivre ce [lien](https://docs.aws.amazon.com/fr_fr/codepipeline/latest/userguide/concepts.html#concepts-stages)
