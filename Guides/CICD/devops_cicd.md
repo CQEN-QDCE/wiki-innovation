@@ -30,7 +30,7 @@ L'infrastructure nécessaire pour unifier le développement, du partage des ress
 Une fois qu'une application est déployée, le côté opérations prend le relais en veillant à ce que les défis opérationnels des plates-formes cloud soient relevés. Les problèmes tels que la sécurité des utilisateurs, la gestion de la base de données, l'évolutivité des workloads de production et l'application de correctifs sont tous traités dans cette fonction. Quelques outils courants utilisés pour les opérations : Terraform, Ansible, Puppet et Chef pour la gestion de l'infrastructure et des configurations.
 
 
-Que l'approche soit nommée « DevOps » ou « DevSecOps », il a toujours été préférable de faire de la sécurité une partie intégrante du cycle de vie des applications. L'approche DevSecOps repose sur une sécurité intégrée et non sur un périmètre de sécurité qui protège les applications et les données. Lorsque la sécurité est reléguée à la fin du processus de développement, les entreprises qui adoptent l'approche DevOps peuvent se retrouver confrontées à de longs cycles de développement, ce qu'elles essayaient justement d'évite
+Que l'approche soit nommée « DevOps » ou « DevSecOps », il a toujours été préférable de faire de la sécurité une partie intégrante du cycle de vie des applications. L'approche DevSecOps repose sur une sécurité intégrée et non sur un périmètre de sécurité qui protège les applications et les données. Lorsque la sécurité est reléguée à la fin du processus de développement, les entreprises qui adoptent l'approche DevOps peuvent se retrouver confrontées à de longs cycles de développement, ce qu'elles essayaient justement d'éviter.
 
 ## DevOps & DevSecOps
 
