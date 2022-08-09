@@ -58,7 +58,7 @@ L'automatisation est un principe fondamental pour la réussite de DevOps et le C
 ![CI/CD](./images/cicd-diagram-02.png)
 
 ### L'intégration continue (CI) 
-construit, teste et intègre automatiquement les changements de code dans un référentiel partagé. Le fait de valider le code plus souvent permet de détecter les erreurs plus rapidement et de réduire la quantité de code qu'un développeur doit déboguer pour trouver la source d'une erreur. Les mises à jour fréquentes du code facilitent également la fusion des modifications apportées par les différents membres d'une équipe de développement logiciel. C'est une excellente chose pour les développeurs, qui peuvent passer plus de temps à écrire du code et moins de temps à déboguer les erreurs ou à résoudre les conflits de fusion.
+construit, teste et intègre automatiquement les changements de code dans un dépôt partagé. Le fait de valider le code plus souvent permet de détecter les erreurs plus rapidement et de réduire la quantité de code qu'un développeur doit déboguer pour trouver la source d'une erreur. Les mises à jour fréquentes du code facilitent également la fusion des modifications apportées par les différents membres d'une équipe de développement logiciel. C'est une excellente chose pour les développeurs, qui peuvent passer plus de temps à écrire du code et moins de temps à déboguer les erreurs ou à résoudre les conflits de fusion.
 
 ### La livraison continue (CD) 
 permet de livrer automatiquement les modifications du code dans des environnements prêts à la production pour approbation ; ou
