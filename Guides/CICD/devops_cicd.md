@@ -63,7 +63,7 @@ construit, teste et intègre automatiquement les changements de code dans un dé
 ### La livraison continue (CD) 
 permet de livrer automatiquement les modifications du code dans des environnements prêts à la production pour approbation ; ou
 ### Le déploiement continu (CD) 
-déploie automatiquement les changements de code aux clients directement afin de publier et déployer des mises à jour logicielles. Dans le cadre du processus typique de CD, le code est automatiquement construit et testé avant le déploiement. Le déploiement continu est souvent associé à l'intégration continue.
+Déploie automatiquement de façon directe les changements de code aux clients afin de publier et déployer des mises à jour logicielles. Dans le cadre du processus typique de CD, le code est automatiquement construit et testé avant le déploiement. Le déploiement continu est souvent associé à l'intégration continue.
 
 ![CI/CD](./images/cicd-diagram-01.png)
 
