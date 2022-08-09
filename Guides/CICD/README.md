@@ -25,7 +25,7 @@ Il peut intégrer des outils tiers comme GitHub, Jenkins, des outils de Load Tes
 
 ## Table de matières
 
-Voici les sujets de base qui peuvent vous aider à démarrer avec le CICD. 
+Voici les sujets de base qui peuvent vous aider à démarrer avec le CICD:
 
 * [L’approche CI/CD en DevOps](./devops_cicd.md)
 
