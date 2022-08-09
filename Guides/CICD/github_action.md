@@ -12,7 +12,7 @@
 ## Composants de Github Actions
 
 ### Workflows (Flux de travail)
-Un flux de travail est un processus automatisé personnalisé que nous pouvons inclure dans notre référentiel pour construire, tester et déployer nos codes sources. Nous pouvons avoir plus d'un flux de travail et il doit être stocké dans le dossier .github/workflows dans le répertoire racine du code source et peut être programmé ou déclenché par un événement.
+Un flux de travail est un processus automatisé personnalisé que nous pouvons inclure dans notre dépôt pour construire, tester et déployer nos codes sources. Nous pouvons avoir plus d'un flux de travail et il doit être stocké dans le dossier .github/workflows dans le répertoire racine du code source et peut être programmé ou déclenché par un événement.
 
 ### Events (Événements)
 Un événement est une activité spécifique qui déclenche un flux de travail. Par exemple, l'activité peut provenir de GitHub lorsque quelqu'un pousse un commit vers un dépôt ou lorsqu'une issue ou une pull request est créée. Vous pouvez également utiliser le webhook de répartition du dépôt pour déclencher un flux de travail lorsqu'un événement externe se produit.
