@@ -12,7 +12,6 @@
 Il y a deux façons principales de structurer vos pipelines, chacune ayant ses propres avantages. Ces méthodes peuvent être mélangées et assorties selon les besoins :
 
 1. Expérimentation : Idéal pour les projets simples où toute la configuration se trouve à un seul endroit facile à trouver.
-Production : Idéal pour les projets complexes et de grande envergure qui nécessitent une exécution efficace.
 2. Production : Idéal pour les projets en cours de production ou dont vous pensez qu'ils peuvent passer à la phase de production.
 
 ## Expérimentation:
