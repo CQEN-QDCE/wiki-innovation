@@ -61,7 +61,7 @@ L'automatisation est un principe fondamental pour la réussite de DevOps et le C
 construit, teste et intègre automatiquement les changements de code dans un dépôt partagé. Le fait de valider le code plus souvent permet de détecter les erreurs plus rapidement et de réduire la quantité de code qu'un développeur doit déboguer pour trouver la source d'une erreur. Les mises à jour fréquentes du code facilitent également la fusion des modifications apportées par les différents membres d'une équipe de développement logiciel. C'est une excellente chose pour les développeurs, qui peuvent passer plus de temps à écrire du code et moins de temps à déboguer les erreurs ou à résoudre les conflits de fusion.
 
 ### La livraison continue (CD) 
-permet de livrer automatiquement les modifications du code dans des environnements prêts à la production pour approbation ; ou
+Permet de livrer automatiquement les modifications du code dans des environnements de pré-production et de production après avoir eu l'approbation ; ou
 ### Le déploiement continu (CD) 
 Déploie automatiquement de façon directe les changements de code aux clients afin de publier et déployer des mises à jour logicielles. Dans le cadre du processus typique de CD, le code est automatiquement construit et testé avant le déploiement. Le déploiement continu est souvent associé à l'intégration continue.
 
