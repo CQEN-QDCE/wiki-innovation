@@ -16,7 +16,7 @@ GitHub Action a été choisi dans le but de permetre les utilisateurs du laborat
 
 ## AWS Codepipeline
 
-AWS Codepipeline a été choisi dans le but de permetre les utilisateurs du CEAI d'automatiser leurs pipelines de publication pour des mises à jour rapides et fiables des applications et de l'infrastructure sur [AWS SEA](https://github.com/CQEN-QDCE/ceai-cqen-documentation/tree/main/ASEA#aws-secure-environement-accelerator-asea).
+AWS CodePeline a été choisi dans le but de permettre aux utilisateurs du CEAI d'automatiser leurs pipelines de publication pour des mises à jour rapides et fiables des applications et de l'infrastructure sur [AWS SEA](https://github.com/CQEN-QDCE/ceai-cqen-documentation/tree/main/ASEA#aws-secure-environement-accelerator-asea).
 
 AWS CodePipeline est l’orchestrateur de tous les services de CICD et permet de mettre en place une chaîne de Continuous Delivery entièrement automatisée.
 
