@@ -6,7 +6,7 @@ Dans les étapes précédentes, vous avez:
 - ajouté une route à votre application
 
 ## TLS Termination Edge
-Openshift a un certificat joker SSL qui peut être utilisé pour toute application. On peut utiliser ce certificat SSL pour servir SSL dès notre application sans devoir générer un certificat nous mêmes.
+Openshift a un certificat joker SSL qui peut être utilisé pour toute application. On peut utiliser ce certificat pour servir notre application sans devoir en générer un nous mêmes.
 
 Il faut éditer la route créée pour ajouter l'option TLS.
 
@@ -17,10 +17,8 @@ Pour continuer, suivez les instructions [ici](../../Readme-HandsOn.md#ajout-dune
 ## Vérification
 Cliquez sur le nouveau lien créé "https://..."
 
-Vous devez voir un résultat similaire:
+Vous obtiendrez un résultat similaire:
 
 ![ocp-nodejs-deploye-page](images/ocp-deployed-nodejs-ui.png)
 
-Félicitations! Dans cet exercice, vous avez appris sur le service SSL à partir de votre application.
-
-[Table de matières](README.md)
+Félicitations! Dans cet exercice, vous avez appris comme utiliser le certificat SSL d'Openshift pour exposer votre application.

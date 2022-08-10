@@ -1,6 +1,6 @@
 # Création du secret pour les paramètres de la base de données
 
-Une bonne pratique de travail dans la plateforme Openshift est celle d'utiliser les [secrets](../../Outils/OC/README.md#création-dun-secret-générique) pour garder l'information sensible des applications.
+Une bonne pratique de travail dans la plateforme Openshift consiste à utiliser les [secrets](../../Outils/OC/README.md#création-dun-secret-générique) pour garder l'information sensible des applications.
 
 Pour le cas de la base de données mongodb de cet exercice, il faut spécifier les paramètres suivants:
 

@@ -3,7 +3,7 @@
 Vous avez maintenant la partie "frontend" (nodejs) et la base de données (mongodb) déployées dans Openshift, mais il n'existe pas encore de lien entre les deux composants.
 
 ## Configurer les variables d'environnement pour la base de données (BD)
-Pour être capable d'accèder à la BD, il faut créer, entre autres, un utilisateur (nom d'utilisateur et son mot de pase), le mot de passe pour l'utilisateur administrateur et le nom de la base de données.
+Pour être capable d'accéder à la base de donné MongoDB, il faut initialiser quelques paramètres dont: le nom de la base de données, un utilisateur qui y aura accès ainsi qu'un mot de passe administrateur.
 
 Dans l'étape 2 de cet atelier, le secret "mongodb-parameters", contenant ces paramètres de connexion à la BD ont été crées.
 
@@ -29,9 +29,9 @@ Ajouter les variables d'environnement avec le secret au déploiement de la BD:
 
 ## Création du secret de l'application
 L'application nodejs-ex a besoin du paramètre "MONGO_URL" pour se connecter à la BD.
-Pour créer le secret qui contiendra la valeur pour ce paramètre, il faut la direction IP du service de la BD.
+Pour créer le secret qui contiendra la valeur pour ce paramètre, il faut l'adresse IP du service de la BD.
 
-Vérification de la direction IP du service:
+Vérification de l'adresse IP du service:
 ```bash
 oc get svc
 ```

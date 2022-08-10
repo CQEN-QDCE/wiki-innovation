@@ -1,11 +1,11 @@
 # Ajouter le service de base de données - mongodb
 
-Dans les étapes précédentes, vous avez créé l'application web et testé l'accès à sa page web.
-Si vous observez la page web, vous allez voir la section "Request information" avec un champ "Page view count" que pour le moment affiche le message: "No database configured" (il n'y a pas de base de données configurée). 
+Dans les étapes précédentes, vous avez créé une application web et testé l'accès à sa page web.
+Si vous observez la page web, vous pouvez voir que la section "Request information" contient un champ "Page view count" qui, pour le moment, affiche le message: "No database configured" (il n'y a pas de base de données configurée). 
 
 ![ocp-nodejs-deploye-page-compteur-vues](images/ocp-deployed-nodejs-ui-page-view-count.png)
 
-On va régler cela en ajoutant un service de base de données - MongoDB. On va créer le service avec la commande "oc new-app" et à partir de l'image dans DockerHub:
+Nous allons régler cela en ajoutant un service de base de données - MongoDB. Pour faire cela, nous allons créer le service avec la commande `oc new-app` en lui spécifiant une image MongoDB contenue dans DockerHub:
 
 ```bash
 oc new-app centos/mongodb-26-centos7

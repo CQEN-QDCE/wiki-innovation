@@ -1,26 +1,26 @@
 # Création et déploiement d'une application simple Nodejs
 
-Cet exemple va vous montrer une simple page de bienvenue générée à partir d'un gabarit Nodejs offert pour Openshift.
+Cet exemple déploie une simple page de bienvenue générée à partir d'un gabarit Nodejs offert pour Openshift.
 
-On s'inspire des instructions détaillées dans [le dépôt de l'exemple](https://github.com/sclorg/nodejs-ex)
+Il est tiré des instructions détaillées dans [ce dépôt Github](https://github.com/sclorg/nodejs-ex)
 
-## Étape 1: Se connecter au projet de travail
-Pour se connecter au projet du travail, nous allons utiliser la commande oc dans un terminal (ligne de commandes).
+## Étape 1: Se connecter à Openshift
+Pour se connecter à Openshift, nous allons utiliser la commande oc dans un terminal (ligne de commandes).
 ```bash
 oc login --token=<jeton> --server=https://api.exp.openshift.cqen.ca:6443
 ```
 Pour obtenir le jeton de connexion, voir les instructions [ici](../../Readme-HandsOn.md#se-connecter-au-cluster-dopenshiftoutilsocreadmemdse-connecter-au-cluster-dopenshift)
 
-## Étape 2: Créer l'application avec l'outil client OC
+## Étape 2: Créer l'application avec l'outil client oc
 
-### Créer l'application à partir du code source (github)
+### Créer l'application à partir du code source (GitHub)
 Création de l'application à partir du code source dans github:
 
 ```bash
 oc new-app https://github.com/sclorg/nodejs-ex -l name=nodejs-from-source
 ```
 
-L'outil va inspecter le code source, va trouver l'image appropriée dans DockerHub, créer un ImageStream pour l'image, et créer la bonne configuration de construction (build), la configuration de déploiement et la définition du service.
+L'outil va inspecter le code source, va trouver une image appropriée, créer un ImageStream, et créer la bonne configuration de construction (build), la configuration de déploiement et la définition du service.
 
 Vous aurez un résultat similaire:
 ```bash
@@ -48,10 +48,14 @@ Vous aurez un résultat similaire:
      'oc expose service/nodejs-ex' 
     Run 'oc status' to view your app.
 ```
+Vous pouvez trouver plus d'information sur les types de composants créés dans le site d'Openshift:
+- [imagestream](https://docs.openshift.com/container-platform/4.10/openshift_images/image-streams-manage.html)
+- [buildconfig](https://docs.openshift.com/container-platform/4.10/rest_api/workloads_apis/buildconfig-build-openshift-io-v1.html)
+- [deployment](https://docs.openshift.com/container-platform/4.10/applications/deployments/what-deployments-are.html)
 
 ### "Build" de l'application
 
-La commande "oc new-app" va déclencher un "build" une fois que toutes les dépendances nécessaires ont été confirmées.
+La commande "oc new-app" va déclencher un "build" une fois que toutes les dépendances nécessaires auront été confirmées.
 
 Vérifier le statut de votre nouvelle application avec la commande "oc status"
 ```bash
@@ -86,7 +90,7 @@ NAME                         READY   STATUS      RESTARTS   AGE
 nodejs-ex-1-build            0/1     Completed   0          24h
 nodejs-ex-585694c695-6kdzn   1/1     Running     0          24h
 ```
-On observe un premier pod pour le build de l'application et un deuxième pod pour l'application qui s'exécute.
+Nous observons un premier pod pour le build de l'application et un deuxième pod pour l'application qui s'exécute.
 
 ```bash
 oc get svc
@@ -96,14 +100,14 @@ résultat obtenu:
 NAME        TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
 nodejs-ex   ClusterIP   172.30.204.90   <none>        8080/TCP   24h
 ```
-On observe une adresse IP pour le service qui s'exécute et le port par défaut pour le déploiement: 8080
+On remarque l'assignation une adresse IP interne pour le service qui s'exécute et le port par défaut pour le déploiement: 8080
 
 #### Console Web
 Vous pouvez aussi vérifier le déploiement de l'application dans la console web d'Openshift:
 
 ![ocp-web-projet-cree](images/ocp-web-console-nodejs-from-github-created.png)
 
-On peut observer que des ressources associées à l'application ont été crée:
+On peut observer que des ressources associées à l'application ont été crées:
 - la définition du service
 - la configuration de construction (build)
 
@@ -126,7 +130,7 @@ résultat:
 route.route.openshift.io/nodejs-ex created
 ```
 
-Cliquez sur le lien créé et vous allez voir dans le navigateur, l'interface graphique (UI) généré par le gabarit utilisé pour cet exemple:
+Cliquez sur le lien créé et vous pourrez voir dans le navigateur l'interface graphique (UI) générée par le gabarit utilisé pour cet exemple:
 
 ![ocp-web-nodejs-ui](images/ocp-deployed-nodejs-ui.png)
 

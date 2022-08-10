@@ -2,6 +2,11 @@
 
 Openshift CLI (oc) est l'outil CLI le plus utilisé pour les utilisateurs de la plateforme conteneurisée d'Openshift (OCP). Il permet aux administrateurs et développeurs du cluster d'effectuer des opérations de bout en bout dans Openshift à partir d'un terminal.
 
+Le binaire *oc* offre les mêmes capacités que le binaire *kubectl*, mais il a été enrichi pour supporter les caractéristiques propres de l'OCP comme:
+- Les fichiers de configuration des ressources: DeploymentConfig, BuildConfig, Routes, ImageStream et ImageStramTags.
+- L'authentification avec login
+- Commandes additionnelles: new-project, new-app, etc. 
+
 Avec la commande oc, vous pouvez créer des applications et gérer les projets dans la plateforme conteneurisée d'Openshift.
 
 ## Table de contenu
@@ -22,11 +27,11 @@ Avec la commande oc, vous pouvez créer des applications et gérer les projets d
 Vous pouvez obtenir l'exécutable `oc` à partir du [lien](https://downloads-openshift-console.apps.exp.openshift.cqen.ca/)
 
 **Ubuntu**
-- extraire le fichier:
+- Extraire le fichier:
 ```bash
 tar xvzf <file>
 ```
-- copier le fichier oc dans un répertoire du PATH (par exemple: /usr/local/bin):
+- Copier le fichier oc dans un répertoire de votre variable d'environnement $PATH (par exemple: /usr/local/bin):
 ```bash
 echo $PATH
 ```
@@ -45,7 +50,7 @@ oc login --token=<token-dans-la-response> --server=https://api.exp.openshift.cqe
 Un message va s'afficher pour montrer qu'on a bien ouvert une session avec succès dans le cluster
 
 ## Accéder à votre projet de travail
-La commande "oc get projects" vous montrera la liste de projets auxquels vous avez accès:
+La commande "oc get projects" vous montrera la liste des projets auxquels vous avez accès:
 ```bash
 oc get projects
 NAME    DISPLAY NAME            STATUS
@@ -57,13 +62,11 @@ oc project <projectname>
 ```
 
 ## Utilisation des secrets
-Le type d'objet `Secret` offre un mechanisme de garder l'information sensible comme les mots de passe, les fichiers de configuration, les fichiers `dockercfg`, les identifiants de dépôts de code source privés, etc.
+Le type d'objet `Secret` offre un mécanisme pour stocker des informations sensibles comme les mots de passe, les fichiers de configuration, les fichiers `dockercfg`, les identifiants de dépôts de code source privés, etc.
 
-Les secrets peuvent être utilisé au niveau de conteneur avec une conexion au volume, ou le système peut utiliser les secrets pour effectuer des actions au nom d'un pod.
-
-Entre les avantages de l'utilisation des secrets, on peut mentionner:
+Parmi les avantages de l'utilisation des secrets, on peut mentionner:
 - Ils peuvent être référencés de manière indépendante à partir de sa définition.
-- Ils peuvent être partagés à l'intérieur d'un space de noms (projet).
+- Ils peuvent être partagés à l'intérieur d'un espace de noms (project).
 
 ### Création d'un secret générique
 On peut créer un secret à partir d'un fichier local, un dossier ou à partir des valeurs littérales.
@@ -77,7 +80,7 @@ La commande à utiliser est: `oc create secret generic <nomDuSecret> <sourceDuSe
   ```bash
   oc create secret generic my-secret --from-file=ssh-privatekey=path/to/id_rsa --from-file=ssh-publickey=path/to/id_rsa.pub
   ```
-- Créer un secret avec les paires les valeurs littérales: key1=supersecret et key2=topsecret
+- Créer un secret avec des paires clés/valeurs littérales: key1=supersecret et key2=topsecret
   ```bash
   oc create secret generic my-secret --from-literal=key1=supersecret --from-literal=key2=topsecret
   ```
@@ -92,7 +95,7 @@ La commande à utiliser est: `oc create secret generic <nomDuSecret> <sourceDuSe
 
 Pour vérifier les variables d'environnement de tous les pods, utilisez la commande "oc set env pods --all --list".
 
-Un exemple de résultat pour les variables d'environnement d'une base de données:
+Un exemple de résultat pour les variables d'environnement d'un pod de base de données:
 ```bash
 # pods/mongodb-26-centos7-7677cf4d75-mzflw, container mongodb-26-centos7
 MONGODB_ADMIN_PASSWORD=super-secret
@@ -107,7 +110,7 @@ Pour la création d'une variable d'environnement utiliser la commande `oc set en
 ```bash
 oc set env deployment/nodejs-ex MONGO_URL='mongodb://admin:secret@172.30.245.220:27017/mongo_db'
 ```
-L'exemple montre le cas d'une variable d'environnement (MONGO_URL), ajouté au déploiment "nodejs-ex" (deployment/nodejs-ex).
+L'exemple montre le cas d'une variable d'environnement (MONGO_URL), ajouté au déploiement "nodejs-ex" (deployment/nodejs-ex).
 
 ## Autres commandes
 - Voir les pods

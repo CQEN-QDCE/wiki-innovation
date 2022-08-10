@@ -1,15 +1,15 @@
 # CLI développeur (odo)
 
-L'interface de ligne de commandes de développement de Red Hat Openshift (odo - Red Hat Openshift Developer CLI), est un outil pour la création des applications dans la plateforme conteneurisée d'Openshift et Kubernetes.
-Avec odo, vous pouvez développer, tester, débogueur et déployer des applications basées en microservices dans un cluster Kubernetes sans avoir une connaissance approfondie de la plateforme.
+L'outil en ligne de commandes de développement de Red Hat Openshift (odo - Red Hat Openshift Developer CLI), est un outil simplifiant la création d'applications dans la plateforme conteneurisée d'Openshift et Kubernetes.
+Avec odo, vous pouvez développer, tester, déboguer et déployer des applications basées en microservices dans un cluster Openshift sans avoir une connaissance approfondie de la plateforme.
 
 ## Installation de l'outil client odo
 
 ### Linux
 
-1. Étape 1: Téléchargez le fichier approprié à votre système d'exploitation.
+1. Étape 1: Téléchargez l'exécutable approprié à votre système d'exploitation.
     
-    Dans ce cas-ci, on va prendre le fichier binaire:
+    Dans ce cas-ci, la version pour linux:
     ```bash
     curl -L https://developers.redhat.com/content-gateway/rest/mirror/pub/openshift-v4/clients/odo/latest/odo-linux-amd64 -o odo
     ```
@@ -17,11 +17,15 @@ Avec odo, vous pouvez développer, tester, débogueur et déployer des applicati
     ```bash
     chmod +x <filename>
     ```
-3. Placez le fichier binaire dans un dépôt qui est dans votre "PATH".
+3. Placez le fichier binaire dans un répertoire référencé dans votre variable d'environnement $PATH.
     
-    Pour vérifier votre "PATH", utilisez la commande "echo $PATH"
+    Pour vérifier la valeur de votre variable PATH, utilisez la commande `echo $PATH`
     ```bash
     echo $PATH
+    ```
+    Pour déplacer le fichier utiliser la commande `cp <src> <dest>` (copier) ou `mv <src> <dest>` (déplacer). Par exemple pour copier:
+    ```bash
+    cp odo /usr/local/bin/
     ```
 4. Vérifiez que odo est maintenant disponible dans votre système:
     ```bash
@@ -47,7 +51,7 @@ Un message va s'afficher pour montrer qu'on a bien ouvert une session avec succ�
 
 ## Se déconnecter du cluster Openshift CLI
 ```bash
-oc logout
+odo logout
 ```
 
 ## Références
