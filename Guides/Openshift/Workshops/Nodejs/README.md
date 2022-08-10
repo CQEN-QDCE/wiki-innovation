@@ -9,5 +9,5 @@
 - Lab 2. [Création du secret pour les paramètres de la base de données](2-Creation-Secret-BD.md)
 - Lab 3. [Ajouter le service de base de données - mongodb](3-Ajout-du-Service-MongoDB.md)
 - Lab 4. [Ajout des variables d'environnement aux applications](4-Ajout-Variables-Env.md)
-- Lab 4. [Tester l'ensemble](5-Tester-LEnsemble.md)
-- Lab 5. [Nettoyage - effacer les ressources créées](../../Outils/OC/README.md#nettoyage-effacer-les-ressources-créées)
+- Lab 5. [Tester l'ensemble](5-Tester-LEnsemble.md)
+- Lab 6. [Nettoyage - effacer les ressources créées](../../Outils/OC/README.md#nettoyage-effacer-les-ressources-créées)
