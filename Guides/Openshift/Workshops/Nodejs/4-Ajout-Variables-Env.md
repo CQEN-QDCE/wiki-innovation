@@ -29,7 +29,7 @@ Ajouter les variables d'environnement avec le secret au déploiement de la BD:
 
 ## Création du secret de l'application
 L'application nodejs-ex a besoin du paramètre "MONGO_URL" pour se connecter à la BD.
-Pour créer le secret qui contiendra la valeur pour ce paramètre, il faut l'adresse IP du service de la BD.
+Pour créer le secret qui contiendra la valeur pour ce paramètre, il faut l'adresse IP ou le nom du service de la BD. Nous allons travailler avec l'adresse IP.
 
 Vérification de l'adresse IP du service:
 ```bash
