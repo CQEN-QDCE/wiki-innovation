@@ -1,11 +1,11 @@
 <!-- ENTETE -->
 [![img](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://www.quebec.ca/gouv/politiques-orientations/vitrine-numeriqc/accompagnement-des-organismes-publics/demarche-conception-services-numeriques)
-[![License](https://img.shields.io/badge/Licence-LiLiQ--R-blue)](LICENSE_FR)
+[![License](https://img.shields.io/badge/Licence-LiLiQ--P-blue)](https://github.com/CQEN-QDCE/.github/blob/main/LICENCE.md)
 
 ---
 
 <div>
-    <img src="https://github.com/CQEN-QDCE/.github/blob/main/images/mcn.png">
+    <img src="https://github.com/CQEN-QDCE/.github/blob/main/images/mcn.png" />
 </div>
 <!-- FIN ENTETE -->
 
@@ -71,7 +71,7 @@ Les capacités du pare-feu d'application Web sont axées sur la protection contr
 - Bloque le contenu XML malveillant
 
 
-Utilisation l'architecture api dans AWS:
+### Utilisation l'architecture api dans AWS:
 
 Cet exemple protège les API REST de la plateforme multi-tenant en utilisant:
 
@@ -79,7 +79,7 @@ Cet exemple protège les API REST de la plateforme multi-tenant en utilisant:
 - [Amazon API Gateway](https://docs.aws.amazon.com/fr_fr/apigateway/latest/developerguide/welcome.html) qui permet de créer, de publier, de gérer, de surveiller et de sécuriser les API REST, HTTP et WebSocket à n'importe quelle échelle. Les développeurs d'API peuvent créer des API qui accèdent à AWS ou à d'autres services web, ainsi qu'aux données stockées dans le cloud AWS.
 - [AWS Lambda](https://aws.amazon.com/fr/lambda) qui vous permet d'exécuter du code sans serveur et vous permet de valider et de décoder le jeton, et extrait l'ID utilisateur du JWT.
 
-L'objectif principal de ces architectures est de simplifier l'ajout de nouvelles fonctionnalités. Le modèle de conception multi-tenant a ouvert de nouveaux défis et de nouvelles opportunités pour les fournisseurs de logiciels grâce à la popularité croissante des architectures de microservices. Le défi dans un environnement multi-tenant est que la charge excessive d'un seul client, en raison de nombreuses requêtes à une API, peut affecter l'ensemble de la plateforme.
+L'objectif principal de cet architecture est de simplifier l'ajout de nouvelles fonctionnalités. Le modèle de conception multi-tenant a ouvert de nouveaux défis et de nouvelles opportunités pour les fournisseurs de logiciels grâce à la popularité croissante des architectures de microservices. Le défi dans un environnement multi-tenant est que la charge excessive d'un seul client, en raison de nombreuses requêtes à une API, peut affecter l'ensemble de la plateforme.
 
 Cet exemple protège les API REST des plateformes multi-tenant à l'aide d'Amazon Cognito, Amazon API Gateway et AWS Lambda.
 
@@ -106,5 +106,18 @@ API Gateway prend en charge la fonction de plan d'utilisation pour les API REST 
 ### Configurer la passerelle API pour intégrer l'API keys et le plan d'utilisation
 Vous devez activer l'API REST pour utiliser l'API keys et définir la source sur AUTHORIZER. Il existe deux façons d'accepter les API keys pour chaque requête entrante. Vous pouvez la fournir dans le HEADER de la requête entrante ou via une fonction Lambda d'autorisation personnalisée. Cet exemple utilise une fonction Lambda d'autorisation personnalisée pour récupérer l'API keys extraite du JWT reçu par une demande d'API entrante. Les clients ne transmettent que des JWT chiffrés dans l'en-tête d'autorisation de la requête.
 
+Un moyen pratique d'exécuter des microservices consiste à les déployer sous forme de conteneurs Docker et qui permet de réduire les efforts opérationnels pour le déploiement. Avec les conteneurs, la phase d'apprentissage peut être difficile, et vous devez penser à des correctifs de sécurité pour la surveillance et vos images Docker. Amazon Elastic Container Service (Amazon ECS) et Amazon Elastic Kubernetes Service (Amazon EKS) vous évitent de devoir installer, exploiter et mettre à l'échelle votre infrastructure de gestion de clusters. Avec de simples appels d'API, vous pouvez lancer et stopper des applications activées par Docker, interroger l'état complet de votre cluster et accéder à de nombreuses fonctions connues, comme les groupes de sécurité, les répartitions de charge, les volumes Amazon Elastic Block Store (Amazon EBS) et les rôles AWS Identity and Access Management (IAM).
+Voici le [lien](./architecture_application_web#Les-raisons-d'utiliser-conteneurs-Docker) afin de vous montrer la raison de pourquoi nous utilisons de conteneurs Docker 
+
+### Amazon ECS 
+Prend en charge les stratégies et contraintes de positionnement de conteneurs afin de personnaliser la façon dont Amazon ECS positionne les tâches et y met fin. La contrainte de positionnement d'une tâche est une règle prise en compte lors du positionnement des tâches. Vous pouvez associer des attributs, qui sont des paires clé/valeur, à vos instances de conteneur, puis utiliser une contrainte pour positionner des tâches en fonction de ces attributs. Par exemple, vous pouvez utiliser des contraintes afin de positionner certains microservices en fonction du type d'instance ou de la capacité d'instance, comme les applications alimentées par le GPU.
+
+### Amazon EKS 
+S'appuie sur les versions à jour du logiciel open source Kubernetes, ce qui vous permet d'utiliser tous les plug-ins et outils existants de la communauté Kubernetes. Les applications s’exécutant sur Amazon EKS sont entièrement compatibles avec les applications s’exécutant sur n’importe quel environnement Kubernetes standard, qu’il s’agisse de centres de données sur site ou de clouds publics. Amazon EKS intègre IAM dans Kubernetes, vous permettant ainsi d’enregistrer les entités IAM avec le système d’authentification natif de Kubernetes. Il n'est pas nécessaire de configurer manuellement les informations d'identification pour l'authentification auprès du plan de contrôle Kubernetes. 
+
 Vous pouvez aussi utiliser votre keycloak SSO au lieu de AWS Cognito, voici le [lien](https://github.com/CQEN-QDCE/ceai-cqen-deployments/tree/main/admin-api) d'un déploiement qui a été fait au milieu de notre organisation (CEAI)
+
+
+
+
 

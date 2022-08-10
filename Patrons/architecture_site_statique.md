@@ -1,17 +1,17 @@
 <!-- ENTETE -->
 [![img](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://www.quebec.ca/gouv/politiques-orientations/vitrine-numeriqc/accompagnement-des-organismes-publics/demarche-conception-services-numeriques)
-[![License](https://img.shields.io/badge/Licence-LiLiQ--R-blue)](LICENSE_FR)
+[![License](https://img.shields.io/badge/Licence-LiLiQ--P-blue)](https://github.com/CQEN-QDCE/.github/blob/main/LICENCE.md)
 
 ---
 
 <div>
-    <img src="https://github.com/CQEN-QDCE/.github/blob/main/images/mcn.png">
+    <img src="https://github.com/CQEN-QDCE/.github/blob/main/images/mcn.png" />
 </div>
 <!-- FIN ENTETE -->
 
 ## Définition
 
-Utilisez cette solution pour créer un site web statique sécurisé pour votre nom de domaine enregistré.
+Nous utilisons cette solution pour créer un site web statique sécurisé pour votre nom de domaine enregistré.
 
 Un site web statique diffuse le contenu dans le même format que celui dans lequel il est stocké. Aucune exécution de code serveur n'est nécessaire. Par exemple, si un site web statique est constitué de documents HTML
 affichant des images, il fournit le HTML et les images tels quels au navigateur, sans modifier le contenu des fichiers.
@@ -22,7 +22,7 @@ les sites statiques peuvent également offrir une interactivité côté client. 
 Dans une architecture traditionnelle, les serveurs web diffusent un contenu statique. En général, le contenu est géré à l'aide d'un système de gestion de contenu (CMS), et plusieurs sites statiques sont hébergés sur la même infrastructure. Le contenu est stocké sur des disques locaux ou sur un partage de fichiers sur un réseau accessible.
 L'exemple suivant montre un exemple de structure de structure du système.
 
-
+```
 ├─ css/
 │ ├─ main.css
 │ └─ navigation.css
@@ -35,6 +35,7 @@ L'exemple suivant montre un exemple de structure de structure du système.
 │ └─ script2.js
 ├─ section1.html
 └─ section2.html
+```
 
 ## Modèle: Site statique
 
@@ -63,7 +64,6 @@ Cette solution crée un Bucket S3 qui héberge les ressources de votre site Web 
 Les sites périphériques d'Amazon CloudFront mettent en cache le contenu d'un serveur d'origine et livrent ce contenu en cache à l'utilisateur. Les utilisateurs suivants qui demandent le même contenu à partir de cet emplacement périphérique bénéficient d'un chargement de page plus rapide, car ce contenu est déjà mis en cache.
 Cette solution crée une distribution CloudFront pour servir votre site Web aux internautes. La distribution est configurée avec [une identité d'accès d'origine](https://docs.aws.amazon.com/fr_fr/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html) CloudFront pour s'assurer que le site Web est uniquement accessible via CloudFront, et non directement depuis S3. La distribution est également configurée avec [une politique d'en-tête de réponse CloudFront](https://docs.aws.amazon.com/fr_fr/AmazonCloudFront/latest/DeveloperGuide/adding-response-headers.html) qui ajoute des en-têtes de sécurité à chaque réponse.
 Et en plus cette solution crée une distribution CloudFront pour diffuser votre site web auprès des utilisateurs avec une faible latence. 
-
 
 [Amazon Route 53](https://aws.amazon.com/fr/route53/) Lors de la création d'une distribution Amazon CloudFront, spécifiez votre réseau Amazon S3 comme serveur d'origine. La distribution Amazon CloudFront possède elle-même un DNS. Vous pouvez y faire référence en utilisant un CNAME si vous avez un nom de domaine personnalisé. Pour faire pointer l'enregistrement A d'un domaine racine vers une distribution Amazon CloudFront, vous pouvez utiliser des enregistrements d'alias Amazon Route 53, comme illustré dans le diagramme suivant.
 
