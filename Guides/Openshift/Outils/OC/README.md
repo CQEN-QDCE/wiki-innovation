@@ -28,17 +28,21 @@ Vous pouvez obtenir l'exécutable `oc` à partir du [lien](https://downloads-ope
 
 **Ubuntu**
 - Extraire le fichier:
-```bash
-tar xvzf <file>
-```
+  ```bash
+  tar xvzf <file>
+  ```
 - Copier le fichier oc dans un répertoire de votre variable d'environnement $PATH (par exemple: /usr/local/bin):
-```bash
-echo $PATH
-```
+  ```bash
+  echo $PATH
+  ```
+  Pour déplacer le fichier utiliser la commande `cp <src> <dest>` (copier) ou `mv <src> <dest>` (déplacer). Par exemple pour copier:
+  ```bash
+  cp odo /usr/local/bin/
+  ```
 - Après l'installation vous pouvez commencer à exécuter les commandes oc:
-```bash
-oc <command>
-```
+  ```bash
+  oc <command>
+  ```
 
 ## Se connecter au cluster d'Openshift
 Pour ouvrir une session au cluster, obtenir le jeton avec un [appel HTTP](https://oauth-openshift.apps.exp.openshift.cqen.ca/oauth/token/request
