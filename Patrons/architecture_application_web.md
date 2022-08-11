@@ -35,6 +35,11 @@ Les conteneurs assurent l'optimisation des ressources car ils permettent d'exéc
 ### Flexibilité
 La flexibilité des conteneurs Docker est due à leur portabilité, à la simplicité de leur déploiement et à leur taille réduite. Les services conteneurisés peuvent être déplacés aisément entre les hôtes, sans qu’ils ne soient affectés par les anomalies d'autres services adjacents, ni par l’action inadéquate des correctifs et des mises à niveau du système hôte. Une machine virtuelle requiert quant à elle des opérations d'installation et de configuration. 
 
+L'architecture sans serveur est un moyen de créer et d'exécuter des applications et des services sans avoir à gérer l'infrastructure.
+
+Serverless est idéal pour permettre une livraison rapide et continue des logiciels. Vous n'avez pas à penser à la gestion de l'infrastructure, au provisionnement ou à la planification de la demande et de la mise à l'échelle.
+C'est un moyen efficace de promouvoir les meilleures pratiques, des solutions robustes.
+
 
 ## Modèle 1: Monlithique
 
@@ -106,6 +111,7 @@ Contient un `Bucket S3` configuré avec un hébergement web statique, aux côté
 
 ![](./images/web_app_aws_modele_2.png)
 
+> Il est fortement recommandé d'ajouter un [AWS WAF](https://aws.amazon.com/fr/waf) à votre solution.
 
 Voici le [lien](https://github.com/CQEN-QDCE/ceai-cqen-deployments/tree/main/sso) d'un déploiement qui a été fait au milieu de notre organisation (CEAI)
 
