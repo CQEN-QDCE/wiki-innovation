@@ -23,13 +23,21 @@ Ce document d'orientation a pour le but de fournir aux développeurs et aux opé
 ## Références
 
 [Document d'architecture pour l'API First au fédéral](https://wiki.gccollab.ca/images/7/7a/API_First_Architecture_Patterns_EN_Endorsed.docx)
+
 [La documentation d'AWS](https://docs.aws.amazon.com/fr_fr/)
+
 [The API Gateway Pattern](https://manningbooks.medium.com/the-api-gateway-pattern-cd8af792084)
+
 [AWS Serverless Multi-Tier Architectures](https://d1.awsstatic.com/whitepapers/AWS_Serverless_Multi-Tier_Architectures.pdf)
+
 [Le Centre d'architecture AWS](https://aws.amazon.com/fr/architecture/?cards-all.sort-by=item.additionalFields.sortDate&cards-all.sort-order=desc&awsf.content-type=content-type%23reference-arch-diagram%7Ccontent-type%23pattern&awsf.methodology=*all&awsf.tech-category=*all&awsf.industries=*all&awsm.page-cards-all=1)
+
 [Architecture AWS utilise ECS fargate avec S3](https://github.com/alaeddine-13/ecs-fargate-s3-infrastructure)
+
 [Modèles d'architecture sans serveur dans AWS](https://waswani.medium.com/serverless-architecture-patterns-in-aws-edeab0e46a32)
-[Sécuriser l'AWS API Gateway](https://mydeveloperplanet.com/2022/01/25/)how-to-secure-aws-api-gateway-with-cognito-user-pool/
+
+[Sécuriser l'AWS API Gateway](https://mydeveloperplanet.com/2022/01/25/how-to-secure-aws-api-gateway-with-cognito-user-pool)
+
 [Démarrer avec un site web statique sécurisé](https://docs.aws.amazon.com/fr_fr/AmazonCloudFront/latest/DeveloperGuide/getting-started-secure-static-website-cloudformation-template.html)
 
 
