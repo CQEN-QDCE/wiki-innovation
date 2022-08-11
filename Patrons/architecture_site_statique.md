@@ -11,7 +11,7 @@
 
 ## Définition
 
-Nous utilisons cette solution pour créer un site web statique sécurisé pour votre nom de domaine enregistré.
+Nous utilisons cette approche afin de créer un site web statique sécurisé pour votre nom de domaine enregistré.
 
 Un site web statique diffuse le contenu dans le même format que celui dans lequel il est stocké. Aucune exécution de code serveur n'est nécessaire. Par exemple, si un site web statique est constitué de documents HTML
 affichant des images, il fournit le HTML et les images tels quels au navigateur, sans modifier le contenu des fichiers.
@@ -78,6 +78,10 @@ Cette solution crée un certificat SSL/TLS dans ACM et l'attache à la distribut
 4. S3 renvoie l'objet à CloudFront
 5. CloudFront met l'objet en cache.
 6. L'objet est renvoyé à l'utilisateur. Les réponses ultérieures pour l'objet sont servies à partir du cache de CloudFront.
+
+
+Voici le [lien](https://github.com/CQEN-QDCE/ceai-cqen-deployments/tree/main/plateform_web) d'un déploiement qui a été fait au milieu de notre organisation (CEAI)
+
 
 
 
