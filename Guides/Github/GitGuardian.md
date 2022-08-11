@@ -53,15 +53,15 @@ Ajoutez le token généré à la variable d'environnement `GITGUARDIAN_API_KEY` 
 
 <img src="./images/GitHubSecrets03.png" /> <br/>
 
-Votre secret est desormais crée et actif dans votre compte GitHub et peut être utilisé dans les flux de travail des `"Actions"`. 
+Votre secret est désormais créé et actif dans votre compte GitHub et peut être utilisé dans les flux de travail des `"Actions"`. 
 
 <img src="./images/GitHubSecrets04.png" /> <br/>
 
 ## Configuration de l'action 
 
-Cette intégration de GitGuardian avec le CI/CD dans Github est faite par moyen d'une apllication CLI appellée [ggshield](https://docs.gitguardian.com/internal-repositories-monitoring/ggshield/getting_started), qui est un `wrapper` pour l'API de détection de secrets de GitGuardian. Le token qui est généré et configuré dans les `secrets` et il sert à faire l'authentification de `ggshield` dans le flux de travail de GitHub.
+Cette intégration de GitGuardian avec le CI/CD dans Github est faite par moyen d'une application CLI appelée [ggshield](https://docs.gitguardian.com/internal-repositories-monitoring/ggshield/getting_started), qui est un `wrapper` pour l'API de détection de secrets de GitGuardian. Le token qui est généré et configuré dans les `secrets` et il sert à faire l'authentification de `ggshield` dans le flux de travail de GitHub.
 
-Suivez les étapes ci-dessous pour préparer l'action `GitGuardian scan` à proteger votre projet. 
+Suivez les étapes ci-dessous pour préparer l'action `GitGuardian scan` à protéger votre projet. 
 ### Création du fichier du flux de travail
 
 Ajoutez un nouveau fichier appelé `git-guardian.yml` au répertoire `.github/workflows` de votre projet, qui va utiliser l'action `GitGuardian/ggshield-action`. 
@@ -98,21 +98,21 @@ Configurez la balise `on:` pour ajouter les événements qui déclencheront l'ex
 
 Vous devez ensuite configurer les branches pour ajouter `GitGuardian scan` à vos `status checks` requis pour empêcher que `pull-requests` qui aient des problèmes de sécurité soient fusionnés. 
 
-D'abord, allez sur les configurations (`"Settings"`) de votre projet, et cliques sur `Branches`. 
+D'abord, allez sur les configurations (`"Settings"`) de votre projet, et cliquez sur `Branches`. 
 
 <img src="./images/GitHubBranch01.png" /> <br/>
 
-Par la suite, editez la branche qui sera protégée par l'action `GitGuardian scan`, cliquez sur le bouton `Edit`. 
+Par la suite, on va éditer la branche qui sera protégée par l'action `GitGuardian scan`, cliquez sur le bouton `Edit`. 
 
 <img src="./images/GitHubBranch02.png" /> <br/>
 
-Dans la page `Branch protection rule`, selectionnes les boîtes `Require status checks to pass before merging` et `Require branches to be up to date before merging`; puis dans la recherche, assurez-vous de choisir `GitGuardian scan` et `GitGuardian Security Checks`. 
+Dans la page `Branch protection rule`, sélectionnez les boîtes `Require status checks to pass before merging` et `Require branches to be up to date before merging`; puis dans la recherche, assurez-vous de choisir `GitGuardian scan` et `GitGuardian Security Checks`. 
 
 <img src="./images/GitHubBranch03.png" /> <br/> 
 
 ## Exécution de l'action 
 
-Lorsqu'un des événements de la balise `on:` se passe, GitHub exécute l'action et vérifie le dépôt de votre projet. S'il y a des secrets qui sont exposés dans votre commit, votre workflow sera signalisé comme en échec, et les étapes suivantes du flux de travail ne seront pas exécutées.  
+Lorsqu'un des événements de la balise `on:` se passe, GitHub exécute l'action et vérifie le dépôt de votre projet. S'il y a des secrets qui sont exposés dans votre commit, votre flux de travail sera signalisé comme en échec, et les étapes suivantes du flux ne seront pas exécutées.  
 
 Vous pouvez vérifier le résultat de l'exécution soit dans les checks de votre `pull-request`, soit dans l'option `Actions` dans le menu de votre projet. 
 
