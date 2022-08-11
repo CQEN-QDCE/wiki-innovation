@@ -11,7 +11,7 @@
 
 ## Définition
 
-Nous ulitisons cette approche pour créer un site web sécurisé pour votre nom de domaine enregistré. Avec cette approche, nous allons vous présenter deux modèles qui sont utilisés au CEAI et qui utilisent des conteneurs Docker.
+Nous ulitisons cette architecture pour créer un site web sécurisé pour votre nom de domaine enregistré. Avec cette approche, nous allons vous présenter deux modèles qui sont utilisés au CEAI et qui utilisent des conteneurs Docker.
 
 Les conteneurs vous permettent de regrouper facilement le code, les configurations et les dépendances d'une application dans des services modulaires simples d'utilisation. Ces derniers assurent la cohérence, l'efficacité des opérations et une meilleure productivité, tout en rendant possible le contrôle de version. Grâce aux conteneurs, les applications se déploient de manière rapide, fiable et constante, quel que soit l'environnement.
 
@@ -86,21 +86,21 @@ Les microservices garantissent une réduction des risques lors du développement
 L'infrastructure est composée des ressources suivantes :
 
 #### Infrastructure de back-end : 
-Contient un registre ECR, une définition de tâche, un cluster ECS, un service ECS associé à un groupe cible et un équilibreur de charge applicatif, un certificat SSL et un enregistrement A backend pointant vers l'équilibreur de charge. Le service ECS est configuré avec un service autoscaling (Target Tracking Autoscaling qui s'adapte en fonction des demandes de l'ALB par cible).
+Contient un registre `AWS ECR`, une définition de tâche, un cluster `AWS ECS`, un service `AWS ECS` associé à un groupe cible et un équilibreur de charge applicatif, un certificat SSL et un enregistrement A backend pointant vers l'équilibreur de charge. Le service `ECS` est configuré avec un service autoscaling (Target Tracking Autoscaling qui s'adapte en fonction des demandes de l'ALB par cible).
 
-- [Amazon Elastic Container Registry (Amazon ECR)](https://aws.amazon.com/fr/ecr): ou vous allez créer l'image de conteneur Docker destinée à votre application monolithique.
+- [Amazon Elastic Container Registry (Amazon ECR)](https://aws.amazon.com/fr/ecr ou vous allez créer l'image de conteneur Docker destinée à votre application monolithique.
 
-- [Amazon Elastic Container Service (Amazon ECS)](https://aws.amazon.com/fr/ecs) qui un service de gestion de conteneurs hautement évolutif et à hautes performances qui prend en charge les conteneurs Docker et vous permet d'exécuter facilement des applications. Grâce à de simples appels d'API, vous pouvez lancer et arrêter les applications activées par des conteneurs Docker, connaître l'état complet de votre cluster et accéder à de nombreuses fonctionnalités courantes telles que les groupes de sécurité, Elastic Load Balancing, les volumes EBS et les rôles IAM.
+- [Amazon Elastic Container Service (Amazon ECS)](https://aws.amazon.com/fr/ecs) qui un service de gestion de conteneurs hautement évolutif et à hautes performances qui prend en charge les conteneurs Docker et vous permet d'exécuter facilement des applications. Grâce à de simples appels d'API, vous pouvez lancer et arrêter les applications activées par des conteneurs Docker, connaître l'état complet de votre cluster et accéder à de nombreuses fonctionnalités courantes telles que les groupes de sécurité, Elastic Load Balancing, les volumes EBS et les rôles `IAM`.
 
-- [AWS Fargate](https://aws.amazon.com/fr/fargate/) : AWS Fargate est une technologie pour Amazon ECS qui vous permet d'exécuter des conteneurs sans avoir à gérer des serveurs ou des clusters. Avec AWS Fargate, vous n'avez plus besoin de provisionner, configurer et mettre à l'échelle des clusters de machines virtuelles pour exécuter des conteneurs. Vous n'avez donc plus besoin de choisir des types de serveurs, de décider quand faire évoluer vos clusters ou d'optimiser le regroupement des clusters.
+- [AWS Fargate](https://aws.amazon.com/fr/fargate/) : AWS Fargate est une technologie pour `Amazon ECS` qui vous permet d'exécuter des conteneurs sans avoir à gérer des serveurs ou des clusters. Avec `AWS Fargate`, vous n'avez plus besoin de provisionner, configurer et mettre à l'échelle des clusters de machines virtuelles pour exécuter des conteneurs. Vous n'avez donc plus besoin de choisir des types de serveurs, de décider quand faire évoluer vos clusters ou d'optimiser le regroupement des clusters.
 Avec AWS Fargate, vous n'avez plus besoin d'interagir avec les serveurs ou les clusters, ni d'y réfléchir. Fargate vous permet de vous concentrer sur la conception et la réalisation de vos applications au lieu de gérer l'infrastructure qui les exécute.
 
 - [L'Équilibreur de charge d'application (ALB)](https://aws.amazon.com/fr/elasticloadbalancing/application-load-balancer) permet à votre service d'accepter le trafic entrant. L'ALB achemine automatiquement le trafic vers des instances de conteneurs fonctionnant sur votre cluster en les utilisant comme groupe cible.
 
 ### Infrastructure de front-end : 
-Contient un Bucket S3 configuré avec un hébergement web statique, aux côtés d'une distribution cloudfront, d'un certificat SSL et d'un enregistrement Awebsite.
+Contient un `Bucket S3` configuré avec un hébergement web statique, aux côtés d'une distribution `AWS Cloudfront`, d'un certificat SSL et d'un enregistrement Awebsite.
 
-- [Amazon Simple Storage Service (Amazon S3)](https://aws.amazon.com/fr/s3): Pour stocker les fichiers statiques dans S3 front-end par une distribution Cloudfront. L'application utilise également des services REST hébergés sur ECS.
+- [Amazon Simple Storage Service (Amazon S3)](https://aws.amazon.com/fr/s3): Pour stocker les fichiers statiques dans `S3` front-end par une distribution Cloudfront. L'application utilise également des services `REST` hébergés sur `AWS ECS`.
 
 - [Le service web de diffusion de contenu Amazon CloudFront](https://docs.aws.amazon.com/fr_fr/cloudfront/index.html): Cette solution crée une distribution CloudFront pour servir votre site Web aux internautes.
 
