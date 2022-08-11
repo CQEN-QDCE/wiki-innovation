@@ -25,6 +25,8 @@ Ce document d'orientation a pour le but de fournir aux développeurs et aux opé
 
 - [Document d'architecture pour l'API First au fédéral](https://wiki.gccollab.ca/images/7/7a/API_First_Architecture_Patterns_EN_Endorsed.docx)
 
+- [Déploiement des services du Centre d'Expertise Appliquée en Innovation (CEAI)](https://github.com/CQEN-QDCE/ceai-cqen-deployments)
+
 - [La documentation d'AWS](https://docs.aws.amazon.com/fr_fr/)
 
 - [The API Gateway Pattern](https://manningbooks.medium.com/the-api-gateway-pattern-cd8af792084)

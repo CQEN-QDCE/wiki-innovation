@@ -65,7 +65,7 @@ Cette solution crée un `AWS Bucket S3` qui héberge les ressources de votre sit
 Les sites périphériques d'Amazon CloudFront mettent en cache le contenu d'un serveur d'origine et livrent ce contenu en cache à l'utilisateur. Les utilisateurs suivants qui demandent le même contenu à partir de cet emplacement périphérique bénéficient d'un chargement de page plus rapide, car ce contenu est déjà mis en cache.
 Cette solution crée une distribution `CloudFront` pour servir votre site Web aux internautes. La distribution est configurée avec [une identité d'accès d'origine](https://docs.aws.amazon.com/fr_fr/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html) `CloudFront` pour s'assurer que le site Web est uniquement accessible via `CloudFront`, et non directement depuis `S3`. La distribution est également configurée avec [une politique d'en-tête de réponse CloudFront](https://docs.aws.amazon.com/fr_fr/AmazonCloudFront/latest/DeveloperGuide/adding-response-headers.html) qui ajoute des en-têtes de sécurité à chaque réponse.
 
-[Amazon Route 53](https://aws.amazon.com/fr/route53/) Lors de la création d'une distribution `Amazon CloudFront`, spécifiez votre réseau `Amazon S3` comme serveur d'origine. La distribution Amazon CloudFront possède elle-même un `DNS`. Vous pouvez y faire référence en utilisant un `CNAME` si vous avez un nom de domaine personnalisé. Pour faire pointer l'enregistrement A d'un domaine racine vers une distribution `Amazon CloudFront`, vous pouvez utiliser des enregistrements d'alias `Amazon Route 53`, comme illustré dans le diagramme suivant.
+[Amazon Route 53](https://aws.amazon.com/fr/route53/) Lors de la création d'une distribution `Amazon CloudFront`, spécifiez votre réseau `Amazon S3` comme serveur d'origine. La distribution `Amazon CloudFront` possède elle-même un `DNS`. Vous pouvez y faire référence en utilisant un `CNAME` si vous avez un nom de domaine personnalisé. Pour faire pointer l'enregistrement A d'un domaine racine vers une distribution `Amazon CloudFront`, vous pouvez utiliser des enregistrements d'alias `Amazon Route 53`, comme illustré dans le diagramme suivant.
 
 [ACM](https://aws.amazon.com/fr/certificate-manager/)
 Cette solution crée un certificat `SSL/TLS` dans `ACM` et l'attache à la distribution `CloudFront`. Cela permet à la distribution de servir le site Web de votre domaine en utilisant HTTPS.
@@ -79,6 +79,7 @@ Cette solution crée un certificat `SSL/TLS` dans `ACM` et l'attache à la distr
 5. CloudFront met l'objet en cache.
 6. L'objet est renvoyé à l'utilisateur. Les réponses ultérieures pour l'objet sont servies à partir du cache de `CloudFront`.
 
+> Il est fortement recommandé d'ajouter un [AWS WAF](https://aws.amazon.com/fr/waf) à votre solution.
 
 Voici le [lien](https://github.com/CQEN-QDCE/ceai-cqen-deployments/tree/main/plateform_web) d'un déploiement qui a été fait au milieu de notre organisation (CEAI)
 

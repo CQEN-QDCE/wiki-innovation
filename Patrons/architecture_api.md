@@ -116,6 +116,7 @@ Prend en charge les stratégies et contraintes de positionnement de conteneurs a
 ### Amazon EKS 
 S'appuie sur les versions à jour du logiciel open source Kubernetes, ce qui vous permet d'utiliser tous les plug-ins et outils existants de la communauté Kubernetes. Les applications s’exécutant sur `Amazon EKS` sont entièrement compatibles avec les applications s’exécutant sur n’importe quel environnement Kubernetes standard, qu’il s’agisse de centres de données sur site ou de clouds publics. `Amazon EKS` intègre `IAM` dans Kubernetes, vous permettant ainsi d’enregistrer les entités `IAM` avec le système d’authentification natif de Kubernetes. Il n'est pas nécessaire de configurer manuellement les informations d'identification pour l'authentification auprès du plan de contrôle Kubernetes. 
 
+> Il est fortement recommandé d'ajouter un [AWS WAF](https://aws.amazon.com/fr/waf) à votre solution.
 
 Vous pouvez aussi utiliser votre keycloak SSO au lieu de AWS Cognito, voici le [lien](https://github.com/CQEN-QDCE/ceai-cqen-deployments/tree/main/admin-api) d'un déploiement qui a été fait au milieu de notre organisation (CEAI)
 
