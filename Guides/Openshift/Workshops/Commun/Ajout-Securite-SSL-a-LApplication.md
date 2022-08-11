@@ -21,4 +21,4 @@ Vous obtiendrez un résultat similaire:
 
 ![ocp-nodejs-deploye-page](../Nodejs/images/ocp-deployed-nodejs-ui.png)
 
-Félicitations! Dans cet exercice, vous avez appris comme utiliser le certificat SSL d'Openshift pour exposer votre application.
+Félicitations! Dans cet exercice, vous avez appris comment utiliser le certificat SSL d'Openshift pour exposer votre application.
