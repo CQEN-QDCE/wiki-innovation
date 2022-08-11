@@ -11,7 +11,7 @@
 
 ## Définition
 
-Nous ulitisons cette solution pour créer un site web sécurisé pour votre nom de domaine enregistré. Nous allons vous présenter deux modèles qui sont utilisés au CEAI et qui utilisent des conteneurs Docker.
+Nous ulitisons cette approche pour créer un site web sécurisé pour votre nom de domaine enregistré. Avec cette approche, nous allons vous présenter deux modèles qui sont utilisés au CEAI et qui utilisent des conteneurs Docker.
 
 Les conteneurs vous permettent de regrouper facilement le code, les configurations et les dépendances d'une application dans des services modulaires simples d'utilisation. Ces derniers assurent la cohérence, l'efficacité des opérations et une meilleure productivité, tout en rendant possible le contrôle de version. Grâce aux conteneurs, les applications se déploient de manière rapide, fiable et constante, quel que soit l'environnement.
 
@@ -20,10 +20,10 @@ Les conteneurs vous permettent de regrouper facilement le code, les configuratio
 ### Rapidité
 En cas de nouveau code, le lancement d'un conteneur n'implique pas d'opérations complexes. Ainsi, les opérations s'accélèrent car ce code, intégré à un conteneur se trouvant sur la machine locale d'un développeur, peut être aisément transféré sur un serveur de test. Lors de sa création, ce conteneur peut être associé aux autres conteneurs nécessaires à l'exécution de la pile d'applications.
 
-#### Contrôle des dépendances et pipeline optimisé
+### Contrôle des dépendances et pipeline optimisé
 Une image de conteneur Docker constitue la capture, à un moment précis, du code et des dépendances d'une application. Grâce à elle, il est possible de mettre en place un processus standard. Par exemple :
 
-#### Les développeurs créent et exécutent le conteneur localement.
+#### Les développeurs créent et exécutent le conteneur localement
 Le serveur d'intégration continue exécute le même conteneur et le soumet à des tests d'intégration afin de s'assurer qu'il est conforme aux besoins.
 Le conteneur est transféré dans un environnement de simulation où son fonctionnement peut être vérifié à l'aide de tests de charge, ou manuels.
 Le conteneur est envoyé en production.
@@ -32,7 +32,7 @@ Le fait de pouvoir créer, tester, transférer et exécuter le même conteneur a
 #### Optimisation des ressources et ajustement des processus
 Les conteneurs assurent l'optimisation des ressources car ils permettent d'exécuter plusieurs processus distincts au sein d'un seul système. Les méthodes d'isolation et d'attribution qui caractérisent les conteneurs contribuent à cela. Par ailleurs, il est possible d'appliquer certaines restrictions afin que les conteneurs n'exploitent qu'une certaine part de la mémoire et du processeur d'un hôte. Une fois que vous savez de quelles ressources un conteneur a besoin, et lesquelles sont disponibles auprès du serveur hôte sous-jacent, vous pouvez adapter la taille des ressources de calcul que vous exploitez avec des hôtes d'envergure moindre, ou encore augmenter la densité des processus s’exécutant sur un seul hôte de plus large envergure. De cette façon, la disponibilité s'accroît et l'emploi des ressources est adapté au mieux.
 
-#### Flexibilité
+### Flexibilité
 La flexibilité des conteneurs Docker est due à leur portabilité, à la simplicité de leur déploiement et à leur taille réduite. Les services conteneurisés peuvent être déplacés aisément entre les hôtes, sans qu’ils ne soient affectés par les anomalies d'autres services adjacents, ni par l’action inadéquate des correctifs et des mises à niveau du système hôte. Une machine virtuelle requiert quant à elle des opérations d'installation et de configuration. 
 
 
@@ -40,11 +40,11 @@ La flexibilité des conteneurs Docker est due à leur portabilité, à la simpli
 
 Les architectures monolithiques classiques sont difficiles à mettre à l'échelle. A mesure de la croissance de la base de code d'une application, elle devient complexe à mettre à jour et à maintenir. L'introduction de nouvelles fonctions, de langues, d'infrastructures et de technologies devient très délicate, ce qui limite l'innovation et les nouvelles idées.
 
-Toute l'application node.js s'exécute dans un conteneur sous la forme d'un service unique et chaque conteneur a les mêmes fonctions que tous les autres. Si une fonction de l'application enregistre un pic de demande, toute l'architecture doit être mise à l'échelle.
-
 ### Présentation de l'architecture
 
 ![](./images/web_app_modele_1.png)
+
+Toute l'application node.js s'exécute dans un conteneur sous la forme d'un service unique et chaque conteneur a les mêmes fonctions que tous les autres. Si une fonction de l'application enregistre un pic de demande, toute l'architecture doit être mise à l'échelle.
 
 - a. Client
 Le client adresse une demande sur le port 80 à l'équilibreur de charge.
@@ -105,5 +105,8 @@ Contient un Bucket S3 configuré avec un hébergement web statique, aux côtés 
 - [Le service web de diffusion de contenu Amazon CloudFront](https://docs.aws.amazon.com/fr_fr/cloudfront/index.html): Cette solution crée une distribution CloudFront pour servir votre site Web aux internautes.
 
 ![](./images/web_app_aws_modele_2.png)
+
+
+Voici le [lien](https://github.com/CQEN-QDCE/ceai-cqen-deployments/tree/main/sso) d'un déploiement qui a été fait au milieu de notre organisation (CEAI)
 
 
