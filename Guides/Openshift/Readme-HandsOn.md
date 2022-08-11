@@ -42,43 +42,11 @@ Vous pouvez cliquer sur le lien de la route pour ouvrir l'application sur le web
 Et voilà!, félicitations! vous avez déployé une application web sur Openshift.
 
 ## Expérimentation avec l'Interface de Commande en Ligne d'Openshift (OC CLI) 
+
 (Documentation Openshift [ici](https://docs.openshift.com/container-platform/4.10/cli_reference/openshift_cli/getting-started-cli.html))
-### Installation de oc cli
-
-Vous pouvez obtenir l'executable `oc` à partir du [lien](https://downloads-openshift-console.apps.exp.openshift.cqen.ca/)
-
-**Ubuntu**
-- extraire le fichier:
-```bash
-tar xvzf <file>
-```
-- copier le fichier oc dans un répertoire du PATH (par exemple: /usr/local/bin):
-```bash
-echo $PATH
-```
-- Après l'installation vous pouvez commencer à exécuter les commandes oc:
-```bash
-oc <command>
-```
-### Se connecter au cluster d'Openshift
-Pour ouvrir une session au cluster, obtenir le jeton avec un appel [HTTP request](https://oauth-openshift.apps.exp.openshift.cqen.ca/oauth/token/request)
-La réponse à la requête dans le navigateur web va vous indiquer la commande pour ouvrir une session, par exemple:
-```bash
-oc login --token=<token-dans-la-response> --server=https://api.exp.openshift.cqen.ca:6443
-```
-Un message va s'afficher pour montrer qu'on a bien ouvert une session avec succès dans le cluster
-### Accéder à votre projet de travail
-La commande "oc get projects" vous montrera la liste de projets auxquels vous avez accès:
-```bash
-oc get projects
-NAME    DISPLAY NAME            STATUS
-...
-```
-
-Vous pouvez sélectionner le projet en cours avec la commande "oc project <projectname>"
-```bash
-oc project <projectname>
-```
+### [Installation de oc cli](Outils/OC/README.md#installation-de-openshift-cli-oc)
+### [Se connecter au cluster d'Openshift](Outils/OC/README.md#se-connecter-au-cluster-dopenshift)
+### [Accéder à votre projet de travail](Outils/OC/README.md#accéder-à-votre-projet-de-travail)
 
 ### Créer une application
 La commande "oc new-app" va créer une nouvelle application:
@@ -100,111 +68,7 @@ Vous verrez un résultat similaire:
      'oc expose service/cakephp-ex' 
     Run 'oc status' to view your app.
 ```
-#### Autres commandes
-- Voir les pods
-    ```bash
-    oc get pods -o wide
-    ```
-    exemple de résultat:
-    ```bash
-    NAME                                READY   STATUS    RESTARTS     AGE     IP               NODE                                        NOMINATED NODE   READINESS GATES
-    cakephp-ex-1-build                  0/1     Completed   0          23m     10.128.7.33    ip-10-2-8-154.ca-central-1.compute.internal     <none>           <none>
-    cakephp-ex-586bf8946d-tf9lj         1/1     Running     0          21m     10.129.4.93    ip-10-2-105-25.ca-central-1.compute.internal    <none>           <none>
-    ```    
-- Voir les logs du pod
-    ```bash
-    oc logs cakephp-ex-586bf8946d-tf9lj
-    ```
-- Voir le projet courant
-    ```bash
-    oc project
-    Using project "sample-nodejs-from-oc-cli" on server "https://api.exp.openshift.cqen.ca:6443".
-    ```
-- Voir le statut du projet
-    ```bash
-    oc status
-    In project guide-openshift-project on server https://api.exp.openshift.cqen.ca:6443
-
-    https://cakephp-example-guide-openshift-project.apps.dev.openshift.cqen.ca to pod port 8080-tcp (svc/cakephp-ex)
-    deployment/cakephp-ex deploys istag/cakephp-ex:latest <-
-    bc/cakephp-ex source builds https://github.com/sclorg/cakephp-ex on openshift/php:7.4-ubi8 
-    deployment #2 running for about an hour - 1 pod
-    deployment #1 deployed about an hour ago
-    ```
-
-- Suggestions (aide)
-    ```bash
-    oc help
-    Openshift Client
-
-    This client helps you develop, build, deploy, and run your applications on any
-    Openshift or Kubernetes cluster. It also includes the administrative commands for managing a cluster under the 'adm' subcommand.
-
-    Usage:
-    oc [flags]
-
-    Basic Commands:
-    login           Log in to a server
-    new-project     Request a new project
-    new-app         Create a new application
-    ...
-    ```
-    Pour obtenir de l'aide avec une commande spécifique, utilisez "--help":
-    ```bash
-    oc create --help
-    Create a resource from a file or from stdin.
-
-    JSON and YAML formats are accepted.
-
-    Usage:
-    oc create -f FILENAME [flags]
-
-    Exemples:
-    # Create a pod using the data in pod.json.
-    oc create -f ./pod.json
-    
-    # Create a pod based on the JSON passed into stdin.
-    cat pod.json | oc create -f -
-    
-    # Edit the data in docker-registry.yaml in JSON then create the resource using the edited data.
-    oc create -f docker-registry.yaml --edit -o json    
-    ```
-- Voir la documentation pour l'une des ressources en particulier: Utilisez "explain". Pour exemple, pour les pods:
-    ```bash
-    oc explain pods
-    KIND:     Pod
-    VERSION:  v1
-
-    DESCRIPTION:
-        Pod is a collection of containers that can run on a host. This resource is
-        created by clients and scheduled onto hosts.
-
-    FIELDS:
-    apiVersion	<string>
-        APIVersion defines the versioned schema of this representation of an
-        object. Servers should convert recognized schemas to the latest internal
-        value, and may reject unrecognized values. More info:
-        https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-
-    kind	<string>
-        Kind is a string value representing the REST resource this object
-        represents. Servers may infer this from the endpoint the client submits
-        requests to. Cannot be updated. In CamelCase. More info:
-        https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-
-    metadata	<Object>
-        Standard object's metadata. More info:
-        https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-
-    spec	<Object>
-        Specification of the desired behavior of the pod. More info:
-        https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-
-    status	<Object>
-        Most recently observed status of the pod. This data may not be up to date.
-        Populated by the system. Read-only. More info:
-        https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-    ```
+#### [Autres commandes](Outils/OC/README.md#autres-commandes)
 
 #### Se déconnecter du cluster Openshift CLI
 ```bash
