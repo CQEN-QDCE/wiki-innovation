@@ -89,15 +89,15 @@ Configurez la balise `on:` pour ajouter les événements qui déclencheront l'ex
 
 Vous devez ensuite configurer les branches pour ajouter `GitGuardian scan` à vos `status checks` requis pour empêcher que `pull-requests` qui aient problèmes de sécurité soient fusionnés. D'abord, allez sur les configurations (`"Settings"`) de votre projet, et cliques sur `Branches`. 
 
-<img src="./images/GithubBranch01.png" /> <br/>
+<img src="./images/GitHubBranch01.png" /> <br/>
 
 Par la suite, editez la branche qui sera protégée par l'action `GitGuardian scan`, cliquez sur le bouton `Edit`. 
 
-<img src="./images/GithubBranch02.png" /> <br/>
+<img src="./images/GitHubBranch02.png" /> <br/>
 
 Dans la page `Branch protection rule`, selectionnes les boîtes `Require status checks to pass before merging` et `Require branches to be up to date before merging`; puis dans la recherche, assurez-vous de choisir `GitGuardian scan` et `GitGuardian Security Checks`. 
 
-<img src="./images/GithubBranch03.png" /> <br/> 
+<img src="./images/GitHubBranch03.png" /> <br/> 
 
 Cette intégration de GitGuardian avec le CI/CD dans Github est faite par moyen d'une apllication CLI appellée [ggshield](https://docs.gitguardian.com/internal-repositories-monitoring/ggshield/getting_started), qui est un `wrapper` pour l'API de détection de secrets de GitGuardian. Le token qui est généré et configuré dans les `secrets` set à faire l'authentification dans `ggshield`.
 
