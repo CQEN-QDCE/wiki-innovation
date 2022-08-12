@@ -9,9 +9,11 @@
 </div>
 <!-- FIN ENTETE -->
 
+# Architecture API
+
 ## Définition
 
-C'est une architecture axée sur les API consiste à se concentrer sur la couche applicative pour intégrer les applications et les services sur l'internet.
+C'est une architecture axée sur les sur les interfaces de programmation d'application (API) consiste à se concentrer sur la couche applicative pour intégrer les applications et les services sur l'internet.
 
 Les API sont des points de terminaison qui offrent un accès et la mise à jour des informations dans une application. Une application ou un service client prend la place d'un utilisateur avec un navigateur web. Au lieu d'accéder à une interface graphique par le biais d'un portail, un point de terminaison API expose des fonctions permettant d'accéder aux données et de les mettre à jour. C'est pourquoi l'approche privilégiée pour connecter les services en nuage sur l'internet est une approche API. Cette approche maintient la technologie nécessaire à l'échange de données entre les services au niveau de la couche applicative en utilisant des technologies omniprésentes telles que l'internet, https et les services d'identité. 
 
@@ -19,13 +21,13 @@ Les API sont des points de terminaison qui offrent un accès et la mise à jour 
 
 ## Modèle 1 : Interfaces de programme d'application (API)
 
-Les API fournissent une architecture moderne pour accéder aux méthodes et aux données dans les applications, les services et les plates-formes. Elles sont omniprésentes pour les services à l'échelle de l'Internet. Les fournisseurs de nuages offrent une suite de services et d'architectures de plateforme pour soutenir une architecture d'API.
+Les API fournissent une architecture moderne pour accéder aux méthodes et aux données dans les applications, les services et les plateformes. Elles sont omniprésentes pour les services à l'échelle de l'Internet. Les fournisseurs de infonuagiques offrent une suite de services et d'architectures de plateforme pour soutenir une architecture d'API.
 
 ![](images/api_modele_1.png)
 
 ## Modèle 2 : API Gateway (Reverse Proxy)
 
-Les capacités communes sont regroupées dans un seul proxy inverse qui constitue une façade pour tous les services. Le client n'interagit pas directement avec chaque service, mais avec une passerelle API qui est un proxy inverse pour tous les services.  Les fournisseurs de services en nuage offrent des capacités de passerelle API en tant que modèle de plate-forme en tant que service (Platform-as-a-Service) où l'infrastructure sous-jacente, y compris le calcul, le stockage et la mise en réseau, est gérée par les fournisseurs de services en nuage. Le schéma ci-dessous suppose un modèle de livraison PaaS pour la passerelle API. La livraison en tant que modèle de service IaaS n'est pas recommandée car elle nécessite une charge opérationnelle plus importante, notamment la gestion des correctifs, la mise à l'échelle et la sécurité des composants de l'infrastructure.
+Les capacités communes sont regroupées dans un seul proxy inverse qui constitue une façade pour tous les services. Le client n'interagit pas directement avec chaque service, mais avec une passerelle API qui est un proxy inverse pour tous les services.  Les fournisseurs de services en nuage offrent des capacités de passerelle API en tant que modèle de plate-forme en tant que service `Platform As A Service - PaaS` où l'infrastructure sous-jacente, y compris le calcul, le stockage et la mise en réseau, est gérée par les fournisseurs de services en nuage. Le schéma ci-dessous suppose un modèle de livraison PaaS pour la passerelle API. La livraison en tant que modèle de service `Infrastructure As A Service - IaaS` n'est pas recommandée car elle nécessite une charge opérationnelle plus importante, notamment la gestion des correctifs, la mise à l'échelle et la sécurité des composants de l'infrastructure.
 
 ![](images/api_modele_2.png)
 
@@ -35,16 +37,16 @@ Les passerelles API offrent les capacités suivantes :
 
 - L'autorisation consiste à accorder l'accès au service. L'authentification vérifie que la connexion du client est autorisée, l'autorisation vérifie quels services et méthodes sont autorisés par le client. 
 
-- La terminaison SSL est le processus de conversion des informations cryptées du client en texte clair pour le traitement.
+- La terminaison `Secure Sockets Layer - SSL` est le processus de conversion des informations cryptées du client en texte clair pour le traitement.
 
 - Le routage (`Routing`) de la connexion du client vers différents services en fonction de l'URL fournie.
-Par exemple, https://domain.com/payment acheminera les interactions du client vers le service de paiement, tandis que http://domain.com/cart acheminera les interactions du client vers le service de panier. Ces services peuvent être déployés à l'aide d'architectures complètement différentes, mais les complexités du client sont abstraites car la passerelle API fournit le routage nécessaire.
+Par exemple, https://domain.com/payment acheminera les interactions du client vers le service de paiement, tandis que http://domain.com/cart acheminera les interactions du client vers le service de panier. Ces services peuvent être déployés à l'aide des architectures complètement différentes, mais les complexités du client sont abstraites car la passerelle API fournit le routage nécessaire.
 
-- Agrégation (`Aggregation`) de plusieurs appels de service en un seul appel de service. Cela permet de réduire le nombre d'échanges entre le client et les services. 
+- Agrégation (`Aggregation`) qui permet de réduire le nombre d'échanges entre le client et les services. 
 
 - La mise en cache (`Caching`) des méthodes couramment invoquées peut réduire le traitement requis par les services dorsaux tout en améliorant la réponse des clients.  L'expiration du cache peut être définie pour forcer un rafraîchissement du cache. 
 
-- L'équilibrage de la charge (`Load balancing`) des demandes de service lorsque les performances d'un service ne sont pas dans une fenêtre spécifiée peut être acheminé entre plusieurs instances de ce service. L'équilibrage de la charge est également un moyen efficace de réaliser des déploiements bleu/vert et des déploiements canariens.
+- L'équilibrage de la charge (`Load balancing`) des demandes de service lorsqu'elles sont acheminées entre plusieurs instances. L'équilibrage de la charge est également un moyen efficace de réaliser des déploiements bleu/vert.
 
 - La conversion de protocole permet aux clients d'utiliser un protocole, par exemple HTTP v1 pour faire une demande même si le service n'accepte que HTTP v2.
 
@@ -56,7 +58,7 @@ Par exemple, https://domain.com/payment acheminera les interactions du client ve
 
 Les pare-feu de réseau sont conçus pour protéger l'infrastructure telle que les serveurs, mais pas nécessairement les applications ou les clients.
 Les pare-feu réseau se concentrent sur l'inspection du trafic des couches 3 et 4 de l'OSI et n'ont aucune connaissance de HTTP/S et des menaces spécifiques aux applications telles que l'injection SQL et le Cross Site Scripting. Les pare-feu réseau prennent en charge de nombreux protocoles, mais pour les API, le seul protocole utilisé est HTTP/S. 
-Pour cela l'ajout d'un pare-feu d'application Web (WAF) offre aux services une plus grande disponibilité tout en protégeant ces services et les clients des menaces courantes. Ce modèle s'appuie sur les capacités d'authentification et d'autorisation d'une passerelle API avec des protections supplémentaires pour les applications et les services pour lesquels la passerelle est un proxy inverse. Les fournisseurs de services en nuage offrent des capacités WAF sous la forme d'un modèle de plate-forme en tant que service `Platform-as-a-Service` où l'infrastructure sous-jacente, y compris l'informatique, le stockage et la mise en réseau, est gérée par les fournisseurs de services en nuage. Le schéma ci-dessous ne s'applique pas lorsque les capacités WAF sont fournies en tant que IaaS.
+Pour cela l'ajout d'un pare-feu d'application Web (WAF) offre aux services une plus grande disponibilité tout en protégeant ces services et les clients des menaces courantes. Ce modèle s'appuie sur les capacités d'authentification et d'autorisation d'une passerelle API avec des protections supplémentaires pour les applications et les services pour lesquels la passerelle est un proxy inverse. Les fournisseurs de services en nuage offrent des capacités WAF sous la forme d'un modèle de plate-forme en tant que service `Platform As A Service - PaaS` où l'infrastructure sous-jacente, y compris l'informatique, le stockage et la mise en réseau, est gérée par les fournisseurs de services en nuage. Le schéma ci-dessous ne s'applique pas lorsque les capacités `WAF` sont fournies en tant que `Infrastructure As A Service - IaaS`.
 
 ![](images/api_modele_3.png)
 
@@ -72,15 +74,15 @@ Les capacités du pare-feu d'application Web sont axées sur la protection contr
 - Bloque le contenu XML malveillant.
 
 
-### Utilisation l'architecture api dans AWS:
+### Utilisation de l'architecture api dans AWS:
 
 Cet exemple protège les API REST de la plateforme multi-tenant en utilisant:
 
 - [Amazon Cognito](https://aws.amazon.com/fr/cognito) qui contrôle l’authentification des utilisateurs et l’accès aux applications mobiles sur les appareils connectés à Internet. Le service enregistre et synchronise les données de l’utilisateur final, ce qui permet d'ajouter l'authentification à votre API.
 - [Amazon API Gateway](https://docs.aws.amazon.com/fr_fr/apigateway/latest/developerguide/welcome.html) qui permet de créer, de publier, de gérer, de surveiller et de sécuriser les API REST, HTTP et WebSocket à n'importe quelle échelle. Les développeurs d'API peuvent créer des API qui accèdent à AWS ou à d'autres services web, ainsi qu'aux données stockées dans le cloud AWS.
-- [AWS Lambda](https://aws.amazon.com/fr/lambda) qui vous permet d'exécuter du code sans serveur et vous permet de valider et de décoder le jeton, et extrait l'ID utilisateur du JWT.
+- [AWS Lambda](https://aws.amazon.com/fr/lambda) qui vous permet d'exécuter du code sans serveur, de valider et de décoder le jeton, et d'extraire l'ID utilisateur du JWT.
 
-L'objectif principal de cet architecture est de simplifier l'ajout de nouvelles fonctionnalités. Le modèle de conception multi-tenant a ouvert de nouveaux défis et de nouvelles opportunités pour les fournisseurs de logiciels grâce à la popularité croissante des architectures de microservices. Le défi dans un environnement multi-tenant est que la charge excessive d'un seul client, en raison de nombreuses requêtes à une API, peut affecter l'ensemble de la plateforme.
+L'objectif principal de cette architecture est de simplifier l'ajout de nouvelles fonctionnalités. Le modèle de conception multi-tenant a ouvert de nouveaux défis et de nouvelles opportunités pour les fournisseurs de logiciels grâce à la popularité croissante des architectures de microservices. Le défi dans un environnement multi-tenant est que la charge excessive d'un seul client, en raison de nombreuses requêtes à une API, peut affecter l'ensemble de la plateforme.
 
 Cet exemple protège les `API REST` des plateformes multi-tenant à l'aide d'Amazon Cognito, `Amazon API Gateway` et AWS Lambda.
 
@@ -94,7 +96,7 @@ La plateforme multi-tenant qui expose des `API REST` a des clients tels qu'une a
 4. Après une authentification réussie, Amazon Cognito renvoie un `JWT`, tel que `acccess_token`, `id_token`, `refresh_token`. Le jeton `access/id` stocke des informations sur les permissions accordées, y compris l'ID du locataire auquel cet utilisateur appartient.
 5. L'application client invoque l'`API REST` qui est déployée dans la passerelle API. La demande d'API transmet le `JWT` comme jeton de porteur dans l'en-tête d'autorisation de la demande d'API.
 6. Comme l'identifiant du locataire est caché dans le jeton `JWT` crypté, la fonction d'autorisation Lambda valide et décode le jeton, et extrait l'identifiant du locataire du `JWT`.
-7. La fonction Lambda token authorizer renvoie une politique IAM ainsi que l'ID du locataire à partir du jeton décodé auquel un utilisateur appartient.
+7. La fonction `Lambda` `Token Authorizer` renvoie une politique IAM ainsi que l'ID du locataire à partir du jeton décodé auquel un utilisateur appartient.
 8. L'`API REST` de l'application est configurée avec des plans d'utilisation par rapport à une API keys personnalisée, qui est l'`ID` du locataire dans `API Gateway`. `API Gateway` évalue la politique `IAM` et recherche la politique d'utilisation à l'aide de l'`API keys`. Elle étrangle les demandes d'API si le nombre de demandes dépasse les limites d'étranglement ou de quota de la politique d'utilisation.
 9. Si le nombre de demandes d'API est dans la limite, alors `API Gateway` envoie des demandes à l'API REST de l'application en aval. Cela peut être déployé à l'aide de conteneurs, de `Lambda` ou d'une instance `Amazon EC2`.
 
@@ -107,7 +109,7 @@ Vous avez besoin d'un pool d'utilisateurs et d'un client d'application activé a
 ### Configurer la passerelle API pour intégrer l'API keys et le plan d'utilisation
 Vous devez activer l'`API REST` pour utiliser l'`API keys` et définir la source sur `AUTHORIZER`. Il existe deux façons d'accepter les `API keys` pour chaque requête entrante. Vous pouvez la fournir dans le HEADER de la requête entrante ou via une fonction `Lambda` d'autorisation personnalisée. Cet exemple utilise une fonction Lambda d'autorisation personnalisée pour récupérer l'`API keys` extraite du `JWT` reçu par une demande d'API entrante. Les clients ne transmettent que des `JWT` chiffrés dans l'en-tête d'autorisation de la requête.
 
-Un moyen pratique d'exécuter des microservices consiste à les déployer sous forme de conteneurs Docker et qui permet de réduire les efforts opérationnels pour le déploiement. Avec les conteneurs, la phase d'apprentissage peut être difficile, et vous devez penser à des correctifs de sécurité pour la surveillance et vos images Docker. `Amazon Elastic Container Service` (Amazon ECS) et `Amazon Elastic Kubernetes Service` (Amazon EKS) vous évitent de devoir installer, exploiter et mettre à l'échelle votre infrastructure de gestion de clusters. Avec de simples appels d'API, vous pouvez lancer et stopper des applications activées par Docker, interroger l'état complet de votre cluster et accéder à de nombreuses fonctions connues, comme les groupes de sécurité, les répartitions de charge, les volumes `Amazon Elastic Block Stor` (Amazon EBS) et les rôles `AWS Identity and Access Management` (IAM).
+Un moyen pratique d'exécuter des microservices consiste à les déployer sous forme de conteneurs Docker et qui permet de réduire les efforts opérationnels pour le déploiement. Avec les conteneurs, la phase d'apprentissage peut être difficile, et vous devez penser à des correctifs de sécurité pour la surveillance et vos images Docker. `Amazon Elastic Container Service - Amazon ECS` et `Amazon Elastic Kubernetes Service - Amazon EKS` vous évitent de devoir installer, exploiter et mettre à l'échelle votre infrastructure de gestion de clusters. Avec de simples appels d'API, vous pouvez lancer et stopper des applications activées par Docker, interroger l'état complet de votre cluster et accéder à de nombreuses fonctions connues, comme les groupes de sécurité, les répartitions de charge, les volumes `Amazon Elastic Block Store - Amazon EBS` et les rôles `AWS Identity and Access Management - IAM`.
 Voici le [lien](./architecture_application_web.md#les-raisons-dutiliser-conteneurs-docker) afin de vous montrer la raison de pourquoi nous utilisons de conteneurs Docker 
 
 ### Amazon ECS 
