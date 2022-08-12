@@ -142,12 +142,7 @@ facilement portables et offrent une isolation des processus.
 ![](./images/web_app_modele_2.png)
 
 #### Isolement des défaillances
-Avec ce type de pattern vous conformer à toutes les meilleures pratiques 
-applicables pour procéder au mieux dans de telles situations, vous pouvez 
-également configurer des microservices afin de limiter l'impact de ces 
-dernières. Avec une bonne architecture de microservices, seule une partie de 
-votre service est en panne si un micro-élément de votre service ne fonctionne 
-plus.
+Avec le modèle de microservices, seule une partie de votre service est indisponible si un un micro-élément de votre service tombe en panne. Donc vous pouvez configurer des microservices pour limiter l'impact de telles situations. 
 
 #### Isolement de chaque service
 Dans une application monolithique, si l'une des fonctions est victime d'une 
