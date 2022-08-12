@@ -185,7 +185,7 @@ l'équilibreur de charge. Le service `ECS` est configuré avec un service
 autoscaling (Target Tracking Autoscaling qui s'adapte en fonction des demandes 
 de l'ALB par cible).
 
-- [Amazon Elastic Container Registry (Amazon ECR)](https://aws.amazon.com/fr/
+- [Amazon Elastic Container Registry (Amazon ECR)](https://aws.amazon.com/fr/ecr)
 ecr) ou vous allez créer l'image de conteneur Docker destinée à votre 
 application monolithique.
 
