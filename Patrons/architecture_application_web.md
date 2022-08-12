@@ -41,7 +41,7 @@ Serverless est idéal pour permettre une livraison rapide et continue des logici
 C'est un moyen efficace de promouvoir les meilleures pratiques, des solutions robustes.
 
 
-## Modèle 1: Monlithique
+## Modèle 1: Monolithique
 
 Les architectures monolithiques classiques sont difficiles à mettre à l'échelle. A mesure de la croissance de la base de code d'une application, elle devient complexe à mettre à jour et à maintenir. L'introduction de nouvelles fonctions, de langues, d'infrastructures et de technologies devient très délicate, ce qui limite l'innovation et les nouvelles idées.
 
