@@ -86,7 +86,7 @@ site.
 de diffusion de contenu qui met en cache le contenu du compte de stockage dans 
 plusieurs centres de données à travers le monde.
 
-### Utiliser ce patterne sur AWS:
+### Utilisation de l'architecture d'un site statique dans AWS:
 
 Pour convertir un environnement d'hébergement traditionnel en une architecture 
 AWS, vous pouvez utiliser une approche `lift-and-shift` dans laquelle vous 
@@ -103,8 +103,7 @@ Cette solution crée un `AWS Bucket S3` qui héberge les ressources de votre sit
 Web statique. Le site Web est uniquement accessible via `AWS CloudFront`, et non 
 directement depuis `AWS S3`.
 
-[Le service web de diffusion de contenu Amazon CloudFront](https://docs.aws.
-amazon.com/fr_fr/cloudfront/index.html) s'intègre à d'autres produits AWS pour 
+[Le service web de diffusion de contenu Amazon CloudFront](https://docs.aws.amazon.com/fr_fr/cloudfront/index.html) s'intègre à d'autres produits AWS pour 
 vous offrir un moyen simple de distribuer du contenu aux utilisateurs de votre 
 site Web avec une faible latence, des vitesses de transfert de données élevées 
 et sans engagement d'utilisation minimale.
@@ -114,8 +113,7 @@ utilisateurs suivants qui demandent le même contenu à partir de cet emplacemen
 périphérique bénéficient d'un chargement de page plus rapide, car ce contenu est 
 déjà mis en cache.
 Cette solution crée une distribution `CloudFront` pour servir votre site Web aux 
-internautes. La distribution est configurée avec [une identité d'accès d'origine]
-(https://docs.aws.amazon.com/fr_fr/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html) `CloudFront` pour s'assurer que 
+internautes. La distribution est configurée avec [une identité d'accès d'origine](https://docs.aws.amazon.com/fr_fr/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html) `CloudFront` pour s'assurer que 
 le site Web est uniquement accessible via `CloudFront`, et non directement 
 depuis `S3`. La distribution est également configurée avec [une politique d'en-tête de réponse CloudFront](https://docs.aws.amazon.com/fr_fr/)
 AmazonCloudFront/latest/DeveloperGuide/adding-response-headers.html) qui ajoute 
