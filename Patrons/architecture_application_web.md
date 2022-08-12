@@ -186,7 +186,7 @@ autoscaling (Target Tracking Autoscaling qui s'adapte en fonction des demandes
 de l'ALB par cible).
 
 - [Amazon Elastic Container Registry (Amazon ECR)](https://aws.amazon.com/fr/ecr)
-ecr) ou vous allez créer l'image de conteneur Docker destinée à votre 
+ ou vous allez créer l'image de conteneur Docker destinée à votre 
 application monolithique.
 
 - [Amazon Elastic Container Service (Amazon ECS)](https://aws.amazon.com/fr/ecs) 
