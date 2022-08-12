@@ -230,5 +230,5 @@ CloudFront pour servir votre site Web aux internautes.
 > Il est fortement recommandé d'ajouter un [AWS WAF](https://aws.amazon.com/fr/
 waf) à votre solution.
 
-Voici le [lien](https://github.com/CQEN-QDCE/ceai-cqen-deployments/tree/main/
+Voici le [lien](https://github.com/CQEN-QDCE/ceai-cqen-deployments/tree/main/sso)
  d'un déploiement qui a été fait au milieu de notre organisation (CEAI)
