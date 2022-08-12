@@ -31,7 +31,7 @@ Les capacités communes sont regroupées dans un seul proxy inverse qui constitu
 
 Les passerelles API offrent les capacités suivantes : 
 
-- L'authentification: est le contrôle de la tentative de connexion. Le client fournit des informations d'identification qui sont vérifiées avant que l'accès ne soit accordé. Ces informations d'identification peuvent être en texte brut (non recommandé) ou cryptées. OAuth 2.0 et SAML sont tous deux suggérés dans les procédures obligatoires pour les API.
+- L'authentification: est le contrôle de la tentative de connexion. Le client fournit des informations d'identification qui sont vérifiées avant que l'accès ne soit accordé. Ces informations d'identification peuvent être en texte brut (non recommandé) ou cryptées. OAuth 2.0 et SAML sont tous les deux suggérés dans les procédures obligatoires pour les API.
 
 - L'autorisation consiste à accorder l'accès au service. L'authentification vérifie que la connexion du client est autorisée, l'autorisation vérifie quels services et méthodes sont autorisés par le client. 
 
