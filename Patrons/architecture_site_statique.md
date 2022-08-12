@@ -148,7 +148,7 @@ sont servies à partir du cache de `CloudFront`.
 waf) à votre solution.
 
 Voici le [lien](https://github.com/CQEN-QDCE/ceai-cqen-deployments/tree/main/plateform_web)
-plateform_web) d'un déploiement d'un site statique qui a été fait au milieu de notre organisation 
+ d'un déploiement d'un site statique qui a été fait au milieu de notre organisation 
 (CEAI)
 
 
