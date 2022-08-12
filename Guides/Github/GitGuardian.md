@@ -11,6 +11,10 @@
 
 # GitGuardian 
 
+<div align="center">
+    <img src="./images/gitguardian-logo.jpg" width="200" />
+</div>
+
 ## Prérequis 
 
 - Avoir un compte GitHub configuré avec double facteur d'authentification; 
