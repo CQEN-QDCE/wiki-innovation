@@ -27,10 +27,6 @@ Avec odo, vous pouvez développer, tester, déboguer et déployer des applicatio
     ```bash
     cp odo /usr/local/bin/
     ```
-    Pour déplacer le fichier utiliser la commande `cp <src> <dest>` (copier) ou `mv <src> <dest>` (déplacer). Par exemple pour copier:
-    ```bash
-    cp odo /usr/local/bin/
-    ```
 4. Vérifiez que odo est maintenant disponible dans votre système:
     ```bash
     odo version
@@ -43,9 +39,9 @@ Avec odo, vous pouvez développer, tester, déboguer et déployer des applicatio
     Kubernetes: v1.23.5+3afdacb
     ```
 ## Se connecter au cluster d'Openshift
-Pour ouvrir une session au cluster, obtenir le jeton avec un [appel HTTP](https://oauth-openshift.apps.exp.openshift.cqen.ca/oauth/token/request
-)
-La réponse à la requête dans le navigateur web contiendra la valeur du token de conexion:
+Pour ouvrir une session au cluster, obtenir le jeton avec un [appel HTTP](https://oauth-openshift.apps.exp.openshift.cqen.ca/oauth/token/request)
+
+La réponse à la requête dans le navigateur web contiendra la valeur du jeton de connexion:
 ![ocp-web-console-jeton-dapi](../../Workshops/Commun/images/ocp-web-console-api-token.png)
 
 Avec le jeton, utilisez la commande `odo login`:
@@ -78,6 +74,7 @@ Un message va s'afficher pour montrer qu'on a bien ouvert une session avec succ�
   ```
 ## Autres commandes
 - Suggestions (aide)
+
   La commande `odo -h` ou `odo --help` nous montre les différentes options d'utilisations avec odo:
   ```bash
   odo -h
@@ -148,7 +145,7 @@ Un message va s'afficher pour montrer qu'on a bien ouvert une session avec succ�
 
     Use "odo [command] --help" for more information about a command.
   ```
-  La commande `odo [command] --help` suggérée comme l'indique le résultat précédent nous montre les options disponibles pour une commande en particulière, par exemple pour un projet:
+  La commande `odo [command] --help` suggérée comme l'indique le résultat précédent, nous montre les options disponibles pour une commande en particulière, par exemple pour un projet:
   ```bash
   odo project -h
   ```
@@ -197,11 +194,11 @@ Un message va s'afficher pour montrer qu'on a bien ouvert une session avec succ�
 ## Nettoyage (effacer les ressources créées)
 
 ### Effacer un composant
-Pour effacer un composant devfile, executez la commande `odo delete`
+Pour effacer un composant devfile, exécutez la commande `odo delete`
 ```bash
 odo delete
 ```
-Si le composant a été poussé dans le cluster, le composant et ses ressources relationnées (URL, secrets, et d'autres), sont effacés du cluster.
+Si le composant a été poussé dans le cluster, le composant et ses ressources associées (URL, secrets, et d'autres), sont effacés du cluster.
 
 ### Annuler le déploiement des composants devfile kubernetes
 Pour annuler un déploiement qui a été fait avec l'outil client odo, utilisez la commande `odo delete` avec l'option `--deploy`:
@@ -209,7 +206,7 @@ Pour annuler un déploiement qui a été fait avec l'outil client odo, utilisez 
 odo delete --deploy
 ```
 ### Effacer tout
-Pour effacer tous les artefacts deployés avec odo, utilisez la commande `odo delete` avec l'option `--all`
+Pour effacer tous les artefacts déployés avec odo, utilisez la commande `odo delete` avec l'option `--all`
 ```bash
 odo delete --all
 ```

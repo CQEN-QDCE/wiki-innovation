@@ -1,6 +1,6 @@
 # Déploiement du composant du backend (nodejs)
 
-1. Dans votre poste de travail, créer un dossier pour sauvegarder le code des composants et allez dans ce dossier créé.
+1. Dans votre poste de travail, créez un dossier pour sauvegarder le code des composants et allez dans ce dossier créé.
     ```bash
     mkdir kiosk
     cd kiosk
@@ -12,7 +12,7 @@
     cd openshiftv4-odo-workshop-backend/
     ```
 
-3. Dans un terminal (interface de ligne de commandes), [Se connecter au cluster d'Openshift](../../Outils/ODO/README.md#se-connecter-au-cluster-dopenshift)
+3. Dans un terminal (interface de ligne de commandes), [se connecter au cluster d'Openshift](../../Outils/ODO/README.md#se-connecter-au-cluster-dopenshift)
    
 
 4. Utilisez odo pour le "build" et le déploiement du composant du backend
@@ -25,7 +25,7 @@
     ```bash
     odo project set myproject
     ```
-    Créez le composant backend à partir du code qui a été rammené du dépôt Git:
+    Créez le composant backend à partir du code qui a été ramené du dépôt Git:
     ```bash
     odo create nodejs backend
     ```
@@ -96,7 +96,7 @@
     ✓  Changes successfully pushed to component
     ```
 
-7. Vérifiez le log et assurez vous que l'application a commencé correctement:
+7. Vérifiez le log et assurez-vous que l'application a commencé correctement:
     ```bash
     odo log backend
     ```
@@ -134,7 +134,7 @@
 dans la vue "Topology":
  - Vue par défaut:
     ![ocp-console-web-backend-kiosk-deploye-vue-defaut](images/oc-web-console-kiosk-backend-default-view.png)
- - Vue graphique: cliquez sur "Graph view" dans l'icone en haut à droite de l'écran:
+ - Vue graphique: cliquez sur "Graph view" dans l'icône en haut à droite de l'écran:
     ![ocp-console-web-options-vue-topology](../Commun/images/ocp-web-console-topology-views.png)
    
     ![ocp-console-web-backend-kiosk-deploye](images/oc-web-console-kiosk-backend-deployed.png)
