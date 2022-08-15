@@ -11,7 +11,7 @@
 
 ## Patrons de conception
 
-Le CEAI déploie son infrastructure sur le fournisseur infonuagique AWS. Pour déployer vos applications sur notre infrastructure, le CEAI a défini trois types d'architectures/Patrons que nous allons vous présenter :
+Le CEAI déploie son infrastructure sur le fournisseur infonuagique AWS. Pour déployer vos applications sur notre infrastructure, le CEAI a défini trois types d'architectures/patrons que nous allons vous présenter :
 
 1. [Architecture d'une API](./architecture_api.md)
 2. [Architecture d'un site statique](./architecture_site_statique.md)
