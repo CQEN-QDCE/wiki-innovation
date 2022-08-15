@@ -13,7 +13,7 @@
 
 ## Définition
 
-Nous ulitisons cette architecture pour créer un site web sécurisé pour votre nom 
+Nous utilisons cette architecture pour créer un site web sécurisé pour votre nom 
 de domaine enregistré. Avec cette approche, nous allons vous présenter deux 
 modèles qui sont utilisés au CEAI et qui utilisent des conteneurs Docker.
 
@@ -185,8 +185,8 @@ l'équilibreur de charge. Le service `ECS` est configuré avec un service
 autoscaling (Target Tracking Autoscaling qui s'adapte en fonction des demandes 
 de l'ALB par cible).
 
-- [Amazon Elastic Container Registry (Amazon ECR)](https://aws.amazon.com/fr/
-ecr) ou vous allez créer l'image de conteneur Docker destinée à votre 
+- [Amazon Elastic Container Registry (Amazon ECR)](https://aws.amazon.com/fr/ecr)
+ ou vous allez créer l'image de conteneur Docker destinée à votre 
 application monolithique.
 
 - [Amazon Elastic Container Service (Amazon ECS)](https://aws.amazon.com/fr/ecs) 
@@ -230,5 +230,5 @@ CloudFront pour servir votre site Web aux internautes.
 > Il est fortement recommandé d'ajouter un [AWS WAF](https://aws.amazon.com/fr/
 waf) à votre solution.
 
-Voici le [lien](https://github.com/CQEN-QDCE/ceai-cqen-deployments/tree/main/
-sso) d'un déploiement qui a été fait au milieu de notre organisation (CEAI)
+Voici le [lien](https://github.com/CQEN-QDCE/ceai-cqen-deployments/tree/main/sso)
+ d'un déploiement qui a été fait au milieu de notre organisation (CEAI)

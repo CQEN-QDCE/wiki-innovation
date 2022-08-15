@@ -147,8 +147,8 @@ sont servies à partir du cache de `CloudFront`.
 > Il est fortement recommandé d'ajouter un [AWS WAF](https://aws.amazon.com/fr/
 waf) à votre solution.
 
-Voici le [lien](https://github.com/CQEN-QDCE/ceai-cqen-deployments/tree/main/
-plateform_web) d'un déploiement d'un site statique qui a été fait au milieu de notre organisation 
+Voici le [lien](https://github.com/CQEN-QDCE/ceai-cqen-deployments/tree/main/plateform_web)
+ d'un déploiement d'un site statique qui a été fait au milieu de notre organisation 
 (CEAI)
 
 
