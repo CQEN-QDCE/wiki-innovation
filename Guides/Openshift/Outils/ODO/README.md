@@ -27,6 +27,10 @@ Avec odo, vous pouvez développer, tester, déboguer et déployer des applicatio
     ```bash
     cp odo /usr/local/bin/
     ```
+    Pour déplacer le fichier utiliser la commande `cp <src> <dest>` (copier) ou `mv <src> <dest>` (déplacer). Par exemple pour copier:
+    ```bash
+    cp odo /usr/local/bin/
+    ```
 4. Vérifiez que odo est maintenant disponible dans votre système:
     ```bash
     odo version
@@ -72,9 +76,6 @@ Un message va s'afficher pour montrer qu'on a bien ouvert une session avec succ�
   ```bash
   odo config unset --env KAFKA_HOST --env KAFKA_PORT  
   ```
-  
-
-
 ## Autres commandes
 - Suggestions (aide)
   La commande `odo -h` ou `odo --help` nous montre les différentes options d'utilisations avec odo:

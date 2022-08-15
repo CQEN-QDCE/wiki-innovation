@@ -14,3 +14,7 @@ L'équipe du CEAI vous propose quelques ateliers pour apprendre à utiliser et �
 
 ## Opérations communes
 - [Ajout de sécurité SSL aux applications](Commun/Ajout-Securite-SSL-a-LApplication.md)
+
+## Lien direct pour l'installations des outils oc et odo
+- [Installation de l'outil oc](../Outils/OC/README.md#installation-de-openshift-cli-oc)
+- [Installation de l'outil odo](../Outils/ODO/README.md#installation-de-loutil-client-odo)
