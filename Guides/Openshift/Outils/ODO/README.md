@@ -1,15 +1,15 @@
 # CLI développeur (odo)
 
-L'interface de ligne de commandes de développement de Red Hat Openshift (odo - Red Hat Openshift Developer CLI), est un outil pour la création des applications dans la plateforme conteneurisée d'Openshift et Kubernetes.
-Avec odo, vous pouvez développer, tester, débogueur et déployer des applications basées en microservices dans un cluster Kubernetes sans avoir une connaissance approfondie de la plateforme.
+L'outil en ligne de commandes de développement de Red Hat Openshift (odo - Red Hat Openshift Developer CLI), est un outil simplifiant la création d'applications dans la plateforme conteneurisée d'Openshift et Kubernetes.
+Avec odo, vous pouvez développer, tester, déboguer et déployer des applications basées en microservices dans un cluster Openshift sans avoir une connaissance approfondie de la plateforme.
 
 ## Installation de l'outil client odo
 
 ### Linux
 
-1. Étape 1: Téléchargez le fichier approprié à votre système d'exploitation.
+1. Étape 1: Téléchargez l'exécutable approprié à votre système d'exploitation.
     
-    Dans ce cas-ci, on va prendre le fichier binaire:
+    Dans ce cas-ci, la version pour linux:
     ```bash
     curl -L https://developers.redhat.com/content-gateway/rest/mirror/pub/openshift-v4/clients/odo/latest/odo-linux-amd64 -o odo
     ```
@@ -17,11 +17,15 @@ Avec odo, vous pouvez développer, tester, débogueur et déployer des applicati
     ```bash
     chmod +x <filename>
     ```
-3. Placez le fichier binaire dans un dépôt qui est dans votre "PATH".
+3. Placez le fichier binaire dans un répertoire référencé dans votre variable d'environnement $PATH.
     
-    Pour vérifier votre "PATH", utilisez la commande "echo $PATH"
+    Pour vérifier la valeur de votre variable "PATH", utilisez la commande `echo $PATH`
     ```bash
     echo $PATH
+    ```
+    Pour déplacer le fichier utiliser la commande `cp <src> <dest>` (copier) ou `mv <src> <dest>` (déplacer). Par exemple pour copier:
+    ```bash
+    cp odo /usr/local/bin/
     ```
 4. Vérifiez que odo est maintenant disponible dans votre système:
     ```bash
@@ -37,11 +41,39 @@ Avec odo, vous pouvez développer, tester, débogueur et déployer des applicati
 ## Se connecter au cluster d'Openshift
 Pour ouvrir une session au cluster, obtenir le jeton avec un [appel HTTP](https://oauth-openshift.apps.exp.openshift.cqen.ca/oauth/token/request
 )
-La réponse à la requête dans le navigateur web va vous indiquer la commande pour ouvrir une session, par exemple:
+La réponse à la requête dans le navigateur web contiendra la valeur du token de conexion:
+![ocp-web-console-jeton-dapi](../../Workshops/Commun/images/ocp-web-console-api-token.png)
+
+Avec le jeton, utilisez la commande `odo login`:
 ```bash
 odo login https://api.exp.openshift.cqen.ca:6443 --token=<token-dans-la-response>
 ```
 Un message va s'afficher pour montrer qu'on a bien ouvert une session avec succès dans le cluster
+
+## Variables de configuration
+- Pour établir une variable de configuration dans le fichier devfile, utilisez la commande `odo config`, par exemple:
+  ```bash
+  odo config set Name testapp
+  odo config set Ports 8080/TCP,8443/TCP
+  odo config set Memory 500M  
+  ```
+- Pour effacer une variable de configuration dans le fichier devfile, utilisez la commande `odo config unset`, par exemple:
+  ```bash
+  odo config unset Name
+  odo config unset Ports
+  odo config unset Memory  
+  ```
+### Variables d'environnement
+- Pour ajouter des variables d'environnement au fichier devfile.yaml généré par odo, utilisez la commande `odo config set --env NOM_VAR=VALEUR_VAR`, par exemple:
+  ```bash
+  odo config set --env COMPONENT_BACKEND_HOST=backend-app
+  ```
+- Pour effacer une variable d'environnement dans le fichier devfile, utilisez la commande `odo config unset` avec l'option `--env`. Par exemple:
+  ```bash
+  odo config unset --env KAFKA_HOST --env KAFKA_PORT  
+  ```
+  
+
 
 ## Autres commandes
 - Suggestions (aide)
@@ -161,9 +193,29 @@ Un message va s'afficher pour montrer qu'on a bien ouvert une session avec succ�
     Use "odo project [command] --help" for more information about a command.
   ```
 
+## Nettoyage (effacer les ressources créées)
+
+### Effacer un composant
+Pour effacer un composant devfile, executez la commande `odo delete`
+```bash
+odo delete
+```
+Si le composant a été poussé dans le cluster, le composant et ses ressources relationnées (URL, secrets, et d'autres), sont effacés du cluster.
+
+### Annuler le déploiement des composants devfile kubernetes
+Pour annuler un déploiement qui a été fait avec l'outil client odo, utilisez la commande `odo delete` avec l'option `--deploy`:
+```bash
+odo delete --deploy
+```
+### Effacer tout
+Pour effacer tous les artefacts deployés avec odo, utilisez la commande `odo delete` avec l'option `--all`
+```bash
+odo delete --all
+```
+
 ## Se déconnecter du cluster Openshift CLI
 ```bash
-oc logout
+odo logout
 ```
 
 ## Références

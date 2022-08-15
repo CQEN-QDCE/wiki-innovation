@@ -13,7 +13,11 @@
    
 
 4. Utilisez odo pour le "build" et le déploiement du composant du frontend
-   Séléctionner le projet en cours au cas où le projet auquel vous vous êtes connecté ne soit pas celui de votre travail.
+    Vérifiez que vous vous trouvez connecté au bon projet d'Openshift.
+    ```bash
+    odo project get
+    ```
+    *Si vous n'êtes pas au bon projet, alors allez au projet de travail en cours avec la commande `set`.
     ```bash
     odo project set myproject
     ```
@@ -33,7 +37,30 @@
 
     Please use `odo push` command to create the component with source deployed
     ```
-    Poussez la création du projet au cluster d'Openshift avec `odo push`:
+    Un ficher devfile.yaml a été créé avec les informations nécessaires pour le déploiement dans Openshift. Vous pouvez le vérifier dans le répertoire du frontend.
+   
+5. Modifiez le port généré dans le fichier devfile.yaml
+
+   Dans VS Code ou votre éditeur de code, ouvrez le fichier devfile.yaml et éditez-le en remplaçant la valeur 3000 par 8080 pour le conteneur:
+
+   avant:
+   ```yaml
+    components:
+    - container:
+        endpoints:
+        - name: http-3000
+        targetPort: 3000    
+   ```
+   après:
+   ```yaml
+    components:
+    - container:
+        endpoints:
+        - name: https-8080
+        targetPort: 8080     
+   ```
+
+6. Poussez la création du projet au cluster d'Openshift avec `odo push`:
     ```bash
     odo push
     ```
@@ -51,7 +78,7 @@
     ✓  Waiting for component to start [7ms]
 
     Applying URL changes
-    ✓  URL http-8080: http://http-8080-4a00075f-ws2-kiosk.apps.exp.openshift.cqen.ca/ created
+    ✓  URL https-8080: http://https-8080-4a00075f-ws2-kiosk.apps.exp.openshift.cqen.ca/ created
 
     Syncing to component frontend
     ✓  Checking files for pushing [1ms]
@@ -64,7 +91,7 @@
     Pushing devfile component "frontend"
     ✓  Changes successfully pushed to component
     ```
-5. Vérifiez le log et assurez vous que l'application a commencé correctement:
+7. Vérifiez le log et assurez vous que l'application a commencé correctement:
     ```bash
     odo log frontend
     ```
@@ -101,7 +128,7 @@
     GET /favicon.ico 404 2.678 ms - 793
     ```
 
-6. Dans la console web d'Openshift, vous pouvez vérifier le déploiement du composant frontend dans la vue "Topology":
+8. Dans la console web d'Openshift, vous pouvez vérifier le déploiement du composant frontend dans la vue "Topology":
 
    - Vue par défaut:
         ![ocp-console-web-frontend-kiosk-deploye-vue-defaut](images/oc-web-console-kiosk-frontend-backend-default-view.png)
@@ -110,12 +137,11 @@
 
         ![ocp-console-web-frontend-kiosk-deploye](images/oc-web-console-kiosk-backend-frontend-deployed.png)
 
-7. Entre les ressources créées pour le composant du frontend, une route a été créée, qui permettra l'accés à l'application via web à l'extérieur d'Openshift.
-   Pour sécuriser l'accès à l'application, il faut [ajouter le protocole TLS (Transport Layer Security) à la route](../Commun/Ajout-Securite-SSL-a-LApplication.md).
+9.  Entre les ressources créées pour le composant du frontend, il y a la route qui contient le lien pour accèder à l'application via web à l'extérieur d'Openshift.
+   :warning:Pour sécuriser l'accès à l'application, il faut [ajouter le protocole TLS (Transport Layer Security) à la route](../Commun/Ajout-Securite-SSL-a-LApplication.md).
 
-8. Cliquez sur l'URL de la route modifié et vous allez voir un résultat similaire:
-    
-9.  
+11. Cliquez sur l'URL https de la route modifié et vous allez voir la page initiale de l'application pour faire la commande:
+   ![kiosk-ui-faire-commande](images/kiosk-ui-home.png)
 
 
 [Table de matières](README.md)

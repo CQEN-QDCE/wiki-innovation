@@ -7,23 +7,21 @@ L'application est un kiosque de concession qui a trois composants:
 - backend (nodejs): Gestion de la sauvegarde de la commande et la génération d'un numéro de commande.
 - une base de données (mongodb) où la commande sera sauvegardée.
 
-On s'inspire des instructions détaillées dans l'atelier "openshiftv4-odo-workshop" de Red Hat [voir](https://github.com/RedHatWorkshops/openshiftv4-odo-workshop)
+Il est tiré des instructions détaillées dans l'atelier [openshiftv4-odo-workshop](https://github.com/RedHatWorkshops/openshiftv4-odo-workshop) de Red Hat.
 
 ## Prérequis
 - Accès à la console web d'Openshift
-- Outils client oc et odo installé dans le poste de travail (Lab 0 et 1), pour les Labs 2 et plus.
+- Outil client oc installé dans le poste de travail ([voir](../../Outils/OC/README.md#installation-de-openshift-cli-oc)).
+- Outils client odo installé dans le poste de travail ([voir](../../Outils/ODO/README.md#installation-de-loutil-client-odo)).
 
 ## Table de matières
-- Lab 0. [Installation de l'outil client oc](../../Outils/OC/README.md#installation-de-openshift-cli-oc)
-- Lab 1. [Installation de l'outil client odo](../../Outils/ODO/README.md#installation-de-loutil-client-odo)
-- Lab 2. [Déploiement du composant "backend" (nodejs)](3-Creation-backend-nodejs.md)
-- Lab 3. [Déploiement du composant "frontend" (nodejs)](4-Creation-frontend-nodejs.md)
-- Lab 4. Lier les composants frontend et backend
-- Lab 4. Déploiement du service de base de données (mongodb)
-
-- Lab 2. [Création du secret pour les paramètres de la base de données](2-Creation-Secret-BD.md)
-- Lab 3. [Ajouter le service de base de données - mongodb](3-Ajout-du-Service-MongoDB.md)
-- Lab 4. [Ajout des variables d'environnement aux applications](4-Ajout-Variables-Env.md)
-- Lab 4. [Tester l'ensemble](5-Tester-LEnsemble.md)
-- Lab 5. [Nettoyage - effacer les ressources créées](../../Outils/OC/README.md#nettoyage-effacer-les-ressources-créées)
+- Lab 1. [Déploiement du composant "backend" (nodejs)](1-Creation-backend-nodejs.md)
+- Lab 2. [Déploiement du composant "frontend" (nodejs)](2-Creation-frontend-nodejs.md)
+- Lab 3. [Lier les composants frontend et backend](3-Lier-frontend-backend.md)
+- Lab 4. [Création du secret pour les paramètres de la base de données](4-Creation-secret-bd.md)
+- Lab 5. [Déploiement du composant de la base de données (mongodb)](5-Ajout-du-service-mongodb.md)
+- Lab 6. [Ajout des variables d'environnement aux composants de backend et de la base de données](6-Ajout-Variables-Env.md)
+- Lab 7. [Tester l'ensemble](7-Tester-LEnsemble.md)
+- Lab 8. [Nettoyage - effacer les ressources créées avec l'outil client oc](../../Outils/OC/README.md#nettoyage-effacer-les-ressources-créées)
+- Lab 9. [Nettoyage - effacer les ressources créées avec l'outil client odo](../../Outils/ODO/README.md#effacer-tout)
 

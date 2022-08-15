@@ -1,6 +1,6 @@
 # Déploiement du composant du backend (nodejs)
 
-1. Dans votre poste de travail, créer un dossier pour sauvegarder le code des composants
+1. Dans votre poste de travail, créer un dossier pour sauvegarder le code des composants et allez dans ce dossier créé.
     ```bash
     mkdir kiosk
     cd kiosk
@@ -16,7 +16,12 @@
    
 
 4. Utilisez odo pour le "build" et le déploiement du composant du backend
-    Séléctionner le projet en cours au cas où le projet auquel vous vous êtes connecté ne soit pas celui de votre travail.
+    
+    Vérifiez que vous vous trouvez connecté au bon projet d'Openshift.
+    ```bash
+    odo project get
+    ```
+    *Si vous n'êtes pas au bon projet, alors allez au projet de travail en cours avec la commande `set`.
     ```bash
     odo project set myproject
     ```
@@ -36,8 +41,30 @@
 
     Please use `odo push` command to create the component with source deployed
     ```
+    Un ficher devfile.yaml a été créé avec les informations nécessaires pour le déploiement dans Openshift. Vous pouvez le vérifier dans le répertoire du backend.
+    
+   
+5. Modifiez le port généré dans le fichier devfile.yaml
+   Dans VS Code ou votre éditeur de code, ouvrez le fichier devfile.yaml et éditez-le en remplaçant la valeur 3000 par 8080 pour le conteneur:
 
-    Poussez la création du projet au cluster d'Openshift avec `odo push`:
+   avant:
+   ```yaml
+    components:
+    - container:
+        endpoints:
+        - name: http-3000
+        targetPort: 3000    
+   ```
+   après:
+   ```yaml
+    components:
+    - container:
+        endpoints:
+        - name: https-8080
+        targetPort: 8080     
+   ```
+
+6. Poussez la création du projet au cluster d'Openshift avec `odo push`:
     ```bash
     odo push
     ```
@@ -55,7 +82,7 @@
     ✓  Waiting for component to start [10ms]
 
     Applying URL changes
-    ✓  URL http-3000: http://http-3000-410c06ba-ws2-kiosk.apps.exp.openshift.cqen.ca/ created
+    ✓  URL https-8080: http://https-8080-410c06ba-ws2-kiosk.apps.exp.openshift.cqen.ca/ created
 
     Syncing to component backend
     ✓  Checking files for pushing [1ms]
@@ -69,7 +96,7 @@
     ✓  Changes successfully pushed to component
     ```
 
-5. Vérifiez le log et assurez vous que l'application a commencé correctement:
+7. Vérifiez le log et assurez vous que l'application a commencé correctement:
     ```bash
     odo log backend
     ```
@@ -103,7 +130,7 @@
     time="2022-07-13T16:03:36Z" level=debug msg="wait program exit" program=devrun 
     time="2022-07-13T16:03:38Z" level=debug msg="no auth required" 
     ```
-6. Si vous vous connectez à la console web d'Openshift, vous pouvez vérifier le déploiement du composant backend 
+8. Si vous vous connectez à la console web d'Openshift, vous pouvez vérifier le déploiement du composant backend 
 dans la vue "Topology":
  - Vue par défaut:
     ![ocp-console-web-backend-kiosk-deploye-vue-defaut](images/oc-web-console-kiosk-backend-default-view.png)
