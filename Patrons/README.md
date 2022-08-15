@@ -19,7 +19,7 @@ Le CEAI déploie son infrastructure sur le fournisseur infonuagique AWS. Pour d�
 
 L'évolution vers des services numériques amène le CEAI à adopter des architectures qui rapprochent ces services de l'endroit où nos utilisateurs y accèdent, à savoir l'internet. 
 
-L'objectif de ce document d'orientation est de fournir aux développeurs et aux opérateurs une vue des architectures qui peuvent être utilisées. Les fournisseurs de services en infonuagiques gèrent ces services et les proposent aux consommateurs sous la forme d'un modèle de plateforme en tant que service. Ces plateformes natives du nuage non seulement sécurisent nos données, mais, grâce à leur évolutivité, ajoutent de la résilience et de la disponibilité à nos services tout en fournissant un modèle de service qui permet aux architectes et aux développeurs de se concentrer sur les choix de configuration et de rester abstraits des activités d'ingénierie de l'infrastructure sous-jacente.
+L'objectif de ce document d'orientation est de fournir aux développeurs et aux opérateurs une vue des architectures qui peuvent être utilisées. Les fournisseurs de services en infonuagiques gèrent ces services et les proposent aux consommateurs sous la forme d'un modèle de plateforme en tant que service. Ces plateformes natives du nuage non seulement sécurisent nos données, mais, grâce à leur évolutivité, ajoutent de la résilience et de la disponibilité à nos services tout en fournissant un modèle de service qui permet aux architectes et aux développeurs de se concentrer sur les choix de configuration et de rester abstraits des activités d'ingénierie de l'infrastructure sous-jacentes.
 
 ## Références
 
