@@ -13,7 +13,7 @@
 
 ## Définition
 
-Nous ulitisons cette architecture pour créer un site web sécurisé pour votre nom 
+Nous utilisons cette architecture pour créer un site web sécurisé pour votre nom 
 de domaine enregistré. Avec cette approche, nous allons vous présenter deux 
 modèles qui sont utilisés au CEAI et qui utilisent des conteneurs Docker.
 
