@@ -28,7 +28,7 @@ Instance détails
 
 Administrator account 
 - Authentication type: `SSH public key`
-- Username: changez pour votre nom d'utilisateur préféré. Dans cet exemple, on utilisera `cqen`; 
+- Username: changez pour votre nom d'utilisateur préféré. Dans cet exemple, nous allons utiliser `cqen`; 
 - SSH public key source: `Generate new key pair`
 - Key pair name: prenez la suggestion ou donnez un nom de votre préférence. 
 
