@@ -131,7 +131,7 @@ D'abord, vérifiez si vous possédez le répertoire de configuration du SSH dans
 $ ls ~/.ssh 
 ```
 
-Si cette commande répond que le répertoire n'est pas trouvable, il faut le créer avec la commande ci-dessous: 
+Si cette commande répond que le répertoire est introuvable, il faut le créer avec la commande ci-dessous: 
 
 ```bash 
 $ mkdir ~/.ssh
