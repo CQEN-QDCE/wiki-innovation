@@ -29,7 +29,7 @@
     ```bash
     odo create nodejs backend
     ```
-    résultat:
+    Résultat:
     ```bash
     Devfile Object Creation
     ✓  Checking if the devfile for "nodejs" exists on available registries [95216ns]
