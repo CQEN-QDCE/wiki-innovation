@@ -4,7 +4,7 @@
 
    - Se connecter au portail Azure [https://portal.azure.com](https://portal.azure.com) 
 
-Dans Azure services, créer une nouvelle ressource "Virtual Machine", puis cliquer sur l'option `+ Create`; choisissez l'option `Azure virtual machine`.
+  - Dans Azure services, créer une nouvelle ressource "Virtual Machine", puis cliquer sur l'option `+ Create`; choisissez l'option `Azure virtual machine`.
 
 La page `Create a virtual machine` est présentée. Elle est composée par plusieurs onglets, qui doivent être répondus pour la collection de toutes les informations utilisées pour la création de la VM. 
 
