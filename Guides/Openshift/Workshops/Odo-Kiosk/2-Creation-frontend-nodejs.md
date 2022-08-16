@@ -1,6 +1,6 @@
 # Déploiement du composant du frontend (nodejs)
 
-1. Dans le terminal, assurez vous d'aller au dossier parent du projet, dossier "kiosk" créé dans l'étape précédente:
+1. Dans le terminal, assurez-vous d'aller au dossier parent du projet, dossier "kiosk" créé dans l'étape précédente:
     ```bash
     cd ..
     ```
@@ -9,7 +9,7 @@
     git clone https://github.com/RedHatWorkshops/openshiftv4-odo-workshop.git
     cd openshiftv4-odo-workshop/
     ```
-3. Si vous êtes déconnecté du cluster: [Se connecter au cluster d'Openshift](../../Outils/ODO/README.md#se-connecter-au-cluster-dopenshift)
+3. Si vous êtes déconnecté du cluster: [se connecter au cluster d'Openshift](../../Outils/ODO/README.md#se-connecter-au-cluster-dopenshift)
    
 
 4. Utilisez odo pour le "build" et le déploiement du composant du frontend
@@ -21,7 +21,7 @@
     ```bash
     odo project set myproject
     ```
-    Créez le composant frontend à partir du code qui a été rammené du dépôt Git:
+    Créez le composant frontend à partir du code qui a été ramené du dépôt Git:
     ```bash
     odo create nodejs frontend
     ```
@@ -43,7 +43,7 @@
 
    Dans VS Code ou votre éditeur de code, ouvrez le fichier `devfile.yaml` et éditez-le en remplaçant la valeur 3000 par 8080 pour le conteneur:
 
-   avant:
+   Avant:
    ```yaml
     components:
     - container:
@@ -91,11 +91,11 @@
     Pushing devfile component "frontend"
     ✓  Changes successfully pushed to component
     ```
-7. Vérifiez le log et assurez vous que l'application a commencé correctement:
+7. Vérifiez le log et assurez-vous que l'application a commencé correctement:
     ```bash
     odo log frontend
     ```
-    résultat:
+    Résultat:
     ```bash
     time="2022-07-11T15:12:52Z" level=info msg="create process:devrun" 
     time="2022-07-11T15:12:52Z" level=info msg="create process:debugrun" 
@@ -132,7 +132,7 @@
 
    - Vue par défaut:
         ![ocp-console-web-frontend-kiosk-deploye-vue-defaut](images/oc-web-console-kiosk-frontend-backend-default-view.png)
-   - Vue graphique: cliquez sur "Graph view" dans l'icone en haut à droite de l'écran:
+   - Vue graphique: cliquez sur "Graph view" dans l'icône en haut à droite de l'écran:
         ![ocp-console-web-options-vue-topology](../Commun/images/ocp-web-console-topology-views.png)
 
         ![ocp-console-web-frontend-kiosk-deploye](images/oc-web-console-kiosk-backend-frontend-deployed.png)

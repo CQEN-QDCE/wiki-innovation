@@ -14,7 +14,7 @@ Vous devriez voir un résultat similaire:
 ![kiosk-ui-resultat-commande](images/kiosk-ui-result-order-db.png)
 
 Donc, vous pouvez constater que dans cet exemple:
-- Une commande s'est faite: 1 sandwich au hotdog, 1 hamburguer et 2 boissons.
+- Une commande s'est faite: 1 sandwich au hotdog, 1 hamburger et 2 boissons.
 - Quand vous avez cliqué sur "Place Order", la commande s'est exécutée et vous avez un résultat de la commande avec:
   1. Le numéro de la commande: 105
   2. Le résumé de la commande: 1 sandwich au hotdog, 1 hamburger et 2 boissons.

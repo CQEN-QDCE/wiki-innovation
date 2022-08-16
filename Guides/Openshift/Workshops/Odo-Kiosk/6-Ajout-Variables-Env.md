@@ -34,58 +34,58 @@ Lier le secret "kiosk-mongodb-parameters" au déploiement de la BD:
 Comme le composant du backend a été déployé avec l'outil client `odo`, nous allons ajouter les variables d'environnement de connexion à la base de données aussi avec l'outil client `odo`, pour que le composant puisse redémarrer dans Openshift.
 
 Les paramètres utilisés dans le composant du backend sont:
-|  Clé | Valeur  |
-|---|---|
-|  MONGODB_DBNAME | mongodb  |
-|  MONGODB_URL | **format**: mongodb://[nomutilisateur:motdepasse@]host[:port][/[authdbdefaut]]. **Valeur**: mongodb://mongodb:mongodb@mongodb-kiosk:27017/mongodb  |
+|  Clé | Valeur (format)  | Valeur
+|---|---|---|
+|  MONGODB_DBNAME | string | mongodb  |
+|  MONGODB_URL | mongodb://[nomutilisateur:motdepasse@]host[:port][/[authdbdefaut]]. | mongodb://mongodb:mongodb@mongodb-kiosk:27017/mongodb |
 
 Allez au répertoire du backend et ajoutez les variables d'environnement:
 * Pour aller du répertoire du frontend au backend par exemple, exécutez:
-```bash
-cd ../openshiftv4-odo-workshop-backend/
-```
+  ```bash
+  cd ../openshiftv4-odo-workshop-backend/
+  ```
 * Pour configurer les variables d'environnement:
-```bash
-odo config set --env MONGODB_DBNAME=mongodb --env MONGODB_URL=mongodb://mongodb:mongodb@mongodb-kiosk:27017/mongodb
-```
-Les variables d'environnement seront ajoutés au fichier devfile.yaml
+  ```bash
+  odo config set --env MONGODB_DBNAME=mongodb --env MONGODB_URL=mongodb://mongodb:mongodb@mongodb-kiosk:27017/mongodb
+  ```
+  Les variables d'environnement seront ajoutés au fichier devfile.yaml
 
-Résultat:
-```bash
- ✓  Environment variables were successfully updated
+  Résultat:
+  ```bash
+  ✓  Environment variables were successfully updated
 
-Run `odo push` command to apply changes to the cluster
-```
+  Run `odo push` command to apply changes to the cluster
+  ```
 * Poussez les changements au cluster d'Openshift avec `odo push`:
-```bash
-odo push
-```
-Résultat:
-```bash
-Validation
- ✓  Validating the devfile [84763ns]
+  ```bash
+  odo push
+  ```
+  Résultat:
+  ```bash
+  Validation
+  ✓  Validating the devfile [84763ns]
 
-Creating Services for component backend
- ✓  Services are in sync with the cluster, no changes are required
+  Creating Services for component backend
+  ✓  Services are in sync with the cluster, no changes are required
 
-Creating Kubernetes resources for component backend
- ✓  Waiting for component to start [6s]                                           
- ✓  Links are in sync with the cluster, no changes are required
- ✓  Waiting for component to start [9ms]
+  Creating Kubernetes resources for component backend
+  ✓  Waiting for component to start [6s]                                           
+  ✓  Links are in sync with the cluster, no changes are required
+  ✓  Waiting for component to start [9ms]
 
-Applying URL changes
- ✓  URLs are synced with the cluster, no changes are required.
+  Applying URL changes
+  ✓  URLs are synced with the cluster, no changes are required.
 
-Syncing to component backend
- ✓  Checking file changes for pushing [521326ns]
- ✓  Syncing files to the component [305ms]
+  Syncing to component backend
+  ✓  Checking file changes for pushing [521326ns]
+  ✓  Syncing files to the component [305ms]
 
-Executing devfile commands for component backend
- ✓  Executing install command "npm install" [5s]
- ✓  Executing run command "npm start" [1s]
+  Executing devfile commands for component backend
+  ✓  Executing install command "npm install" [5s]
+  ✓  Executing run command "npm start" [1s]
 
-Pushing devfile component "backend"
- ✓  Changes successfully pushed to component
-```
+  Pushing devfile component "backend"
+  ✓  Changes successfully pushed to component
+  ```
 
 [Table de matières](README.md)

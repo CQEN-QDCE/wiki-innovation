@@ -6,7 +6,7 @@ Maintenant que les composants frontend et backend ont été déployés, il faut 
     ```bash
     odo link backend
     ```
-    résultat:
+    Résultat:
     ```bash
     ✓  Successfully created link between component "frontend" and component "backend"
 
@@ -16,7 +16,7 @@ Maintenant que les composants frontend et backend ont été déployés, il faut 
     ```bash
     odo push
     ```
-    résultat:
+    Résultat:
     ```bash
     Validation
     ✓  Validating the devfile [74605ns]
@@ -45,10 +45,12 @@ Maintenant que les composants frontend et backend ont été déployés, il faut 
     ✓  Changes successfully pushed to component
     ```
     L'information de la configuration du composant de backend est ajoutée au frontend, et ensuite, il est redémarré.
-
-2. Modifiez la route dans Openshift: Comme la route a été re-créée, il faut l'[ajouter le protocole TLS (Transport Layer Security)](../Commun/Ajout-Securite-SSL-a-LApplication.md) dans la console web d'Openshift.
    
-3. Ajoutez les variables d'environnement: Le composant du frontend utilise deux variables d'environnement (dans le fichier routes/index.js):
+2. Modifiez la route dans Openshift: 
+   Comme la route a été re-créée, il faut l'[ajouter le protocole TLS (Transport Layer Security)](../Commun/Ajout-Securite-SSL-a-LApplication.md) dans la console web d'Openshift.
+   
+3. Ajoutez les variables d'environnement: 
+   Le composant du frontend utilise deux variables d'environnement (dans le fichier routes/index.js):
    - COMPONENT_BACKEND_HOST
    - COMPONENT_BACKEND_PORT
   
@@ -56,7 +58,7 @@ Maintenant que les composants frontend et backend ont été déployés, il faut 
     ```bash
     odo config set --env COMPONENT_BACKEND_HOST=backend-app --env COMPONENT_BACKEND_PORT=8080
     ```
-    résultat:
+    Résultat:
     ```bash
     ✓  Environment variables were successfully updated
         Run `odo push` command to apply changes to the cluster
@@ -65,7 +67,7 @@ Maintenant que les composants frontend et backend ont été déployés, il faut 
     ```bash
     odo push
     ```
-    résultat:
+    Résultat:
     ```bash
     Validation
     ✓  Validating the devfile [76538ns]
