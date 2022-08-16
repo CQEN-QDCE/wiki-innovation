@@ -13,7 +13,7 @@ Vous devriez voir un résultat similaire:
 
 Donc, vous pouvez constater que dans cet exemple:
 - une commande s'est faite: 1 sandwich au hotdog, 1 hamburguer et 2 boissons.
-- quand vous avez cliqué sur "Place Order", la commande s'est executée et vous avez un résultat de la commande avec:
+- Quand vous avez cliqué sur "Place Order", la commande s'est exécutée et vous avez un résultat de la commande avec:
   1. le numéro de la commande: 105
   2. le résumé de la commande: 1 sandwich au hotdog, 1 hamburguer et 2 boissons.
 
