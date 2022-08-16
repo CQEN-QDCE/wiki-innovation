@@ -64,7 +64,7 @@
     ```bash
     odo push
     ```
-    résultat:
+    Résultat:
     ```bash
     Validation
     ✓  Validating the devfile [63384ns]
