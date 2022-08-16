@@ -144,7 +144,7 @@ $ mv ~/Downloads/CQEN-Linux-VM_key.pem ~/.ssh/.
 $ chmod 400 ~/.ssh/CQEN-Linux-VM_key.pem
 ```
 
-Maintenant, dans VSCode, faites `Ctrl+Shift+P` pour ouvrir le menu de selection d'options, puis saisissez `Remote-SSH:` ; vous allez voir l'option `Add a New SSH Host`. Cliquez sur l'option. 
+Maintenant, dans VSCode, faites `Ctrl+Shift+P` pour ouvrir le menu de sélection d'options, puis saisissez `Remote-SSH:` ; cliquez sur l'option `Add a New SSH Host`. 
 
 <img src="./images/VSCodeOptionMenu.png" />
 
