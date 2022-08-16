@@ -119,7 +119,7 @@ Vous allez vous connecter à cette machine via une connection SSH. Dans votre ma
 
 ### Installation de l'extension 
 
-Dans la barre d'outils à gauche du VSCode, cliquez sur l'icône des Extensions; ensuite, dans la boîte de recherche, cherchez le terme `Remote Development`, l'extension se présentera dans la liste à gauche. Cliquez sur installer et attendez la fin de l'installation. 
+Dans la barre d'outils à gauche du VSCode, cliquez sur l'icône des extensions; dans la zone de recherche, inscrivez le terme `Remote Development`, l'extension se présentera dans la liste à gauche puis cliquez sur installer et attendez la fin de l'installation. 
 
 <img src="./images/VSCodeExtension.png" />
 
