@@ -84,7 +84,7 @@ Auto shutdown
 Guest OS updates 
 - Patch orchestration options: `Image default`
 
-Cliquez le bouton `"Next: Advanced"`
+Cliquez sur le bouton `"Next: Advanced"`
 
 ## Onglet `Advanced`
 
