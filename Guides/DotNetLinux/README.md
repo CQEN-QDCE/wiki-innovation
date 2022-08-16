@@ -55,7 +55,7 @@ Data disks for CQEN-Linux-VM
     - Encryption type: `(Default) Encryption at-rest with a platform-managed key`
     - Delete disk with VM: sélectionnez la boîte
 
-Cliquez le bouton `"Next: Networking"`
+Cliquez sur le bouton `"Next: Networking"`
 
 ## Onglet `Networking`
 
