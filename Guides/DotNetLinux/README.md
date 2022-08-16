@@ -107,7 +107,7 @@ Si vous êtes d'accord avec ces termes, cliquez le bouton `Create` en bas à gau
 
 Vous verrez un écran appelé `Generate new key pair`, qui vous demande de faire le téléchargement de la clé privée SSH de votre utilisateur, pour la connexion remote. Cliquez sur le bouton `Download private key and create resource`. Prenez note du répertoire où vous enregistrez ce fichier. Après le téléchargement, Azure continue la création et le déploiement de votre machine virtuelle. Cela peut prendre quelques minutes, merci de patienter pendant le traitement de la demande.
 
-Après quelques minutes, vous recevez le message `Your deployment is complete`, ce que nous confirme que la création est réussie. Cliquez sur le bouton `Go to resource` pour voir les ressources créés. 
+Après quelques minutes, vous recevez le message `Your deployment is complete`, ce qui nous confirme donc la création de la ressource avec succès. Cliquez sur le bouton `Go to resource` pour voir les ressources créées.
 
 ## Connecter à la machine
 
