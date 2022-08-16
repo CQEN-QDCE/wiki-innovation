@@ -55,7 +55,7 @@ résultat:
 
 Run `odo push` command to apply changes to the cluster
 ```
-*Poussez les changements au cluster d'Openshift avec `odo push`:
+* Poussez les changements au cluster d'Openshift avec `odo push`:
 ```bash
 odo push
 ```
