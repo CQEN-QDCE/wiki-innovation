@@ -37,7 +37,7 @@
 
     Please use `odo push` command to create the component with source deployed
     ```
-    Un ficher devfile.yaml a été créé avec les informations nécessaires pour le déploiement dans Openshift. Vous pouvez le vérifier dans le répertoire du frontend.
+    Un ficher `devfile.yaml` a été créé avec les informations nécessaires pour le déploiement dans `OpenShift`. Vous pouvez le vérifier dans le répertoire du frontend.
    
 5. Modifiez le port généré dans le fichier `devfile.yaml`
 
