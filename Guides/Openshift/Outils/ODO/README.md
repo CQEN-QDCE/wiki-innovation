@@ -68,7 +68,8 @@ Un message va s'afficher pour montrer qu'on a bien ouvert une session avec succ√
   ```bash
   odo config set --env COMPONENT_BACKEND_HOST=backend-app
   ```
-- Pour effacer une variable d'environnement dans le fichier devfile, utilisez la commande `odo config unset` avec l'option `--env`. Par exemple:
+- Pour effacer une variable d'environnement dans le fichier `devfile`, utilisez la commande `odo config unset` avec l'option `--env`, Par exemple:
+
   ```bash
   odo config unset --env KAFKA_HOST --env KAFKA_PORT  
   ```
