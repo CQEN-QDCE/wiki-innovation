@@ -109,7 +109,7 @@ Vous verrez un écran appelé `Generate new key pair`, qui vous demande de faire
 
 Après quelques minutes, vous recevez le message `Your deployment is complete`, ce qui nous confirme donc la création de la ressource avec succès. Cliquez sur le bouton `Go to resource` pour voir les ressources créées.
 
-## Connecter à la machine
+## Connexion à la machine
 
 Dans la page de votre VM, prenez note de l'adresse IP publique de votre machine (Public IP address). Assurez-vous aussi que votre machine soit démarrée. 
 
