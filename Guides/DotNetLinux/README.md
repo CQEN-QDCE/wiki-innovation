@@ -42,7 +42,7 @@ Cliquez sur le bouton `"Next: Disks"`
 
 Disk options 
 - OS disk size: `Default size (30 GiB)`
-- OS disk type: `Standard HDD (locally-redundant storage)` ou selon votre préférence. Par contre, l'option du disk SSD est beaucoup plus chère que celle du disk HDD. Dans cet exemple on a choisi HDD étant donné que cette machine n'aura pas une application critique qui doit avoir de la haute disponibilité. 
+- OS disk type: `Standard HDD (locally-redundant storage)` ou selon votre préférence. Cependant, l'option du disk SSD est beaucoup plus chère que celle du disk HDD. Dans cet exemple on a choisi HDD étant donné que cette machine n'aura pas une application critique qui doit avoir de la haute disponibilité. 
 - Delete with VM: sélectionner
 - Encryption type: `(Default) Encryption at-rest with a platform-managed key`
 
