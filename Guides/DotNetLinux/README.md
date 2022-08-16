@@ -71,7 +71,7 @@ Network interface
 Load balancing 
 - Load balancing options: `None`
 
-Cliquez le bouton `"Next: Management"`
+Cliquez sur le bouton `"Next: Management"`
 
 ## Onglet `Management` 
 
