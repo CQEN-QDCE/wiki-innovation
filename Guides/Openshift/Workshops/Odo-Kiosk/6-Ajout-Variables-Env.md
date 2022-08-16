@@ -40,7 +40,7 @@ Les paramètres utilisés dans le composant du backend sont:
 |  MONGODB_URL | **format**: mongodb://[nomutilisateur:motdepasse@]host[:port][/[authdbdefaut]]. **Valeur**: mongodb://mongodb:mongodb@mongodb-kiosk:27017/mongodb  |
 
 Allez au répertoire du backend et ajoutez les variables d'environnement:
-*Pour aller du répertoire du frontend au backend par exemple, exécutez:
+* Pour aller du répertoire du frontend au backend par exemple, exécutez:
 ```bash
 cd ../openshiftv4-odo-workshop-backend/
 ```
