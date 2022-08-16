@@ -156,7 +156,7 @@ Ensuite, dans le dialog qui suit `Enter SSH connection command`, saississez la c
 $ ssh cqen@22.196.64.15 -A -i ~/.ssh/CQEN-Linux-VM_key.pem
 ```
 
-Dans le dialogue de plateforme, choississez `Linux`: 
+Dans la boîte de dialogue plateforme, choisissez `Linux`: 
 
 <img src="./images/SSHPlateforme.png" />
 
