@@ -138,6 +138,7 @@
         ![ocp-console-web-frontend-kiosk-deploye](images/oc-web-console-kiosk-backend-frontend-deployed.png)
 
 9.  Entre les ressources créées pour le composant du frontend, il y a la route qui contient le lien pour accèder à l'application via web à l'extérieur d'Openshift.
+   
    :warning:Pour sécuriser l'accès à l'application, il faut [ajouter le protocole TLS (Transport Layer Security) à la route](../Commun/Ajout-Securite-SSL-a-LApplication.md).
 
 11. Cliquez sur l'URL https de la route modifié et vous allez voir la page initiale de l'application pour faire la commande:
