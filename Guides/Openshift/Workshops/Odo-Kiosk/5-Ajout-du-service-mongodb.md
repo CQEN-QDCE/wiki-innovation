@@ -1,10 +1,10 @@
 # Ajouter le service de base de données - mongodb
 
 Dans les étapes précédentes, vous avez:
-- deployé le composant du frotend
-- deployé le composant du backend
-- lié les composants frontend et backend
-- testé l'ensemble
+- Déployé le composant du frontend
+- Déployé le composant du backend
+- Lié les composants frontend et backend
+- Testé l'ensemble
 
 Dans cette section, vous allez ajouter le service de base de données - MongoDB pour compléter l'ensemble. 
 Vous allez créer le service avec la commande oc new-app en lui spécifiant une image MongoDB contenue dans DockerHub:
