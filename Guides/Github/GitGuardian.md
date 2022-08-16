@@ -36,7 +36,7 @@ En plus, c'est une bonne pratique de déterminer une date d'expiration pour tout
 
 <img src="./images/GitGuardianAPI02.png" /> <br/>
 
-Voilà, votre token d'accès personnel est créé. Prenez-note de ce token, parce qu'il n'y a pas moyen de le visualiser ultérieurement. 
+Voilà, votre token d'accès personnel est créé. Prenez en note ce token, parce qu'il n'y a pas moyen de le visualiser ultérieurement. 
 
 <img src="./images/GitGuardianAPI03.png" /> <br/>
 
