@@ -100,7 +100,7 @@ Configurez la balise `on:` pour ajouter les événements qui déclencheront l'ex
 
 ### Configuration des branches 
 
-Vous devez ensuite configurer les branches pour ajouter `GitGuardian scan` à vos `status checks` requis pour empêcher que `pull-requests` qui aient des problèmes de sécurité soient fusionnés. 
+Vous devez ensuite configurer les branches pour ajouter `GitGuardian scan` à vos `status checks` requis pour empêcher que les `pull-requests` qui présentaient des enjeux de sécurité soient fusionnés. 
 
 D'abord, allez sur les configurations (`"Settings"`) de votre projet, et cliquez sur `Branches`. 
 
