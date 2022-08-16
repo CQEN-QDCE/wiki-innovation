@@ -168,7 +168,7 @@ Dans la boîte de dialogue`Select SSH configuration file to update`, saisissez l
 ~/.ssh/config
 ```
 
-Et c'est fait, votre configuration de connection est créé. 
+Et c'est fait, votre configuration de connexion est créée. 
 
 Pour vous connecter, faites `Ctrl+Shift+P`, saisissez `Remote-SSH`, et choississez l'option `Connect current window to host`; 
 
