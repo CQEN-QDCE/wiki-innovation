@@ -59,7 +59,7 @@ Run `odo push` command to apply changes to the cluster
 ```bash
 odo push
 ```
-résultat:
+Résultat:
 ```bash
 Validation
  ✓  Validating the devfile [84763ns]
