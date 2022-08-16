@@ -9,6 +9,7 @@ Faites votre commande et cliquez sur "Place Order"
 ![kiosk-ui-placez-commande](images/kiosk-ui-place-order.png)
 
 Vous devriez voir un résultat similaire:
+
 ![kiosk-ui-resultat-commande](images/kiosk-ui-result-order-db.png)
 
 Donc, vous pouvez constater que dans cet exemple:
