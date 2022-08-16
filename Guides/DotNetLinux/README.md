@@ -10,7 +10,7 @@ Une fois sur la page `Create a virtual machine`, elle est composée de plusieurs
 
 ## Onglet `Basics`
 
-Dans le premier onglet, `Basics`, il faut répondre aux champs suivants: 
+Dans le premier onglet, `Basics`, il faut remplir les champs suivants: 
 
 Project details
 - Subscription: choisissez votre suscription;
