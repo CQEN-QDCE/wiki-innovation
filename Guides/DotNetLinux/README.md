@@ -36,7 +36,7 @@ Inbound port rules
 - Public inbound ports: `Allow selected ports` 
 - Selected inbound ports: choisissez `SSH(22)`, `HTTPS(443)`. 
 
-Cliquez le bouton `"Next: Disks"`
+Cliquez sur le bouton `"Next: Disks"`
 
 ## Onglet `Disks`
 
