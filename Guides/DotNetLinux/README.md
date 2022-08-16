@@ -178,7 +178,7 @@ Choisissez votre serveur par l'adresse IP:
 
 <img src="./images/SSHConnect02.png"/>
 
-À la première connexion, on vous demandera de confirmer l'empreinte de la clé publique; confirmez en cliquant sur `Oui`. 
+À la première connexion on vous demandera de confirmer l'empreinte de la clé publique, confirmez en cliquant sur `Oui`. 
 
 <img src="./images/SSHConfirmation.png"/>
 
