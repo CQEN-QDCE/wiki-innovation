@@ -97,7 +97,7 @@ Cliquez sur le bouton `"Next: Tags"`
 - Name: `Serveur Linux`
 - Value: `Develop`
 
-Cliquez le bouton `"Next: Review + Create"`
+Cliquez sur le bouton `"Next: Review + Create"`
 
 ## Onglet  `Review + Create`
 
