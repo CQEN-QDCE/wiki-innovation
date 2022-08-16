@@ -1,8 +1,8 @@
 # Ajout des variables d'environnement aux applications
 
 Vous avez maintenant les trois composants déployés dans Openshift, frontend, backend et la base de données. Maintenant nous allons nous servir des variables d'environnement pour:
-- configurer les valeurs des paramètres de connexion à la base de données.
-- configurer les valeurs des paramètres de connexion du composant de backend à la base de données.
+- Configurer les valeurs des paramètres de connexion à la base de données.
+- Configurer les valeurs des paramètres de connexion du composant de backend à la base de données.
 
 ## Ajout des variables d'environnement au composant de la base de données avec l'outil client `oc`
 Pour être capable d'accèder à la BD, il faut créer, entre autres, un utilisateur (nom d'utilisateur et son mot de pase), le mot de passe pour l'utilisateur administrateur et le nom de la base de données.
