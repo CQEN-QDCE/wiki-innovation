@@ -88,7 +88,7 @@ Cliquez sur le bouton `"Next: Advanced"`
 
 ## Onglet `Advanced`
 
-On ne va pas configurer des options dans cet onglet. 
+Il n'est pas nécessaire de configurer les options de cet onglet. 
 
 Cliquez le bouton `"Next: Tags"`
 
