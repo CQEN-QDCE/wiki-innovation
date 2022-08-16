@@ -6,7 +6,7 @@
 
   - Dans Azure services, créer une nouvelle ressource "Virtual Machine", puis cliquer sur l'option `+ Create`; choisissez l'option `Azure virtual machine`.
 
-La page `Create a virtual machine` est présentée. Elle est composée par plusieurs onglets, qui doivent être répondus pour la collection de toutes les informations utilisées pour la création de la VM. 
+Une fois sur la page `Create a virtual machine`, elle est composée de plusieurs onglets qui présentent  la collection des informations qui sont utilisées pour la création de la VM. 
 
 ## Onglet `Basics`
 
