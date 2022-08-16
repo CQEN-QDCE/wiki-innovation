@@ -90,7 +90,7 @@ Cliquez sur le bouton `"Next: Advanced"`
 
 Il n'est pas nécessaire de configurer les options de cet onglet. 
 
-Cliquez le bouton `"Next: Tags"`
+Cliquez sur le bouton `"Next: Tags"`
 
 ## Onglet `Tags`
 
