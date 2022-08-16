@@ -148,7 +148,7 @@ Maintenant, dans VSCode, faites `Ctrl+Shift+P` pour ouvrir le menu de sélection
 
 <img src="./images/VSCodeOptionMenu.png" />
 
-Ensuite, dans le dialog qui suit `Enter SSH connection command`, saississez la commande qui suit, en substituant le nom d'usager, l'IP publique et le path vers la cl'publique avec les valeurs que vous avez configurés: 
+Ensuite, dans la boîte de dialogue qui suit `Enter SSH connection command`, saisissez la commande qui suit, en substituant le nom d'usager, l'IP publique et le path vers la clé publique avec les valeurs que vous avez configurés: 
 
 <img src="./images/SSHCommande.png" />
 
