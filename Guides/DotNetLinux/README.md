@@ -14,7 +14,7 @@ Dans le premier onglet, `Basics`, il faut remplir les champs suivants:
 
 Project details
 - Subscription: choisissez votre suscription;
-- Resource group: cliques sur `Create new`; puis donnez un nom de votre préférence. Dans cet exemple, on le nomme `CQEN-RG`; 
+- Resource group: cliquez sur `Create new` puis donnez un nom de votre préférence. Dans cet exemple on le nomme `CQEN-RG`; 
 
 Instance détails 
 - Virtual machine name: dans l'exemple, CQEN-Linux-VM; 
