@@ -1,6 +1,6 @@
 # .Net sur Linux 
 
-Étapes pour créer une machine virtuelle Linux sur Azure et se connecter à la machine pour le développement .Net 
+Étapes pour la création d'une machine virtuelle Linux sur Azure ainsi que la connexion à cette dernière pour le développement en .Net
 
 Faire logon au portail Azure [https://portal.azure.com](https://portal.azure.com) 
 
