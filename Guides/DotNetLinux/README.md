@@ -101,7 +101,7 @@ Cliquez sur le bouton `"Next: Review + Create"`
 
 ## Onglet  `Review + Create`
 
-À cet onglet, Azure va procéder à des validations des options choisies dans les onglets précédants, et si le tout est correct, il vous montrera le message `Validation passed`. En plus, il affichera toutes les configurations faites, les détails du produit que vous déployez, bien comme le cout et les termes de service. 
+À cet onglet, Azure va procéder à la validation des options choisies dans les onglets précédents, si le tout est correct, il va afficher le message `Validation passed` ainsi que toutes les configurations faites, les détails du produit que vous déployez, et aussi le coût et les termes de service. 
 
 Si vous êtes d'accord avec ces termes, cliquez le bouton `Create` en bas à gauche de l'écran. 
 
