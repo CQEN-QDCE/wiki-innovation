@@ -123,7 +123,7 @@ Dans la barre d'outils à gauche du VSCode, cliquez sur l'icône des extensions;
 
 <img src="./images/VSCodeExtension.png" />
 
-Une fois finie, on va se connecter à la machine virtuelle accessible via l'adresse IP publique que vous avez pris note, avec la clé qui a été générée dans l'étape `Onglet Review+Create` ci-dessus. 
+Une fois finie, on va se connecter à la machine virtuelle accessible via l'adresse IP publique que vous avez pris note, ainsi que la clé qui a été générée dans l'étape `Onglet Review+Create` ci-dessus. 
 
 D'abord, vérifiez si vous possedez le répertoire de configuration du SSH dans votre profil d'usager. Il est important parce que c'est l'endroit à enregistrer vos clés d'accès à la machine virutelle.  
 
