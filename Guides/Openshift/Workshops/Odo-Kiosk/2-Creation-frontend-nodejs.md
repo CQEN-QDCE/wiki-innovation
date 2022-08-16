@@ -39,7 +39,7 @@
     ```
     Un ficher devfile.yaml a été créé avec les informations nécessaires pour le déploiement dans Openshift. Vous pouvez le vérifier dans le répertoire du frontend.
    
-5. Modifiez le port généré dans le fichier devfile.yaml
+5. Modifiez le port généré dans le fichier `devfile.yaml`
 
    Dans VS Code ou votre éditeur de code, ouvrez le fichier `devfile.yaml` et éditez-le en remplaçant la valeur 3000 par 8080 pour le conteneur:
 
