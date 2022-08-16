@@ -6,6 +6,7 @@ Accédez à la page web de l'application à partir du lien du composant  fronten
 ![kiosk-ui-home](images/kiosk-ui-home.png)
 
 Faites votre commande et cliquez sur "Place Order"
+
 ![kiosk-ui-placez-commande](images/kiosk-ui-place-order.png)
 
 Vous devriez voir un résultat similaire:
