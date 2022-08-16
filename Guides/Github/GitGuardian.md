@@ -106,7 +106,7 @@ D'abord, allez sur les configurations (`"Settings"`) de votre projet, et cliquez
 
 <img src="./images/GitHubBranch01.png" /> <br/>
 
-Par la suite, on va éditer la branche qui sera protégée par l'action `GitGuardian scan`, cliquez sur le bouton `Edit`. 
+Par la suite, on va éditer la branche qui sera protégée par l'action `GitGuardian scan`, en cliquant sur le bouton `Edit`. 
 
 <img src="./images/GitHubBranch02.png" /> <br/>
 
