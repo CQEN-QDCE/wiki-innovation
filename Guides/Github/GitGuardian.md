@@ -43,7 +43,7 @@ Voilà, votre token d'accès personnel est créé. Prenez en note ce token, parc
 
 ## Création de la variable d'environnement dans GitHub
 
-Vous avez un token d'accès créé et actif dans GitGuardian. Maintenant il faudrait le faire connu à GitHub pour les autorisations d'accès lors de l'exécution des jobs des `"Actions"`. On le fait par la création d'une variable d'environnement au niveau de votre projet. 
+Vous avez un token d'accès créé et actif dans GitGuardian. Maintenant il faudrait le faire connaître à GitHub pour les autorisations d'accès lors de l'exécution des jobs `"Actions"`. On le fait par la création d'une variable d'environnement au niveau de votre projet. 
 
 Accédez à votre projet et dans la section de configurations, allez à la page des `Secrets`. 
 
