@@ -160,7 +160,7 @@ Dans la boîte de dialogue plateforme, choisissez `Linux`:
 
 <img src="./images/SSHPlateforme.png" />
 
-Dans le dialog `Select SSH configuration file to update`, saississez l'adresse suivante: 
+Dans la boîte de dialogue`Select SSH configuration file to update`, saisissez l'adresse suivante: 
 
 <img src="./images/SSHPKpath.png" />
 
