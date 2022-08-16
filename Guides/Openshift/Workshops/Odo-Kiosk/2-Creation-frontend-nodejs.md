@@ -51,7 +51,7 @@
         - name: http-3000
         targetPort: 3000    
    ```
-   après:
+   Après:
    ```yaml
     components:
     - container:
