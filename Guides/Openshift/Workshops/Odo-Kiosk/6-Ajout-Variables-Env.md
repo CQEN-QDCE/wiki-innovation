@@ -49,7 +49,8 @@ cd ../openshiftv4-odo-workshop-backend/
 odo config set --env MONGODB_DBNAME=mongodb --env MONGODB_URL=mongodb://mongodb:mongodb@mongodb-kiosk:27017/mongodb
 ```
 Les variables d'environnement seront ajoutés au fichier devfile.yaml
-résultat:
+
+Résultat:
 ```bash
  ✓  Environment variables were successfully updated
 
