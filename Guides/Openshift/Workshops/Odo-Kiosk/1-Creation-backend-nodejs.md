@@ -45,7 +45,7 @@
     
    
 5. Modifiez le port généré dans le fichier `devfile.yaml`
-   Dans VS Code ou votre éditeur de code, ouvrez le fichier devfile.yaml et éditez-le en remplaçant la valeur 3000 par 8080 pour le conteneur:
+   Dans `VS Code` ou votre éditeur de code, ouvrez le fichier `devfile.yaml` et éditez-le en remplaçant la valeur 3000 par 8080 pour le conteneur:
 
    avant:
    ```yaml
