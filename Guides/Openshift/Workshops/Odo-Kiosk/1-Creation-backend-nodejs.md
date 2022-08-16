@@ -100,7 +100,7 @@
     ```bash
     odo log backend
     ```
-    résultat:
+    Résultat:
     ```bash
     time="2022-07-13T16:03:29Z" level=info msg="create process:debugrun" 
     time="2022-07-13T16:03:29Z" level=info msg="create process:devrun" 
