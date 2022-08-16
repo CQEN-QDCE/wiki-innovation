@@ -21,7 +21,7 @@ Donc, vous pouvez constater que dans cet exemple:
 
 ![kiosk-ui-resultat-commande-soulignee](images/kiosk-ui-result-order-db-order-number.png)
 
-Vous pouvez tester encore, faire une autre commande et devriez voir un autre numéro de commande et le résumé de votre nouvelle commande.
+Vous pouvez tester à nouveau, passer une autre commande et vous devriez voir un autre numéro de commande et un résumé de votre nouvelle commande.
 
 Félicitations! vouz avez réussi à bien déployer le site web du kiosk!
 
