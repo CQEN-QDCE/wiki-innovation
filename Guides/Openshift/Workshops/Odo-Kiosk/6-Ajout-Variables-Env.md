@@ -44,7 +44,7 @@ Allez au répertoire du backend et ajoutez les variables d'environnement:
 ```bash
 cd ../openshiftv4-odo-workshop-backend/
 ```
-*Pour configurer les variables d'environnement:
+* Pour configurer les variables d'environnement:
 ```bash
 odo config set --env MONGODB_DBNAME=mongodb --env MONGODB_URL=mongodb://mongodb:mongodb@mongodb-kiosk:27017/mongodb
 ```
