@@ -13,7 +13,7 @@ Vous allez créer le service avec la commande `oc new-app` en lui spécifiant un
 ```bash
 oc new-app quay.io/centos7/mongodb-36-centos7 --name mongodb-kiosk -l 'app.kubernetes.io/part-of=app,app.kubernetes.io/name=mongodb'
 ```
-exemple de résultat:
+Exemple de résultat:
 ```bash
 --> Found container image dc18f52 (14 months old) from quay.io for "quay.io/centos7/mongodb-36-centos7"
 
