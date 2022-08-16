@@ -2,7 +2,7 @@
 
 Étapes pour la création d'une machine virtuelle Linux sur Azure ainsi que la connexion à cette dernière pour le développement en .Net
 
-Faire logon au portail Azure [https://portal.azure.com](https://portal.azure.com) 
+   - Se connecter au portail Azure [https://portal.azure.com](https://portal.azure.com) 
 
 Dans Azure services, créer une nouvelle ressource "Virtual Machine", puis cliquer sur l'option `+ Create`; choisissez l'option `Azure virtual machine`.
 
