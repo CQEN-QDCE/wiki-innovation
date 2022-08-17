@@ -10,7 +10,7 @@ Openshift a un certificat joker SSL qui peut être utilisé pour toute applicati
 
 Il faut éditer la route créée pour ajouter l'option TLS.
 
-Allez dans la console web d'Openshift et cliquez sur la route de l'application (menu à gauche -> Topology or menu à gauche -> Project -> Route).
+Allez dans la console web d'Openshift et cliquez sur la route de l'application (menu à gauche -> Topology ou menu à gauche -> Project -> Route).
 
 Pour continuer, suivez les instructions [ici](../../Readme-HandsOn.md#ajout-dune-couche-de-sécurité-pour-laccès-à-nos-applications-sur-le-web)
 
