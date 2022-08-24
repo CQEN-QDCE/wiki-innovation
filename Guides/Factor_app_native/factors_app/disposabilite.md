@@ -15,3 +15,8 @@ En outre, selon la plate-forme sur laquelle votre application est déployée, un
 - Les processus peuvent être facilement créés ou détruits sans processus d'arrêt orchestré.
 - Mettez en place un arrêt progressif. Marquez le service comme hors ligne (plus de nouvelles demandes), terminez les demandes existantes, puis supprimez les services. Dans Kubernetes, cela se produit automatiquement pour vous.
 - Votre application est robuste contre la mort subite. Il n'y a pas de perte de données si votre application cesse soudainement de fonctionner.
+
+
+[Le facteur suivant](./parite_environnements.md)
+
+[Le tableau de la méthodologie de Twelve-Factor](../README.md)

@@ -15,3 +15,8 @@ Les applications qui exportent l'association de ports peuvent consommer les info
 
 - Configurer le port avec la variable d'environnement server.port.
 - Vous ne devez pas coder en dur les numéros de port dans votre code. Indiquez plutôt les numéros de port dans l'environnement, par exemple dans une variable d'environnement.
+
+
+[Le facteur suivant](./concurence.md)
+
+[Le tableau de la méthodologie de Twelve-Factor](../README.md)

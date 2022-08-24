@@ -19,3 +19,8 @@ Ceci est important pour s'assurer que tous les bogues potentiels peuvent être i
 - Les flags doivent permettre d'activer/désactiver des fonctionnalités sans connaître l'étape ou l'environnement (par exemple, ne pas utiliser if ($environment == 'dev') { ... })
 - N'utilisez pas les noms d'hôtes pour la logique conditionnelle/de routage (c'est le travail d'Ingress).
 -  Éliminez le "décalage horaire". Publiez le code qui a été écrit quelques heures plus tard au lieu de plusieurs jours ou semaines.
+
+
+[Le facteur suivant](./journaux.md)
+
+[Le tableau de la méthodologie de Twelve-Factor](../README.md)

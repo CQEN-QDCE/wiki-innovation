@@ -15,3 +15,8 @@ Dans les microservices, l'observabilité est le citoyen de première classe, c�
 - Les événements sont des flux d'événements structurés (par exemple, JSON).
 
 L'observabilité peut être obtenue en utilisant des outils APM (ELK, Newrelic, et d'autres outils) ou des outils d'agrégation de logs comme Splunk, logs, etc.
+
+
+[Le facteur suivant](./processus_administration.md)
+
+[Le tableau de la méthodologie de Twelve-Factor](../README.md)

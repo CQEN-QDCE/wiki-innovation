@@ -14,3 +14,8 @@ Pour les microservices, le point important du facteur Processus est que votre ap
 - Doit sortir non nul en cas d'erreur fatale
 - Les contrôles de santé ne doivent pas dépendre de la santé des services de soutien.
 - Ne nécessite pas d'exécution privilégiée (par exemple, root).
+
+
+[Le facteur suivant](./laison_port.md)
+
+[Le tableau de la méthodologie de Twelve-Factor](../README.md)

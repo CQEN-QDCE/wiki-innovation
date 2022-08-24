@@ -23,3 +23,8 @@ L'avantage de séparer les paramètres de configuration de la logique applicativ
 - Vous ne construisez qu'une seule fois pour les déploiements dans tous vos environnements.
 - Les services peuvent être reconfigurés dynamiquement sans recompilation (par exemple en changeant les paramètres)
 - Les secrets sont transmis à l'aide de méthodes sécurisées telles que Docker Secrets, AWS secret Manager, Terraform secret ou Kubernetes Secrets et aucun secret n'est stocké dans le contrôle de version.
+
+
+[Le facteur suivant](./stockage.md)
+
+[Le tableau de la méthodologie de Twelve-Factor](../README.md)

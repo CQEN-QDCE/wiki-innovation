@@ -17,3 +17,8 @@ Dans un écosystème de microservices, tout ce qui est externe au service est tr
 - Utiliser des bases de données externes (par exemple Postgres, MySQL, Redis, etc.) pour conserver l'état.
 - Utiliser des variables d'environnement pour la configuration (par exemple, les délais d'attente, les points de terminaison, etc.)
 - Utiliser des délais d'attente configurables pour les connexions et les réponses des backends.
+
+
+[Le facteur suivant](./cicd.md)
+
+[Le tableau de la méthodologie de Twelve-Factor](../README.md)

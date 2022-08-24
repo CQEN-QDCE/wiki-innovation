@@ -15,3 +15,8 @@ Les sections suivantes décrivent certaines structures permettant l'évolutivit�
 - L'application ne maintient pas un grand pool de connexions persistantes à la base de données (par exemple, la taille du pool est configurable).
 - L'application utilise les transactions de la base de données, le cas échéant, et évite les blocages.
 - L'application ne dépend pas de sessions collantes ; les demandes peuvent atteindre n'importe quel processus.
+
+
+[Le facteur suivant](./disposabilite.md)
+
+[Le tableau de la méthodologie de Twelve-Factor](../README.md)

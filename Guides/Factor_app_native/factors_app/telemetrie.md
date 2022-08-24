@@ -5,3 +5,8 @@ La télémétrie est un autre ajout important. Le facteur de journalisation, qui
 ![](../images/telemetrie.png)
 
 La télémétrie peut inclure des mesures spécifiques au domaine (celles qui sont nécessaires ou requises par votre organisation, votre département ou votre équipe), ainsi que des mesures de santé et de système pour votre application. Les mesures de santé et de système comprennent le démarrage, l'arrêt et la mise à l'échelle de l'application, le suivi des requêtes Web et les résultats des contrôles de santé périodiques. MicroProfile Health et MicroProfile Metrics sont de fantastiques outils Java ouverts et natifs du nuage qui peuvent être utilisés pour collecter ce type de mesures.
+
+
+[Le facteur suivant](./authentification.md)
+
+[Le tableau de la méthodologie de Twelve-Factor](../README.md)

@@ -22,3 +22,8 @@ en coclusion:
 - Toutes les dépendances sont déclarées explicitement à l'aide d'un manifeste de déclaration des dépendances, tel qu'un Dockerfile.
 - Votre application s'exécute de manière isolée afin d'éviter que les dépendances du système ne soient utilisées accidentellement, comme dans un conteneur Docker.
 - Les dépendances sont déclarées et isolées de la même manière pour les environnements de développement et de production.
+
+
+[Le facteur suivant](./configuration.md)
+
+[Le tableau de la méthodologie de Twelve-Factor](../README.md)

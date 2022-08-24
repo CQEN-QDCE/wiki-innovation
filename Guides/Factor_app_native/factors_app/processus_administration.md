@@ -21,3 +21,8 @@ De cette façon, vos microservices peuvent se concentrer sur la logique métier.
 - Exécuter des scripts ponctuels (comme la sauvegarde d'une base de données) dans le même environnement et la même configuration que l'application. Cela peut être fait avec Docker en utilisant les commandes docker exec ou kubectl exec.
 -  Stockez les scripts d'administration dans le même contrôle de version que l'application pour éviter les problèmes de synchronisation.
 - Le traitement doit être exécuté dans un conteneur séparé
+
+
+[Le facteur suivant](./api_first.md)
+
+[Le tableau de la méthodologie de Twelve-Factor](../README.md)
