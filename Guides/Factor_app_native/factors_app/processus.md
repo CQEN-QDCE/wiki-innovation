@@ -16,6 +16,6 @@ Pour les microservices, le point important du facteur Processus est que votre ap
 - Ne nécessite pas d'exécution privilégiée (par exemple, root).
 
 
-[Le facteur suivant](./laison_port.md)
+[Le facteur suivant](./liaison_port.md)
 
 [Le tableau de la méthodologie de Twelve-Factor](../README.md)

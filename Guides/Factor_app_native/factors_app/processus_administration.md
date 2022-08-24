@@ -23,6 +23,6 @@ De cette façon, vos microservices peuvent se concentrer sur la logique métier.
 - Le traitement doit être exécuté dans un conteneur séparé
 
 
-[Le facteur suivant](./api_first.md)
+[Le facteur suivant](api_first.md)
 
 [Le tableau de la méthodologie de Twelve-Factor](../README.md)

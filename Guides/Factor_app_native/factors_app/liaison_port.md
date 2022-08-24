@@ -17,6 +17,6 @@ Les applications qui exportent l'association de ports peuvent consommer les info
 - Vous ne devez pas coder en dur les numéros de port dans votre code. Indiquez plutôt les numéros de port dans l'environnement, par exemple dans une variable d'environnement.
 
 
-[Le facteur suivant](./concurence.md)
+[Le facteur suivant](./concurrence.md)
 
 [Le tableau de la méthodologie de Twelve-Factor](../README.md)

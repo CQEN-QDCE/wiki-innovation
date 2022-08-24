@@ -26,6 +26,6 @@ Exemple:
 Github, Mercurial, SVN
 
 
-[Le facteur suivant](./dependance.md)
+[Le facteur suivant](./dependances.md)
 
 [Le tableau de la méthodologie de Twelve-Factor](../README.md)

@@ -24,6 +24,6 @@ en coclusion:
 - Les dépendances sont déclarées et isolées de la même manière pour les environnements de développement et de production.
 
 
-[Le facteur suivant](./configuration.md)
+[Le facteur suivant](./configurations.md)
 
 [Le tableau de la méthodologie de Twelve-Factor](../README.md)
