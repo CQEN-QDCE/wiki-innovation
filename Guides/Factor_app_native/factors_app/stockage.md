@@ -4,7 +4,7 @@
 
 Chaque service utilisé par l'application dans le cadre de son fonctionnement normal, tel que les systèmes de fichiers, les bases de données, les systèmes de mise en cache, les files d'attente de messages et les serveurs de messagerie doit être accessible en tant que service et externalisé dans la configuration et qui peuvent être approvisionnés et maintenus par le personnel des systèmes comme des ressources attachées. Ce sont des abstractions pour la ressource sous-jacente. 
 
-![](./images/stockage.png)
+![](../images/stockage.png)
 
 Par exemple, lorsque l'application écrit des données dans l'espace de stockage, traiter celui-ci comme un service externe vous permet de modifier facilement le type de stockage sous-jacent, car il est dissocié de l'application. Vous pouvez ensuite effectuer des changements, par exemple passer d'une base de données PostgreSQL locale à Cloud SQL pour PostgreSQL sans modifier le code de l'application.
 

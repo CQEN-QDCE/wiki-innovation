@@ -3,7 +3,7 @@
 
 Sur une instance Cloud, a vie d'une application est aussi éphémère que l'infrastructure qui la prend en charge. Il faut savoir qu’une application 12 facteurs est jetables : cela signifie qu’elle peut démarrer ou s’arrêter très rapidement. Les processus doivent donc être prêts à l’emploi rapidement : s’ils sont lancés pour des besoins de montée en charge, il est important d’être opérationnel rapidement pour éviter la saturation des instances en cours. En complément, les développeurs doivent prévoir des arrêts gracieux, c’est-à-dire prévoir les cas où l’application est en train d’être déconnectée ou est en train de crasher : il est préférable d’intercepter ces signaux pour que le travail en cours soit renvoyé dans une file de travaux, afin de ne pas corrompre des données.
 
-![](./images/jetable.png)
+![](../images/jetable.png)
 
 
 Pour les microservices, En adoptant la conteneurisation dans le processus de déploiement des microservices, votre application suit implicitement ce principe dans une mesure maximale. Les conteneurs Docker peuvent être démarrés ou arrêtés instantanément. Le stockage des données de demande, d'état ou de session dans des files d'attente ou d'autres services de sauvegarde garantit qu'une demande est traitée de manière transparente en cas de panne du conteneur.

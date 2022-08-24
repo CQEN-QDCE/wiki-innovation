@@ -4,7 +4,7 @@
 Le premier principe de la méthodologie est lié à la base de code de votre application. Une base de code suivie avec un système de contrôle de version, elle est utilisée pour plusieurs déploiements de l’application : prod, pre-prod, dev.
 Le point le plus important ici est de s'assurer que votre application est suivie et qu'elle se trouve dans un dépot central accessible à vos développeurs grâce à des outils tels que Git, Mercurial ou SVN.
 
-![](./images/base_de_code.png)
+![](../images/base_de_code.png)
 
 
 Vous devez gérer le code de votre application dans un système de contrôle des versions tel que Git ou Mercurial. Pour travailler sur l'application, vous extrayez le code vers votre environnement de développement local. Le stockage du code dans un système de contrôle des versions permet aux membres de votre équipe de travailler ensemble. En effet, ce système fournit une trace d'audit des modifications apportées au code, et offre un moyen systématique de résoudre les conflits de fusion et d'effectuer un rollback du code vers une version précédente. Ce type de stockage fournit également un emplacement à partir duquel effectuer l'intégration continue (CI) et le déploiement continu (CD).

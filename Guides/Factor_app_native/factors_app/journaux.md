@@ -7,7 +7,7 @@ Traditionnellement, la responsabilité de collecter les logs, de les filtrer sel
 
 Dans les microservices, l'observabilité est le citoyen de première classe, c’est pourquoi les applications 12 facteurs privilégient une vision plus dynamique où les logs seront considérés comme un flux d’évènements décrivant le comportement de l’application, sans pour autant se soucier du stockage du flux de sortie.
 
-![](./images/logs.png)
+![](../images/logs.png)
 
 - Publier les journaux vers un agrégateur central de journaux.
 - Ecrire les logs en sortie standard

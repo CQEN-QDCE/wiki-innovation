@@ -7,7 +7,7 @@ Dans les environnements non basés sur le cloud, les applications Web sont souve
 Le principe du Port Binding affirme qu'un service ou une application est identifiable sur le réseau par un numéro de port, et non par un nom de domaine. 
 Les noms de domaine et les adresses IP associées peuvent être attribués à la volée par des manipulations manuelles et des mécanismes automatisés de découverte de services. Leur utilisation comme point de référence n'est donc pas fiable. En revanche, l'exposition d'un service ou d'une application au réseau en fonction du numéro de port est plus fiable et plus facile à gérer. Au minimum, les problèmes potentiels dus à une collision entre l'attribution d'un numéro de port privé au réseau et l'utilisation publique de ce même numéro de port par un autre processus public peuvent être évités en utilisant la redirection de port.
 
-![](./images/port_binding.png)
+![](../images/port_binding.png)
 
 Sur le plan architectural, il est recommandé que les services exposent un numéro de port, spécifié par la variable d'environnement PORT.
 

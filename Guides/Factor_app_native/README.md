@@ -29,7 +29,7 @@ Voici le tableau suivant met en évidence la méthodologie de Twelve-Factor selo
 | Facteur   |      Explication  |
 |----------|:-------------:|
 | [1 - Base de code](./factors_app/base_code.md) | Base de code unique pour chaque microservice, stockée dans son propre référentiel. Suivi avec contrôle de version, il peut être déployé sur plusieurs environnements (qa, préproduction, production).  |
-| [2 - Dépendances](./factors_app/dependances.md) |   Chaque microservice isole et empaquette ses propres dépendances, en adoptant les modifications sans avoir d’impact sur l’ensemble du système.    |
+| [2 - Dépendances](./factors_app/dependances.md) |  Chaque microservice isole et empaquette ses propres dépendances, en adoptant les modifications sans avoir d’impact sur l’ensemble du système.    |
 | [3 - Configurations](./factors_app/configurations.md)	 | Les informations de configuration sont déplacées hors du microservice et externalisées par le biais d’un outil de gestion de la configuration en dehors du code. Le même déploiement peut se propager entre les environnements avec la configuration appropriée appliquée. |
 | [4 - Services de stockage](./factors_app/stockage.md) | Les ressources auxiliaires (magasins de données, caches, répartiteurs de messages) doivent être exposées via une URL adressable. Cela dissocie la ressource de l’application, ce qui lui permet d’être interchangeable. |
 | [5 - Build, Release, Run](./factors_app/cicd.md) | Chaque version doit appliquer une séparation stricte entre les étapes de génération, de mise en œuvre et d’exécution. Chacun doit être étiqueté avec un ID unique et prendre en charge la possibilité de restaurer. Les systèmes CI/CD modernes permettent de répondre à ce principe. |

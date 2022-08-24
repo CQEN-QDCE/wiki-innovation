@@ -8,7 +8,7 @@ la phase de la compilation qui transforme le code en un paquet exécutable/un pa
 la phase du release qui envoie le résultat de cette build sur l’environnement cible, et qui récupère le paquet de construction de l'étape de construction et le combine avec les configurations de l'environnement de déploiement et rend votre application prête à fonctionner.
 la phase de l'exécution qui lance le ou les processus de l’application, ou plutot c'est comme si vous exécutiez votre application dans l'environnement d'exécution.
 
-![](./images/build_release_run.png)
+![](../images/build_release_run.png)
 
 
 Chaque étape doit donner lieu à un artefact à identifiant unique. Chaque déploiement doit être associé à une release spécifique qui est le produit de la combinaison d'une configuration d'environnement et d'une version. Cela permet de réduire le temps d’indisponibilité de l’applicatif car la phase de build, est souvent une longue opération et peut se faire en parallèle de l’exécution de l’ancienne application sur l’environnement cible.

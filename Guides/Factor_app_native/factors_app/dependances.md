@@ -8,7 +8,7 @@ Les dépendances (librairies, outils, …) doivent être décrites explicitement
 
 Vous devez également isoler une application et ses dépendances en les rassemblant dans un conteneur. Les conteneurs vous permettent d'isoler une application et ses dépendances de son environnement, et de garantir le fonctionnement uniforme de l'application malgré les différences entre les environnements de développement et de préproduction.
 
-![](./images/dependances.png)
+![](../images/dependances.png)
 
 
 Tous les paquets de l'application seront gérés par des gestionnaires de paquets comme sbt, maven.
