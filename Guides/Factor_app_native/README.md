@@ -13,7 +13,7 @@ Commençons par une définition simple fournit par [Microsoft](https://docs.micr
 
 La vitesse et l’agilité du cloud natif dérivent de nombreux facteurs. Avant tout, l’infrastructure cloud. Mais il y en a plus : cinq autres piliers fondamentaux présentés dans la figure ci-apres fournissent également le fondement des systèmes natifs cloud.
 
-![](./images/cloud_native_foundational_pillars.png)
+![](./images/cloud_native_foundational_pillars.png) 
 
 Une de ces pelier comme vous avez vu dans la figure au-desous est Conception moderne pour cela nous pourrons avoir plusieur question:
 Comment concevez-vous une application native cloud ? À quoi ressemble votre architecture ? À quels principes, modèles et bonnes pratiques adhéreriez-vous ? Quelles sont les préoccupations liées à l’infrastructure et aux opérations ?
