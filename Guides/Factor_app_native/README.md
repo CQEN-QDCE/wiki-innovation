@@ -8,6 +8,7 @@ Commençons par une définition simple fournit par [Microsoft](https://docs.micr
 [Cloud Native Computing Foundation](https://www.cncf.io/) fournit la [définition officielle](https://github.com/cncf/foundation/blob/main/charter.md) :
 
 "Les technologies natives cloud permettent aux organisations de créer et d’exécuter des applications évolutives dans des environnements modernes, dynamiques tels que des clouds publics, privés et hybrides. Les conteneurs, les maillages de service, les microservices, l’infrastructure immuable et les API déclaratives illustrent cette approche."
+
 "Ces techniques permettent des systèmes faiblement couplés qui sont résilients, gérables et observables. Combinés à une automatisation robuste, ils permettent aux ingénieurs d’apporter des modifications à fort impact fréquemment et prévisibles avec un minimum de peine."
 
 La vitesse et l’agilité du cloud natif dérivent de nombreux facteurs. Avant tout, l’infrastructure cloud. Mais il y en a plus : cinq autres piliers fondamentaux présentés dans la figure ci-apres fournissent également le fondement des systèmes natifs cloud.
