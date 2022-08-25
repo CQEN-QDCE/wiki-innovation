@@ -20,6 +20,9 @@ Vous trouverez ci-dessous un exemple d'affichage de l'éditeur Swagger. Jetez-y 
 
 ![](../images/swagger.png)
 
+Vous pourrez jeter un coup d'œil à la vision du CEAI de [l'architecture API-First native](https://github.com/CQEN-QDCE/ceai-cqen-documentation/blob/main/Patrons/architecture_api.md) dans l'infonuagique.
+
+
 [Le facteur suivant](./telemetrie.md)
 
 [Le tableau de la méthodologie de Twelve-Factor](../README.md)
