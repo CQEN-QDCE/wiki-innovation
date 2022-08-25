@@ -1,6 +1,6 @@
 ## 12. Processus d'administration
 
-"Exécuter les tâches d'administration et de maintenance en tant que processus ponctuels"
+> Exécuter les tâches d'administration et de maintenance en tant que processus ponctuels.
 
 Les processus d'administration sont généralement constitués de tâches ponctuelles ou récurrentes, telles que la création de rapports, l'exécution de scripts batch, le démarrage de sauvegardes de bases de données et la migration de schémas. Le facteur relatif aux processus d'administration du manifeste des douze facteurs a été rédigé en prenant en compte les tâches ponctuelles. Pour les applications cloud natives, ce facteur devient plus pertinent lors de la création de tâches récurrentes. Par ailleurs, les instructions de cette section sont orientées vers ce type de tâche.
 
@@ -21,6 +21,17 @@ De cette façon, vos microservices peuvent se concentrer sur la logique métier.
 - Exécuter des scripts ponctuels (comme la sauvegarde d'une base de données) dans le même environnement et la même configuration que l'application. Cela peut être fait avec Docker en utilisant les commandes docker exec ou kubectl exec.
 -  Stockez les scripts d'administration dans le même contrôle de version que l'application pour éviter les problèmes de synchronisation.
 - Le traitement doit être exécuté dans un conteneur séparé
+
+### Exemples de cas d’utilisation
+
+
+- Lancer les migrations de base de données (par ex. manage.py migrate avec Django, rake db:migrate avec Rails).
+- Lancer une console (également appelée terminal REPL) pour exécuter du code arbitraire ou inspecter les modèles de l’application dans la base de données. La plupart des langages fournissent un terminal REPL en lançant l’interpréteur sans arguments (par exemple python ou perl), ou dans certains cas à l’aide d’une commande dédiée (par ex. irb pour Ruby, rails console pour Rails).
+- Exécuter des scripts ponctuels inclus dans le dépôt de code (par ex. php scripts/fix_bad_records.php).
+- Pour exécuter des applications sur GKE, démarrez des conteneurs distincts pour les tâches d'administration. Vous pouvez exploiter les tâches Cron dans un cluster. Les tâches Cron s'exécutent dans des conteneurs éphémères et vous permettent de contrôler la durée, la fréquence d'exécution et les nouvelles tentatives si les tâches échouent ou prennent trop de temps.
+
+
+La même technique d’isolation de dépendances doit être utilisée sur tous les types de processus. Par exemple, si le processus web de Ruby utilise la commande bundle exec thin start, alors une migration de base de données devrait être faite via bundle exec rake db:migrate. De la même manière, un programme Python qui utilise Virtualenv devrait utiliser la commande incluse bin/python pour lancer à la fois le serveur web Tornado et tout processus administrateur manage.py.
 
 
 [Le facteur suivant](api_first.md)

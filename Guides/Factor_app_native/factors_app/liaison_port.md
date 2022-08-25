@@ -1,6 +1,6 @@
 ## 7. Association de ports
 
-"Exportez les services via des associations de ports"
+> Exportez les services via des associations de ports.
 
 Dans les environnements non basés sur le cloud, les applications Web sont souvent conçues pour s'exécuter dans des conteneurs d'applications tels que Apache Tomcat et le serveur HTTP Apache. En revanche, les applications douze facteurs ne reposent pas sur des conteneurs d'applications externes. Au lieu de cela, elles intègrent la bibliothèque du serveur Web directement dans l'application.
 
@@ -16,6 +16,22 @@ Les applications qui exportent l'association de ports peuvent consommer les info
 - Configurer le port avec la variable d'environnement server.port.
 - Vous ne devez pas coder en dur les numéros de port dans votre code. Indiquez plutôt les numéros de port dans l'environnement, par exemple dans une variable d'environnement.
 
+### Exemples de cas d’utilisation
+
+Au lieu de coder en dur le port sur lequel le serveur Web écoute, la configuration utilise une variable d'environnement. L'extrait de code suivant, issu d'une application App Engine, indique comment accepter une valeur de port transmise dans une variable d'environnement.
+
+
+const express = require('express')
+const request = require('got')
+
+const app = express()
+app.enable('trust proxy')
+
+const PORT = process.env.PORT || 8080
+app.listen(PORT, () => {
+  console.log('App listening on port ${PORT}')
+  console.log('Press Ctrl+C to quit.')
+})
 
 [Le facteur suivant](./concurrence.md)
 

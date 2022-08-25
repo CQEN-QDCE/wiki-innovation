@@ -1,6 +1,6 @@
 ## 5. Build, release, run (CI/CD)
 
-"Étapes de construction et d'exécution strictement séparées".
+> Étapes de construction et d'exécution strictement séparées.
 
 
 Il est important de séparer le processus de déploiement logiciel en trois phases: 
@@ -19,6 +19,12 @@ Nous recommandons l'utilisation d'un outil d'intégration continue/de livraison 
 - Les builds sont déclenchés par un changement de code. Avec les microservices, cela doit être automatisé et cette automatisation vit dans le contrôle de source avec l'application.
 - Les builds aboutissent à une version avec un identifiant de version unique qui peut être facilement référencé dans l'étape "Run".
 - Vous pouvez mettre à l'échelle une version existante ou revenir à une version précédente sans avoir besoin d'une nouvelle construction ou d'une nouvelle version. Ceci peut être facilement géré avec un outil comme Kubernetes.
+
+### Exemples de cas d’utilisation
+
+Chaque release devrait toujours avoir un identifiant unique, comme un horodatage (timestamp) de la release (tel que 2011-04-06-20:32:17) ou un nombre incrémental (tel que v100). La liste des releases est accessible en écriture incrémentale uniquement, et il n’est pas possible de modifier une release une fois qu’elle a été réalisée. Tout changement doit créer une nouvelle release.
+
+
 
 
 [Le facteur suivant](./processus.md)

@@ -7,5 +7,16 @@ Les applications natives du cloud peuvent sécuriser leurs points d'extrémité 
 
 MicroProfile JWT (JSON Web Token), un mécanisme d'authentification par jeton pour authentifier, autoriser et vérifier les utilisateurs, peut être une API Java open source utile pour activer ce facteur. Un jeton Web JSON (JWT) est un jeton autonome conçu pour transmettre en toute sécurité des informations sous forme d'objet JSON. Les informations contenues dans cet objet JSON sont signées numériquement et peuvent être reconnues et vérifiées par le destinataire. Pour les microservices, un mécanisme d'authentification basé sur des jetons offre un moyen léger pour les contrôles de sécurité et les jetons de sécurité de propager les identités des utilisateurs à travers différents services. JWT est en train de devenir le format de jeton le plus courant car il suit des normes bien définies et connues. Les normes JWT de MicroProfile définissent le format requis de JWT pour l'authentification et l'autorisation. Les normes font également correspondre les revendications JWT à diverses API de conteneurs Jakarta EE et rendent l'ensemble des revendications disponibles par le biais de méthodes getter.
 
+Exemple:
+
+DOS, DDOS protection
+API should be secured using A&A – API token, RBAC, OAuth
+Web content should be exposed externally on HTTPS
+Network should have firewall protection
+API request/response payloads should be encrypted
+Firewall and router level security should be in place
+Database protection
+MFA (Mutii-factor authentication)
+
 
 [Le tableau de la méthodologie de Twelve-Factor](../README.md)

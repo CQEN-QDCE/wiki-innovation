@@ -1,5 +1,5 @@
 ## 1. Codebase
-"Une base de code suivie avec un système de contrôle de version, plusieurs déploiements"
+> Une base de code suivie avec un système de contrôle de version, plusieurs déploiements.
 
 Le premier principe de la méthodologie est lié à la base de code de votre application. Une base de code suivie avec un système de contrôle de version, elle est utilisée pour plusieurs déploiements de l’application : prod, pre-prod, dev.
 Le point le plus important ici est de s'assurer que votre application est suivie et qu'elle se trouve dans un dépot central accessible à vos développeurs grâce à des outils tels que Git, Mercurial ou SVN.
@@ -21,7 +21,8 @@ De plus, nous recommandons fortement l'utilisation de Git comme référentiel, e
 - Utilisez une gestion des dépendances appropriée à votre langue pour les bibliothèques partagées entre les projets. Pour Java, Gradle ou Maven sont populaires : pom.xml
 - Attachez vos dépendances à une version afin d'éviter que les choses ne changent sous vos pieds entre deux constructions.
 avec les accès dont vous avez besoin. 
-Exemple:
+
+### Exemples de cas d’utilisation
 
 Github, Mercurial, SVN
 

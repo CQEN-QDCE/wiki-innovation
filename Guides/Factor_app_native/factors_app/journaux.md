@@ -1,5 +1,5 @@
 ## 11. Journaux
-"Traiter les journaux comme des flux d'événements, ne pas gérer les fichiers journaux"
+> Traiter les journaux comme des flux d'événements, ne pas gérer les fichiers journaux.
 
 La journalisation applicative ou les journaux  d’évènements, permettant de stocker un historique des évènements attachés à un processus ou à un service externe qui tourne. Ces évènements sont horodatés et ordonnés en fonction du temps pour retracer le comportement d’une application. Dans une situation idéale, ces fichiers sont visibles par les développeurs dans leurs consoles locales et, en production, ils sont automatiquement capturés comme un flux d'événements et poussés dans un système consolidé en temps réel pour l'archivage à long terme et l'exploration de données. La meilleure solution serait de capter les erreurs puis de les envoyer à un service comme une notification d’erreur.
 
@@ -14,7 +14,14 @@ Dans les microservices, l'observabilité est le citoyen de première classe, c�
 - Ne supprimez pas ou ne faites pas tourner les logs. Conservez les données des logs pour des analyses futures
 - Les événements sont des flux d'événements structurés (par exemple, JSON).
 
+
+### Exemples de cas d’utilisation
+
 L'observabilité peut être obtenue en utilisant des outils APM (ELK, Newrelic, et d'autres outils) ou des outils d'agrégation de logs comme Splunk, logs, etc.
+
+Dans les déploiements de validation ou de production, les flux de chaque processus seront capturés par leur environnement d’exécution, assemblés avec les autres flux de l’application, et routés vers une ou plusieurs destinations pour un visionnage et un archivage de longue durée. Le lieu d’archivage n’est pas visible et ne peut être configuré par l’application : ils sont complètements gérés par l’environnement d’exécution. Des routeurs opensource de logs, (tel que Logplex et Fluentd) existent pour cela.
+
+Le flux d’événements d’une application peut être routé dans un fichier, ou surveillé en temps réel (avec tail) dans un terminal. Plus pertinent, les flux peuvent être envoyés vers un outil d’indexation et d’archivage des logs tel que Splunk, ou bien dans un entrepôt de données générique comme Hadoop/Hive
 
 
 [Le facteur suivant](./processus_administration.md)
