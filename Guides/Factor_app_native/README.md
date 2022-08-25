@@ -16,24 +16,26 @@ Ce document décrit la méthodologie de l'application douze facteurs et sa mise 
 Avant d'aborder le sujet des « 12 Factor app », il faut comprendre le Cloud Native.
 
 Commençons par une définition simple fournit par [Microsoft](https://docs.microsoft.com/en-us/dotnet/architecture/cloud-native/definition):
-"L’architecture et les technologies natives cloud sont une approche de la conception, de la construction et de l’exploitation des charges de travail intégrées au cloud et tirent pleinement parti du modèle de cloud computing."
+
+`L’architecture et les technologies natives cloud sont une approche de la conception, de la construction et de l’exploitation des charges de travail intégrées au cloud et tirent pleinement parti du modèle de cloud computing.`
 
 [Cloud Native Computing Foundation](https://www.cncf.io/) fournit la [définition officielle](https://github.com/cncf/foundation/blob/main/charter.md) :
 
-"Les technologies natives cloud permettent aux organisations de créer et d’exécuter des applications évolutives dans des environnements modernes, dynamiques tels que des clouds publics, privés et hybrides. Les conteneurs, les maillages de service, les microservices, l’infrastructure immuable et les API déclaratives illustrent cette approche."
+`Les technologies natives cloud permettent aux organisations de créer et d’exécuter des applications évolutives dans des environnements modernes, dynamiques tels que des clouds publics, privés et hybrides. Les conteneurs, les maillages de service, les microservices, l’infrastructure immuable et les API déclaratives illustrent cette approche.`
 
-"Ces techniques permettent des systèmes faiblement couplés qui sont résilients, gérables et observables. Combinés à une automatisation robuste, ils permettent aux ingénieurs d’apporter des modifications à fort impact fréquemment et prévisibles avec un minimum de peine."
+`Ces techniques permettent des systèmes faiblement couplés qui sont résilients, gérables et observables. Combinés à une automatisation robuste, ils permettent aux ingénieurs d’apporter des modifications à fort impact fréquemment et prévisibles avec un minimum de peine.`
 
 La vitesse et l’agilité du cloud natif dérivent de nombreux facteurs. Avant tout, l’infrastructure cloud. Mais il y en a plus : cinq autres piliers fondamentaux présentés dans la figure ci-apres fournissent également le fondement des systèmes natifs cloud.
 
 ![](./images/cloud_native_foundational_pillars.png) 
 
 Une de ces pelier comme vous avez vu dans la figure au-desous est Conception moderne pour cela nous pourrons avoir plusieur question:
+
 Comment concevez-vous une application native cloud ? À quoi ressemble votre architecture ? À quels principes, modèles et bonnes pratiques adhéreriez-vous ? Quelles sont les préoccupations liées à l’infrastructure et aux opérations ?
 
 Et pour répondre à ces questions, nous allons vous montrer La méthodologie 15 facteurs peut être appliquée à des applications écrites dans tout langage de programmation et toutes les plateformes, et qui utilisent tout type de services externes (base de données, file, cache mémoire, etc.)
 
-Le « 15 Factor app » est un manifeste qui propose 15 bonnes pratiques concernant le développement d’applications web. Ce manifeste, écrit par [Adam Wiggins](https://adamwiggins.com/) (co-fondateur d’Heroku), est né de ses observations et de son expérience dans le développement et le déploiement d’applications web.
+Le « 12 Factor app » est un manifeste qui propose 12 bonnes pratiques concernant le développement d’applications web. Ce manifeste, écrit par [Adam Wiggins](https://adamwiggins.com/) (co-fondateur d’Heroku), est né de ses observations et de son expérience dans le développement et le déploiement d’applications web.
 
 Cependant, la conception d'applications cloud natives modernes exige que vous changiez de vision en termes d'ingénierie, de configuration et de déploiement logiciel, par rapport à la conception d'applications sur site. Ce document vous explique comment appliquer les quanze facteurs à votre conception d'applications.
 
