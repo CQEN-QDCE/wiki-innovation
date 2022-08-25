@@ -7,26 +7,24 @@ Toute application moderne requiert une configuration, d'une forme ou d'une autre
 ![](../images/configuration.png)
 
 
-Dans un environnement de service microservice, vous pouvez gérer les configurations de vos applications à partir d'un contrôle de source comme git (spring-cloud-config) et utiliser les variables d'environnement pour ne pas maintenir les informations sensibles dans le contrôle de source.
+Dans un environnement de service microservice, vous pouvez gérer les configurations de vos applications à partir d'un contrôle de source comme `Git` et utiliser les variables d'environnement pour ne pas maintenir les informations sensibles dans le contrôle de source. Et vous ne construisez qu'une seule fois pour les déploiements dans tous vos environnements. Et en plus les services peuvent être reconfigurés dynamiquement sans recompilation (par exemple en changeant les paramètres)
 
 ### Nous recommandons les pratiques spécifiques suivantes :
 
-- Utilisez des fichiers .env non contrôlés par version pour le développement local. Docker prend en charge le chargement de ces fichiers au moment de l'exécution.
-- Conservez tous les fichiers .env dans un système de stockage sécurisé, tel que Vault, afin que les fichiers soient disponibles pour les équipes de développement, mais non commités dans Git.
+- Utilisez des fichiers `.env` non contrôlés par version pour le développement local. `Docker` prend en charge le chargement de ces fichiers au moment de l'exécution.
+- Conservez tous les fichiers `.env` dans un système de stockage sécurisé, tel que `Vault`, afin que les fichiers soient disponibles pour les équipes de développement, mais non commités dans `Git`.
 - Utilisez une variable d'environnement pour tout ce qui peut changer au moment de l'exécution, et pour tout secret qui ne doit pas être commité dans le référentiel partagé.
-- Une fois que vous avez déployé votre application sur une plate-forme de livraison, utilisez le mécanisme de gestion des variables d'environnement de cette plate-forme.
-- N'utilisez pas la configuration interne de l’application, tel que config/routes.rb avec Rails
-- N'utilisez pas des fichiers de configuration qui ne sont pas inclus dans le système de contrôle de version, par exemple config/database.yml de Rails.
+- Une fois que vous avez déployé votre application sur une plateforme de livraison, utilisez le mécanisme de gestion des variables d'environnement de cette plateforme.
+- N'utilisez pas la configuration interne de l’application, tel que `config/routes.rb` avec `Rails`
+- N'utilisez pas des fichiers de configuration qui ne sont pas inclus dans le système de contrôle de version, par exemple `config/database.yml` de `Rails`.
 
 L'avantage de séparer les paramètres de configuration de la logique applicative est que vous pouvez appliquer les paramètres de configuration en fonction du chemin de déploiement. Par exemple, vous pouvez avoir un ensemble de paramètres de configuration pour un déploiement destiné à un environnement de test et un ensemble différent pour un déploiement destiné à un environnement de production.
 
 - Externaliser la configuration avec des variables d'environnement.
 - Tous les paramètres de configuration sont transmis via des variables d'environnement et ne sont pas codés en dur.
-- Vous ne construisez qu'une seule fois pour les déploiements dans tous vos environnements.
-- Les services peuvent être reconfigurés dynamiquement sans recompilation (par exemple en changeant les paramètres)
-- Les secrets sont transmis à l'aide de méthodes sécurisées telles que Docker Secrets, AWS secret Manager, Terraform secret ou Kubernetes Secrets et aucun secret n'est stocké dans le contrôle de version.
+- Les secrets sont transmis à l'aide de méthodes sécurisées telles que `Docker Secrets`, `AWS secret Manager`, `Terraform secret` ou `Kubernetes Secrets` et aucun secret n'est stocké dans le contrôle de version.
 
-Le changement d’environnement est aussi simple que de modifier le fichier env lui-même. Vous pouvez stocker plusieurs fichiers sous les noms .env.dev, .env.prod, .env.uat, etc., et configurer votre code source pour qu’il accède à ces fichiers en fonction de l’environnement dans lequel il est exécuté.
+Le changement d’environnement est aussi simple que de modifier le fichier env lui-même. Vous pouvez stocker plusieurs fichiers sous les noms `.env.dev`, `.env.prod`, etc., et configurer votre code source pour qu’il accède à ces fichiers en fonction de l’environnement dans lequel il est exécuté.
 
 ### Exemples de cas d’utilisation
 
@@ -38,7 +36,7 @@ Maintenant que vous avez une idée claire du fonctionnement des variables d’en
 - Clés privées : Les clés des services et ressources payants doivent être isolées du code source de l’application afin qu’elles ne tombent pas accidentellement dans de mauvaises mains.
 - Numéros de compte de service, etc : Vous pouvez varier d’autres informations spécifiques au système, telles que les numéros de compte de service, les keytabs, etc., en fonction de l’environnement de l’application pour la gestion et la surveillance des ressources.
 
-Les fichiers .env stockent les secrets de votre application sous la forme de paires clé-valeur. Le format habituel pour stocker les variables d’environnement dans un fichier .env est le suivant :
+Les fichiers `.env` stockent les secrets de votre application sous la forme de paires clé-valeur. Le format habituel pour stocker les variables d’environnement dans un fichier `.env` est le suivant :
 
 ```
 Clé1=Valeur1

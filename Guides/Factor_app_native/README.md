@@ -1,3 +1,16 @@
+<!-- ENTETE -->
+[![img](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://www.quebec.ca/gouv/politiques-orientations/vitrine-numeriqc/accompagnement-des-organismes-publics/demarche-conception-services-numeriques)
+[![License](https://img.shields.io/badge/Licence-LiLiQ--P-blue)](https://github.com/CQEN-QDCE/.github/blob/main/LICENCE.md)
+
+---
+
+<div>
+    <img src="https://github.com/CQEN-QDCE/.github/blob/main/images/mcn.png" />
+</div>
+<!-- FIN ENTETE -->
+
+## Introduction 
+
 Ce document décrit la méthodologie de l'application douze facteurs et sa mise en œuvre lors du développement d'applications exécutées sur l'infrastruture au CEAI. Cette méthodologie permet de créer des applications évolutives et robustes qui peuvent être déployées en continu avec une agilité optimale.
 
 Avant d'aborder le sujet des « 12 Factor app », il faut comprendre le Cloud Native.
@@ -20,12 +33,13 @@ Comment concevez-vous une application native cloud ? À quoi ressemble votre arc
 
 Et pour répondre à ces questions, nous allons vous montrer La méthodologie 15 facteurs peut être appliquée à des applications écrites dans tout langage de programmation et toutes les plateformes, et qui utilisent tout type de services externes (base de données, file, cache mémoire, etc.)
 
-Le « 15 Factor app » est un manifeste qui propose 15 bonnes pratiques concernant le développement d’applications web. Ce manifeste, écrit par Adam Wiggins (co-fondateur d’Heroku), est né de ses observations et de son expérience dans le développement et le déploiement d’applications web.
+Le « 15 Factor app » est un manifeste qui propose 15 bonnes pratiques concernant le développement d’applications web. Ce manifeste, écrit par [Adam Wiggins](https://adamwiggins.com/) (co-fondateur d’Heroku), est né de ses observations et de son expérience dans le développement et le déploiement d’applications web.
 
 Cependant, la conception d'applications cloud natives modernes exige que vous changiez de vision en termes d'ingénierie, de configuration et de déploiement logiciel, par rapport à la conception d'applications sur site. Ce document vous explique comment appliquer les quanze facteurs à votre conception d'applications.
 
-Voici le tableau suivant met en évidence la méthodologie de Twelve-Factor selon [Microsoft](https://docs.microsoft.com/fr-ca/dotnet/architecture/cloud-native/definition#the-twelve-factor-application):
+Voici le tableau suivant met en évidence la méthodologie de douzes facteurs selon [Microsoft](https://docs.microsoft.com/fr-ca/dotnet/architecture/cloud-native/definition#the-twelve-factor-application):
 
+## Les 12 facteurs
 
 | Facteur   |      Explication  |
 |----------|:-------------:|
@@ -42,8 +56,34 @@ Voici le tableau suivant met en évidence la méthodologie de Twelve-Factor selo
 | [11 - Journalisation](./factors_app/journalisation.md)  | Traitez les journaux générés par les microservices en tant que flux d’événements. Traitez-les avec un agrégateur d’événements. Propagez les données de journal aux outils d’exploration de données/de gestion des journaux tels qu’Azure Monitor ou Splunk et finalement à l’archivage à long terme. |
 | [12 - Processus d’administration](./factors_app/processus_administration.md) | Exécutez des tâches d’administration/gestion, telles que le nettoyage des données ou l’analytique informatique, en tant que processus unique. Utilisez des outils indépendants pour appeler ces tâches à partir de l’environnement de production, mais séparément de l’application. |
 
+## Les trois nouveaux facteurs
+
 | Nouveau facteur   |      Explication  |
 |----------|:-------------:|
 | [13 - API First](./factors_app/api_first.md) | Faites tout un service. Supposons que votre code sera consommé par un client frontal, une passerelle ou un autre service. |
 | [14 - Télémétrie](./factors_app/telemetrie.md) | Sur une station de travail, vous disposez d’une visibilité approfondie sur votre application et son comportement. Dans le cloud, vous ne le faites pas. Assurez-vous que votre conception inclut la collection de données de supervision, spécifiques au domaine et d’intégrité/système. |
 | [15 - Authentification/autorisation](./factors_app/authentification.md) | Implémentez l’identité à partir du début. Envisagez les fonctionnalités RBAC (contrôle d’accès en fonction du rôle) disponibles dans les clouds publics. |
+
+
+## Références
+
+[Les 12 facteurs](https://12factor.net/fr/)
+
+[12-factor applications par IBM](https://developer.ibm.com/articles/creating-a-12-factor-application-with-open-liberty/) IBM - Par Grace Jansen, Mis à jour le 20 mai 2022 | Publié le 12 novembre 2021
+
+[Applications Java cloud natives à 15 facteurs par IBM](https://developer.ibm.com/articles/15-factor-applications) IBM - Par Grace Jansen, Mis à jour le 20 mai 2022 | Publié le 29 novembre 2021
+
+[Les 12 facteurs par CQEN](https://gitlab.forge.gouv.qc.ca/cqen/12facteurs)
+
+[Qu’est-ce que Cloud Native ?](https://docs.microsoft.com/fr-fr/dotnet/architecture/cloud-native/definition) Microsoft, Publié le 23 juin 2022
+
+[Développement d'applications douze facteurs sur Google Cloud](https://cloud.google.com/architecture/twelve-factor-app-development-on-gcp?hl=fr)
+
+[Un guide illustré des applications à 12 facteurs](https://www.redhat.com/architect/12-factor-app) RedHat - Par Bob Reselman, le 2 février 2021
+
+[Adapter l'application des douze facteurs aux microservices](https://www.nginx.com/blog/microservices-reference-architecture-nginx-twelve-factor-app/) Par Ben Horowitz de NGINX, Inc., le 28 juillet 2016
+
+[12-factor App : une excellente base de développement applicatif](https://scient.fr/12-factor-app-une-excellente-base-de-developpement-applicatif/) Le 14 février 2022
+
+[The 12-factor app : sont-ils toujours d’actualité ?](https://www.softfluent.fr/blog/the-12-factor-app-sont-ils-toujours-dactualite/) Par Christine Moronval
+

@@ -1,6 +1,6 @@
 ## 12. Processus d'administration
 
-> Exécuter les tâches d'administration et de maintenance en tant que processus ponctuels.
+> `Exécuter les tâches d'administration et de maintenance en tant que processus ponctuels.`
 
 Les processus d'administration sont généralement constitués de tâches ponctuelles ou récurrentes, telles que la création de rapports, l'exécution de scripts batch, le démarrage de sauvegardes de bases de données et la migration de schémas. Le facteur relatif aux processus d'administration du manifeste des douze facteurs a été rédigé en prenant en compte les tâches ponctuelles. Pour les applications cloud natives, ce facteur devient plus pertinent lors de la création de tâches récurrentes. Par ailleurs, les instructions de cette section sont orientées vers ce type de tâche.
 
@@ -25,11 +25,9 @@ De cette façon, vos microservices peuvent se concentrer sur la logique métier.
 
 ### Exemples de cas d’utilisation
 
-- Lancer les migrations de base de données (par ex. manage.py migrate avec Django, rake db:migrate avec Rails).
-- Lancer une console (également appelée terminal REPL) pour exécuter du code arbitraire ou inspecter les modèles de l’application dans la base de données. La plupart des langages fournissent un terminal REPL en lançant l’interpréteur sans arguments (par exemple python ou perl), ou dans certains cas à l’aide d’une commande dédiée (par ex. irb pour Ruby, rails console pour Rails).
-- Exécuter des scripts ponctuels inclus dans le dépôt de code (par ex. php scripts/fix_bad_records.php).
-- Vous pouvez exploiter les CronJob dans un cluster. Les CronJob s'exécutent dans des conteneurs éphémères et vous permettent de contrôler la durée, la fréquence d'exécution et les nouvelles tentatives si les Jobs échouent ou prennent trop de temps.
-
+- Lancer les migrations de base de données (par ex. `manage.py migrate` avec `Django`, `rake db:migrate` avec `Rails`).
+- Lancer une console (également appelée terminal) pour exécuter du code arbitraire ou inspecter les modèles de l’application dans la base de données. La plupart des langages fournissent un terminal `REPL` en lançant l’interpréteur sans arguments (par exemple `python`), ou dans certains cas à l’aide d’une commande dédiée (par ex. `irb` pour `Ruby`, `rails` console pour `Rails`) et exécuter des scripts ponctuels inclus dans le dépôt de code (par ex. `php scripts/fix_bad_records.php`).
+- Vous pouvez exploiter les CronJob dans un cluster. Les `CronJob` s'exécutent dans des conteneurs éphémères et vous permettent de contrôler la durée, la fréquence d'exécution et les nouvelles tentatives si les Jobs échouent ou prennent trop de temps.
 
 
 [Le facteur suivant](api_first.md)

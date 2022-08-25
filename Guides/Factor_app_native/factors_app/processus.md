@@ -13,7 +13,6 @@ Pour les microservices, le point important du facteur Processus est que votre ap
 - Créez des services sans état et stockez toutes les informations d'état en dehors de l'application, par exemple dans une base de données.
 - Tous les processus doivent exposer des health check endpoint (/healthz)
 - Ne doit pas dépendre d'un gestionnaire de processus (par exemple [pm2](https://pm2.keymetrics.io/))
-- Doit sortir non nul en cas d'erreur fatale
 - Les contrôles de santé ne doivent pas dépendre de la santé des services de soutien.
 - Ne nécessite pas d'exécution privilégiée (par exemple, root).
 

@@ -22,7 +22,7 @@ Les applications conçues avec des processus jetables et sans état sont bien pl
 
 Certaines structures clés de Kubernetes s'appliquent aux processus de scaling :
 
-- Autoscaling horizontal des pods (HPA). Kubernetes peut être configuré de façon à augmenter ou diminuer le nombre de pods exécutés dans le cluster en fonction de métriques standards ou personnalisées. Cela s'avère utile lorsque vous devez vous adapter à une charge variable sur votre cluster. L'exemple de fichier YAML HPA suivant montre comment configurer le scaling pour le déploiement en configurant jusqu'à 10 pods selon l'utilisation moyenne du processeur.
+- Autoscaling horizontal des pods `HPA`. Kubernetes peut être configuré de façon à augmenter ou diminuer le nombre de pods exécutés dans le cluster en fonction de métriques standards ou personnalisées. Cela s'avère utile lorsque vous devez vous adapter à une charge variable sur votre cluster. L'exemple de fichier `YAML` `HPA` suivant montre comment configurer le scaling pour le déploiement en configurant jusqu'à 10 pods selon l'utilisation moyenne du processeur.
 
 ```yml
 apiVersion: autoscaling/v2beta2
@@ -46,10 +46,10 @@ spec:
         averageUtilization: 60
 ```
 
-- Autoscaling des nœuds: En cas de demande accrue, vous devrez peut-être faire évoluer votre cluster de façon à ce qu'il accueille davantage de pods. Lorsque l'autoscaling est activé, AWS EKS par exemple assure le scaling automatique des nœuds lorsque des pods supplémentaires doivent être programmés et que les nœuds existants ne peuvent pas les gérer. Par contre AWS EKS réduit également le nombre de nœuds lorsque la charge sur le cluster diminue 
+- Autoscaling des nœuds: En cas de demande accrue, vous devrez peut-être faire évoluer votre cluster de façon à ce qu'il accueille davantage de pods. Lorsque l'autoscaling est activé, `AWS EKS` par exemple assure le scaling automatique des nœuds lorsque des pods supplémentaires doivent être programmés et que les nœuds existants ne peuvent pas les gérer. Par contre `AWS EKS` réduit également le nombre de nœuds lorsque la charge sur le cluster diminue 
 
 
-- Tâches (Jobs): Une tâche peut être définie de manière générale comme une action nécessitant l'exécution d'un ou de plusieurs pods. La tâche peut s'exécuter une seule fois ou ponctuellement selon un calendrier. Une fois la tâche terminée, les pods dans lesquels elle s'exécutait sont supprimés. Le fichier YAML qui configure la tâche spécifie les détails sur la gestion des erreurs, le parallélisme, la gestion des redémarrages, etc.
+- Tâches (`Jobs`): Une tâche peut être définie de manière générale comme une action nécessitant l'exécution d'un ou de plusieurs pods. La tâche peut s'exécuter une seule fois ou ponctuellement selon un calendrier. Une fois la tâche terminée, les pods dans lesquels elle s'exécutait sont supprimés. Le fichier `YAML` qui configure la tâche spécifie les détails sur la gestion des erreurs, le parallélisme, la gestion des redémarrages, etc.
 
 ```yml
 apiVersion: batch/v1
@@ -66,6 +66,7 @@ spec:
       restartPolicy: Never
   backoffLimit: 4
 ```
+
 
 [Le facteur suivant](./disposabilite.md)
 

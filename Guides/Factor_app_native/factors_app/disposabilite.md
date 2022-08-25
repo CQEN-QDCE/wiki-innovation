@@ -13,14 +13,14 @@ En outre, selon la plate-forme sur laquelle votre application est déployée, un
 ### Nous recommandons les pratiques spécifiques suivantes :
 
 - Empaquetez l'application dans une image de conteneur.
-- Réduire les temps de démarrage. Les temps de démarrage peuvent être réduits en utilisant Docker et en tirant parti de son système de superposition intégré. Envisagez également le lazy-loading ou d'autres pratiques pour réduire les temps.
+- Réduire les temps de démarrage. Les temps de démarrage peuvent être réduits en utilisant `Docker` et en tirant parti de son système de superposition intégré. Envisagez également le lazy-loading ou d'autres pratiques pour réduire les temps.
 - Mettez en place un arrêt progressif. Marquez le service comme hors ligne (plus de nouvelles demandes), terminez les demandes existantes, puis supprimez les services. Dans Kubernetes, cela se produit automatiquement pour vous.
 
 ### Exemples de cas d’utilisation
 
-L'utilisation du signal [SIGTERM](https://www.ibm.com/docs/en/aix/7.2?topic=management-process-termination) est pour lancer un arrêt. Par exemple, lorsque [AWS CloudWatch Event](https://docs.aws.amazon.com/fr_fr/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html) arrête une instance, il envoie normalement un signal STOP (SIGTERM) au conteneur de l'application. Votre application peut utiliser ce signal pour effectuer des actions de nettoyage avant l'arrêt du conteneur. (Votre application n'a pas besoin de répondre à l'événement SIGTERM.) Dans des conditions normales, le système attend jusqu'à 30 secondes que l'application s'arrête, puis envoie un signal KILL (SIGKILL).
+L'utilisation du signal [SIGTERM](https://www.ibm.com/docs/en/aix/7.2?topic=management-process-termination) est pour lancer un arrêt. Par exemple, lorsque [AWS CloudWatch Event](https://docs.aws.amazon.com/fr_fr/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html) arrête une instance, il envoie normalement un signal STOP (`SIGTERM`) au conteneur de l'application. Votre application peut utiliser ce signal pour effectuer des actions de nettoyage avant l'arrêt du conteneur. (Votre application n'a pas besoin de répondre à l'événement `SIGTERM`.) Dans des conditions normales, le système attend jusqu'à 30 secondes que l'application s'arrête, puis envoie un signal KILL (SIGKILL).
 
-L'extrait suivant issu vous montre comment intercepter le signal SIGTERM pour fermer les connexions de base de données ouvertes:
+L'extrait suivant issu vous montre comment intercepter le signal `SIGTERM` pour fermer les connexions de base de données ouvertes:
 
 ```js
 const express = require('express')

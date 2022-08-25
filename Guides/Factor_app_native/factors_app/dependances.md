@@ -11,7 +11,7 @@ Vous devez également isoler une application et ses dépendances en les rassembl
 ![](../images/dependances.png)
 
 
-### Nous recommandons les pratiques spécifiques suivantes :
+### Nous recommandons les bonnes pratiques spécifiques suivantes :
 
 - Toutes les dépendances sont déclarées explicitement à l'aide d'un manifeste de déclaration des dépendances, tel qu'un Dockerfile.
 - Votre application s'exécute de manière isolée afin d'éviter que les dépendances du système ne soient utilisées accidentellement, comme dans un conteneur Docker.
@@ -19,11 +19,10 @@ Vous devez également isoler une application et ses dépendances en les rassembl
 
 ### Exemples de cas d’utilisation
 
-- Déclarez toutes les dépendances dans pom.xml ou build.gradle.
-- Tous les paquets de l'application seront gérés par des gestionnaires de paquets comme sbt, maven.
-- Dans les environnements non conteneurisés, utilisez un outil de gestion de la configuration (Chef, Puppet, Ansible) pour installer les dépendances du système.
-- Dans un environnement conteneurisé, faites-le dans le Dockerfile.
-- Bundler pour Ruby fournit le format de manifeste Gemfile pour la déclaration des dépendances, ainsi que la commande bundle exec pour l’isolation des dépendances. En python, il y a deux outils séparés pour ces étapes – Pip est utilisé pour la déclaration et Virtualenv pour l’isolation. Même le C dispose d’Autoconf pour les déclarations de dépendances, et la liaison statique peut fournir l’isolation des dépendances. Peu importe la chaîne d’outils, la déclaration et l’isolation des dépendances doivent toujours être utilisées ensemble – seulement l’un ou l’autre ne suffit pas à satisfaire les 12 facteurs.
+- Tous les paquets de l'application seront gérés par des gestionnaires de paquets comme `sbt`, `maven`.
+- Dans les environnements non conteneurisés, utilisez un outil de gestion de la configuration (`Ansible`, `Chef`, `Puppet`) pour installer les dépendances du système.
+- La déclaration des dépendances dans un environnement conteneurisé, faites-le dans le `Dockerfile`.
+- `Bundler` pour `Ruby` fournit le format de manifeste `Gemfile` pour la déclaration des dépendances, ainsi que la commande bundle exec pour l’isolation des dépendances.
 
 
 [Le facteur suivant](./configurations.md)
