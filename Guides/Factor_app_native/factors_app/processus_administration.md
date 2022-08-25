@@ -6,7 +6,7 @@ Les processus d'administration sont généralement constitués de tâches ponctu
 
 Les conteneurs rendent cela très facile, car vous pouvez faire tourner un conteneur juste pour exécuter une tâche, puis l'arrêter.
 
-Les processus d'administration doivent respecter les règles suivantes:
+### Les processus d'administration doivent respecter les règles suivantes:
 
 - Ces scripts doivent partager le même chemin de déploiement et d’exécution de l’application de base et ne doivent pas être séparés du cycle de vie du développement. Cela signifie que pour une même base de code, on associe une même séquence de Build, Release et Run.
 - Afin d’éviter tout risque d’interférence avec les processus de production en cas de problème (fail ou potentiel impact de performances), les processus d’administration doivent être exécutés d’une manière séparée et isolés des autres processus de production. Il est préférable de démarrer de nouvelles instances d’exécution.
@@ -14,24 +14,22 @@ Les processus d'administration doivent respecter les règles suivantes:
 
 ![](../images/admin-processes.png)
 
-
 De cette façon, vos microservices peuvent se concentrer sur la logique métier. Cela permet également de déboguer et d'administrer en toute sécurité les applications de production et qui permet également d'exécuter les processus ponctuels comme une tâche et de les arrêter automatiquement une fois la mise en œuvre terminée.
+
+### Nous recommandons les pratiques spécifiques suivantes :
 
 - Créez des processus ponctuels en tant que points de terminaison d'API.
 - Exécuter des scripts ponctuels (comme la sauvegarde d'une base de données) dans le même environnement et la même configuration que l'application. Cela peut être fait avec Docker en utilisant les commandes docker exec ou kubectl exec.
 -  Stockez les scripts d'administration dans le même contrôle de version que l'application pour éviter les problèmes de synchronisation.
-- Le traitement doit être exécuté dans un conteneur séparé
+- La même technique d’isolation de dépendances doit être utilisée sur tous les types de processus.
 
 ### Exemples de cas d’utilisation
-
 
 - Lancer les migrations de base de données (par ex. manage.py migrate avec Django, rake db:migrate avec Rails).
 - Lancer une console (également appelée terminal REPL) pour exécuter du code arbitraire ou inspecter les modèles de l’application dans la base de données. La plupart des langages fournissent un terminal REPL en lançant l’interpréteur sans arguments (par exemple python ou perl), ou dans certains cas à l’aide d’une commande dédiée (par ex. irb pour Ruby, rails console pour Rails).
 - Exécuter des scripts ponctuels inclus dans le dépôt de code (par ex. php scripts/fix_bad_records.php).
-- Pour exécuter des applications sur GKE, démarrez des conteneurs distincts pour les tâches d'administration. Vous pouvez exploiter les tâches Cron dans un cluster. Les tâches Cron s'exécutent dans des conteneurs éphémères et vous permettent de contrôler la durée, la fréquence d'exécution et les nouvelles tentatives si les tâches échouent ou prennent trop de temps.
+- Vous pouvez exploiter les CronJob dans un cluster. Les CronJob s'exécutent dans des conteneurs éphémères et vous permettent de contrôler la durée, la fréquence d'exécution et les nouvelles tentatives si les Jobs échouent ou prennent trop de temps.
 
-
-La même technique d’isolation de dépendances doit être utilisée sur tous les types de processus. Par exemple, si le processus web de Ruby utilise la commande bundle exec thin start, alors une migration de base de données devrait être faite via bundle exec rake db:migrate. De la même manière, un programme Python qui utilise Virtualenv devrait utiliser la commande incluse bin/python pour lancer à la fois le serveur web Tornado et tout processus administrateur manage.py.
 
 
 [Le facteur suivant](api_first.md)

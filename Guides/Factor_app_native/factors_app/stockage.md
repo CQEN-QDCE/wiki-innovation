@@ -10,6 +10,8 @@ Par exemple, lorsque l'application écrit des données dans l'espace de stockage
 
 Dans un écosystème de microservices, tout ce qui est externe au service est traité comme une ressource attachée. La ressource peut être échangée à tout moment sans que cela ait un impact sur le service.
 
+### Nous recommandons les pratiques spécifiques suivantes :
+
 - Créez des services pluggable en utilisant des abstractions comme JPA.
 - Connexion aux ressources de sauvegarde via URL + secrets. 
 - Externaliser les informations de connexion dans la configuration externe. Comme dans helm values.yaml

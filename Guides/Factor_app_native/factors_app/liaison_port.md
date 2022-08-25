@@ -11,16 +11,18 @@ Les noms de domaine et les adresses IP associées peuvent être attribués à la
 
 Sur le plan architectural, il est recommandé que les services exposent un numéro de port, spécifié par la variable d'environnement PORT.
 
-Les applications qui exportent l'association de ports peuvent consommer les informations relatives à cette association en externe (en tant que variables d'environnement) lors de l'utilisation du modèle Platform as a Service. Dans Google Cloud, vous pouvez déployer des applications sur des services de plate-forme tels que Compute Engine, GKE, App Engine ou Cloud Run.
+Les applications qui exportent l'association de ports peuvent consommer les informations relatives à cette association en externe (en tant que variables d'environnement) lors de l'utilisation du modèle Platform as a Service.
+
+### Nous recommandons les pratiques spécifiques suivantes :
 
 - Configurer le port avec la variable d'environnement server.port.
 - Vous ne devez pas coder en dur les numéros de port dans votre code. Indiquez plutôt les numéros de port dans l'environnement, par exemple dans une variable d'environnement.
 
 ### Exemples de cas d’utilisation
 
-Au lieu de coder en dur le port sur lequel le serveur Web écoute, la configuration utilise une variable d'environnement. L'extrait de code suivant, issu d'une application App Engine, indique comment accepter une valeur de port transmise dans une variable d'environnement.
+Au lieu de coder en dur le port sur lequel le serveur Web écoute, la configuration utilise une variable d'environnement. L'extrait de code suivant, indique comment accepter une valeur de port transmise dans une variable d'environnement.
 
-
+```js
 const express = require('express')
 const request = require('got')
 
@@ -32,6 +34,8 @@ app.listen(PORT, () => {
   console.log('App listening on port ${PORT}')
   console.log('Press Ctrl+C to quit.')
 })
+```
+
 
 [Le facteur suivant](./concurrence.md)
 

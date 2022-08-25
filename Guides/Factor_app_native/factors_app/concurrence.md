@@ -8,7 +8,9 @@ Vous devez décomposer votre application en processus indépendants en fonction 
 
 Dans une architecture microservices, vous pouvez faire évoluer horizontalement chaque service indépendamment, dans la mesure où l'infrastructure sous-jacente le permet. Avec les services conteneurisés, vous bénéficiez en outre de la concurrence recommandée dans l'application à douze facteurs.
 
-Les sections suivantes décrivent certaines structures permettant l'évolutivité des applications. Les applications conçues avec des processus jetables et sans état sont bien placées pour bénéficier de ces conceptions de scaling horizontal.
+Les applications conçues avec des processus jetables et sans état sont bien placées pour bénéficier de ces conceptions de scaling horizontal.
+
+### Nous recommandons les pratiques spécifiques suivantes :
 
 - Construire de plus petites applications sans état (microservices).
 - L'application peut être exécutée un nombre illimité de fois en parallèle (par exemple, pas d'attente de verrouillage).
@@ -20,12 +22,13 @@ Les sections suivantes décrivent certaines structures permettant l'évolutivit�
 
 Certaines structures clés de Kubernetes s'appliquent aux processus de scaling :
 
-Autoscaling horizontal des pods (HPA). Kubernetes peut être configuré de façon à augmenter ou diminuer le nombre de pods exécutés dans le cluster en fonction de métriques standards ou personnalisées. Cela s'avère utile lorsque vous devez vous adapter à une charge variable sur votre cluster. L'exemple de fichier YAML HPA suivant montre comment configurer le scaling pour le déploiement en configurant jusqu'à 10 pods selon l'utilisation moyenne du processeur.
+- Autoscaling horizontal des pods (HPA). Kubernetes peut être configuré de façon à augmenter ou diminuer le nombre de pods exécutés dans le cluster en fonction de métriques standards ou personnalisées. Cela s'avère utile lorsque vous devez vous adapter à une charge variable sur votre cluster. L'exemple de fichier YAML HPA suivant montre comment configurer le scaling pour le déploiement en configurant jusqu'à 10 pods selon l'utilisation moyenne du processeur.
 
+```yml
 apiVersion: autoscaling/v2beta2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: my-sample-web-app-hpa
+  name: my-sample-web-app
   namespace: dev
 spec:
   scaleTargetRef:
@@ -41,12 +44,28 @@ spec:
       target:
         type: Utilization
         averageUtilization: 60
+```
+
+- Autoscaling des nœuds: En cas de demande accrue, vous devrez peut-être faire évoluer votre cluster de façon à ce qu'il accueille davantage de pods. Lorsque l'autoscaling est activé, AWS EKS par exemple assure le scaling automatique des nœuds lorsque des pods supplémentaires doivent être programmés et que les nœuds existants ne peuvent pas les gérer. Par contre AWS EKS réduit également le nombre de nœuds lorsque la charge sur le cluster diminue 
 
 
-Autoscaling des nœuds. En cas de demande accrue, vous devrez peut-être faire évoluer votre cluster de façon à ce qu'il accueille davantage de pods.
+- Tâches (Jobs): Une tâche peut être définie de manière générale comme une action nécessitant l'exécution d'un ou de plusieurs pods. La tâche peut s'exécuter une seule fois ou ponctuellement selon un calendrier. Une fois la tâche terminée, les pods dans lesquels elle s'exécutait sont supprimés. Le fichier YAML qui configure la tâche spécifie les détails sur la gestion des erreurs, le parallélisme, la gestion des redémarrages, etc.
 
-
-Tâches. GKE est compatible avec les tâches Kubernetes. Une tâche peut être définie de manière générale comme une action nécessitant l'exécution d'un ou de plusieurs pods. La tâche peut s'exécuter une seule fois ou ponctuellement selon un calendrier. Une fois la tâche terminée, les pods dans lesquels elle s'exécutait sont supprimés. Le fichier YAML qui configure la tâche spécifie les détails sur la gestion des erreurs, le parallélisme, la gestion des redémarrages, etc.
+```yml
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pi
+spec:
+  template:
+    spec:
+      containers:
+      - name: pi
+        image: perl:5.34.0
+        command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]
+      restartPolicy: Never
+  backoffLimit: 4
+```
 
 [Le facteur suivant](./disposabilite.md)
 

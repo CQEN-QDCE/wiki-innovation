@@ -2,7 +2,6 @@
 
 > Séparation stricte entre la configuration et le code et Stocker la config dans l'environnement.
 
-
 Toute application moderne requiert une configuration, d'une forme ou d'une autre. Les données de configuration vont plus porter sur des données sensibles telles que les mots de passe de la base de données ou les identifiants d’authentifications. Il est donc nécessaire de les protéger en les séparant du reste du code de l’application pour cela il existe généralement des configurations différentes en fonction des environnements cibles (développement, pre-prod et production, par exemple). Ces configurations incluent généralement des identifiants de compte de service et des descripteurs de ressources dans des services externes tels que des bases de données.
 
 ![](../images/configuration.png)
@@ -18,7 +17,6 @@ Dans un environnement de service microservice, vous pouvez gérer les configurat
 - Une fois que vous avez déployé votre application sur une plate-forme de livraison, utilisez le mécanisme de gestion des variables d'environnement de cette plate-forme.
 - N'utilisez pas la configuration interne de l’application, tel que config/routes.rb avec Rails
 - N'utilisez pas des fichiers de configuration qui ne sont pas inclus dans le système de contrôle de version, par exemple config/database.yml de Rails.
-
 
 L'avantage de séparer les paramètres de configuration de la logique applicative est que vous pouvez appliquer les paramètres de configuration en fonction du chemin de déploiement. Par exemple, vous pouvez avoir un ensemble de paramètres de configuration pour un déploiement destiné à un environnement de test et un ensemble différent pour un déploiement destiné à un environnement de production.
 
