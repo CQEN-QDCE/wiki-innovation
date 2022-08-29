@@ -9,9 +9,11 @@
 </div>
 <!-- FIN ENTETE -->
 
-# Amazon Web Service - AWS
+# Terraform
 
-## Questions - Réponses
+## Qu'est-ce que c'est terraform?
 
-## Exemples de déploiement
-- Une simple application web avec terraform: voir
+## Installation
+
+## Références
+- [Install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
