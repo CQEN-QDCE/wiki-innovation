@@ -1,6 +1,6 @@
 ## 15 - Authentification/autorisation
 
-L'ajout du facteur Authentification et autorisation met l'accent sur la sécurité des applications natives du nuage. Le déploiement d'applications dans un environnement en infonuagique signifie que les applications peuvent être transportées à travers de nombreux centres de données dans le monde entier, exécutées dans plusieurs conteneurs et accessibles à un nombre presque illimité de clients. Il est donc essentiel que la sécurité ne soit pas une réflexion après coup pour les applications natives en infonuagique et constitue un facteur très important à prendre en compte.
+L'ajout du facteur Authentification et autorisation met l'accent sur la sécurité des applications Cloud Native. Le déploiement d'applications dans un environnement en infonuagique signifie que les applications peuvent être transportées à travers de nombreux centres de données dans le monde entier, exécutées dans plusieurs conteneurs et accessibles à un nombre presque illimité de clients. Il est donc essentiel que la sécurité ne soit pas une réflexion après coup pour les applications natives en infonuagique et constitue un facteur très important à prendre en compte.
 Les applications natives du cloud peuvent sécuriser leurs points d'extrémité grâce au contrôle d'accès basé sur les rôles (RBAC). Ces rôles déterminent si le client appelant dispose d'une autorisation suffisante pour que l'application honore la demande et permettent de suivre l'auteur de la demande à des fins d'audit.
 
 ![](../images/authentification.png)
@@ -21,4 +21,4 @@ Pour les microservices, un mécanisme d'authentification basé sur des jetons of
 - MFA (authentification multifactor)
 
 
-[Le tableau de la méthodologie de Twelve-Factor](../README.md)
+[Le tableau de la méthodologie de 12 Facteurs](../README.md)

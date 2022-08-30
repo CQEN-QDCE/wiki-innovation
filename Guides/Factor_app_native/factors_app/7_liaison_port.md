@@ -37,6 +37,6 @@ app.listen(PORT, () => {
 ```
 
 
-[Le facteur suivant](./concurrence.md)
+[Le facteur suivant](./8_concurrence.md)
 
-[Le tableau de la méthodologie de Twelve-Factor](../README.md)
+[Le tableau de la méthodologie de 12 Facteurs](../README.md)

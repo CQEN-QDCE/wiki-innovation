@@ -22,6 +22,6 @@ Dans une architecture de microservices, l'approche correcte est chaque service d
 
 Nous recommandons fortement l'utilisation de Git comme référentiel, en raison de la richesse de ses fonctionnalités et de son énorme écosystème. [Github](https://github.com/CQEN-QDCE/ceai-cqen-documentation/tree/main/Guides/Github#github) est devenu la plateforme d'hébergement Git par défaut dans la communauté open source qui est une plateforme de collaboration et de contrôle de version destinée aux développeurs de logiciels, mais il existe de nombreuses autres excellentes options d'hébergement Git, en fonction des besoins de votre organisation.
 
-[Le facteur suivant](./dependances.md)
+[Le facteur suivant](./2_dependances.md)
 
-[Le tableau de la méthodologie de Twelve-Factor](../README.md)
+[Le tableau de la méthodologie de 12 Facteurs](../README.md)

@@ -24,7 +24,7 @@ Nous recommandons l'utilisation d'un outil d'intégration continue/de livraison 
 
 ### Exemples de cas d’utilisation
 
-Par exemple, une application native en infonuagique peut être une application web déployée via des conteneurs Docker et utiliser AWS Container Registry déployé sur les services `AWS EKS` de `Kubernetes` ou utiliser les services `AWS EC2`, `AWS Lambda` ou `AWS S3`.
+Par exemple, une application Cloud Native peut être une application web déployée via des conteneurs Docker et utiliser AWS Container Registry déployé sur les services `AWS EKS` de `Kubernetes` ou utiliser les services `AWS EC2`, `AWS Lambda` ou `AWS S3`.
 
 Le code ci-dessous est utilisé comme base de d'un [démo de `workflow` CI/CD](https://github.com/CQEN-QDCE/ceai-cqen-github-actions-demo#aws-pipeline) en utilisant AWS pipeline pour une application nodejs:
 
@@ -62,6 +62,6 @@ artifacts:
 - `npm start` est utilisé pour démarrer l'application.
 
 
-[Le facteur suivant](./processus.md)
+[Le facteur suivant](./6_processus.md)
 
-[Le tableau de la méthodologie de Twelve-Factor](../README.md)
+[Le tableau de la méthodologie de 12 Facteurs](../README.md)

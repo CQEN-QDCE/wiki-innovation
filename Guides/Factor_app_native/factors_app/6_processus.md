@@ -21,6 +21,6 @@ Pour les microservices, le point important du facteur Processus est que votre ap
 Des outils de création de paquets de ressources tel que django-compressor utilisent le système de fichier comme cache pour les ressources compilées. Une application 12 facteurs préfère faire cette compilation durant l’étape d’assemblage, comme avec le pipeline des ressources de Rails, plutôt que durant l’exécution. Et si vous souhaitez conserver des données, vous pouvez utiliser le service externe comme[ElastiCache](https://docs.aws.amazon.com/fr_fr/AmazonElastiCache/latest/red-ug/WhatIs.html) pour mettre en cache l'état de vos applications et partager des données communes entre les processus, en vue de favoriser les couplages faibles.
 
 
-[Le facteur suivant](./liaison_port.md)
+[Le facteur suivant](./7_liaison_port.md)
 
-[Le tableau de la méthodologie de Twelve-Factor](../README.md)
+[Le tableau de la méthodologie de 12 Facteurs](../README.md)

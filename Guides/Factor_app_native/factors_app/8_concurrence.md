@@ -68,6 +68,6 @@ spec:
 ```
 
 
-[Le facteur suivant](./disposabilite.md)
+[Le facteur suivant](./9_disposabilite.md)
 
-[Le tableau de la méthodologie de Twelve-Factor](../README.md)
+[Le tableau de la méthodologie de 12 Facteurs](../README.md)

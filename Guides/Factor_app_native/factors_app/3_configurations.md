@@ -2,12 +2,12 @@
 
 > Séparation stricte entre la configuration et le code et Stocker la config dans l'environnement.
 
-Toute application moderne requiert une configuration, d'une forme ou d'une autre. Les données de configuration vont plus porter sur des données sensibles telles que les mots de passe de la base de données ou les identifiants d’authentifications. Il est donc nécessaire de les protéger en les séparant du reste du code de l’application pour cela il existe généralement des configurations différentes en fonction des environnements cibles (développement, pre-prod et production, par exemple). Ces configurations incluent généralement des identifiants de compte de service et des descripteurs de ressources dans des services externes tels que des bases de données.
+Toute application moderne requiert une configuration, d'une forme ou d'une autre. Les données de configuration vont plus porter sur des données sensibles telles que les mots de passe de la base de données ou les identifiants d’authentifications. Il est donc nécessaire de les protéger en les séparant du reste du code de l’application pour cela il existe généralement des configurations différentes en fonction des environnements cibles (développement, pre-prod et production, par exemple).
 
 ![](../images/configuration.png)
 
 
-Dans un environnement de service microservice, vous pouvez gérer les configurations de vos applications à partir d'un contrôle de source comme `Git` et utiliser les variables d'environnement pour ne pas maintenir les informations sensibles dans le contrôle de source. Et vous ne construisez qu'une seule fois pour les déploiements dans tous vos environnements. Et en plus les services peuvent être reconfigurés dynamiquement sans recompilation (par exemple en changeant les paramètres)
+Dans un environnement de microservices, vous pouvez gérer les configurations de vos applications à partir d'un contrôle de source comme `Git` et utiliser les variables d'environnement pour ne pas maintenir les informations sensibles dans le contrôle de source. Et vous ne construisez qu'une seule fois pour les déploiements dans tous vos environnements. Et en plus les services peuvent être reconfigurés dynamiquement sans recompilation (par exemple en changeant les paramètres)
 
 ### Nous recommandons les pratiques spécifiques suivantes :
 
@@ -42,6 +42,6 @@ Les fichiers `.env` stockent les secrets de votre application sous la forme de p
 Clé1=Valeur1
 ```
 
-[Le facteur suivant](./stockage.md)
+[Le facteur suivant](./4_stockage.md)
 
-[Le tableau de la méthodologie de Twelve-Factor](../README.md)
+[Le tableau de la méthodologie de 12 Facteurs](../README.md)

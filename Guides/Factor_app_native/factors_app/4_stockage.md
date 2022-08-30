@@ -25,6 +25,6 @@ Dans un écosystème de microservices, tout ce qui est externe au service est tr
 Un déploiement d’une application douze facteurs doit pouvoir remplacer une base de données `MySQL` locale par une autre gérée par des tiers ([`AWS RDS`](https://aws.amazon.com/fr/rds/) par exemple) sans le moindre changement dans le code de l’application. De la même manière, un serveur `SMTP` local doit pouvoir être remplacé par un service tiers ([`Amazon SES`](https://aws.amazon.com/fr/ses/) par exemple) sans changements dans le code. Dans les deux cas, seules les informations de configurations doivent changer.
 
 
-[Le facteur suivant](./cicd.md)
+[Le facteur suivant](./5_cicd.md)
 
-[Le tableau de la méthodologie de Twelve-Factor](../README.md)
+[Le tableau de la méthodologie de 12 Facteurs](../README.md)

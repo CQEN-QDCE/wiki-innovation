@@ -24,6 +24,6 @@ Dans les déploiements de validation ou de production, les flux de chaque proces
 Le flux d’événements d’une application peut être routé dans un fichier, ou surveillé en temps réel (avec tail) dans un terminal. Plus pertinent, les flux peuvent être envoyés vers un outil d’indexation et d’archivage des logs tel que Splunk, ou bien dans un entrepôt de données générique comme [Hadoop/Hive](https://hadoop.apache.org/)
 
 
-[Le facteur suivant](./processus_administration.md)
+[Le facteur suivant](./12_processus_administration.md)
 
-[Le tableau de la méthodologie de Twelve-Factor](../README.md)
+[Le tableau de la méthodologie de 12 Facteurs](../README.md)

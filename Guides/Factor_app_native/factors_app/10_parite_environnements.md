@@ -31,6 +31,6 @@ De nombreuses applications s'exécutant désormais dans l'infonuagique, interagi
 `NODE_CONFIG` est utilisé avec parcimonie, et uniquement pour charger des fichiers de configuration spécifiques à l'environnement.
 
 
-[Le facteur suivant](./journaux.md)
+[Le facteur suivant](./11_journaux.md)
 
-[Le tableau de la méthodologie de Twelve-Factor](../README.md)
+[Le tableau de la méthodologie de 12 Facteurs](../README.md)

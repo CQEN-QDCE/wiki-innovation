@@ -30,6 +30,6 @@ De cette façon, vos microservices peuvent se concentrer sur la logique métier.
 - Vous pouvez exploiter les CronJob dans un cluster. Les `CronJob` s'exécutent dans des conteneurs éphémères et vous permettent de contrôler la durée, la fréquence d'exécution et les nouvelles tentatives si les Jobs échouent ou prennent trop de temps.
 
 
-[Le facteur suivant](api_first.md)
+[Le facteur suivant](13_api_first.md)
 
-[Le tableau de la méthodologie de Twelve-Factor](../README.md)
+[Le tableau de la méthodologie de 12 Facteurs](../README.md)

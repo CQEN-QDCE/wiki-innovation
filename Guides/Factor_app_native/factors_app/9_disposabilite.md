@@ -40,6 +40,6 @@ process.on('SIGTERM', () => {
 ```
 
 
-[Le facteur suivant](./parite_environnements.md)
+[Le facteur suivant](./10_parite_environnements.md)
 
-[Le tableau de la méthodologie de Twelve-Factor](../README.md)
+[Le tableau de la méthodologie de 12 Facteurs](../README.md)

@@ -25,6 +25,6 @@ Vous devez également isoler une application et ses dépendances en les rassembl
 - `Bundler` pour `Ruby` fournit le format de manifeste `Gemfile` pour la déclaration des dépendances, ainsi que la commande bundle exec pour l’isolation des dépendances.
 
 
-[Le facteur suivant](./configurations.md)
+[Le facteur suivant](./3_configurations.md)
 
-[Le tableau de la méthodologie de Twelve-Factor](../README.md)
+[Le tableau de la méthodologie de 12 Facteurs](../README.md)
