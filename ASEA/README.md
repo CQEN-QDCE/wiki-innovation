@@ -1,3 +1,14 @@
+<!-- ENTETE -->
+[![img](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://www.quebec.ca/gouv/politiques-orientations/vitrine-numeriqc/accompagnement-des-organismes-publics/demarche-conception-services-numeriques)
+[![License](https://img.shields.io/badge/Licence-LiLiQ--P-blue)](https://github.com/CQEN-QDCE/.github/blob/main/LICENCE.md)
+
+---
+
+<div>
+    <img src="https://github.com/CQEN-QDCE/.github/blob/main/images/mcn.png" />
+</div>
+<!-- FIN ENTETE -->
+
 # AWS Secure Environment Accelerator (ASEA)
 
 Le CEAI déploie son infrastructure infonuagique chez AWS. Le CEAI a utilisé l'outil AWS Secure Environment Accelerator qui lui a permis de déployer rapidement une architecture AWS multi-comptes, multi-régions sécuritaire et automatisé. 
@@ -33,3 +44,13 @@ Le pare-feu AWS Network Firewall est déployé dans le compte Perimeter pour fil
 Le compte Management est isolé au niveau réseautique et déploie le service AWS SSO qui utilise le service public Keycloak du CEAI comme fournisseur d'identité.
 
 Finalement deux zones hébergées asea.cqen.ca (publique) et asea.cqen.org (privée) assurent la résolution des noms de domaines de l'infrastructure.
+
+## Contenus connexes
+
+* [Déploiement ASEA du CEAI](https://github.com/CQEN-QDCE/ceai-cqen-deployments/tree/main/ASEA)
+
+## Références
+
+* [Documentation  AWS Secure Environment Accelerator](https://aws-samples.github.io/aws-secure-environment-accelerator/)
+* [Norme de sécurité de l'information NIST 800-53](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final)
+* [Norme de sécurité de l'information CCCS Medium Cloud Control](https://www.canada.ca/fr/gouvernement/systeme/gouvernement-numerique/innovations-gouvernementales-numeriques/services-informatique-nuage/profil-controle-securite-services-ti-fondes-information-nuage.html)

@@ -1,3 +1,9 @@
+<!-- ENTETE -->
+[![img](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://www.quebec.ca/gouv/politiques-orientations/vitrine-numeriqc/accompagnement-des-organismes-publics/demarche-conception-services-numeriques)
+[![License](https://img.shields.io/badge/Licence-LiLiQ--P-blue)](https://github.com/CQEN-QDCE/.github/blob/main/LICENCE.md)
+
+---
+
 # Comptes de travail ASEA
 
 L'environnement ASEA du CEAI propose trois types de comptes de travail: Sandbox, Dev et Prod.
@@ -40,4 +46,7 @@ Les conteneurs applicatifs sont déployé via le service ECS. Le service est con
 
 API Gateway est le service qui doit être utilisé pour exposer les services conteneurs sur Internet. Il effectue entre autres choses la gestion des accès et la qualité du service. Finalement, l'accès public d'API Gateway doit toujours être protégé par le service de pare-feu applicatif AWS WAF.
 
-Vous pouvez trouver des patrons d'architecture AWS-SEA dans ce [dépôt](../Patrons).
+## Contenus connexes
+
+* [Patrons d'architecture AWS-SEA](../Patrons)
+* [Guide d'utilisation de l'infrastructe AWS du CEAI](../Guides/AWS)
