@@ -1,6 +1,6 @@
-# AWS Secure Environement Accelerator (ASEA)
+# AWS Secure Environment Accelerator (ASEA)
 
-Le CEAI déploie son infrastructure chez le fournisseur infonuagique AWS. Pour déployer cette infrastructure, le CEAI a utilisé l'outil AWS Secure Environment Accelerator qui permet de déployer rapidement une architecture AWS multi-comptes, multi-régions sécuritaire et automatisé. 
+Le CEAI déploie son infrastructure infonuagique chez AWS. Le CEAI a utilisé l'outil AWS Secure Environment Accelerator qui lui a permis de déployer rapidement une architecture AWS multi-comptes, multi-régions sécuritaire et automatisé. 
 
 Cette architecture adaptée au contexte d'utilisation gouvernemental garantie une conformité envers les standards de sécurité infonuagique américain [NIST 800-53](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final) et canadien [CCCS Medium Cloud Control Profile](https://www.canada.ca/fr/gouvernement/systeme/gouvernement-numerique/innovations-gouvernementales-numeriques/services-informatique-nuage/profil-controle-securite-services-ti-fondes-information-nuage.html).
 
@@ -10,17 +10,17 @@ Pour comprendre ce qui suit il est préférable d'avoir consulté la documentati
 
 Le CEAI a choisi de mettre en place une version allégée de l'architecture ASEA.
 
+![Architecture AWS CEAI](images/ASEA-CEAI.png)
+
 ### Organisation
+
+ASEA utilise le service AWS Organization pour organiser son architecture multi-compte. Celle-ci est composée de 6 comptes systèmes répartis dans deux unités d'organisations puis, d'un nombre variable de comptes de travail assignés dans des unités représentant des niveaux d'environnement. 
 
 ![Structure multi-comptes du CEAI](images/organization_structure.png)
 
-Trois types de comptes de travail seront utilisés: **Sandbox**, **Dev** et **Prod**.
+Trois types de comptes de travail sont utilisés: **Sandbox**, **Dev** et **Prod**.
 
-**Sandbox**: Comptes sans architecture restrictive. Pour mettre en place rapidement des expérimentations. Peut être utilisé pour les phases exploratoires de conceptions de services ou dans le cadre d'un  laboratoire.
-
-**Dev**: Comptes avec architecture prescriptive et VPC partagé. Pour intégrer le déploiement d'une solution éventuelle dans ASEA. 
-
-**Prod**: Comptes avec architecture prescriptive et VPC partagé. Pour déployer des solutions dans un contexte de production.
+Pour en savoir plus sur l'architecture prescriptive des comptes de travail, consultez ce [document](compte_travail.md).
 
 ### Réseautique
 
