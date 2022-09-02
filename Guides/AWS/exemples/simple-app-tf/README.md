@@ -35,6 +35,7 @@ Plus sur terraform: [ici](../../Outils/Terraform/README.md#quest-ce-que-cest-ter
   - Une service web de système de noms de domaine (DNS) - Route 53
 - Accès au compte AWS
 - Terraform installé dans le poste de travail ([voir](../../Outils/Terraform/README.md#installation))
+- AWS cli installé dans le poste de travail ([voir](../../Outils/AWS-Command-Line-Interface/README.md#installation))
 
 ### Exécution
 
