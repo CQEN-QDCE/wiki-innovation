@@ -53,7 +53,7 @@ Testez l'application dans votre browser avec le lien: http://localhost:3000
 
 Vous devriez voir un résultat similaire:
 
-![](images/localhost-hello-world-nodejs.png)
+![localhost-app](images/localhost-hello-world-nodejs.png)
 
 ## Faire une image docker de l'application
 
@@ -110,7 +110,7 @@ Explication du contenu du fichier Dockerfile:
   Cette commande indique d'exécuter l'image `some-image-name` localement dans le port `12345` (qui correspond au port 3000 du conteneur).
 - Pour tester l'accès à l'application dans le conteneur, utilisez le lien http://localhost:12345 dans votre browser.
   Voud devriez voir un résultat similaire:
-  ![](images/localhost-docker-image-hello-world-nodejs.png)
+  ![localhost-docker-app](images/localhost-docker-image-hello-world-nodejs.png)
 
 ### Arretez le processus Docker
 Vous avez réussi à tester localement l'exécution d'un conteneur à partir de la image construite.
@@ -133,4 +133,5 @@ Maintenant on va arreter le conteneur local car on n'en a plus besoin:
   ```
 
 [<- Page Principale](README.md)
+
 [-> Page Suivante: Étape 2: Déployer les ressources du cluster ECS](E2-deploy-aws-ecs.md)
