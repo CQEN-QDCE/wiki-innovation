@@ -8,3 +8,5 @@
     <img src="https://github.com/CQEN-QDCE/.github/blob/main/images/mcn.png">
 </div>
 <!-- FIN ENTETE -->
+
+# Déploiement des ressources de l'Api Gateway pour tester l'application

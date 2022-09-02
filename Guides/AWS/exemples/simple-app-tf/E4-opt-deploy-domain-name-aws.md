@@ -8,3 +8,5 @@
     <img src="https://github.com/CQEN-QDCE/.github/blob/main/images/mcn.png">
 </div>
 <!-- FIN ENTETE -->
+
+# (Optionnel) Déploiement des ressources pour avoir un lien public de l'application (DNS)

@@ -8,6 +8,7 @@
     <img src="https://github.com/CQEN-QDCE/.github/blob/main/images/mcn.png">
 </div>
 <!-- FIN ENTETE -->
+
 # Construction d'une image docker d'une application web simple
 
 Cette étape est nécessaire si vous n'avez pas déjà une application web simple pour la déployer dans AWS.
