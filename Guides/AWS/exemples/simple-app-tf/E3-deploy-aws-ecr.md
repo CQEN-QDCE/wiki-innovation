@@ -9,53 +9,10 @@
 </div>
 <!-- FIN ENTETE -->
 
-# Déploiement des ressources du cluster AWS ECS (Elastic Container Service)
+# Déploiement du ressource du registre des conteneurs AWS ECR (Elastic Container Registry)
 
-Dans cette partie des instructions nous allons mettre en place l'infrastructure nécessaire pour le déploiement de l'application dans AWS avec l'aide des scripts terraform ([plus sur terraform](../../Outils/Terraform/README.md#quest-ce-que-cest-terraform)).
+Le registre contiendra l'image de l'application à être déployée.
 
-Comme mentionné dans la page principale de cet exemple, il y a des [prérequis](README.md#prérequis) avant de commencer le provisionnement des ressources dans AWS.
-
-Entre les les ressources à créer, on peut mentionner:
-- ECS (Elastic Container Service): Le cluster qui héberge l'application.
-- ECR (Elastic Container Registry): Le conteneur de l'image de l'application.
-- Équilibreurs de charge (Load Balancers)
-
-## Initialiser et préparer l'espace du travail avec les scripts terraform
-
-Dans cette partie initiale, nous allons créer trois fichiers terraform:
-
-- terraform.tfvars: fichier que contient les paramètres nécessaires pour l'environnement de travail.
-- data.tf: fichier que contient les informations des ressources déjà créées dans AWS comme prérequis de cette exercice.
-- provider.tf: fichier qu'indique que le fournisseur de cloud est AWS et la région dans laquelle le compte AWS se trouve.
-
-Créez un dossier `deploiement`pour garder le code terraform et allez au dossier créé.
-```bash
-mkdir deploiement
-cd deploiement
-```
-Dans votre éditeur de code (par exemple, Visual Studio Code):
-- Créez un fichier `terraform.tfvars` avec le contenu du fichier template [terraform.tfvars](scripts/terraform.tfvars) et éditez les valeurs nécessaires:
-
-    |  Variable | Description  |  Exemple de Valeur  |
-    |---|---|---|
-    | aws_region | La région du compte AWS  | ca-central-1  |
-    | aws_profile | Le profile créé dans AWS pour gérer les ressources  | dev1  |
-    | aws_application | Le nom de l'application  | mon-api-web  |
-    | aws_environment | L'environnement de travail  | dev  |
-    | aws_type_compte | Le type de compte AWS (utilisé pour étiquetter les ressources)  | Dev  |
-    | aws_ecs_cpu | CPU utilisé pour la définition de tâche  | 1024  |
-    | aws_ecs_memory | La mémoire utilisé pour la définition de tâche  | 2048  |
-    | aws_ecs_app_port | Le port a être utilisé pour exposer l'application  | 3000 |
-    | aws_ecs_ec2_tg_port | Le port à être utilisé par le group cible  | 80 |
-    | aws_ecs_force_deploy | Flag pour forcer le déploiement  | true |
-    | aws_ecs_health_check_path | Le path pour vérifier la santé de l'application  | / |
-    | aws_ecs_image_app_tag | L'étiquette (tag) de l'image de l'application  | latest  |
-    | aws_route53_zone_id | La zone de la route 53 d'AWS | XXXXXXXX  |
-
-- Copiez les fichiers [data.tf](scripts/data.tf), [provider.tf](scripts/provider.tf), [variables.tf](scripts/variables.tf) et [ecr.tf](scripts/ecr.tf) dans votre dossier deploiement.
-
-
-## Créer la ressource AWS ECR (Elastic Container Registry), que contiendra l'image de l'application
 Pour commencer à créer les ressources dans AWS, il faut que le profile de connexion au compte AWS [soit créé](../../Outils/AWS-Command-Line-Interface/README.md#configuration-daws-sso-single-sign-on) et ensuite, ouvrir une session de connexion avec ce profile créé ([voir](../../Outils/AWS-Command-Line-Interface/README.md#login-au-compte-aws)).
 
 - Exécutez la commande `init` pour initialiser le répertoire comme un conteneur du code terraform:
@@ -92,7 +49,7 @@ Pour commencer à créer les ressources dans AWS, il faut que le profile de conn
 
 - Exécutez la commande `apply` pour appliquer les modifications.
   ```bash
-  terraform apply
+  terraform apply -var-file terraform.tfvars
   ```
   Vous confirmez l'action et la ressource sera créée dans AWS.
   Dans votre navigateur, vous pouvez aller au compte AWS et confirmer que le registre a été bien créé.
@@ -130,3 +87,8 @@ Dans votre terminal:
 
     ![aws-ecr-app-image](images/aws-web-ecr-app-image.png)
 
+[<-- Page Principale](README.md)
+
+[-> Page Précedente: Étape 2: Préparation et initialisation de l'espace du travail avec les scripts terraform](E2-preps-and-init-workspace-tf.md)
+
+[-> Page Suivante: Étape 4: Déployer les ressources du cluster ECS](E4-deploy-aws-ecs.md)

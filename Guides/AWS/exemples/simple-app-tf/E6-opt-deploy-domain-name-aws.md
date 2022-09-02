@@ -10,3 +10,7 @@
 <!-- FIN ENTETE -->
 
 # (Optionnel) Déploiement des ressources pour avoir un lien public de l'application (DNS)
+
+[<-- Page Principale](README.md)
+
+[-> Page Précedente: Étape 5: Déployer les ressources de l'Api Gateway pour tester l'application](E5-deploy-api-gateway-aws.md)

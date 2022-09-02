@@ -40,9 +40,11 @@ Plus sur terraform: [ici](../../Outils/Terraform/README.md#quest-ce-que-cest-ter
 ### Exécution
 
 - [Étape 1: Construire une image docker d'une application web simple](E1-image-docker-web-app.md)
-- [Étape 2: Déployer les ressources du cluster ECS](E2-deploy-aws-ecs.md)
-- [Étape 3: Déployer les ressources de l'Api Gateway pour tester l'application](E3-deploy-api-gateway-aws.md)
-- [Étape 4: (oprtionnel) Déployer les ressources pour avoir un lien public de l'application](E4-opt-deploy-domain-name-aws.md)
+- [Étape 2: Préparation et initialisation de l'espace du travail avec les scripts terraform](E2-preps-and-init-workspace-tf.md)
+- [Étape 3: Déployer les ressources du registre de conteneurs ECR](E3-deploy-aws-ecr.md)
+- [Étape 4: Déployer les ressources du cluster ECS](E4-deploy-aws-ecs.md)
+- [Étape 5: Déployer les ressources de l'Api Gateway pour tester l'application](E5-deploy-api-gateway-aws.md)
+- [Étape 6: (oprtionnel) Déployer les ressources pour avoir un lien public de l'application](E6-opt-deploy-domain-name-aws.md)
 
 ### Nettoyage
 
