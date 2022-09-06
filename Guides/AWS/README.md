@@ -11,7 +11,5 @@
 
 # Amazon Web Service - AWS
 
-## Questions - Réponses
-
 ## Exemples de déploiement
 - Une simple application web avec terraform: [voir](exemples/simple-app-tf/README.md)

@@ -18,9 +18,13 @@ Dans cette section nous allons mettre en place l'infrastructure nécessaire pour
 Comme mentionné dans la page principale de cet exemple, il y a des [prérequis](README.md#prérequis) avant de commencer le provisionnement des ressources dans AWS.
 
 Entre les ressources à créer en première, on peut mentionner:
-- ECS (Elastic Container Service): Le cluster qui héberge l'application.
 - ECR (Elastic Container Registry): Le conteneur de l'image de l'application.
-- Équilibreurs de charge (Load Balancers)
+- ECS (Elastic Container Service): Le cluster qui héberge l'application.
+  - Service: Exécute et mantient un nombre spécifique d'instances d'une définition de tâche au même temps.
+  - Définition de Tâche: Nécessaire pour rouler le conteneur Docker dans ECS.
+  - Équilibreurs de charge (Load Balancers):
+    - D'application (alb): Utilisé pour acheminer le trafic HTTP/HTTPS (Hypertext Transfer Protocol / Secure).
+    - De réseau (nlb): Utilisé pour acheminer le trafic TCP (Transmission Control Protocol) ou UDP (User Datagram Protocol).
 
 ## Fichiers terraform initials
 

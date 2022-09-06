@@ -25,7 +25,7 @@ Un des prérequis de cet exercice, était celui d'avoir un réseau privé virtue
 Les informations des ressources créées se trouvent dans le fichier [data.tf](scripts/data.tf).
 
 Nous allons ajouter la ressource de `groupe de sécurité`.
-Copiez le fichier sg.tf dans votre répertoire de travail.
+Copiez le fichier [sg.tf](scripts/sg.tf) dans votre répertoire de travail.
 
 
 ## Fargate (ECS)
@@ -58,20 +58,27 @@ Dans le terminal, dans votre répertoire `deploiement`, exécutez les commandes 
   ```bash
   terraform apply -var-file terraform.tfvars
   ```
-- Après la création des ressources AWS, allez dans le navigateur, dans la console web de votre compte AWS, pour vérifier que les ressources ont été bien créées. Vous devriez trouver que:
-  - Dans la vue ECS: Un cluster a été crée pour l'application web
-    - Ce cluster a un service et une tâche en cours d'exécution
 
-        ![aws-ecs](images/aws-web-ecs.png)
+## Vérification dans AWS (console web)
 
-    - Cliquez sur le cluster crée pour voir plus des détails. Dans l'onglet `Services` du détails du service, cliquez sur le service pour vérifier ses détails. Vous devriez voir que le service est lié au équilibreur de charge.
+Après la création des ressources AWS, allez dans le navigateur, dans la console web de votre compte AWS, pour vérifier que les ressources ont été bien créées. Vous devriez trouver que:
+- Dans la vue ECS: Un cluster a été crée pour l'application web
+  - Ce cluster a un service et une tâche en cours d'exécution
 
-        ![aws-ecs-details-service](images/aws-ecs-details-service.png)
+    ![aws-ecs](images/aws-web-ecs.png)
 
-  - Dans la vue EC2:
-    - Target Groups: vous devriez voir dans l'onglet des détails, le statut: `Healthy`
+  - Cliquez sur le cluster crée pour voir plus des détails. Dans l'onglet `Services` du détails du service, cliquez sur le service pour vérifier ses détails. Vous devriez voir que le service est lié au équilibreur de charge.
 
-        ![aws-ec2-target-group-detail](images/aws-ec2-target-group.png)
+    ![aws-ecs-details-service](images/aws-ecs-details-service.png)
+
+- Dans la vue EC2:
+  - Target Groups: vous devriez voir dans l'onglet des détails, le statut: `Healthy`
+
+    ![aws-ec2-target-group-detail](images/aws-ec2-target-group.png)
+
+
+Voilà!, vous avez réussi à déployer avec succès, une application web dans un cluster AWS ECS.
+
 
 [<-- Page Principale](README.md)
 
