@@ -84,7 +84,6 @@ Global options (use these before the subcommand, if any):
 - ***terraform init*** : Permet d'initialiser le répertoire contenant la configuration Terraform
 - ***terraform plan*** : Permet d'afficher une vue des différences entre la configuration Terraform et la configuration effective
 - ***terraform apply*** : Permet d'appliquer la configuration
-- terraform destroy : Permet de détruire les ressources déployées
 - ***terraform import*** : Permet d'intégrer des ressources déployées à l'extérieur de Terraform dans sa configuration
 - ***terraform state*** : Permet d'interagir avec le state file
 - ***terraform destroy***: Permet de détruire les ressources créées. Utilisez plus pour des environnements temporaires comme de développement ou de test.

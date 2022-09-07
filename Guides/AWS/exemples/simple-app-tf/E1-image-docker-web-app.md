@@ -13,7 +13,7 @@
 
 Cette étape est nécessaire si vous n'avez pas déjà une application web simple pour la déployer dans AWS.
 
-Si vous avez déjà une image docker d'une telle image, alors, vous pouvez passer à l'[étape 2](E2-deploy-aws-ecs.md) pour déployer les ressources dans AWS.
+Si vous avez déjà une image docker d'une telle image, alors, vous pouvez passer à l'[étape 2](E2-preps-and-init-workspace-tf.md) pour commencer à travailler avec les scripts terraform pour la création de ressources dans AWS.
 
 ## Créer une application basique NodeJS
 
@@ -135,4 +135,4 @@ Maintenant on va arreter le conteneur local car on n'en a plus besoin:
 
 [<- Page Principale](README.md)
 
-[-> Page Suivante: Étape 2: Déployer les ressources du cluster ECS](E2-deploy-aws-ecs.md)
+[-> Page Suivante: Étape 2: Préparation et initialisation de l'espace du travail avec les scripts terraform](E2-preps-and-init-workspace-tf.md)

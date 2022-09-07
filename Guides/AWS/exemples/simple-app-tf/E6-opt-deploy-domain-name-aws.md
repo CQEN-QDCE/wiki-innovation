@@ -46,7 +46,7 @@ Pour l'instant, vous pouvez indiquer comme valeur, un url temporaire qui sera aj
 
 ## Certificat ACM et enregistrement DNS dans la Route53
 
-Copiez le fichier [custom_domain_preps.tf](scripts/custom_domain_preps.tf.tf).
+Copiez le fichier [custom_domain_preps.tf](scripts/custom_domain_preps.tf).
 
 Ce fichier va permettre de créer:
 - Un certificat ACM lié au DNS et,
@@ -58,7 +58,7 @@ Le certificat sera validé et son statut final devrait être `Émis`.
 
 ## Nom de domain
 
-Copiez le fichier [custom_domain](scripts/custom_domain.tf).
+Copiez le fichier [custom_domain.tf](scripts/custom_domain.tf).
 
 Appliquez les commandes terraform `validate`, `plan` et `apply` comme dans  l'[étape 4](E4-deploy-aws-ecs.md#déploiement).
 
@@ -72,10 +72,12 @@ Avec ce fichier le nom du domain personnalisé sera crée dans AWS.
 
 
 ## Test du nom de domain personnalisé
-Pour tester l'accès public à l'application, vous n'avez que à copier le lien du nom de domain personnalisé dans votre browser et vous devez voir le "Hello World!" de l'api.
+Pour tester l'accès public à l'application, vous n'avez que à copier le lien du nom de domain personnalisé dans votre navigateur et vous devez voir le "Hello World!" de l'api.
 
+AWS - Api Gateway - Nom de Domain Personnalisé
 ![aws-api-gateway-dns-url](images/aws-api-gateway-custom-domain-name-url.png)
 
+Internet:
 ![web-public-access-to-app](images/web-public-access-to-app.png)
 
 Dans le cas de cet exemple, l'URL pour accéder à l'application est accompagné du path `web-api-sample1-dev`, ça veut dire:
