@@ -50,7 +50,7 @@ Vérifiez que votre serveur marche:
 ```bash
 node app.js
 ```
-Testez l'application dans votre browser avec le lien: http://localhost:3000
+Testez l'application dans votre navigateur avec le lien: http://localhost:3000
 
 Vous devriez voir un résultat similaire:
 
@@ -61,7 +61,7 @@ Vous devriez voir un résultat similaire:
 Nous allons utiliser les avantages d'un conteneur comme docker pour faciliter le déploiement de l'application dans une technologie infonuagique.
 
 Entre autres, docker nous permet de:
-- Lister les dépendances (en excluant un noyau linux qui est assumé)
+- Lister les dépendances (en excluant un noyau Linux qui est assumé)
 - Isoler l'application web par défaut
 - Donner des instructions simples pour exécuter l'application
 
@@ -86,7 +86,7 @@ Explication du contenu du fichier Dockerfile:
 - **`RUN npm i`** -> Installe les dépendances listées dans le fichier package.json.
 - **`COPY . .`** -> Copie tous les fichiers de votre espace de travail au dossier du travail `WORKDIR` du conteneur.
 
-    * **Note**: Afin d'éviter copier certains fichiers comme ceux qui ont été géneré au moment de l'installation des dépendances `node_modules`, nous allons utiliser le fichier .dockerignore. 
+    * **Note**: Afin d'éviter de copier certains fichiers comme ceux qui ont été génerés au moment de l'installation des dépendances `node_modules`, nous allons utiliser le fichier .dockerignore. 
   
         Créez un fichier `.dockerignore` avec le contenu suivant:
 
@@ -96,7 +96,7 @@ Explication du contenu du fichier Dockerfile:
         ```
 
 - **`EXPOSE 3000`** -> Permet d'exposer l'application à l'extérieur du conteneur via le port 3000.
-- **`CMD [ "node", "app.js" ]`** -> Indique au conteneur d'exécuter la commande `node app.js` (comment exécuté précédémment pour tester localement l'application).
+- **`CMD [ "node", "app.js" ]`** -> Indique au conteneur d'exécuter la commande `node app.js` (comment exécuté précédemment pour tester localement l'application).
 
 ### Exécutez l'image de l'application localement
 - Construisez l'image:
@@ -109,16 +109,17 @@ Explication du contenu du fichier Dockerfile:
   docker run -p 12345:3000 -d some-image-name
   ```
   Cette commande indique d'exécuter l'image `some-image-name` localement dans le port `12345` (qui correspond au port 3000 du conteneur).
-- Pour tester l'accès à l'application dans le conteneur, utilisez le lien http://localhost:12345 dans votre browser.
-  Voud devriez voir un résultat similaire:
+- Pour tester l'accès à l'application dans le conteneur, utilisez le lien http://localhost:12345 dans votre navigateur.
+  
+  Vous devriez voir un résultat similaire:
   ![localhost-docker-app](images/localhost-docker-image-hello-world-nodejs.png)
 
-### Arretez le processus Docker
-Vous avez réussi à tester localement l'exécution d'un conteneur à partir de la image construite.
+### Arrêtez le processus Docker
+Vous avez réussi à tester localement l'exécution d'un conteneur à partir de l'image construite.
 
 L'image servira pour les étapes suivantes de déploiement de l'application dans AWS.
 
-Maintenant on va arreter le conteneur local car on n'en a plus besoin:
+Maintenant, on va arrêter le conteneur local, car on n'en a plus besoin:
 - Pour lister les processus docker qui s'exécutent, utilisez la commande `docker ps`:
   ```bash
   docker ps
@@ -128,7 +129,7 @@ Maintenant on va arreter le conteneur local car on n'en a plus besoin:
   CONTAINER ID   IMAGE                           COMMAND                  CREATED          STATUS          PORTS                                         NAMES
   ccb4c473e008   nodejs-example-dev-ecr:latest   "docker-entrypoint.s…"   44 minutes ago   Up 44 minutes   0.0.0.0:12345->3000/tcp, :::12345->3000/tcp   nifty_greider
   ```
-- Pour arreter le processus docker, utilisez la commande `docker stop <nom du processus>`
+- Pour arrêter le processus docker, utilisez la commande `docker stop <nom du processus>`
   ```bash
   docker stop nifty_greider
   ```

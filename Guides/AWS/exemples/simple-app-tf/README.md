@@ -14,13 +14,13 @@
 ## Description
 Cet exercice vous montre comment déployer une application web simple dans AWS d'une manière fiable.
 
-Il s'agit d'une application nodejs que, dans une première étape, sera déployé dans un cluster ECS (Elastic Container Service), à partir d'un service de registre d'images de conteneur ECR (Elastic Container Registry).
+Il s'agit d'une application nodejs que, dans une première étape, sera déployée dans un cluster ECS (Elastic Container Service), à partir d'un service de registre d'images de conteneur ECR (Elastic Container Registry).
 
-Ensuite, dans des étapes suivantes, l'application sera exposé à l'extérieur via l'API gateway d'AWS.
+Ensuite, dans des étapes suivantes, l'application sera exposée à l'extérieur via l'API gateway d'AWS.
 
 ![infrastructure-aws-web-app](../../images/Infra-Web-App-AWS.png)
 
-L'infrastructure nécessaire pour cet exercice sera monté en utilisant l'outil d'infrastructure en tant que code (IaC): `terraform`.
+L'infrastructure nécessaire pour cet exercice sera montée en utilisant l'outil d'infrastructure en tant que code (IaC): `terraform`.
 Terraform aide à la mise en place des ressources nécessaires dans AWS pour le déploiement de l'application. À travers des scripts il offre la flexibilité et le montage/démontage de toute l'architecture utilisé dans l'exercice.
 
 Plus sur terraform: [ici](../../Outils/Terraform/README.md#quest-ce-que-cest-terraform)
@@ -32,7 +32,7 @@ Plus sur terraform: [ici](../../Outils/Terraform/README.md#quest-ce-que-cest-ter
   - Un réseau virtuel (Virtual Private Cloud - VPC)
   - Des sous-réseaux d'application et de web
   - Des groupes de sécurité d'application et de web
-  - Une service web de système de noms de domaine (DNS) - Route 53
+  - Un service web de système de noms de domaine (DNS) - Route 53
 - Accès au compte AWS
 - Terraform installé dans le poste de travail ([voir](../../Outils/Terraform/README.md#installation))
 - AWS cli installé dans le poste de travail ([voir](../../Outils/AWS-Command-Line-Interface/README.md#installation))
@@ -51,7 +51,7 @@ Il est important de nettoyer nos espaces de travail de développement une fois f
 - Parce que c'est une bonne pratique.
 - Parce que l'infrastructure infonuagique a souvent un prix à payer pour l'utilisation de ses ressources.
 
-Quand vous avez fini de travailler dans cet environnement, vous pouvez effacer les ressources crées en utilisant la commande `destroy` de terraform.
+Quand vous avez fini de travailler dans cet environnement, vous pouvez effacer les ressources créées en utilisant la commande `destroy` de terraform.
 ```bash
 terraform destroy
 ```

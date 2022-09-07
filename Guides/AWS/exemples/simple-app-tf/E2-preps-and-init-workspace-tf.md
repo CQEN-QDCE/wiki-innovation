@@ -11,34 +11,34 @@
 
 # Initialiser et préparer l'espace du travail avec les scripts terraform
 
-## Brève Description
+## Brève description
 
-Dans cette section nous allons mettre en place l'infrastructure nécessaire pour le déploiement de l'application dans AWS avec l'aide des scripts terraform ([plus sur terraform](../../Outils/Terraform/README.md#quest-ce-que-cest-terraform)).
+Dans cette section, nous allons mettre en place l'infrastructure nécessaire pour le déploiement de l'application dans AWS avec l'aide des scripts terraform ([plus sur terraform](../../Outils/Terraform/README.md#quest-ce-que-cest-terraform)).
 
 Comme mentionné dans la page principale de cet exemple, il y a des [prérequis](README.md#prérequis) avant de commencer le provisionnement des ressources dans AWS.
 
 Entre les ressources à créer en première, on peut mentionner:
 - ECR (Elastic Container Registry): Le conteneur de l'image de l'application.
 - ECS (Elastic Container Service): Le cluster qui héberge l'application.
-  - Service: Exécute et mantient un nombre spécifique d'instances d'une définition de tâche au même temps.
+  - Service: Exécute et maintiens un nombre spécifique d'instances d'une définition de tâche en même temps.
   - Définition de Tâche: Nécessaire pour rouler le conteneur Docker dans ECS.
   - Équilibreurs de charge (Load Balancers):
     - D'application (alb): Utilisé pour acheminer le trafic HTTP/HTTPS (Hypertext Transfer Protocol / Secure).
     - De réseau (nlb): Utilisé pour acheminer le trafic TCP (Transmission Control Protocol) ou UDP (User Datagram Protocol).
 
-## Fichiers terraform initials
+## Fichiers terraform initiaux
 
 ### Explication
 
 Pour l'initialisation de l'espace de travail avec terraform, nous allons créer trois fichiers terraform:
 
 - terraform.tfvars: fichier que contient les paramètres nécessaires pour l'environnement de travail.
-- data.tf: fichier que contient les informations des ressources déjà créées dans AWS comme prérequis de cette exercice.
+- data.tf: fichier que contient les informations des ressources déjà créées dans AWS comme prérequis de cet exercice.
 - provider.tf: fichier qu'indique que le fournisseur de cloud est AWS et la région dans laquelle le compte AWS se trouve.
 
 ### Création et édition des fichiers terraform
 
-Créez un dossier `deploiement`pour garder le code terraform et allez au dossier créé.
+Créez un dossier `deploiement` pour garder le code terraform et allez au dossier créé.
 ```bash
 mkdir deploiement
 cd deploiement
@@ -52,17 +52,17 @@ Dans votre éditeur de code (par exemple, Visual Studio Code):
     | aws_profile | Le profile créé dans AWS pour gérer les ressources  | dev1  |
     | aws_application | Le nom de l'application  | mon-api-web  |
     | aws_environment | L'environnement de travail  | dev  |
-    | aws_type_compte | Le type de compte AWS (utilisé pour étiquetter les ressources)  | Dev  |
+    | aws_type_compte | Le type de compte AWS (utilisé pour étiqueter les ressources)  | Dev  |
     | aws_ecs_cpu | CPU utilisé pour la définition de tâche  | 1024  |
-    | aws_ecs_memory | La mémoire utilisé pour la définition de tâche  | 2048  |
-    | aws_ecs_app_port | Le port a être utilisé pour exposer l'application  | 3000 |
-    | aws_ecs_ec2_tg_port | Le port à être utilisé par le group cible  | 80 |
+    | aws_ecs_memory | La mémoire utilisée pour la définition de tâche  | 2048  |
+    | aws_ecs_app_port | Le port à être utilisé pour exposer l'application  | 3000 |
+    | aws_ecs_ec2_tg_port | Le port à être utilisé par le groupe cible  | 80 |
     | aws_ecs_force_deploy | Flag pour forcer le déploiement  | true |
     | aws_ecs_health_check_path | Le path pour vérifier la santé de l'application  | / |
     | aws_ecs_image_app_tag | L'étiquette (tag) de l'image de l'application  | latest  |
     | aws_route53_zone_id | La zone de la route 53 d'AWS | XXXXXXXX  |
 
-- Copiez les fichiers [data.tf](scripts/data.tf), [provider.tf](scripts/provider.tf), [variables.tf](scripts/variables.tf) et [ecr.tf](scripts/ecr.tf) dans votre dossier deploiement.
+- Copiez les fichiers [data.tf](scripts/data.tf), [provider.tf](scripts/provider.tf), [variables.tf](scripts/variables.tf) et [ecr.tf](scripts/ecr.tf) dans votre dossier `deploiement`.
 
 [<-- Page Principale](README.md)
 

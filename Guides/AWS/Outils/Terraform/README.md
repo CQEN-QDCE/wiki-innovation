@@ -14,7 +14,7 @@
 ## Qu'est-ce que c'est terraform?
 Terraform est un outil open source d'Infrastructure as Code (IaC) créé par HashiCorp.
 
-Outil de codage déclaratif, Terraform permet aux développeurs d'utiliser un langage de configuration appelé HCL (HashiCorp Configuration Language), qui décrit l'infrastructure cloud ou sur site souhaitée pour l'exécution d'une application avec son "état final". Terraform génère ensuite un plan permettant d'atteindre cet état final et exécute le plan pour mettre à disposition l'infrastructure.
+Outil de codage déclaratif, Terraform permet aux développeurs d'utiliser un langage de configuration appelé HCL (HashiCorp Configuration Language), qui décrit l'infrastructure cloud ou sur site souhaité pour l'exécution d'une application avec son "état final". Terraform génère ensuite un plan permettant d'atteindre cet état final et exécute le plan pour mettre à disposition l'infrastructure.
 
 Terraform possède de nombreux avantages : il utilise une syntaxe simple, il peut mettre à disposition une infrastructure dans plusieurs clouds et centres de données sur site, et il peut remettre à disposition des infrastructures de façon sécurisée et efficace en réponse aux changements de configuration. Toutes ces qualités en font actuellement l'un des outils d'automatisation d'infrastructure les plus populaires. Si votre entreprise a l'intention de déployer un environnement de cloud hybride ou multicloud, vous aurez probablement envie ou besoin de découvrir Terraform.
 
@@ -23,7 +23,7 @@ Terraform possède de nombreux avantages : il utilise une syntaxe simple, il peu
 ## Installation
 Pour installer Terraform, la première chose à faire est de télécharger le package correspondant à votre système d'exploitation sur le [site d'HashiCorp](https://www.terraform.io/downloads). 
 
-Evidemment, la procédure d'installation différera selon les OS. Sur son site, HashiCorp propose une série de tutoriels d'installation couvrant Windows, Linux et MacOS.
+Évidemment, la procédure d'installation différera selon les OS. Sur son site, HashiCorp propose une série de tutoriels d'installation couvrant Windows, Linux et MacOS.
 
 Pour le cas de cet exercice, nous allons choisir Linux - Ubuntu/Debian.
 Dans un terminal, exécutez les commandes:
@@ -33,7 +33,7 @@ echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://
 sudo apt update && sudo apt install terraform
 ```
 
-Pour finir, il convient de vérifiez que le binaire terraform est disponible sur le PATH. Et surtout que l'installation a bien été réalisée en ouvrant une session via l'interface en ligne de commande pour faire le point sur les sous-commandes Terraform disponibles:
+Pour finir, il convient de vérifier que le binaire terraform est disponible sur le PATH. Et surtout que l'installation a bien été réalisée en ouvrant une session via l'interface en ligne de commande pour faire le point sur les sous-commandes Terraform disponibles:
 ```bash
 terraform -help
 ```
@@ -85,7 +85,7 @@ Global options (use these before the subcommand, if any):
 - ***terraform plan*** : Permet d'afficher une vue des différences entre la configuration Terraform et la configuration effective
 - ***terraform apply*** : Permet d'appliquer la configuration
 - ***terraform import*** : Permet d'intégrer des ressources déployées à l'extérieur de Terraform dans sa configuration
-- ***terraform state*** : Permet d'interagir avec le state file
+- ***terraform state*** : Permet d'interagir avec le fichier d'état
 - ***terraform destroy***: Permet de détruire les ressources créées. Utilisez plus pour des environnements temporaires comme de développement ou de test.
 
 ## Références
