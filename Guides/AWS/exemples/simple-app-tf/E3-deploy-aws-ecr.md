@@ -9,7 +9,7 @@
 </div>
 <!-- FIN ENTETE -->
 
-# Déploiement du ressource du registre des conteneurs AWS ECR (Elastic Container Registry)
+# Déploiement de la ressource du registre des conteneurs AWS ECR (Elastic Container Registry)
 
 Le registre contiendra l'image de l'application à être déployée.
 
@@ -19,7 +19,7 @@ Pour commencer à créer les ressources dans AWS, il faut que le profile de conn
   ```bash
   terraform init
   ```
-  La commande va télécharger les plugins disponibles pour le fournisseur AWS listé dans le fichier `provider.tf`
+  La commande va télécharger les plug-ins disponibles pour le fournisseur AWS listé dans le fichier `provider.tf`
 
 - Exécutez la commande `plan` pour visualiser les ressources à créer:
   ```bash
@@ -69,11 +69,11 @@ Dans votre terminal:
     aws ecr get-login-password --region ca-central-1 | docker login --username AWS --password-stdin 123456789012.dkr.ecr.ca-central-1.amazonaws.com
     ```
 2. Comme vous avez déjà l'image de votre application en local, vous n'avez pas besoin de la construire, donc pas besoin de la deuxième instruction.
-   Vous pouvez voir vos images locales avec la commande `docker images`
+   Vous pouvez voir vos images locales avec la commande `docker images`:
    ```bash
    docker images
    ```
-3. Étiquettez l'image locale avant de la transférer au registre:
+3. Étiquetez l'image locale avant de la transférer au registre:
    ```bash
    docker tag web-api-sample1-dev-ecr:latest 123456789012.dkr.ecr.ca-central-1.amazonaws.com/web-api-sample1-dev-ecr:latest
    ```
@@ -83,7 +83,7 @@ Dans votre terminal:
    ```bash
    docker push 123456789012.dkr.ecr.ca-central-1.amazonaws.com/web-api-sample1-dev-ecr:latest
    ```
-5. Vérifiez que l'image a été bien poussez dans le registre. Dans votre navigateur, dans la console web de votre compte AWS (vue ECR), vous allez voir que l'image a été transférée:
+5. Vérifiez que l'image a été bien poussée dans le registre. Dans votre navigateur, dans la console web de votre compte AWS (vue ECR), vous allez voir que l'image a été transférée:
 
     ![aws-ecr-app-image](images/aws-web-ecr-app-image.png)
 
