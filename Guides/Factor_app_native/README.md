@@ -39,7 +39,7 @@ D'abord écrit comme un manifeste par [Adam Wiggins](https://adamwiggins.com/) (
 
 | Facteur   |      Explication  |
 |----------|:-------------:|
-| [1 - Base de code](./facteurs/1_base_code.md) | Base de code unique pour chaque système, stockée dans son propre dépôt de code source avec suivi avec contrôle des versions.  |
+| [1 - Base de code](./facteurs/1_base_code.md) | Base de code unique pour chaque système, stockée dans son propre dépôt de code source avec suivi et contrôle des versions.  |
 | [2 - Dépendances](./facteurs/2_dependances.md) |  Chaque système isole et inclus ses propres dépendances. Idéalement un gestionnaire de dépendance est utilisé pour faire cela.   |
 | [3 - Configuration](./facteurs/3_configurations.md)	 | Les informations de configuration sont externalisées par le biais d’un outil de gestion de la configuration en dehors du code. Le même déploiement peut se déployer dans des environnements différents avec la configuration appropriée à celui-ci. |
 | [4 - Services externes](./facteurs/4_service_externe.md) | Les services externes (magasins de données, caches, répartiteurs de messages) utilisent des protocoles standards et sont exposées via une URL. Cela dissocie le service de l’application, ce qui lui permet d’être interchangeable. |
