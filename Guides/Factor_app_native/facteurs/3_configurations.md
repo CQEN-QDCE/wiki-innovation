@@ -1,20 +1,19 @@
 ## 3. Configuration (Config)
 
-> Séparation stricte entre la configuration et le code et Stocker la config dans l'environnement.
+> Les informations de configuration sont externalisées en dehors du code par le biais d’un outil de gestion de la configuration.
 
-Toute application moderne requiert une configuration, d'une forme ou d'une autre. Les données de configuration vont plus porter sur des données sensibles telles que les mots de passe de la base de données ou les identifiants d’authentifications. Il est donc nécessaire de les protéger en les séparant du reste du code de l’application pour cela il existe généralement des configurations différentes en fonction des environnements cibles (développement, pre-prod et production, par exemple).
+Toutes les informations nécessaires au fonctionnement de votre application qui sont dépendante de l'environnement d'éxecution doivent être transmise via une configuration. Cette configuration doit être séparé du code pour ne pas avoir à créer des versions différentes par chaque environnement. 
 
 ![](../images/configuration.png)
 
-
-Dans un environnement de microservices, vous pouvez gérer les configurations de vos applications à partir d'un contrôle de source comme `Git` et utiliser les variables d'environnement pour ne pas maintenir les informations sensibles dans le contrôle de source. Et vous ne construisez qu'une seule fois pour les déploiements dans tous vos environnements. Et en plus les services peuvent être reconfigurés dynamiquement sans recompilation (par exemple en changeant les paramètres)
+L'utilisation de variables d'environnement est le moyen généralement utilisé pour transmettre les configration vers un application exécuté dans l'environnement. Ces variables sont alors initialisées par l'environnement d'éxéction du conteneur ou enncore lues dans un fichier de configuration généré au moment du déploiement. L'application peut ensuite lire les variables d'environnement via des librairies d'accès au système d'exploitation.
 
 ### Nous recommandons les pratiques spécifiques suivantes :
 
 - Utilisez des fichiers `.env` non contrôlés par version pour le développement local. `Docker` prend en charge le chargement de ces fichiers au moment de l'exécution.
 - Conservez tous les fichiers `.env` dans un système de stockage sécurisé, tel que `Vault`, afin que les fichiers soient disponibles pour les équipes de développement, mais non commités dans `Git`.
-- Utilisez une variable d'environnement pour tout ce qui peut changer au moment de l'exécution, et pour tout secret qui ne doit pas être commité dans le référentiel partagé.
-- Une fois que vous avez déployé votre application sur une plateforme de livraison, utilisez le mécanisme de gestion des variables d'environnement de cette plateforme.
+- Utilisez une variable d'environnement pour tout ce qui peut changer au moment de l'exécution, et pour tout secret qui ne doit pas être publié avec le code.
+- Une fois que vous avez déployé votre application sur une plateforme, utilisez le mécanisme de gestion des variables d'environnement de cette plateforme.
 - N'utilisez pas la configuration interne de l’application, tel que `config/routes.rb` avec `Rails`
 - N'utilisez pas des fichiers de configuration qui ne sont pas inclus dans le système de contrôle de version, par exemple `config/database.yml` de `Rails`.
 
@@ -28,12 +27,10 @@ Le changement d’environnement est aussi simple que de modifier le fichier env 
 
 ### Exemples de cas d’utilisation
 
-Maintenant que vous avez une idée claire du fonctionnement des variables d’environnement et de la manière dont vous devez les utiliser efficacement, voici quelques scénarios courants dans lesquels vous pouvez utiliser les variables d’environnement :
-
 - Type d’environnement : Les variables d’environnement sont souvent utilisées pour stocker le nom de l’environnement dans lequel l’application est en cours d’exécution. La logique de l’application peut utiliser cette valeur pour accéder au bon ensemble de ressources ou activer/désactiver certaines fonctionnalités ou sections de l’application.
 - Nom de domaine : Le nom de domaine d’une application peut varier en fonction de son environnement. L’isoler vous permet également de modifier facilement le nom de domaine de votre application sans avoir à rechercher ses occurrences dans l’ensemble de la base de code.
 - URL d’API : Chaque environnement de votre application peut avoir des API déployées dans différents environnements également.
-- Clés privées : Les clés des services et ressources payants doivent être isolées du code source de l’application afin qu’elles ne tombent pas accidentellement dans de mauvaises mains.
+- Clés privées : Les clés des services et ressources externes doivent être isolées du code source de l’application afin qu’elles ne tombent pas accidentellement dans de mauvaises mains.
 - Numéros de compte de service, etc : Vous pouvez varier d’autres informations spécifiques au système, telles que les numéros de compte de service, les keytabs, etc., en fonction de l’environnement de l’application pour la gestion et la surveillance des ressources.
 
 Les fichiers `.env` stockent les secrets de votre application sous la forme de paires clé-valeur. Le format habituel pour stocker les variables d’environnement dans un fichier `.env` est le suivant :
@@ -42,6 +39,6 @@ Les fichiers `.env` stockent les secrets de votre application sous la forme de p
 Clé1=Valeur1
 ```
 
-[Le facteur suivant](./4_stockage.md)
+[Le facteur suivant](./4_service_externe.md)
 
 [Le tableau de la méthodologie de 12 Facteurs](../README.md)
