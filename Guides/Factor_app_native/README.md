@@ -56,7 +56,7 @@ D'abord écrit comme un manifeste par [Adam Wiggins](https://adamwiggins.com/) (
 
 | Nouveau facteur   |      Explication  |
 |----------|:-------------:|
-| [13 - API First](./facteurs/13_api_first.md) | Concevez tout comme un API. Vos systèmes pourront être consommée par n'importe quel autre type d'applications. |
+| [13 - *API First*](./facteurs/13_api_first.md) | Concevez tout comme un API. Vos systèmes pourront être consommée par n'importe quel autre type d'applications. |
 | [14 - Télémétrie](./facteurs/14_telemetrie.md) | Collectez le plus de données possibles sur le comportement et l'utilisation de votre application. |
 | [15 - Authentification/autorisation](./facteurs/15_authentification.md) | Implémentez l’identité à partir du début. Envisagez les fonctionnalités RBAC (contrôle d’accès en fonction du rôle) disponibles dans les clouds publics. |
 
