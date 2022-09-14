@@ -66,6 +66,6 @@ spec:
 ```
 
 
-[Le facteur suivant](./9_disposabilite.md)
+[Le facteur suivant](./9_jetable.md)
 
 [Le tableau de la méthodologie de 12 Facteurs](../README.md)
