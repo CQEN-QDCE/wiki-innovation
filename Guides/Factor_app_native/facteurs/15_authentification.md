@@ -1,24 +1,19 @@
-## 15 - Authentification/autorisation
+## 15 - Authentification & autorisation
 
-L'ajout du facteur Authentification et autorisation met l'accent sur la sécurité des applications Cloud Native. Le déploiement d'applications dans un environnement en infonuagique signifie que les applications peuvent être transportées à travers de nombreux centres de données dans le monde entier, exécutées dans plusieurs conteneurs et accessibles à un nombre presque illimité de clients. Il est donc essentiel que la sécurité ne soit pas une réflexion après coup pour les applications natives en infonuagique et constitue un facteur très important à prendre en compte.
-Les applications natives du cloud peuvent sécuriser leurs points d'extrémité grâce au contrôle d'accès basé sur les rôles (RBAC). Ces rôles déterminent si le client appelant dispose d'une autorisation suffisante pour que l'application honore la demande et permettent de suivre l'auteur de la demande à des fins d'audit.
+> Implémentez l’identité à partir du début sur tout les services.
 
-![](../images/authentification.png)
+L'ajout du facteur Authentification et autorisation met l'accent sur la sécurité des applications Cloud Native. Pour interconnecter des systèmes distribués dans l'infonuagique ainsi que sur des applications consonmmées en SaaS, vous devrez exposer des services sur le web public. Il est alors primordial de sécuriser de contrôler l'accès à vos services. Les mécanismes d'ahthentification et d'autorisation doivent être réfléchis et mis en place dans les étapes initiales de la conception d'un service.
 
-MicroProfile [JWT](https://jwt.io/) (JSON Web Token), un mécanisme d'authentification par jeton pour authentifier, autoriser et vérifier les utilisateurs, peut être une API Java open source utile pour activer ce facteur. Un jeton Web JSON (JWT) est un jeton autonome conçu pour transmettre en toute sécurité des informations sous forme d'objet JSON. Les informations contenues dans cet objet JSON sont signées numériquement et peuvent être reconnues et vérifiées par le destinataire. 
+On délèguera la plupart du temps, le stockage des identités à un fournisseur d'identité en service externe. Ces outils peuvent aussi souvent fournir le processus d'authentification. Idéalement votre organisation fournie déjà un tel service, mais si vous devez le mettre en place des outils tel que [Keycloak](https://www.keycloak.org/) ou [Gluu](https://gluu.org/) fournissent les fonctionalités nécéssaires à un tel service.
 
-Pour les microservices, un mécanisme d'authentification basé sur des jetons offre un moyen léger pour les contrôles de sécurité et les jetons de sécurité de propager les identités des utilisateurs à travers différents services. JWT est en train de devenir le format de jeton le plus courant car il suit des normes bien définies et connues. Les normes JWT de MicroProfile définissent le format requis de JWT pour l'authentification et l'autorisation.
+Pour les microservices, un mécanisme d'autorisation basé sur des jetons offre un moyen léger pour contrôler les accès en plus de permettre de propager les identités des utilisateurs à travers différents services. JWT est en train de devenir le format de jeton le plus courant car il suit des normes bien définies et connues.
 
 ### Nous recommandons les bonnes pratiques suivantes :
 
-- Protection contre les DOS et DDOS
-- L'API doit être sécurisée par A&A - jeton d'API, RBAC, OAuth.
-- Le contenu Web doit être exposé en externe via HTTPS.
-- Le réseau doit être protégé par un pare-feu.
-- Les charges utiles des demandes/réponses de l'API doivent être cryptées.
-- La sécurité du pare-feu et du routeur doit être en place.
-- Protection de la base de données
-- MFA (authentification multifactor)
+- Tentez le plus possible d'utiliser un fournisseur d'identité externe unique.
+- Utiliser des protocols d'authentification et d'identification standards tel que [OAuth2](https://oauth.net/2/) et [OpenIdConnect](https://openid.net/connect/).
+- Revalider les identitées à chaques étape d'un processus distribué.
+- Mettre en place une authentification unique (*Single Sign On*) pour toutes les applications d'un système, simplifie grandement la vie des usagers.
 
 
 [Le tableau de la méthodologie de 12 Facteurs](../README.md)
