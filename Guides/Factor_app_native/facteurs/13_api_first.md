@@ -16,7 +16,7 @@ Pour définir clairement une API dans une application, on peut utiliser les mod�
 
 En tant qu'outil à code source ouvert, le générateur de documentation d'API Swagger permet de publier une documentation complète ainsi que des tests pour un API.
 
-Vous trouverezà cette adresse https://petstore.swagger.io/, un exemple de documentation Swagger. Jetez-y un coup d'œil pour vous familiariser avec ses fonctionnalités.
+Vous trouverez à cette adresse https://petstore.swagger.io/, un exemple de documentation Swagger. Jetez-y un coup d'œil pour vous familiariser avec ses fonctionnalités.
 
 Vous pouvez également consulter la vision du CEAI de [l'architecture API-First native](https://github.com/CQEN-QDCE/ceai-cqen-documentation/blob/main/Patrons/architecture_api.md) dans l'infonuagique.
 
