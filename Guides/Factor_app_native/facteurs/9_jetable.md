@@ -9,6 +9,7 @@ Les services de déploiement infonuagique avec capacité d'adaptation à la char
 - Déployer les applications dans des conteneurs.
 - Réduire les temps de démarrage. Envisagez également le chargement de librairie à la demande ou d'autres pratiques pour réduire les temps.
 - Mettez en place un arrêt progressif. Surveillez les signaux d'arrête système (*SIGTERM*), puis marquez le service comme hors ligne (plus de nouvelles demandes), terminez les demandes existantes, puis supprimez les services.
+- Placer les longs traitements dans des tâches asynchrones indempotantes gérées par une file d'attente.
 
 ### Exemples de cas d’utilisation
 
