@@ -32,7 +32,7 @@ Chaque compte contiendra aussi 3 groupes de sécurité prédéfinis à appliquer
 Le sous-réseau Web sert au déploiement des services qui doivent écouter et émettre vers l'extérieur du compte de travail. On y trouvera principalement des équilibreurs de charges, passerelle d'API ou encore des serveurs Web qui n'interviennent pas dans la couche métier de l'application. La communication est permise seulement sur les ports HTTP(80) et HTTPS(443). 
 
 ### App
-Le sous-réseau App sert à déployer les charges de travail (qui devraient être prinicipalement des conteneurs) des services de votre déploiements. La communication est permise sur tous les ports sur ce sous-réseau.
+Le sous-réseau App sert à déployer les charges de travail (qui devraient être principalement des conteneurs) des services de vos déploiements. La communication est permise sur tous les ports sur ce sous-réseau.
 
 ### Data
 Le sous-réseau Data sert à déployer les services de persistance de données, tel que des bases de données. Seul le sous-réseau App peut communiquer avec ce sous-réseau et ce sur les ports des principaux services de base de données. Si vous déployez un service qui communique par un autre port, vous devrez définir un groupe de sécurité sur mesure pour votre service.
