@@ -2,7 +2,7 @@
 
 > Les instances de service doivent être jetables. Favorisez le démarrage rapide pour augmenter les opportunités d’extensibilité et les arrêts gracieux pour laisser le système dans un état correct.
 
-Les services de déploiement infonuagique avec capacité d'adaptation à la charge doivent, pour faire cela, pouvoir créer et détruire des instances d'application. Ainsi les instances d'une application 12 facteurs sont jetables : cela signifie qu’elle doivent démarrer ou s’arrêter très rapidement. Elle doivent aussi prévoir des arrêts gracieux, comme par exemple en prévoyant des processus idempotent ou encore en surveillant les signaux d'arrêt systm̀e pour réagir en conséquence.
+Les services de déploiement infonuagique avec capacité d'adaptation à la charge doivent, pour faire cela, pouvoir créer et détruire des instances d'application. Ainsi les instances d'une application 12 facteurs sont jetables : cela signifie qu’elle doivent démarrer ou s’arrêter très rapidement. Elle doivent aussi prévoir des arrêts gracieux, comme par exemple en prévoyant des processus idempotent ou encore en surveillant les signaux d'arrêt système pour réagir en conséquence.
 
 ### Nous recommandons les pratiques spécifiques suivantes :
 
