@@ -4,7 +4,7 @@
 
 Les applications d'entreprise évoluent dans différents environnements au cours de leur cycle de développement. En règle générale, ces environnements sont les suivants : développement, préproduction et production. Il est recommandé de faire en sorte que ces environnements restent aussi semblables que possible.
 
-L'utilisation de conteneurs facilitent beaucoup l'atteinte de la parité dans les envrionnements car ils vous permettent d'exécuter exactement le même environnement d'exécution tout au long du développement local jusqu'à la production. N'oubliez pas, cependant, que des différences dans les données sous-jacentes peuvent toujours entraîner des différences au moment de l'exécution.
+L'utilisation de conteneurs Docker facilitent beaucoup l'atteinte de la parité dans les environnements car ils vous permettent d'exécuter exactement le même environnement d'exécution tout au long du développement local jusqu'à la production. N'oubliez pas, cependant, que des différences dans les données sous-jacentes peuvent toujours entraîner des différences au moment de l'exécution.
 
 ### Nous recommandons les pratiques spécifiques suivantes :
 
