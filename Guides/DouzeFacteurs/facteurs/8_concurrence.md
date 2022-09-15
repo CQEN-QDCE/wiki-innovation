@@ -12,7 +12,7 @@ Dans une architecture microservices, vous pouvez faire évoluer horizontalement 
 
 - Construire de plus petites applications sans état (microservices).
 - L'application peut être exécutée un nombre illimité de fois en parallèle.
-- L'application ne doit pas maintenir un grand pnombre de connexions persistantes à la base de données 
+- L'application ne doit pas maintenir un grand nombre de connexions persistantes à la base de données 
 - L'application utilise les transactions de la base de données, le cas échéant, et évite les blocages.
 - L'application ne dépend pas de sessions collantes ; les demandes peuvent atteindre n'importe quel processus.
 
