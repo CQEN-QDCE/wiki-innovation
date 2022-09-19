@@ -56,7 +56,7 @@ Pour commencer à créer les ressources dans AWS, il faut que le profile de conn
 
   ![aws-ecr](images/aws-web-ecr.png)
 
-  Si vous cliquez sur le registre créé, vous allez voir qu'il est vide. À continuation, vous allez ajouter l'image de l'application.
+  Si vous cliquez sur le registre créé, vous allez voir qu'il est vide. Par la suite, vous allez ajouter l'image de l'application.
 ## Déposer l'image docker de l'application dans la ressource ECR
 
 Toujours, dans votre navigateur, cliquez sur le registre créé dans AWS, si vous n'êtes pas déjà à l'intérieur.

@@ -11,13 +11,13 @@
 
 # Construction d'une image docker d'une application web simple
 
-Cette étape est nécessaire si vous n'avez pas déjà une application web simple pour la déployer dans AWS.
+Cette étape est nécessaire si vous n'avez pas déjà une application web simple à déployer dans AWS.
 
-Si vous avez déjà une image docker d'une telle image, alors, vous pouvez passer à l'[étape 2](E2-preps-and-init-workspace-tf.md) pour commencer à travailler avec les scripts terraform pour la création de ressources dans AWS.
+Si vous avez déjà une image *docker* d'une telle application, alors, vous pouvez passer à l'[étape 2](E2-preps-and-init-workspace-tf.md) pour commencer à travailler avec les scripts terraform pour la création de ressources dans AWS.
 
 ## Créer une application basique NodeJS
 
-Nous allons créer une application basique web qui peut être exécutée localement dans votre poste de travail (localhost).
+Nous allons créer une application web simple qui peut être exécutée localement dans votre poste de travail (localhost).
 
 Créez un répertoire de travail et allez dans ce répertoire:
 ```bash
@@ -44,9 +44,9 @@ app.get('/', (req, res) => {
 
 app.listen(3000, '0.0.0.0');
 ```
-Ce fichier va commencer le serveur web localement (localhost) avec le port 3000.
+Ce fichier va démarrer le serveur web localement (localhost) sur le port 3000.
 
-Vérifiez que votre serveur marche:
+Vérifiez que votre serveur fonctionne:
 ```bash
 node app.js
 ```
@@ -58,14 +58,14 @@ Vous devriez voir un résultat similaire:
 
 ## Faire une image docker de l'application
 
-Nous allons utiliser les avantages d'un conteneur comme docker pour faciliter le déploiement de l'application dans une technologie infonuagique.
+Nous allons utiliser les avantages d'un conteneur *docker* pour faciliter le déploiement de l'application dans un service infonuagique.
 
-Entre autres, docker nous permet de:
+Entre autres, *docker* nous permet de:
 - Lister les dépendances (en excluant un noyau Linux qui est assumé)
 - Isoler l'application web par défaut
 - Donner des instructions simples pour exécuter l'application
 
-Pour plus d'information sur Docker, voir [ici](../../../CEAI/README.md#conteneurs)
+Pour plus d'information sur *Docker*, voir [ici](../../../CEAI/README.md#conteneurs)
 
 ### Créez le fichier Dockerfile
 Créez un fichier Dockerfile avec le contenu suivant:
@@ -108,7 +108,7 @@ Explication du contenu du fichier Dockerfile:
   ```bash
   docker run -p 12345:3000 -d some-image-name
   ```
-  Cette commande indique d'exécuter l'image `some-image-name` localement dans le port `12345` (qui correspond au port 3000 du conteneur).
+  Cette commande va démarrer le conteneur *docker* `some-image-name` localement dans le port `12345` (qui correspond au port 3000 du conteneur).
 - Pour tester l'accès à l'application dans le conteneur, utilisez le lien http://localhost:12345 dans votre navigateur.
   
   Vous devriez voir un résultat similaire:
@@ -119,8 +119,8 @@ Vous avez réussi à tester localement l'exécution d'un conteneur à partir de 
 
 L'image servira pour les étapes suivantes de déploiement de l'application dans AWS.
 
-Maintenant, on va arrêter le conteneur local, car on n'en a plus besoin:
-- Pour lister les processus docker qui s'exécutent, utilisez la commande `docker ps`:
+Maintenant, nous allons arrêter le conteneur local, car on n'en a plus besoin:
+- Pour lister les processus *docker* qui s'exécutent, utilisez la commande `docker ps`:
   ```bash
   docker ps
   ```

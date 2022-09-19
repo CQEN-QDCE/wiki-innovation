@@ -76,5 +76,5 @@ variable "aws_ecs_image_app_tag" {
 variable "aws_route53_zone_id" {
   type        = string
   description = ""
-  sensitive   = false
+  sensitive   = true
 }

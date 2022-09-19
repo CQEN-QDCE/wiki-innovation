@@ -12,7 +12,7 @@
 # Déploiement des ressources du cluster AWS ECS (Elastic Container Service)
 
 Dans l'étape précédente, vous avez créé le registre pour stocker l'image de l'application. 
-Maintenant, nous allons déployer cette image dans un cluster AWS (ECS).
+Maintenant, nous allons déployer cette image dans le service ECS.
 
 ## Role IAM (Identity and Access Management)
 Il faut créer le rôle qui permettra d'exécuter la tâche liée au cluster ECS qui gère l'exécution de l'instance de l'application.

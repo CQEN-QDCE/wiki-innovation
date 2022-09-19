@@ -17,9 +17,9 @@ Dans cette section, nous allons mettre en place l'infrastructure nécessaire pou
 
 Comme mentionné dans la page principale de cet exemple, il y a des [prérequis](README.md#prérequis) avant de commencer le provisionnement des ressources dans AWS.
 
-Entre les ressources à créer en première, on peut mentionner:
-- ECR (Elastic Container Registry): Le conteneur de l'image de l'application.
-- ECS (Elastic Container Service): Le cluster qui héberge l'application.
+Parmi les ressources à créer en premier, on peut mentionner:
+- ECR (Elastic Container Registry): Le registre de conteneur qui hébergera l'image de l'application.
+- ECS (Elastic Container Service): Le service de déploiement qui héberge l'application.
   - Service: Exécute et maintiens un nombre spécifique d'instances d'une définition de tâche en même temps.
   - Définition de Tâche: Nécessaire pour rouler le conteneur Docker dans ECS.
   - Équilibreurs de charge (Load Balancers):
@@ -32,9 +32,9 @@ Entre les ressources à créer en première, on peut mentionner:
 
 Pour l'initialisation de l'espace de travail avec terraform, nous allons créer trois fichiers terraform:
 
-- terraform.tfvars: fichier que contient les paramètres nécessaires pour l'environnement de travail.
-- data.tf: fichier que contient les informations des ressources déjà créées dans AWS comme prérequis de cet exercice.
-- provider.tf: fichier qu'indique que le fournisseur de cloud est AWS et la région dans laquelle le compte AWS se trouve.
+- terraform.tfvars: fichier qui contient les paramètres nécessaires pour l'environnement de travail.
+- data.tf: fichier qui contient les informations des ressources déjà créées dans AWS comme prérequis de cet exercice.
+- provider.tf: fichier qui indique que le fournisseur est AWS et la région dans laquelle l'application doit être déployée.
 
 ### Création et édition des fichiers terraform
 

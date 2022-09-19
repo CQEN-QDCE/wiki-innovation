@@ -14,9 +14,9 @@
 ## Description
 Cet exercice vous montre comment déployer une application web simple dans AWS d'une manière fiable.
 
-Il s'agit d'une application nodejs que, dans une première étape, sera déployée dans un cluster ECS (Elastic Container Service), à partir d'un service de registre d'images de conteneur ECR (Elastic Container Registry).
+Il s'agit d'une application Node.js qui, dans une première étape, sera déployée dans le service ECS (*Elastic Container Service*), à partir du service de registre d'images de conteneur ECR (*Elastic Container Registry*).
 
-Ensuite, dans des étapes suivantes, l'application sera exposée à l'extérieur via l'API gateway d'AWS.
+Ensuite, dans les étapes suivantes, l'application sera exposée publiquement via le service *API Gateway*.
 
 ![infrastructure-aws-web-app](../../images/Infra-Web-App-AWS.png)
 
@@ -49,7 +49,7 @@ Plus sur terraform: [ici](../../Outils/Terraform/README.md#quest-ce-que-cest-ter
 ### Nettoyage
 Il est important de nettoyer nos espaces de travail de développement une fois finie l'expérience, pour deux raisons:
 - Parce que c'est une bonne pratique.
-- Parce que l'infrastructure infonuagique a souvent un prix à payer pour l'utilisation de ses ressources.
+- Parce que les services infonuagiques sont facturés à l'utilisation.
 
 Quand vous avez fini de travailler dans cet environnement, vous pouvez effacer les ressources créées en utilisant la commande `destroy` de terraform.
 ```bash

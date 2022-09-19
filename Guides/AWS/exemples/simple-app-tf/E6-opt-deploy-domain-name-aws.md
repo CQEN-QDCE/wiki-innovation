@@ -31,7 +31,7 @@ Dans les étapes précédentes, vous avez réussi à:
 - Déployer une application web dans AWS et,
 - Tester un appel à l'application avec une requête HTTP GET avez l'API Gateway.
 
-Maintenant, nous allons voir la partie d'exposer un lien public de l'application pour qu'elle soit accessible sur internet.
+Maintenant, nous allons voir comment exposer un lien public vers l'application pour qu'elle soit accessible sur internet.
 
 ## Nom de domaine dans Route53
 Cette partie de l'exercice se fait manuellement dans le compte AWS.

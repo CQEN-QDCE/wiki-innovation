@@ -11,7 +11,7 @@
 
 # Déploiement des ressources de l'Api Gateway pour tester l'application
 
-Dans l'étape précédente, l'application web a été déployée dans le cluster AWS ECS Fargate. Maintenant, nous allons créer les ressources nécessaires pour pouvoir faire des requêtes HTTP à cette application web.
+Dans l'étape précédente, l'application web a été déployée dans le service ECS sur une unité de calculs Fargate. Maintenant, nous allons créer les ressources nécessaires pour exposer notre application sur le web.
 
 
 ## Équilibreur de charge de réseau (Network Load Balancer)
