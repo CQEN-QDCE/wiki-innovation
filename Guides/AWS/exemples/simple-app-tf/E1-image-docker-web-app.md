@@ -80,7 +80,7 @@ CMD [ "node", "app.js" ]
 ```
 
 Explication du contenu du fichier Dockerfile:
-- **`FROM node:10`** -> Définir l'image de base (dans notre exemple c'est Node) et en plus Indique que l'application va dépendre de la version 10 de Node.
+- **`FROM node:10`** -> Définit l'image de base (dans notre exemple c'est Node) et sa version (10).
 - **`WORKDIR /usr/src/app`** -> Indique que pour les autres commandes dans votre fichier Dockerfile, le dossier du travail est `/usr/src/app` dans le système virtuel des fichiers.
 - **`COPY package*.json ./`** -> Copie les fichiers locaux`package.json` et `package-lock.json` au dossier du travail `WORKDIR` (dans docker).
 - **`RUN npm i`** -> Installe les dépendances listées dans le fichier package.json.
@@ -108,7 +108,14 @@ Explication du contenu du fichier Dockerfile:
   ```bash
   docker run -p 12345:3000 -d some-image-name
   ```
-  Cette commande va démarrer le conteneur *docker* `some-image-name` localement dans le port `12345` (qui correspond au port 3000 du conteneur).
+  Cette commande va démarrer le conteneur *docker* de l'image `some-image-name` localement, dans le port `12345` (qui correspond au port 3000 du conteneur).
+  
+  **:information_source:** Comme bonne pratique, le nom de l'instance de l'image qui roule devrait être spécifié:
+  ```
+  docker run --name sample-app -p 12345:3000 -d some-image-name
+  ```
+  Dans le cas de cet exercice, le nom n'a pas été spécifié, donc, un nom par hasard a été assigné à l'instance: `nifty_greider`
+
 - Pour tester l'accès à l'application dans le conteneur, utilisez le lien http://localhost:12345 dans votre navigateur.
   
   Vous devriez voir un résultat similaire:

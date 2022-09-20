@@ -38,9 +38,9 @@ Cette partie de l'exercice se fait manuellement dans le compte AWS.
 
 Dans AWS -> Route53 -> zone hébergée, créez un enregistrement de type `CNAME` avec le nom de domaine que vous allez utiliser.
 
-Exemple du nom de domaine: ***api-example***
+Dans le cas de cet exercice, le nom de domaine qui sera créé avec le fichier `custom_domain.tf` est: ***web-api-sample1-dev.ceai.cqen.ca***
 
-Donc, l'URL finale serait par exemple: https://api-exemple.com
+Donc, l'URL finale serait par exemple: https://web-api-sample1-dev.ceai.cqen.ca
 
 Pour l'instant, vous pouvez indiquer comme valeur, une URL temporaire qui sera ajustée lors de la création du nom de domaine personnalisé.
 
@@ -95,4 +95,4 @@ Fin de l'exercice!
 
 [<-- Page Principale](README.md)
 
-[-> Page Précedente: Étape 5: Déployer les ressources de l'Api Gateway pour tester l'application](E5-deploy-api-gateway-aws.md)
+[<- Page Précedente: Étape 5: Déployer les ressources de l'Api Gateway pour tester l'application](E5-deploy-api-gateway-aws.md)

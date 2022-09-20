@@ -19,7 +19,6 @@ POLICY
 }
 
 resource "aws_iam_role_policy_attachment" "ecs_policy_attachment" {
-  #name = "${local.name}-EcsTaskExecAttachment"
   role = "${aws_iam_role.ecs_task_execution_role.name}"
 
   // This policy adds logging + ecr permissions

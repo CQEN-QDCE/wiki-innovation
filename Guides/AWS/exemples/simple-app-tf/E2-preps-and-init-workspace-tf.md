@@ -15,6 +15,8 @@
 
 Dans cette section, nous allons mettre en place l'infrastructure nécessaire pour le déploiement de l'application dans AWS avec l'aide des scripts terraform ([plus sur terraform](../../Outils/Terraform/README.md#quest-ce-que-cest-terraform)).
 
+**:information_source:** Exceptionnellement et pour simplicité, nous allons garder le fichier d'état de terraform localement, mais, idéalement, ce fichier sensible devrait être sauvegardé dans le service de stockage simple d'AWS: [S3](https://docs.aws.amazon.com/fr_fr/AmazonS3/latest/userguide/Welcome.html).
+
 Comme mentionné dans la page principale de cet exemple, il y a des [prérequis](README.md#prérequis) avant de commencer le provisionnement des ressources dans AWS.
 
 Parmi les ressources à créer en premier, on peut mentionner:
@@ -62,10 +64,10 @@ Dans votre éditeur de code (par exemple, Visual Studio Code):
     | aws_ecs_image_app_tag | L'étiquette (tag) de l'image de l'application  | latest  |
     | aws_route53_zone_id | La zone de la route 53 d'AWS | XXXXXXXX  |
 
-- Copiez les fichiers [data.tf](scripts/data.tf), [provider.tf](scripts/provider.tf), [variables.tf](scripts/variables.tf) et [ecr.tf](scripts/ecr.tf) dans votre dossier `deploiement`.
+- Copiez les fichiers [data.tf](scripts/data.tf), [provider.tf](scripts/provider.tf) et [variables.tf](scripts/variables.tf) dans votre dossier `deploiement`.
 
 [<-- Page Principale](README.md)
 
-[-> Page Précedente: Étape 1: Étape 1: Construire une image docker d'une application web simple](E1-image-docker-web-app.md)
+[<- Page Précedente: Étape 1: Étape 1: Construire une image docker d'une application web simple](E1-image-docker-web-app.md)
 
 [-> Page Suivante: Étape 3: Déployer les ressources du registre de conteneurs ECR](E3-deploy-aws-ecr.md)

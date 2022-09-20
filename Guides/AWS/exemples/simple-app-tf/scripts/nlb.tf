@@ -14,7 +14,7 @@ resource "aws_lb_target_group" "nlb_tg" {
     timeout             = 6
     healthy_threshold   = 3
     unhealthy_threshold = 3
-    matcher             = "200-399"
+    matcher             = "200-202"
   }
   lifecycle {
     create_before_destroy = true

@@ -67,6 +67,6 @@ Et voilà! Vous avez réussi à faire une requête `GET` à l'application déplo
 
 [<-- Page Principale](README.md)
 
-[-> Page Précedente: Étape 4: Déployer les ressources du cluster ECS](E4-deploy-aws-ecs.md)
+[<- Page Précedente: Étape 4: Déployer les ressources du cluster ECS](E4-deploy-aws-ecs.md)
 
 [-> Page Suivante: Étape 6: (optionnel) Déployer les ressources pour avoir un lien public de l'application (DNS)](E6-opt-deploy-domain-name-aws.md)

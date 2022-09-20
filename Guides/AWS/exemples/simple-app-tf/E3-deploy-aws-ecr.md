@@ -15,6 +15,8 @@ Le registre contiendra l'image de l'application à être déployée.
 
 Pour commencer à créer les ressources dans AWS, il faut que le profile de connexion au compte AWS [soit créé](../../Outils/AWS-Command-Line-Interface/README.md#configuration-daws-sso-single-sign-on) et ensuite, ouvrir une session de connexion avec ce profile créé ([voir](../../Outils/AWS-Command-Line-Interface/README.md#login-au-compte-aws)).
 
+- Copiez le fichier [ecr.tf](scripts/ecr.tf) dans votre dossier `deploiement`.
+
 - Exécutez la commande `init` pour initialiser le répertoire comme un conteneur du code terraform:
   ```bash
   terraform init
@@ -89,6 +91,6 @@ Dans votre terminal:
 
 [<-- Page Principale](README.md)
 
-[-> Page Précedente: Étape 2: Préparation et initialisation de l'espace du travail avec les scripts terraform](E2-preps-and-init-workspace-tf.md)
+[<- Page Précedente: Étape 2: Préparation et initialisation de l'espace du travail avec les scripts terraform](E2-preps-and-init-workspace-tf.md)
 
 [-> Page Suivante: Étape 4: Déployer les ressources du cluster ECS](E4-deploy-aws-ecs.md)

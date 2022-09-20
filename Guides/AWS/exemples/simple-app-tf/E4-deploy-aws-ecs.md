@@ -22,6 +22,8 @@ Dans votre répertoire `deploiement`, copiez le fichier [iam.tf](scripts/iam.tf)
 ## Réseau Virtuel Privé (VPN - Virtual Private Cloud)
 Un des prérequis de cet exercice était celui d'avoir un réseau privé virtuel dans le compte AWS auquel vous avez accès.
 
+**:information_source:** Comme mentionné au début de l'exercice, le CEAI utilise [AWS SEA](../../../CEAI/README.md), donc, un VPC et un sous-réseau défaut ont été déjà mis en place pour utilisation.
+
 Les informations des ressources créées se trouvent dans le fichier [data.tf](scripts/data.tf).
 
 Nous allons ajouter la ressource de `groupe de sécurité`.
@@ -30,6 +32,8 @@ Copiez le fichier [sg.tf](scripts/sg.tf) dans votre répertoire de travail.
 
 ## Fargate (ECS)
 Cette section contient la partie des ressources du cluster ECS de AWS où l'application sera déployée.
+
+**:information_source:** AWS Fargate est un moteur de calcul sans serveur, qui permet de ne pas devoir gérer des serveurs ou des clusters d'instances [Amazon EC2](https://docs.aws.amazon.com/fr_fr/AWSEC2/latest/UserGuide/concepts.html).
 
 Fargate c'est un type de service de conteneur (ECS - Elastic Container Service), qui a trois concepts:
 - Clusters: Un regroupement logique de tâches ou de services.
@@ -83,6 +87,6 @@ Voilà!, vous avez réussi à déployer avec succès, une application web dans u
 
 [<-- Page Principale](README.md)
 
-[-> Page Précedente: Étape 3: Déployer les ressources du registre de conteneurs ECR](E3-deploy-aws-ecr.md)
+[<- Page Précedente: Étape 3: Déployer les ressources du registre de conteneurs ECR](E3-deploy-aws-ecr.md)
 
 [-> Page Suivante: Étape 5: Déployer les ressources de l'Api Gateway pour tester l'application](E5-deploy-api-gateway-aws.md)

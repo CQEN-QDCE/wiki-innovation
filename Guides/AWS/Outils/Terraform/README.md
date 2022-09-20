@@ -82,6 +82,7 @@ Global options (use these before the subcommand, if any):
 
 ## Commandes principales
 - ***terraform init*** : Permet d'initialiser le répertoire contenant la configuration Terraform
+- ***terraform validate*** : Permet de vérifier si la configuration est valide
 - ***terraform plan*** : Permet d'afficher une vue des différences entre la configuration Terraform et la configuration effective
 - ***terraform apply*** : Permet d'appliquer la configuration
 - ***terraform import*** : Permet d'intégrer des ressources déployées à l'extérieur de Terraform dans sa configuration
