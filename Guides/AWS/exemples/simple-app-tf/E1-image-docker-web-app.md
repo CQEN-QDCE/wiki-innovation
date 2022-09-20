@@ -80,7 +80,7 @@ CMD [ "node", "app.js" ]
 ```
 
 Explication du contenu du fichier Dockerfile:
-- **`FROM node:10`** -> Indique que l'application va dépendre de la version 10 de Node.
+- **`FROM node:10`** -> Définir l'image de base (dans notre exemple c'est Node) et en plus Indique que l'application va dépendre de la version 10 de Node.
 - **`WORKDIR /usr/src/app`** -> Indique que pour les autres commandes dans votre fichier Dockerfile, le dossier du travail est `/usr/src/app` dans le système virtuel des fichiers.
 - **`COPY package*.json ./`** -> Copie les fichiers locaux`package.json` et `package-lock.json` au dossier du travail `WORKDIR` (dans docker).
 - **`RUN npm i`** -> Installe les dépendances listées dans le fichier package.json.
