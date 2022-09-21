@@ -1,4 +1,15 @@
-# Liste des politiques de sécurité appliquées dans les compte de travail ASEA
+<!-- ENTETE -->
+[![img](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://www.quebec.ca/gouv/politiques-orientations/vitrine-numeriqc/accompagnement-des-organismes-publics/demarche-conception-services-numeriques)
+[![License](https://img.shields.io/badge/Licence-LiLiQ--P-blue)](https://github.com/CQEN-QDCE/.github/blob/main/LICENCE.md)
+
+---
+
+<div>
+    <img src="https://github.com/CQEN-QDCE/.github/blob/main/images/mcn.png" />
+</div>
+<!-- FIN ENTETE -->
+
+# Liste des politiques de sécurité appliquées dans les comptes de travail ASEA
 
 ## EC2
 
@@ -9,7 +20,7 @@
 | EC2-INSTANCE-PROFILE-PERMISSIONS | Les instances EC2 doivent être attachés au politiques IAM suivantes: `AmazonSSMManagedInstanceCore`, `AmazonSSMDirectoryServiceAccess`,  `CloudWatchAgentServerPolicy` |  Automatisé | AWS Config |
 | EC2_INSTANCE_DETAILED_MONITORING_ENABLED | Vérifie si la surveillance détaillée est activée pour les instances EC2.  | Alerte conformité | AWS Config |
 | EC2_MANAGEDINSTANCE_PATCH_COMPLIANCE_STATUS_CHECK | Vérifie si l'état de conformité des correctifs *Systems Manager* après l'installation d'un correctif sur l'instance. | Alerte conformité | AWS Config |
-| INSTANCES_IN_VPC | Vérifie que vos instances EC2 appartiennent à un réseau Virtual Private (VPC). | AWS Config |
+| INSTANCES_IN_VPC | Vérifie que vos instances EC2 appartiennent à un réseau Virtual Private (VPC). | Alerte conformité | AWS Config |
 
 ## EBS/EFS (Volumes EC2)
 
@@ -43,9 +54,11 @@
 
 ## S3
 
-| S3_BUCKET_SERVER_SIDE_ENCRYPTION_ENABLED | Les bucket S3 doivent être encryptés. | Automatisée| AWS Config |
-| S3_BUCKET_POLICY_GRANTEE_CHECK | Vérifie que l'accès accordé au compartiment S3 est limité par l'un des mécanismes suivants: par utilisateurs fédérés, par mandataires de service, par adresses IP ou par VPC que vous fournissez. | AWS Config |
-| S3_BUCKET_VERSIONING_ENABLED | Vérifie si le versionnage est activé pour vos compartiments S3. | AWS Config |
+| Règle | Explication | Méthode d'application | Service AWS |
+| ----- | ----------- | --------------------- | ----------- |
+| S3_BUCKET_SERVER_SIDE_ENCRYPTION_ENABLED | Les bucket S3 doivent être encryptés. | Automatisée | AWS Config |
+| S3_BUCKET_POLICY_GRANTEE_CHECK | Vérifie que l'accès accordé au compartiment S3 est limité par l'un des mécanismes suivants: par utilisateurs fédérés, par mandataires de service, par adresses IP ou par VPC que vous fournissez. | Alerte conformité | AWS Config |
+| S3_BUCKET_VERSIONING_ENABLED | Vérifie si le versionnage est activé pour vos compartiments S3. | Alerte conformité | AWS Config |
 
 ## ACM
 
