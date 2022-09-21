@@ -21,7 +21,7 @@ Le CEAI offre une plateforme de déploiement de conteneurs Openshift qui devrait
 
 L'objectif principal de l'environnement AWS du CEAI est l'hébergement de son laboratoire d'expérimentation. Un VPC partagé de production conforme au standard [CCCS Medium Cloud Control Profile](https://www.canada.ca/fr/gouvernement/systeme/gouvernement-numerique/innovations-gouvernementales-numeriques/services-informatique-nuage/profil-controle-securite-services-ti-fondes-information-nuage.html) y est tout de même déployé. Ceci permet effectivement d'héberger des charges dans un contexte de production. 
 
-Il faut toutefois garder en tête que l'environnement du CEAI est totalement détaché du réseau interne du MCN. Il ne peut donc pas accéder aucun système de mission interne du gouvernement du Québec que ne soit exposé publiquement.
+Il faut toutefois garder en tête que l'environnement du CEAI est totalement détaché du réseau interne du MCN. Il ne peut donc pas accéder aucun système de mission interne du gouvernement du Québec qui ne soit exposé publiquement.
 
 ## Est-ce que le CEAI propose des patrons d'architecture à déployer dans AWS ?
 
