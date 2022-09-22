@@ -119,6 +119,7 @@ Explication du contenu du fichier Dockerfile:
 - Pour tester l'accès à l'application dans le conteneur, utilisez le lien http://localhost:12345 dans votre navigateur.
   
   Vous devriez voir un résultat similaire:
+  
   ![localhost-docker-app](images/localhost-docker-image-hello-world-nodejs.png)
 
 ### Arrêtez le processus Docker

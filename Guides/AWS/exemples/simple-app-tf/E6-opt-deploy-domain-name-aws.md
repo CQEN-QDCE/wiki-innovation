@@ -75,9 +75,11 @@ Avec ce fichier, le nom du domaine personnalisé sera créé dans AWS.
 Pour tester l'accès public à l'application, vous n'avez qu'à copier le lien du nom de domaine personnalisé dans votre navigateur et vous devez voir le "Hello World!" de l'api.
 
 AWS - Api Gateway - Nom de Domain Personnalisé
+
 ![aws-api-gateway-dns-url](images/aws-api-gateway-custom-domain-name-url.png)
 
 Internet:
+
 ![web-public-access-to-app](images/web-public-access-to-app.png)
 
 Dans le cas de cet exemple, l'URL pour accéder à l'application est accompagnée du path `web-api-sample1-dev`, ça veut dire:
