@@ -76,6 +76,14 @@ Après la création des ressources AWS, allez dans le navigateur, dans la consol
 
     ![aws-ecs-details-service](images/aws-ecs-details-service.png)
 
+  - Cliquez sur l'onglet `Tâches` du service pour voir les tâches associées au service.
+
+    ![aws-ecs-details-service-taches](images/aws-ecs-details-service-taches.png)
+
+  - Cliquez sur la tâche associée pour voir les détails de la tâche. Vous allez constater que le statut est `RUNNING` (en exécution) et que  l'`État d'intégrité` est `HEALTHY`:
+  
+    ![aws-ecs-details-service-tache-details](images/aws-ecs-details-service-tache-details.png)
+
 - Dans la vue EC2:
   - Target Groups: vous devriez voir dans l'onglet des détails, le statut: `Healthy`
 

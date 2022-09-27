@@ -17,7 +17,8 @@ resource "aws_ecs_task_definition" "app_task" {
         container_name = "${local.name}-container",
         image = "${aws_ecr_repository.ecr_repo.repository_url}:${var.aws_ecs_image_app_tag}",
         container_port = "${var.aws_ecs_app_port}",
-        host_port = "${var.aws_ecs_app_port}"
+        host_port = "${var.aws_ecs_app_port}",
+        healthcheck_path = "${var.aws_ecs_health_check_path}"
     })
 }
 

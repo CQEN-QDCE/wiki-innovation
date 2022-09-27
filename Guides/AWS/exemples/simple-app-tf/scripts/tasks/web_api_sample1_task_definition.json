@@ -9,6 +9,16 @@
                 "containerPort": ${container_port},
                 "hostPort": ${host_port}
             }
-        ]
+        ],
+        "healthCheck": {
+            "retries": 5,
+            "command": [
+              "CMD-SHELL",
+              "curl -f http://localhost:${host_port}${healthcheck_path} || exit 1"
+            ],
+            "timeout": 15,
+            "interval": 30,
+            "startPeriod": 300
+          }  
     }
 ]
