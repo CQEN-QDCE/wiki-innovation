@@ -33,7 +33,7 @@ Pour en savoir plus sur l'architecture prescriptive des comptes de travail, cons
 
 ![Architecture Réseau](images/network.png)
 
-Au niveau réseautique, le CEAI ne déploie que les VPC partagés Dev, Prod et Central dans deux zones de disponibilité. 
+Au niveau réseautique, le CEAI ne déploie que les VPC partagés Dev, Prod et Central dans deux zones de disponibilité (La troisième zone est disponible dans le VPC Dev pour accomoder le déploiement d'Openshift ainsi que pour expérimentation). 
 
 Le pare-feu AWS Network Firewall est déployé dans le compte Perimeter pour filtrer le trafic entrant et sortant de l'infrastructure.
 
