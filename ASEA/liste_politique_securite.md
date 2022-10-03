@@ -26,8 +26,8 @@
 
 | Règle | Explication | Méthode d'application | Service AWS |
 | ----- | ----------- | --------------------- | ----------- |
-| EBS1 | Le volume d'une instance EC2 doit être encrypté lors du déploiement de l'instance. | Erreur | Organization |
-| EBS2 | Le volume d'une instance EC2 doit être encrypté lors de sa création. | Erreur | Organization |
+| EBS1 | Le volume d'une instance EC2 doit être encrypté avec la clé `ASEA-EBS-Key` du compte, lors du déploiement de l'instance. | Erreur | Organization |
+| EBS2 | Le volume d'une instance EC2 doit être encrypté avec la clé `ASEA-EBS-Key` du compte, lors de sa création. | Erreur | Organization |
 | EFS | Le volume EFS doit être encrypté lors de sa création. | Erreur | Organization |
 | EBS_IN_BACKUP_PLAN | Vérifie si les volumes Amazon Elastic Block Store (Amazon EBS) sont dans un plan de sauvegarde AWS Backup. | Alerte conformité | AWS Config |
 | EC2_VOLUME_INUSE_CHECK | Vérifie si les volumes EBS sont attachés à des instances EC2. Vérifie éventuellement si les volumes EBS sont marqués pour suppression lorsqu'une instance est mise hors service. | Alerte conformité | AWS Config |
@@ -56,7 +56,7 @@
 
 | Règle | Explication | Méthode d'application | Service AWS |
 | ----- | ----------- | --------------------- | ----------- |
-| S3_BUCKET_SERVER_SIDE_ENCRYPTION_ENABLED | Les bucket S3 doivent être encryptés. | Automatisée | AWS Config |
+| S3_BUCKET_SERVER_SIDE_ENCRYPTION_ENABLED | Les bucket S3 doivent être encryptés avec la clé `ASEA-Bucket-Key` du compte. | Automatisée | AWS Config |
 | S3_BUCKET_POLICY_GRANTEE_CHECK | Vérifie que l'accès accordé au compartiment S3 est limité par l'un des mécanismes suivants: par utilisateurs fédérés, par mandataires de service, par adresses IP ou par VPC que vous fournissez. | Alerte conformité | AWS Config |
 | S3_BUCKET_VERSIONING_ENABLED | Vérifie si le versionnage est activé pour vos compartiments S3. | Alerte conformité | AWS Config |
 
