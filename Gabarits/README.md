@@ -10,3 +10,5 @@
 <!-- FIN ENTETE -->
 
 # Gabarits
+
+- [Pipelines CI/CD](Pipelines/README.md)
