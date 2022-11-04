@@ -43,7 +43,7 @@ Bien que chaque équipe DevOps devra déterminer les étapes qui comprennent ses
     - **Déploiement bleu-vert** : avec cette méthode, les développeurs exécutent deux versions de l’application en parallèle sur des infrastructures distinctes. La dernière version stable de l’application est exécutée dans l’environnement de production (bleu) et la nouvelle version est exécutée dans un environnement de simulation (vert) pour y tester les fonctionnalités et les performances. Lorsque les tests sont réussis, le trafic passe de l’environnement bleu à l’environnement vert, qui devient le nouvel environnement de production. Les déploiements bleu-vert sont rapides et faciles à mettre en œuvre, mais ils peuvent être coûteux si l’environnement de production répliqué est particulièrement complexe.
     - **Déploiement canari** : dans ce modèle de déploiement, les développeurs mettent une application à la disposition d’un petit sous-ensemble d’utilisateurs qui font part de leurs commentaires. Lorsqu’il est certain que l’application fonctionne correctement, elle est déployée auprès du reste des utilisateurs. Cette stratégie permet aux développeurs de tester deux versions parallèles d’une application avec de vrais utilisateurs, et d’effectuer des mises à jour et des annulations sans interruption.
 
-### Diagramme d'un exemple de workflow avec les phases et tâches liées aux branchs et pipelines:
+### Diagramme d'un exemple de workflow avec les tâches liées aux branchs et pipelines:
 
 ![example-workflow-cd-ci](images/workflow-cd-ci-pipelines.png)
 
@@ -60,6 +60,8 @@ Brève description du workflow optimale:
 6. La phase de staging (mis au scène) commence et les tests d'acceptation peuvent s'exécuter avant de déployer en production.
 7. Une fois les tests d'acceptation passés, un pull request est crée pour fusionner à la branch de production.
    - Le pipeline lié à la branch prod est déclenché. Les tâches associées sont exécutées.
+
+:warning: Si une des tâches du pipeline échoue alors les tâches suivantes ne s'exécuteront pas et le statut du pipeline se montrera en erreur.
 
 # Modèles de Pipelines
 
