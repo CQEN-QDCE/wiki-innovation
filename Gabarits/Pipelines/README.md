@@ -60,9 +60,9 @@ Brève description du workflow optimale:
 6. La phase de staging (mis au scène) commence et les tests d'acceptation peuvent s'exécuter avant de déployer en production.
 7. Une fois les tests d'acceptation passés avec succès, un pull request est crée pour fusionner à la branch de production.
    - Le pipeline lié à la branch prod est déclenché. Les tâches associées sont exécutées.
-   - Aucun type de test est exécuté dans l'environnement de production pour ne pas toucher les données de production.
+   - Aucun type de test n'est exécuté dans l'environnement de production pour ne pas toucher les données de production.
 
-:warning: Si une des tâches du pipeline échoue alors les tâches suivantes ne s'exécuteront pas et le statut du pipeline se montrera en erreur.
+:warning: Si l'une des tâches du pipeline échoue alors les tâches suivantes ne s'exécuteront pas et le statut du pipeline se montrera en erreur.
 
 ***Note**: Dans le cas d'un "hotfix" (correctif urgent en production), le développeur crée un branch hotfix à partir de la branch de prod et idéalement, le changement est déployé dans l'environnement de pre-prod pour passer les tâches liées à la branch.
 
