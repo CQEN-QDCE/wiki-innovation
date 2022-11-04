@@ -47,10 +47,19 @@ Bien que chaque équipe DevOps devra déterminer les étapes qui comprennent ses
 
 ![example-workflow-cd-ci](images/workflow-cd-ci-pipelines.png)
 
+Brève description du workflow optimale:
 
-
-
-
+1. Le développeur travaille dans la branche feature (code, tests)
+2. Le développeur crée le pull request quand il a terminé son développement.
+   - Un pipeline (PR) est déclenché à la création et la mise à jour du pull request. Les tâches associées sont exécutées.
+3. Quand le pull request est approuvé et funsionné à la branche Dev, alors:
+   - Le pipeline lié à la branch dev est déclenché. Les tâches associées sont exécutées.
+4. Un pull request est crée pour merger la branch dev avec la branch pre-prod.
+5. Quand le pull request est approuvé et fusionné à la branche Pre-Prod, alors:
+   - Le pipeline lié à la branch pre-prod est déclenché. Les tâches associées sont exécutées.
+6. La phase de staging (mis au scène) commence et les tests d'acceptation peuvent s'exécuter avant de déployer en production.
+7. Une fois les tests d'acceptation passés, un pull request est crée pour fusionner à la branch de production.
+   - Le pipeline lié à la branch prod est déclenché. Les tâches associées sont exécutées.
 
 # Modèles de Pipelines
 
