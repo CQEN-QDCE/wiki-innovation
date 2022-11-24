@@ -1,0 +1,38 @@
+[Container] 2022/11/21 20:31:11 Selecting 'java' runtime version 'corretto17' based on manual selections...
+[Container] 2022/11/21 20:31:11 Running command echo "Installing Java version 17 ..."
+Installing Java version 17 ...   
+...
+[Container] 2022/11/21 20:31:29 Running command mvn install
+[INFO] Scanning for projects...
+...
+[INFO] ----------------------< org.example:messageUtil >-----------------------
+[INFO] Building Message Utility Java Sample App 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+...
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.12.4/surefire-junit4-2.12.4.jar (37 kB at 1.1 MB/s)
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running TestMessageUtil
+Inside testSalutationMessage()
+Hi!Robert
+Inside testPrintMessage()
+Robert
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 sec
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+...
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.754 s
+[INFO] Finished at: 2022-11-24T19:58:30Z
+[INFO] ------------------------------------------------------------------------
+...
+[Container] 2022/11/24 19:58:57 Expanding target/messageUtil-1.0.jar
+...
+[Container] 2022/11/24 19:58:57 Phase complete: UPLOAD_ARTIFACTS State: SUCCEEDED
+
