@@ -56,8 +56,8 @@ artifacts:
 
 #### Gabarits des fichiers buildspec pour AWS CodeBuild
 
-| Buildspec pour  | Fichier yaml  | Plus d'information  |
-|---|---|---|---|
+| Buildspec | Fichier yaml | Plus d'information  |
+|---|---|---|
 | syntaxe  | [référence](CodeBuild/buildspec_ref.yaml)  | [doc-aws](https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec.phases) |
 | application java  | [java-app](CodeBuild/buildspec_app_java.yaml)  | [doc-aws](https://docs.aws.amazon.com/codebuild/latest/userguide/getting-started-create-build-spec-console.html), [app-java](#application-java) |
 | application nodejs  | [nodejs-app](CodeBuild/buildspec_app_nodejs.yaml) | [app-nodejs](#application-nodejs) |
