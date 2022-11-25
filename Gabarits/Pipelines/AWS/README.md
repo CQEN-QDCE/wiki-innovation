@@ -18,16 +18,16 @@ Voir [ici](https://docs.aws.amazon.com/codebuild/latest/userguide/welcome.html) 
 
 Entre les avantages que CodeBuild offre, nous pouvons mentionner:
 - Flexibilité de configuration du "build" de l'application, avec un fichier de spécification "buildspec.yaml". Ce fichier sert à détailler les tâches à exécuter lors du "build" de l'application et il peut se trouver dans le code source.
-- Un project de CodeBuild peut être déclenché par exemple à la création et mis à jour d'un "Pull Request".
-- Le project CodeBuild créé pour une application, peut être appelé aussi à partir d'un pipeline dans AWS CodePipeline pour spécifier les tâches d'un "stage" particulier comme un "build" ou test par exemple.
+- Un projet de CodeBuild peut être déclenché par exemple à la création et mis à jour d'un "Pull Request".
+- Le projet CodeBuild créé pour une application peut être appelé aussi à partir d'un pipeline dans AWS CodePipeline pour spécifier les tâches d'un "stage" particulier comme un "build" ou test par exemple.
 
   ![aws-codepipeline-aws-codebuild](images/pipeline.png)
 
-Pour les avantages mentionnées précédement, nous avons décidé de travailler et de proposer des différents gabarits d'AWS CodeBuild pour nos workflows d'automatisation.
+Pour les avantages mentionnés précédemment, nous avons décidé de travailler et de proposer différents gabarits d'AWS CodeBuild pour nos workflows d'automatisation.
 
 ### AWS Buildspec
 
-AWS offre une [documentation detaillé](https://docs.aws.amazon.com/codebuild/latest/userguide/getting-started-create-build-spec-console.html) de la syntaxe d'un fichier buildspec.yaml.
+AWS offre une [documentation détaillée](https://docs.aws.amazon.com/codebuild/latest/userguide/getting-started-create-build-spec-console.html) de la syntaxe d'un fichier buildspec.yaml.
 
 Vous pouvez voir le fichier au complet [ici](CodeBuild/buildspec_ref.yaml), mais nous allons vous montrer les parties plus importantes à être utilisées dans nos gabarits.
 
@@ -67,7 +67,7 @@ artifacts:
 
 **Plus de détails sur les projets CodeBuild**
 
-Dans les gabarits du tableau, pour le cas des applications, la liste des tâches à exécuter lors du "build" du projet sont en général:
+Dans les gabarits du tableau, pour le cas des applications, la liste des tâches à exécuter lors du "build" du projet est en général:
 
 - Compiler le code source
 - Exécuter les tests unitaires
@@ -112,7 +112,7 @@ Dans les gabarits du tableau, pour le cas des applications, la liste des tâches
     - Exécute l'installation du runtime java, 
     - Compile le code source, 
     - Exécute les tests unitaires et finalement, 
-    - Télécharge l'artefact résultat avec succès.
+    - Télécharge l'artefact résultant avec succès.
   
 ##### Application Nodejs
 
@@ -125,7 +125,7 @@ Dans les gabarits du tableau, pour le cas des applications, la liste des tâches
       commands:
         - npm install
   ```    
-- Extrait du [log](CodeBuild/logs/log-extract-nodejs.log) du build dans AWS CodeBuild:-  
+- Extrait du [log](CodeBuild/logs/log-extract-nodejs.log) du build dans AWS CodeBuild:  
 
   ```bash
   ...Running command npm install
@@ -172,7 +172,7 @@ Dans les gabarits du tableau, pour le cas des applications, la liste des tâches
     files:
       - lambda-go-samples-govulncheck-results.json           
   ```    
-- Extrait du [log](CodeBuild/logs/log-extract-go.log) du build dans AWS CodeBuild:-  
+- Extrait du [log](CodeBuild/logs/log-extract-go.log) du build dans AWS CodeBuild:  
 
   ```bash
   ...Running command go get -u golang.org/x/lint/golint
@@ -192,16 +192,16 @@ Dans les gabarits du tableau, pour le cas des applications, la liste des tâches
   Vous pouvez observer que le build: 
     - Exécute l'installation de golint
     - Exécute l'installation de govulncheck pour le scan de code, 
-    - Exécute `go vet` for vérifier les problèmes communs dans le code, 
+    - Exécute `go vet` pour vérifier les problèmes communs dans le code, 
     - Exécute `go test` pour les tests unitaires, 
-    - Exécute `govulncheck` pour vérifier les vulnerabilités et imprime le résultat dans un fichier json, et finalement, 
+    - Exécute `govulncheck` pour vérifier les vulnérabilités et imprime le résultat dans un fichier json, et finalement, 
     - Télécharge tel fichier json dans le conteneur des données, AWS S3.
 
 ##### Scan Snyk
 
 Le script suivant sert à exécuter le scan du code afin de trouver possibles vulnerabilités générales.
 
-Snyk offre une intégration avec AWS pour utiliser directement ses services de scan avec un jeton de connection à l'api de Snyk. Comme montré dans l'exemple, le jeton se trouve dans AWS Secrets Manager pour une question de sécurité.
+Snyk offre une intégration avec AWS pour utiliser directement ses services de scan avec un jeton de connexion à l'api de Snyk. Comme montré dans l'exemple, le jeton se trouve dans AWS Secrets Manager pour une question de sécurité.
 
 - Extrait du [buildspec](CodeBuild/buildspec_scan_snyk.yaml):
   ```yaml
@@ -235,7 +235,7 @@ Snyk offre une intégration avec AWS pour utiliser directement ses services de s
       - snyk-scan-results-open-source.json
       - snyk-scan-results-code.json      
   ```    
-- Extrait du [log](CodeBuild/logs/log-extract-scan-snyk.log) du build dans AWS CodeBuild:-  
+- Extrait du [log](CodeBuild/logs/log-extract-scan-snyk.log) du build dans AWS CodeBuild:  
 
   ```bash
   ...Running command npm install -g snyk
@@ -258,15 +258,15 @@ Snyk offre une intégration avec AWS pour utiliser directement ses services de s
   ```
   Vous pouvez observer que le build: 
     - Exécute l'installation de l'outil de scan Snyk,
-    - Configure la clé de connection à l'api de l'outil Snyk avec un secret dans AWS Secrets Manager,
+    - Configure la clé de connexion à l'api de l'outil Snyk avec un secret dans AWS Secrets Manager,
     - Exécute les commandes de scan de snyk,
     - Extrait les résultats du scan dans un fichier json
-    - Edite le fichier json résultat pour ajouter des informations du CodeBuild, et finalement,
+    - Édite le fichier json résultat pour ajouter des informations du CodeBuild, et finalement,
     - Télécharge les fichiers json résultat dans un conteneur des données dans AWS S3.
 
 ##### Image docker dans AWS ECR
 
-L'exemple du script suivant sert à obtenir une image conteneurisé de l'application et la pousser dans le service de conteneur AWS ECR.
+L'exemple du script suivant sert à obtenir une image conteneurisée de l'application et la pousser dans le service de conteneur AWS ECR.
 
 - Extrait du [buildspec](CodeBuild/buildspec_docker_img_ecr.yaml):
   ```yaml
@@ -296,7 +296,7 @@ L'exemple du script suivant sert à obtenir une image conteneurisé de l'applica
         - docker rmi 111111111111.dkr.ecr.ca-central-1.amazonaws.com/$ECR_REPO_NAME:$IMAGE_TAG
         - docker rmi $APP_NAME:$IMAGE_TAG          
   ```    
-- Extrait du [log](CodeBuild/logs/log-extract-docker.log) du build dans AWS CodeBuild:-  
+- Extrait du [log](CodeBuild/logs/log-extract-docker.log) du build dans AWS CodeBuild:  
 
   ```bash
   ...Running command docker build -t $APP_NAME:$IMAGE_TAG .
@@ -322,9 +322,9 @@ L'exemple du script suivant sert à obtenir une image conteneurisé de l'applica
     - Build le conteneur de l'application
     - Exécute l'instance du conteneur
     - Exécute un appel à l'application exposé dans le port 5000
-    - Obtient une réponse de l'application
+    - Obtiens une réponse de l'application
     - Étiquette l'image avec le nom du dépôt AWS ECR
-    - Pousse l'image étiquettée dans le dépôt AWS ECR
+    - Pousse l'image étiquetée dans le dépôt AWS ECR
 
 ## Références
 
