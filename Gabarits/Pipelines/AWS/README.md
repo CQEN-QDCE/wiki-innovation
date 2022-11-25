@@ -63,11 +63,11 @@ artifacts:
 | application nodejs  | [nodejs-app](CodeBuild/buildspec_app_nodejs.yaml) | [app-nodejs](#application-nodejs) |
 | application golang  | [go-app](CodeBuild/buildspec_app_go.yaml)  | [app-go](#application-go) |
 | scan snyk  | [scan-snyk](CodeBuild/buildspec_scan_snyk.yaml)  | [scan-snyk](#scan-snyk)  |
-| docker image  | [docker-img-ecr](CodeBuild/buildspec_docker.yaml)  | [docker-img](#image-docker-dans-aws-ecr) |
+| docker image  | [docker-img-ecr](CodeBuild/buildspec_docker_img_ecr.yaml)  | [docker-img](#image-docker-dans-aws-ecr) |
 
 **Plus de détails sur les projets CodeBuild**
 
-Dans les gabarits du tableau, pour le cas des applications, la liste des tâches à exécuter lors du "build" du projet sont:
+Dans les gabarits du tableau, pour le cas des applications, la liste des tâches à exécuter lors du "build" du projet sont en général:
 
 - Compiler le code source
 - Exécuter les tests unitaires
@@ -91,7 +91,7 @@ Dans les gabarits du tableau, pour le cas des applications, la liste des tâches
     files:
       - target/messageUtil-1.0.jar
   ```  
-- Extrait du [log](CodeBuild/logs/logs-extract-java.log) du build dans AWS CodeBuild:
+- Extrait du [log](CodeBuild/logs/log-extract-java.log) du build dans AWS CodeBuild:
 
   ```bash
   ...Selecting 'java' runtime version 'corretto17' based on manual selections...
@@ -108,7 +108,11 @@ Dans les gabarits du tableau, pour le cas des applications, la liste des tâches
   ...Phase complete: UPLOAD_ARTIFACTS State: SUCCEEDED
   ```
 
-  Vous pouvez observer que le build exécute l'installation du runtime java, compile le code source, exécute les tests unitaires et finalement télécharge l'artefact résultat avec succès.
+  Vous pouvez observer que le build: 
+    - Exécute l'installation du runtime java, 
+    - Compile le code source, 
+    - Exécute les tests unitaires et finalement, 
+    - Télécharge l'artefact résultat avec succès.
   
 ##### Application Nodejs
 
@@ -130,7 +134,9 @@ Dans les gabarits du tableau, pour le cas des applications, la liste des tâches
   ...
   found 0 vulnerabilities
   ```
-  Vous pouvez observer que le build exécute l'installation de nodejs version 16 et compile le code source. 
+  Vous pouvez observer que le build: 
+    - Exécute l'installation de nodejs version 16 et,
+    - Compile le code source. 
 
 ##### Application Go
 
@@ -166,7 +172,7 @@ Dans les gabarits du tableau, pour le cas des applications, la liste des tâches
     files:
       - lambda-go-samples-govulncheck-results.json           
   ```    
-- Extrait du [log](CodeBuild/logs/logs-extraxt-go.log) du build dans AWS CodeBuild:-  
+- Extrait du [log](CodeBuild/logs/log-extract-go.log) du build dans AWS CodeBuild:-  
 
   ```bash
   ...Running command go get -u golang.org/x/lint/golint
@@ -183,11 +189,142 @@ Dans les gabarits du tableau, pour le cas des applications, la liste des tâches
   ...Found 1 file(s)
   ...Phase complete: UPLOAD_ARTIFACTS State: SUCCEEDED  
   ```
-  Vous pouvez observer que le build exécute l'installation de golint et govulncheck pour le scan de code, ensuite, exécute go vet for vérifier les problèmes communs dans le code, exécute go test pour les tests unitaires, exécute govulncheck pour vérifier les vulnerabilités et imprime le résultat dans un fichier json et finalement télécharge tel fichier dans AWS S3.
+  Vous pouvez observer que le build: 
+    - Exécute l'installation de golint
+    - Exécute l'installation de govulncheck pour le scan de code, 
+    - Exécute `go vet` for vérifier les problèmes communs dans le code, 
+    - Exécute `go test` pour les tests unitaires, 
+    - Exécute `govulncheck` pour vérifier les vulnerabilités et imprime le résultat dans un fichier json, et finalement, 
+    - Télécharge tel fichier json dans le conteneur des données, AWS S3.
 
 ##### Scan Snyk
 
+Le script suivant sert à exécuter le scan du code afin de trouver possibles vulnerabilités générales.
+
+Snyk offre une intégration avec AWS pour utiliser directement ses services de scan avec un jeton de connection à l'api de Snyk. Comme montré dans l'exemple, le jeton se trouve dans AWS Secrets Manager pour une question de sécurité.
+
+- Extrait du [buildspec](CodeBuild/buildspec_scan_snyk.yaml):
+  ```yaml
+  env:
+    secrets-manager:
+      AWS_SNYK_AUTH_TOKEN: "API-token-snyk:SNYK_AUTH_TOKEN_RP"      
+  phases:
+    install:
+      commands:
+        - npm install -g snyk
+    build:
+      commands:
+        # Snyk Auth using API token
+        - snyk config set api=$AWS_SNYK_AUTH_TOKEN
+        - snyk test --json > snyk-results-open-source.json
+        - snyk code test --json > snyk-results-code.json
+    post_build:
+      commands:     
+        - |
+          jq "{ \"messageType\": \"CodeScanReport\", \"reportType\": \"SNYK\", \
+          \"createdAt\": $(date +\"%Y-%m-%dT%H:%M:%S.%3NZ\"), \"source_repository\": env.CODEBUILD_SOURCE_REPO_URL, \
+          \"source_branch\": env.CODEBUILD_SOURCE_VERSION, \
+          \"build_id\": env.CODEBUILD_BUILD_ID, \
+          \"source_commitid\": env.CODEBUILD_RESOLVED_SOURCE_VERSION, \
+          \"report\": . }" snyk-results-open-source.json > snyk-scan-results-open-source.json
+        - echo ""
+        - |    
+        #...    
+  artifacts:
+    files:
+      - snyk-scan-results-open-source.json
+      - snyk-scan-results-code.json      
+  ```    
+- Extrait du [log](CodeBuild/logs/log-extract-scan-snyk.log) du build dans AWS CodeBuild:-  
+
+  ```bash
+  ...Running command npm install -g snyk
+  ...Running command snyk config set api=$AWS_SNYK_AUTH_TOKEN api updated
+  ...
+  ...Running command snyk test --json > snyk-results-open-source.json
+  ...Running command snyk code test --json > snyk-results-code.json
+  ...
+  ...Running command jq "{ \"messageType\": \"CodeScanReport\", \"reportType\": \"SNYK\", \
+  \"createdAt\": $(date +\"%Y-%m-%dT%H:%M:%S.%3NZ\"), \"source_repository\": env.CODEBUILD_SOURCE_REPO_URL, \
+  \"source_branch\": env.CODEBUILD_SOURCE_VERSION, \
+  \"build_id\": env.CODEBUILD_BUILD_ID, \
+  \"source_commitid\": env.CODEBUILD_RESOLVED_SOURCE_VERSION, \
+  \"report\": . }" snyk-results-open-source.json > snyk-scan-results-open-source.json  
+  ...
+  ...Expanding snyk-scan-results-open-source.json
+  ...Expanding snyk-scan-results-code.json
+  ...Found 3 file(s)
+  ...Phase complete: UPLOAD_ARTIFACTS State: SUCCEEDED
+  ```
+  Vous pouvez observer que le build: 
+    - Exécute l'installation de l'outil de scan Snyk,
+    - Configure la clé de connection à l'api de l'outil Snyk avec un secret dans AWS Secrets Manager,
+    - Exécute les commandes de scan de snyk,
+    - Extrait les résultats du scan dans un fichier json
+    - Edite le fichier json résultat pour ajouter des informations du CodeBuild, et finalement,
+    - Télécharge les fichiers json résultat dans un conteneur des données dans AWS S3.
+
 ##### Image docker dans AWS ECR
+
+L'exemple du script suivant sert à obtenir une image conteneurisé de l'application et la pousser dans le service de conteneur AWS ECR.
+
+- Extrait du [buildspec](CodeBuild/buildspec_docker_img_ecr.yaml):
+  ```yaml
+  env:
+    variables:
+      ECR_REPO_NAME: "hello-world-nodejs-repo"        
+  phases:
+    install:
+      commands:
+        - nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock --host=tcp://127.0.0.1:2375 --storage-driver=overlay2 &
+        - timeout 15 sh -c "until docker info; do echo .; sleep 1; done"      
+    pre_build:
+      commands:
+        - aws ecr get-login-password --region ca-central-1 | docker login --username AWS --password-stdin 111111111111.dkr.ecr.ca-central-1.amazonaws.com
+    build:
+      commands:
+        - IMAGE_TAG=`echo $CODEBUILD_BUILD_NUMBER`
+        - docker build -t $APP_NAME:$IMAGE_TAG .
+        - docker run -d --name $APP_NAME -p 5000:5000 $APP_NAME:$IMAGE_TAG
+        - curl http://localhost:5000
+        - docker tag $APP_NAME:$IMAGE_TAG 111111111111.dkr.ecr.ca-central-1.amazonaws.com/$ECR_REPO_NAME:$IMAGE_TAG
+    post_build:
+      commands:
+        - docker push 111111111111.dkr.ecr.ca-central-1.amazonaws.com/$ECR_REPO_NAME:$IMAGE_TAG
+        - docker stop $APP_NAME
+        - docker rm $APP_NAME
+        - docker rmi 111111111111.dkr.ecr.ca-central-1.amazonaws.com/$ECR_REPO_NAME:$IMAGE_TAG
+        - docker rmi $APP_NAME:$IMAGE_TAG          
+  ```    
+- Extrait du [log](CodeBuild/logs/log-extract-docker.log) du build dans AWS CodeBuild:-  
+
+  ```bash
+  ...Running command docker build -t $APP_NAME:$IMAGE_TAG .
+  ...
+  ...Running command docker run -d --name $APP_NAME -p 5000:5000 $APP_NAME:$IMAGE_TAG 
+  1111111111111111111111111111111111111111111111111111111111111111
+  ...
+  Running command curl http://localhost:5000
+    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                  Dload  Upload   Total   Spent    Left  Speed
+
+    0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  100    50  100    50    0     0   6271      0 --:--:-- --:--:-- --:--:--  7142
+  {"message":"Hello World JavaScript v202202161438"}
+  Running command docker tag $APP_NAME:$IMAGE_TAG 111111111111.dkr.ecr.ca-central-1.amazonaws.com/$ECR_REPO_NAME:$IMAGE_TAG  
+  ...
+  Running command docker push 111111111111.dkr.ecr.ca-central-1.amazonaws.com/$ECR_REPO_NAME:$IMAGE_TAG
+  The push refers to repository [111111111111.dkr.ecr.ca-central-1.amazonaws.com/hello-world-nodejs-repo]
+  ...
+  ...Phase complete: UPLOAD_ARTIFACTS State: SUCCEEDED
+  ```
+  Vous pouvez observer que le build: 
+    - Build le conteneur de l'application
+    - Exécute l'instance du conteneur
+    - Exécute un appel à l'application exposé dans le port 5000
+    - Obtient une réponse de l'application
+    - Étiquette l'image avec le nom du dépôt AWS ECR
+    - Pousse l'image étiquettée dans le dépôt AWS ECR
 
 ## Références
 

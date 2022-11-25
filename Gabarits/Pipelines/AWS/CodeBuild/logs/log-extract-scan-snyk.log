@@ -1,0 +1,45 @@
+[Container] 2022/11/24 19:57:58 Running command npm install -g snyk
+npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead.
+
+added 1 package, and audited 2 packages in 3s
+
+found 0 vulnerabilities
+...
+[Container] 2022/11/24 19:58:30 Running command snyk config set api=$AWS_SNYK_AUTH_TOKEN
+api updated
+
+[Container] 2022/11/24 19:58:31 Running command snyk test --json > snyk-results-open-source.json
+
+[Container] 2022/11/24 19:58:42 Running command snyk code test --json > snyk-results-code.json
+
+[Container] 2022/11/24 19:58:56 Phase complete: BUILD State: SUCCEEDED
+[Container] 2022/11/24 19:58:56 Phase context status code:  Message: 
+[Container] 2022/11/24 19:58:56 Entering phase POST_BUILD
+
+[Container] 2022/11/24 19:58:56 Running command jq "{ \"messageType\": \"CodeScanReport\", \"reportType\": \"SNYK\", \
+\"createdAt\": $(date +\"%Y-%m-%dT%H:%M:%S.%3NZ\"), \"source_repository\": env.CODEBUILD_SOURCE_REPO_URL, \
+\"source_branch\": env.CODEBUILD_SOURCE_VERSION, \
+\"build_id\": env.CODEBUILD_BUILD_ID, \
+\"source_commitid\": env.CODEBUILD_RESOLVED_SOURCE_VERSION, \
+\"report\": . }" snyk-results-open-source.json > snyk-scan-results-open-source.json
+
+[Container] 2022/11/24 19:58:57 Running command echo ""
+[Container] 2022/11/24 19:58:57 Running command 
+[Container] 2022/11/24 19:58:57 Running command jq "{ \"messageType\": \"CodeScanReport\", \"reportType\": \"SNYK\", \
+\"createdAt\": $(date +\"%Y-%m-%dT%H:%M:%S.%3NZ\"), \"source_repository\": env.CODEBUILD_SOURCE_REPO_URL, \
+\"source_branch\": env.CODEBUILD_SOURCE_VERSION, \
+\"build_id\": env.CODEBUILD_BUILD_ID, \
+\"source_commitid\": env.CODEBUILD_RESOLVED_SOURCE_VERSION, \
+\"report\": . }" snyk-results-code.json > snyk-scan-results-code.json
+
+[Container] 2022/11/24 19:58:57 Running command echo ""
+
+[Container] 2022/11/24 19:58:57 Running command 
+...
+[Container] 2022/11/24 19:58:57 Assembling file list
+[Container] 2022/11/24 19:58:57 Expanding target/messageUtil-1.0.jar
+[Container] 2022/11/24 19:58:57 Expanding snyk-scan-results-open-source.json
+[Container] 2022/11/24 19:58:57 Expanding snyk-scan-results-code.json
+[Container] 2022/11/24 19:58:57 Found 3 file(s)
+[Container] 2022/11/24 19:58:57 Phase complete: UPLOAD_ARTIFACTS State: SUCCEEDED
+[Container] 2022/11/24 19:58:57 Phase context status code:  Message: 

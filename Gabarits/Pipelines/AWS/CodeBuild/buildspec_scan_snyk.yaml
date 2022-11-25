@@ -9,8 +9,6 @@ phases:
     commands:
       - echo "in the install phase"
       - npm install -g snyk
-    runtime-versions:
-      java: corretto17
   build:
     commands:
       - echo Build started on `date`

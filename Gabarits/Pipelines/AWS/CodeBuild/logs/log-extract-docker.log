@@ -70,7 +70,7 @@ Successfully built 54d606a008ec
 Successfully tagged hello-world-nodejs:39
 
 [Container] 2022/11/23 17:39:39 Running command docker run -d --name $APP_NAME -p 5000:5000 $APP_NAME:$IMAGE_TAG
-dc2fdbd33259760e32111bb2cd747a14bedb6c77295aaedbf075fd8f6f291507
+1111111111111111111111111111111111111111111111111111111111111111
 
 [Container] 2022/11/23 17:39:39 Running command docker logs $APP_NAME
 
