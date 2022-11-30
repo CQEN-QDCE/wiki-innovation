@@ -13,17 +13,17 @@
 
 ## AWS Codebuild
 
-AWS CodeBuild c'est un service de "build" dans le nuage qui permet de compiler le code source, d'exécuter des tests unitaires et de produire les artefacts prêts pour déployer.
-Voir [ici](https://docs.aws.amazon.com/codebuild/latest/userguide/welcome.html) pour plus d'information d'AWS.
+AWS CodeBuild est un service de "build" infonuagique qui permet de compiler le code source, d'exécuter des tests unitaires et de produire des artefacts prêts à déployer.
+Voir [ici](https://docs.aws.amazon.com/codebuild/latest/userguide/welcome.html) pour plus d'information.
 
-Entre les avantages que CodeBuild offre, nous pouvons mentionner:
+Parmi les avantages que CodeBuild offre, nous pouvons mentionner:
 - Flexibilité de configuration du "build" de l'application, avec un fichier de spécification "buildspec.yaml". Ce fichier sert à détailler les tâches à exécuter lors du "build" de l'application et il peut se trouver dans le code source.
-- Un projet de CodeBuild peut être déclenché par exemple à la création et mis à jour d'un "Pull Request".
-- Le projet CodeBuild créé pour une application peut être appelé aussi à partir d'un pipeline dans AWS CodePipeline pour spécifier les tâches d'un "stage" particulier comme un "build" ou test par exemple.
+- Un projet de CodeBuild peut être déclenché par exemple à la création et la mise à jour d'un "Pull Request".
+- Le projet CodeBuild créé pour une application peut être appelé aussi à partir d'un pipeline dans AWS CodePipeline pour spécifier les tâches d'un "stage" particulier comme un "build" ou un test par exemple.
 
   ![aws-codepipeline-aws-codebuild](images/pipeline.png)
 
-Pour les avantages mentionnés précédemment, nous avons décidé de travailler et de proposer différents gabarits d'AWS CodeBuild pour nos workflows d'automatisation.
+Pour démontrer les avantages mentionnés précédemment, nous proposons différents gabarits d'AWS CodeBuild pour différents workflows d'automatisation.
 
 ### AWS Buildspec
 
@@ -67,13 +67,13 @@ artifacts:
 
 **Plus de détails sur les projets CodeBuild**
 
-Dans les gabarits du tableau, pour le cas des applications, la liste des tâches à exécuter lors du "build" du projet est en général:
+Dans la plupart des cas du tableau ci-hait, la liste des tâches à exécuter lors d'un "build" est en général:
 
 - Compiler le code source
 - Exécuter les tests unitaires
-- Déployer les artefacts résultat dans un conteneur de data en AWS S3
+- Déployer les artefacts résultats dans un *bucket* AWS S3
 
-À continuation, nous allons mentionner les parties les plus pertinentes pour chacun des gabarits: 
+Voici maintenant un survol des parties les plus pertinentes pour chacun des gabarits: 
 
 ##### Application Java
 
