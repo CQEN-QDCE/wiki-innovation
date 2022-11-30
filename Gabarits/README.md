@@ -11,4 +11,4 @@
 
 # Gabarits
 
-- [AWS Pipelines](Pipelines/AWS/README.md)
+- [Pipelines CI/CD](Pipelines/README.md)
