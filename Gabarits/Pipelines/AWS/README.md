@@ -63,7 +63,7 @@ artifacts:
 | application nodejs  | [nodejs-app](CodeBuild/buildspec_app_nodejs.yaml) | [app-nodejs](#application-nodejs) |
 | application golang  | [go-app](CodeBuild/buildspec_app_go.yaml)  | [app-go](#application-go) |
 | scan snyk  | [scan-snyk](CodeBuild/buildspec_scan_snyk.yaml)  | [scan-snyk](#scan-snyk)  |
-| docker image  | [docker-img-ecr](CodeBuild/buildspec_docker_img_ecr.yaml)  | [docker-img](#image-docker-dans-aws-ecr) |
+| docker image  | [docker-img-ecr](CodeBuild/buildspec_docker_img_ecr.yaml)  | [doc-aws](https://docs.aws.amazon.com/codebuild/latest/userguide/sample-docker.html), [docker-img](#image-docker-dans-aws-ecr) |
 
 **Plus de détails sur les projets CodeBuild**
 
