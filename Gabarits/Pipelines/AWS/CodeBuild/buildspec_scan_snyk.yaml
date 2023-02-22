@@ -1,0 +1,43 @@
+version: 0.2
+
+env:
+  secrets-manager:
+    AWS_SNYK_AUTH_TOKEN: "API-token-snyk:SNYK_AUTH_TOKEN_RP"  
+
+phases:
+  install:
+    commands:
+      - echo "in the install phase"
+      - npm install -g snyk
+  build:
+    commands:
+      - echo Build started on `date`
+      # Snyk Auth using API token
+      - snyk config set api=$AWS_SNYK_AUTH_TOKEN
+      - snyk test --json > snyk-results-open-source.json
+      - snyk code test --json > snyk-results-code.json
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - |
+        jq "{ \"messageType\": \"CodeScanReport\", \"reportType\": \"SNYK\", \
+        \"createdAt\": $(date +\"%Y-%m-%dT%H:%M:%S.%3NZ\"), \"source_repository\": env.CODEBUILD_SOURCE_REPO_URL, \
+        \"source_branch\": env.CODEBUILD_SOURCE_VERSION, \
+        \"build_id\": env.CODEBUILD_BUILD_ID, \
+        \"source_commitid\": env.CODEBUILD_RESOLVED_SOURCE_VERSION, \
+        \"report\": . }" snyk-results-open-source.json > snyk-scan-results-open-source.json
+      - echo ""
+      - |
+      - |
+        jq "{ \"messageType\": \"CodeScanReport\", \"reportType\": \"SNYK\", \
+        \"createdAt\": $(date +\"%Y-%m-%dT%H:%M:%S.%3NZ\"), \"source_repository\": env.CODEBUILD_SOURCE_REPO_URL, \
+        \"source_branch\": env.CODEBUILD_SOURCE_VERSION, \
+        \"build_id\": env.CODEBUILD_BUILD_ID, \
+        \"source_commitid\": env.CODEBUILD_RESOLVED_SOURCE_VERSION, \
+        \"report\": . }" snyk-results-code.json > snyk-scan-results-code.json
+      - echo ""
+      - | 
+artifacts:
+  files:
+    - snyk-scan-results-open-source.json
+    - snyk-scan-results-code.json

@@ -69,7 +69,7 @@ Brève description du workflow optimale:
 
 # Modèles de Pipelines
 
-- AWS
+- [AWS Pipelines](AWS/README.md)
 - Github Actions
 - Azure DevOps
 - Tekton

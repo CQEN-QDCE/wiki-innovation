@@ -1,0 +1,132 @@
+[Container] 2022/11/23 17:39:16 Running command docker build -t $APP_NAME:$IMAGE_TAG .
+Sending build context to Docker daemon  24.67MB
+
+Step 1/9 : FROM node:18-alpine
+18-alpine: Pulling from library/node
+ca7dd9ec2225: Pulling fs layer
+55371e6747e8: Pulling fs layer
+694d6b1b2d1b: Pulling fs layer
+71f41f5ff77d: Pulling fs layer
+71f41f5ff77d: Waiting
+694d6b1b2d1b: Download complete
+ca7dd9ec2225: Verifying Checksum
+ca7dd9ec2225: Download complete
+ca7dd9ec2225: Pull complete
+71f41f5ff77d: Download complete
+55371e6747e8: Verifying Checksum
+55371e6747e8: Download complete
+55371e6747e8: Pull complete
+694d6b1b2d1b: Pull complete
+71f41f5ff77d: Pull complete
+Digest: sha256:9eff44230b2fdcca57a73b8f908c8029e72d24dd05cac5339c79d3dedf6b208b
+Status: Downloaded newer image for node:18-alpine
+ ---> 0fa08f92e64b
+Step 2/9 : RUN mkdir /app
+ ---> Running in 89dad851f871
+Removing intermediate container 89dad851f871
+ ---> 23460448a0a9
+Step 3/9 : WORKDIR /app
+ ---> Running in c77164130488
+Removing intermediate container c77164130488
+ ---> e853712ca339
+Step 4/9 : COPY package.json /app
+ ---> 59c8d1d8d0e7
+Step 5/9 : RUN chmod -R 775 /app
+ ---> Running in e8ed3c8db02d
+Removing intermediate container e8ed3c8db02d
+ ---> 710da2060d0f
+Step 6/9 : RUN npm install
+ ---> Running in 3a706e1d9587
+npm WARN deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+npm WARN deprecated source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated
+npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+npm WARN deprecated source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated
+
+added 401 packages, and audited 402 packages in 9s
+
+16 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+npm notice 
+npm notice New major version of npm available! 8.19.2 -> 9.1.2
+npm notice Changelog: <https://github.com/npm/cli/releases/tag/v9.1.2>
+npm notice Run `npm install -g npm@9.1.2` to update!
+npm notice 
+Removing intermediate container 3a706e1d9587
+ ---> be190a006256
+Step 7/9 : EXPOSE 5000
+ ---> Running in 1be5333644e6
+Removing intermediate container 1be5333644e6
+ ---> ebebe3169a0e
+Step 8/9 : COPY . /app
+ ---> 56be7bb03161
+Step 9/9 : CMD node index.js
+ ---> Running in 5717e9a87030
+Removing intermediate container 5717e9a87030
+ ---> 54d606a008ec
+Successfully built 54d606a008ec
+Successfully tagged hello-world-nodejs:39
+
+[Container] 2022/11/23 17:39:39 Running command docker run -d --name $APP_NAME -p 5000:5000 $APP_NAME:$IMAGE_TAG
+1111111111111111111111111111111111111111111111111111111111111111
+
+[Container] 2022/11/23 17:39:39 Running command docker logs $APP_NAME
+
+[Container] 2022/11/23 17:39:39 Running command curl http://localhost:5000
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100    50  100    50    0     0   6271      0 --:--:-- --:--:-- --:--:--  7142
+{"message":"Hello World JavaScript v202202161438"}
+[Container] 2022/11/23 17:39:40 Running command docker tag $APP_NAME:$IMAGE_TAG 111111111111.dkr.ecr.ca-central-1.amazonaws.com/$ECR_REPO_NAME:$IMAGE_TAG
+
+[Container] 2022/11/23 17:39:40 Running command docker ps
+CONTAINER ID   IMAGE                   COMMAND                  CREATED        STATUS                  PORTS                    NAMES
+dc2fdbd33259   hello-world-nodejs:39   "docker-entrypoint.s…"   1 second ago   Up Less than a second   0.0.0.0:5000->5000/tcp   hello-world-nodejs
+
+[Container] 2022/11/23 17:39:40 Running command docker images
+REPOSITORY                                                                TAG         IMAGE ID       CREATED         SIZE
+111111111111.dkr.ecr.ca-central-1.amazonaws.com/hello-world-nodejs-repo   39          54d606a008ec   2 seconds ago   228MB
+hello-world-nodejs                                                        39          54d606a008ec   2 seconds ago   228MB
+node                                                                      18-alpine   0fa08f92e64b   11 days ago     167MB
+
+[Container] 2022/11/23 17:39:40 Phase complete: BUILD State: SUCCEEDED
+[Container] 2022/11/23 17:39:40 Phase context status code:  Message: 
+[Container] 2022/11/23 17:39:40 Entering phase POST_BUILD
+[Container] 2022/11/23 17:39:40 Running command echo Build completed on `date`
+Build completed on Wed Nov 23 17:39:40 UTC 2022
+
+[Container] 2022/11/23 17:39:40 Running command echo Pushing the Docker image...
+Pushing the Docker image...
+
+[Container] 2022/11/23 17:39:40 Running command docker push 111111111111.dkr.ecr.ca-central-1.amazonaws.com/$ECR_REPO_NAME:$IMAGE_TAG
+The push refers to repository [111111111111.dkr.ecr.ca-central-1.amazonaws.com/hello-world-nodejs-repo]
+f5d19f55f9d4: Preparing
+5165e65f17d0: Preparing
+5703dfc681fd: Preparing
+79b50c53511a: Preparing
+fdbc7684a95d: Preparing
+b2d2930f5207: Preparing
+3d3b9564a8d2: Preparing
+0d519f3bcae3: Preparing
+e5e13b0c77cb: Preparing
+b2d2930f5207: Waiting
+3d3b9564a8d2: Waiting
+0d519f3bcae3: Waiting
+e5e13b0c77cb: Waiting
+79b50c53511a: Pushed
+5703dfc681fd: Pushed
+fdbc7684a95d: Pushed
+b2d2930f5207: Layer already exists
+3d3b9564a8d2: Layer already exists
+e5e13b0c77cb: Layer already exists
+0d519f3bcae3: Layer already exists
+f5d19f55f9d4: Pushed
+5165e65f17d0: Pushed
+39: digest: sha256:3ca7e8bdb2d6dd018363bd53fd36690e9c5adecbde66bf0c7f6f433bd95936b8 size: 2202
+
+[Container] 2022/11/23 17:39:43 Running command echo Stop and remove container and images
+Stop and remove container and images

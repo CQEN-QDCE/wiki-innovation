@@ -1,0 +1,48 @@
+[Container] 2022/11/23 22:12:54 No runtime version selected in buildspec.
+...
+[Container] 2022/11/23 22:12:56 Running command mkdir -p "/go/src/$(dirname ${PACKAGE})"
+...
+[Container] 2022/11/23 22:12:56 Running command go get -u golang.org/x/lint/golint
+...
+[Container] 2022/11/23 22:13:18 Running command go install golang.org/x/vuln/cmd/govulncheck@latest
+go: downloading golang.org/x/vuln v0.0.0-20221122171214-05fb7250142c
+go: downloading golang.org/x/exp v0.0.0-20220722155223-a9213eeb770e
+go: downloading golang.org/x/tools v0.2.1-0.20221108172846-9474ca31d0df
+go: downloading golang.org/x/mod v0.6.0
+go: downloading golang.org/x/sys v0.1.0
+...
+[Container] 2022/11/23 22:13:27 Running command cd "/go/src/${PACKAGE}"
+
+[Container] 2022/11/23 22:13:27 Running command go get -t ./...
+
+[Container] 2022/11/23 22:13:32 Running command golint -set_exit_status
+
+[Container] 2022/11/23 22:13:32 Running command go vet .
+
+[Container] 2022/11/23 22:13:39 Running command go test .
+ok      github.com/aws-samples/lambda-go-samples    0.003s
+...
+[Container] 2022/11/23 22:13:42 Running command govulncheck -json ./... > lambda-go-samples-govulncheck-results.json
+...
+[Container] 2022/11/23 22:13:46 Phase complete: PRE_BUILD State: SUCCEEDED
+[Container] 2022/11/23 22:13:46 Phase context status code:  Message: 
+[Container] 2022/11/23 22:13:47 Entering phase BUILD
+[Container] 2022/11/23 22:13:47 Running command go build -o main
+
+[Container] 2022/11/23 22:13:47 Phase complete: BUILD State: SUCCEEDED
+[Container] 2022/11/23 22:13:47 Phase context status code:  Message: 
+[Container] 2022/11/23 22:13:47 Entering phase POST_BUILD
+[Container] 2022/11/23 22:13:47 Phase complete: POST_BUILD State: SUCCEEDED
+[Container] 2022/11/23 22:13:47 Phase context status code:  Message: 
+[Container] 2022/11/23 22:13:47 exiting execCommands
+[Container] 2022/11/23 22:13:47 Expanding base directory path: .
+[Container] 2022/11/23 22:13:47 Assembling file list
+[Container] 2022/11/23 22:13:47 Expanding .
+[Container] 2022/11/23 22:13:47 Expanding file paths for base directory .
+[Container] 2022/11/23 22:13:47 Assembling file list
+[Container] 2022/11/23 22:13:47 Expanding packaged.yml
+[Container] 2022/11/23 22:13:47 Skipping invalid file path packaged.yml
+[Container] 2022/11/23 22:13:47 Expanding lambda-go-samples-govulncheck-results.json
+[Container] 2022/11/23 22:13:47 Found 1 file(s)
+[Container] 2022/11/23 22:13:47 Phase complete: UPLOAD_ARTIFACTS State: SUCCEEDED
+[Container] 2022/11/23 22:13:47 Phase context status code:  Message: 

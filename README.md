@@ -1,3 +1,14 @@
+<!-- ENTETE -->
+[![img](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://www.quebec.ca/gouv/politiques-orientations/vitrine-numeriqc/accompagnement-des-organismes-publics/demarche-conception-services-numeriques)
+[![License](https://img.shields.io/badge/Licence-LiLiQ--R-blue)](LICENSE_FR)
+
+---
+
+<div>
+    <img src="https://github.com/CQEN-QDCE/.github/blob/main/images/mcn.png">
+</div>
+<!-- FIN ENTETE -->
+
 # Documentation du centre d'expertise appliquée en innovation du CQEN (CEAI)
 
 Le CEAI vise à promouvoir l’utilisation d’une approche de développement de services basée sur l’exploration et l’expérimentation dans l'écosystème gouvernemental.
@@ -24,7 +35,7 @@ Documentation du processus de déploiement d'Openshift comme plateforme en tant 
 
 Rapports d'expérimentations effectués dans le cadre de la mise en place du CEAI.
 
-### Gabarits
+### [Gabarits](Gabarits/README.md)
 
 Gabarits utiles aux activités du CEAI.
 
