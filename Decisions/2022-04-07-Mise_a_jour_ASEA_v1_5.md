@@ -43,8 +43,6 @@ Nous irons de l'avant avec une réinstallation d'un nouvel environnement ASEA 1.
 
 ### Réinstallation d'un nouvel environnement
 
-### Avantages
-
 * Bon, occasion de revoir l'architecture en tenant compte de la nouvelle réalité du projet CEAI et des besoin du CQEN
 * Bon, bénéficier des nouvelles intégrations de services AWS (Control Tower, AWS Firewall)
 * Bon, utiliser la nomenclature standardisée du projet ASEA
