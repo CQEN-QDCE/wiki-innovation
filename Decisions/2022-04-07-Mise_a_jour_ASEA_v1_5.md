@@ -1,9 +1,9 @@
 ---
-titre : Décision (MADR)
-sous-titre : Mise à jour de l'environnement AWS-SEA à la version 1.5
-auteur : Centre d'expertise appliquée en innovation
-date : 2022-04-07
-statut : accepté
+title: Décision (MADR)
+subtitle: Mise à jour de l'environnement AWS-SEA à la version 1.5
+author: Centre d'expertise appliquée en innovation
+date: 2022-04-07
+status: accepté
 ---
 
 # Mise à jour de l'environnement AWS-SEA à la version 1.5
@@ -21,7 +21,7 @@ Cette mise à jour entraîne plusieurs changements majeurs à l'architecture et 
 
 ## Résultat de la décision
 
-Nous irons de l'avant avec une réinstallation d'un nouvel environnement ASEA 1.5. L'environnement actuel, qui a été installé dans les versions préliminaires du projet ASEA, commence a subir des limitations au niveau des fonctionnalités déployables dans les nouvelles mise à jour. L'occasion de réviser l'architecture de l'environnement et mettre à jour la documentation d'installation s'aligne parfaitement avec les objectifs du CEAI, soit de mettre en place les meilleures pratiques pour ses infrastructures ainsi que de rester allignées avec les dernières innovations offertes.
+Nous irons de l'avant avec une réinstallation d'un nouvel environnement ASEA 1.5. L'environnement actuel, qui a été installé dans les versions préliminaires du projet ASEA, commence a subir des limitations au niveau des fonctionnalités déployables dans les nouvelles mise à jour. L'occasion de réviser l'architecture de l'environnement et mettre à jour la documentation d'installation s'aligne parfaitement avec les objectifs du CEAI, soit de mettre en place les meilleures pratiques pour ses infrastructures ainsi que de rester alignées avec les dernières innovations offertes.
 
 ## Avantages et inconvénients des options envisagées
 
@@ -38,7 +38,7 @@ Nous irons de l'avant avec une réinstallation d'un nouvel environnement ASEA 1.
 * Mauvais, pas possible d'utiliser la nouvelle fonctionnalité de gestion de comptes Control Tower
 * Mauvais, utilisation  de la nomenclature dépréciée PBMM qui rend difficile l'utilisation de la documentation.
 * Mauvais, impossibilité de désinstaller l'expérimentation d'un VPC partagé non utilisé (mais facturé)
-* Mauvais, le remplacement des pare-feu Fortinet par ceux d'AWS doit se faire manuellement et entrainera un autre arrêt de service des applications exposées via le compte Perimeter
+* Mauvais, le remplacement des pare-feu Fortinet par ceux d'AWS doit se faire manuellement et entraînera un autre arrêt de service des applications exposées via le compte Perimeter
 * Mauvais, mise à jour complexe Openshift 4.9
 
 ### Réinstallation d'un nouvel environnement

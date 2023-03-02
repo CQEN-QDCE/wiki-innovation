@@ -1,9 +1,9 @@
 ---
-titre : Décision (MADR)
-sous-titre : {Titre de la décision}
-auteur : Centre d'expertise appliquée en innovation
-date : {AAAA-MM-JJ date de la dernière mise à jour de la décision}
-statut : {proposé | rejeté | accepté | déprécié | ... | remplacé par ADR-0005 <0005-example.md>}
+title: Décision (MADR)
+subtitle: {Titre de la décision}
+author: Centre d'expertise appliquée en innovation
+date: {AAAA-MM-JJ date de la dernière mise à jour de la décision}
+status: {proposé | rejeté | accepté | déprécié | ... | remplacé par ADR-0005 <0005-example.md>}
 ---
 # {Titre de la décision}
 
@@ -17,7 +17,7 @@ statut : {proposé | rejeté | accepté | déprécié | ... | remplacé par ADR-
 
 * {Facteur décisionnel 1, par exemple, une force, une préoccupation, ...}
 * {Facteur décisionnel 2, par exemple, une force, face à une préoccupation, ...}
-* ... <!-- le nombre de facteurs de décision peut varier -->
+* ... <!-- le nombre de facteurs décisionnels peut varier -->
 
 ## Options envisagées
 
@@ -53,10 +53,10 @@ Option choisie : "{titre de l'option 1}", parce que
 
 * Bon, car {argument a}
 * Bon, parce que {argument b}
-<!-- utiliser "neutre" si l'argument donné ne pèse ni pour le bien ni pour le mal -->
+<!-- utiliser "neutre" si l'argument donné n'est ni bon ni mauvais' -->
 * Neutre, car {argument c}
 * Mauvais, parce que {argument d}
-* ... <!-- le nombre de pour et de contre peut varier -->
+* ... <!-- le nombre d'arguments' peut varier -->
 
 ### {titre de l'autre option}
 

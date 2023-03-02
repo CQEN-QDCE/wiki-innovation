@@ -3,7 +3,7 @@ title: Décision (MADR)
 subtitle: Hébergement des services du CEAI
 author: Centre d'expertise appliquée en innovation
 date: 2021-09-15
-statut : accepté
+status: accepté
 ---
 
 # Hébergement des services du CEAI
@@ -12,7 +12,7 @@ statut : accepté
 
 L’environnement d’innovation est hébergé chez le fournisseur infonuagique AWS. AWS nous permet de mettre en place une zone sécurisée répondant au standard PBMM (Secure Environment Accelerator). C’est à l’intérieur de cette zone qu’une plateforme de développements modernes (PDM) est installée pour développer et héberger les diverses expérimentations réalisées par les équipes de développement.
 
-Dans ce contexte, l’équipe noyau tente de déterminer l’emplacement préférable pour installer les services de l’environnement de d’innovation.
+Dans ce contexte, l’équipe noyau tente de déterminer l’emplacement préférable pour installer les services de l’environnement d’innovation.
 
 ## Options envisagées
 
@@ -36,7 +36,7 @@ Les services sont directement hébergés dans SEA. Les déploiements se font en 
 * Bon, réduit les coûts d’infrastructures et d’opérations en utilisant avec efficience les ressources déjà acquises et en bénéficiant des services offerts par les fournisseurs infonuagiques; 
 * Bon, isole des coûts reliés aux services d’infrastructures des coûts reliés à l’environnement d’expérimentations.
 
-* Mauvais, crée une dépendance à l’environnement AWS. Une migration vers un autre fournisseur sera toujours faisable mais imposera plus de travail. 
+* Mauvais, crée une dépendance à l’environnement AWS. Une migration vers un autre fournisseur sera toujours faisable, mais imposera plus de travail. 
 
 ### Les services sont hébergés dans la PDM destinée aux expérimentations
 

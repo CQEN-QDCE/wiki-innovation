@@ -1,9 +1,9 @@
 ---
-titre : Décision (MADR)
-sous-titre : Outil Infrastructure as Code
-auteur : Centre d'expertise appliquée en innovation
-date : 2021-09-21
-statut : accepté
+title: Décision (MADR)
+subtitle: Outil Infrastructure as Code
+author: Centre d'expertise appliquée en innovation
+date: 2021-09-21
+status: accepté
 ---
 
 # Choix d'un outil *Infrastructure as Code*
