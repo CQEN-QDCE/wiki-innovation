@@ -11,4 +11,5 @@
 
 # Gabarits
 
+- [Diagrammes d'architecture](./Architecture)
 - [Pipelines CI/CD](Pipelines/README.md)
