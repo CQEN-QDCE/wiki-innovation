@@ -9,11 +9,25 @@
 </div>
 <!-- FIN ENTETE -->
 
-# Documentation des expérimentations 
+# Expérimentations dans le cadre du processus d'innovation
 
-Le Centre d'expertise appliqué en innovation rend disponible un laboratoire infonuagique d'expérimentation. Que ce soit pour appuyer la [phase découverte de la démarche de conception de services](https://www.quebec.ca/gouvernement/politiques-orientations/vitrine-numeriqc/accompagnement-des-organismes-publics/demarche-conception-services-numeriques/), pour mettre à l'essai des technologies appuyant l'innovation ou pour mettre en pratique les méthodes DevDecOps dans le contexte d'une organisation en processus de transformation numérique, l'expérimentation est la méthode privilégiée par le CEAI.
+Le Centre d'expertise appliqué en innovation rend disponible un laboratoire infonuagique d'expérimentation. Que ce soit pour appuyer la [phase découverte de la démarche de conception de services](https://www.quebec.ca/gouvernement/politiques-orientations/vitrine-numeriqc/accompagnement-des-organismes-publics/demarche-conception-services-numeriques/), pour mettre à l'essai des technologies appuyant l'innovation ou pour mettre en pratique les méthodes DevSecOps dans le contexte d'une organisation en processus de transformation numérique, l'expérimentation est la méthode privilégiée par le CEAI.
+
+Le CEAI propose une méthode d'expérimentation basée sur le *[hypothesis driven development](https://www.ibm.com/garage/method/practices/learn/practice_hypothesis_driven_development)* qui consiste à élaborer une hypothèse décrivant l'effet recherché de l'application d'une technologie à un problème donné. Les projets d'expérimentation doivent être soumis au CEAI sous forme d'hypothèse. Celles-ci sont par la suite priorisées selon plusieurs critères allant du potentiel d'innovation à l'applicabilité de la solution.
 
 Pour assurer le partage des connaissances acquises lors d'une expérimentation menée dans ses infrastructures, le CEAI exige que celles-ci soient documentées et partagées dans un dépôt de code public. En plus contenir toutes les ressources nécessaires à la reproduction de l'expérimentation, le dépôt devra contenir un ou plusieurs rapports d'expérimentation consignant les résultats de l'expérimentation.
+
+## Hypothèse
+
+L'hypothèse est un document d'une page énonçant une proposition d'application d'une technologie à un problème donné. On y décrit d'abord le contexte: soit le projet, le problème ou l'opportunité dans l'écosystème gouvernemental sur lequel l'hypothèse va s'appliquer. Puis, on énonce l'hypothèse via une formule définie:
+
+> Nous croyons que ...
+> Résultera en ...
+> Ceci sera prouvé si : 
+
+Finalement, on propose une méthode pour mener l'expérimentation en ne donnant que les grandes lignes de celle-ci. Les besoins en ressources et les échéanciers seront définis plus tard si l'on va de l'avant avec l'hypothèse.
+
+Gabarit disponible [ici](gabarits/hypothese.md).
 
 ## Le dépôt de code
 
@@ -23,49 +37,5 @@ Les bonnes pratiques concernant les dépôts de code public sont documentées da
 
 ## Le rapport d’expérimentation
 
-Le rapport doit être présenté de façon claire, lisible et structurée. Il est publié dans un fichier de type *markdown* sauvegardé dans le dépôt Git du projet. On préconise la création d’un fichier par expérimentation (gabarit disponible [ici](gabarit.md)). Il débute par le titre de l'expérimentation suivi des sections suivantes:  
+Le rapport doit être présenté de façon claire, lisible et structurée. Il est publié dans un fichier de type *markdown* sauvegardé dans le dépôt Git du projet. On préconise la création d’un fichier par expérimentation (gabarit disponible [ici](gabarits/rapport.md)). Il débute par le titre de l'expérimentation suivi des sections suivantes:  
 
-### Objectif 
-
-Cette section est la première du rapport d'expérimentation. Elle permet d'expliquer ce qui doit être accompli durant l'expérimentation. On y énonce le problème que l'on tente de régler et les contraintes présentes. On peut mettre en contexte l'expérimentation si elle est menée dans le cadre d'un projet ou d'un laboratoire. L'objectif doit être clair et concis et se résume la plupart du temps à une question.
-
-**Exemple d'objectif:**
-
-> Dans le cadre du projet de refonte des systèmes de l'organisme public Exemple, l'organisme aimerait savoir s'il peut continuer à utiliser le langage de programmation X dans le développement d'applications conçues pour l'infonuagique.
-
-### Hypothèse(s)
-
-L'hypothèse est un énoncé qui tente de prédire les résultats de l'expérimentation. Elle se base normalement sur une recherche faite sur le sujet de l'expérimentation.
-
-**Exemple d'hypothèse:**
-
-> Le langage de programmation X n'ayant de pas compilateur supporté pour les systèmes Unix, il ne sera pas possible de construire des conteneurs Linux stables pour déployer chez les fournisseurs infonuagiques approuvés.
-
-> Le langage de programmation X supporte le déploiement en conteneurs Linux qui pourront être déployés sans problème chez les fournisseurs approuvés.
-
-### Démarche  
-
-Cette section présente les étapes à suivre pour réaliser l'expérimentation. Idéalement, une personne qui lit la démarche ne devrait pas se poser de questions sur ce qu'elle doit faire pour reproduire l'expérimentation et valider les résultats obtenus. Chaque étape devrait être décrite par une seule phrase et débuter par un verbe d'action à l'infinitif. Les étapes sont numérotées et sont placées de manière chronologique. 
-
-**Exemple de démarche:**
-
-> 1. Créer une application de type "Hello World" dans le langage X
-> 2. Construire un conteneur exécutant l'application "Hello World"
-> 3. Déployer le conteneur dans le service ECS 
-> 4. Tester le fonctionnement de l'application
-
-### Résultats  
-
-On rapporte d'abord si l'hypothèse s'est avérée ou non. Puis, on rapporte les découvertes faites au cours de l'expérimentation qui viennent mettre en contexte le résultat par rapport à l'objectif.
-
-**Exemple de résultat:**
-
-> Nous avons pu déployer une application conçue pour le cloud programmée avec le langage X.
->
-> Par contre, la démarche fut très complexe car le langage X n'est pas conçu à la base pour concevoir des applications web. Nous avons dû utiliser un framework Y, qui n'est supporté que par une très petite communauté. Des problèmes de stabilité ont vite fait surface lors des tests de fonctionnement.
-> 
-> Pour utiliser le langage X dans un contexte infonuagique, l'organisme devra supporter et entretenir lui-même le framework Y et corriger les bugs qu'il contient.
-
-### Références
-
-Énoncer ici les références qui ont servies à l'expérimentation.
